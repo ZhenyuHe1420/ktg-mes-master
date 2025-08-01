@@ -79,7 +79,9 @@
         enable_flag,
         remark,
         create_by,
-        create_time
+        create_time,
+        update_by,
+        update_time
       )values(
         #{ruleCode},
         #{ruleName},
@@ -97,6 +99,8 @@
         #{enableFlag},
         #{remark},
         #{createBy},
+        sysdate(),
+        #{updateBy},
         sysdate()
         )
     </insert>

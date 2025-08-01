@@ -107,9 +107,7 @@ public class SysConfigServiceImpl implements ISysConfigService
 
     /**
      * 新增参数配置
-     * 
      * @param config 参数配置信息
-     * @return 结果
      */
     @Override
     public int insertConfig(SysConfig config)
@@ -124,9 +122,7 @@ public class SysConfigServiceImpl implements ISysConfigService
 
     /**
      * 修改参数配置
-     * 
      * @param config 参数配置信息
-     * @return 结果
      */
     @Override
     public int updateConfig(SysConfig config)

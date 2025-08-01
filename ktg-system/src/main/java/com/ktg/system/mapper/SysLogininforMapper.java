@@ -19,7 +19,6 @@ public interface SysLogininforMapper
 
     /**
      * 查询系统登录日志集合
-     * 
      * @param logininfor 访问日志对象
      * @return 登录记录集合
      */

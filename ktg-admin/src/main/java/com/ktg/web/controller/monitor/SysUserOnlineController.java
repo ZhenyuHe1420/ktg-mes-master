@@ -25,8 +25,6 @@ import com.ktg.system.service.ISysUserOnlineService;
 
 /**
  * 在线用户监控
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/monitor/online")
@@ -34,10 +32,14 @@ public class SysUserOnlineController extends BaseController
 {
     @Autowired
     private ISysUserOnlineService userOnlineService;
-
     @Autowired
     private RedisCache redisCache;
 
+    /**
+     * 在线用户分页查询接口
+     * @param ipaddr 登录地址
+     * @param userName 用户名称
+     */
     @PreAuthorize("@ss.hasPermi('monitor:online:list')")
     @GetMapping("/list")
     public TableDataInfo list(String ipaddr, String userName)

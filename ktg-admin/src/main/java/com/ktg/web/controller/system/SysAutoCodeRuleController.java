@@ -18,10 +18,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/system/autocode/rule")
 public class SysAutoCodeRuleController extends BaseController {
-
     @Autowired
     private IAutoCodeRuleService iAutoCodeRuleService;
 
+    /**
+     * 编码规则分页查询
+     */
     @PreAuthorize("@ss.hasPermi('system:autocode:rule:list')")
     @GetMapping("/list")
     public TableDataInfo list(SysAutoCodeRule sysAutoCodeRule){
@@ -30,12 +32,19 @@ public class SysAutoCodeRuleController extends BaseController {
         return getDataTable(rules);
     }
 
+    /**
+     * 编码规则详情查询
+     * @param ruleId 编码规则
+     */
     @PreAuthorize("@ss.hasPermi('system:autocode:rule:query')")
     @GetMapping("/{ruleId}")
     public AjaxResult getInfo(@PathVariable Long ruleId){
         return AjaxResult.success(iAutoCodeRuleService.findById(ruleId));
     }
 
+    /**
+     * 新增编码规则
+     */
     @PreAuthorize("@ss.hasPermi('system:autocode:rule:add')")
     @Log(title = "新增自动编码规则",businessType = BusinessType.INSERT)
     @PostMapping
@@ -51,9 +60,13 @@ public class SysAutoCodeRuleController extends BaseController {
             sysAutoCodeRule.setPaddedMethod(null);
         }
         sysAutoCodeRule.setCreateBy(getUsername());
+        sysAutoCodeRule.setUpdateBy(getUsername());
         return toAjax(iAutoCodeRuleService.insertInfo(sysAutoCodeRule));
     }
 
+    /**
+     * 修改编码规则
+     */
     @PreAuthorize("@ss.hasPermi('system:autocode:rule:edit')")
     @Log(title = "更新自动编码规则",businessType = BusinessType.UPDATE)
     @PutMapping
@@ -68,12 +81,13 @@ public class SysAutoCodeRuleController extends BaseController {
         return toAjax(iAutoCodeRuleService.updateInfo(sysAutoCodeRule));
     }
 
+    /**
+     * 删除编码规则
+     */
     @PreAuthorize("@ss.hasPermi('system:autocode:rule:remove')")
     @Log(title = "删除自动编码规则",businessType = BusinessType.DELETE)
     @DeleteMapping("/{ruleIds}")
     public AjaxResult remove(@PathVariable Long[] ruleIds){
-
         return toAjax(iAutoCodeRuleService.deleteByIds(ruleIds));
     }
-
 }

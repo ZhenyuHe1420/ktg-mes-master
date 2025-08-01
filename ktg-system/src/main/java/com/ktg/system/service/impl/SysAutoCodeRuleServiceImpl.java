@@ -71,12 +71,6 @@ public class SysAutoCodeRuleServiceImpl implements IAutoCodeRuleService {
     }
 
     @Override
-    public int deleteById(Long ruleId) {
-
-        return sysAutoCodeRuleMapper.deleteById(ruleId);
-    }
-
-    @Override
     public int deleteByIds(Long[] ruleIds) {
         for (Long ruleId: ruleIds
              ) {

@@ -21,8 +21,6 @@ import com.ktg.system.service.ISysOperLogService;
 
 /**
  * 操作日志记录
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/monitor/operlog")
@@ -31,6 +29,9 @@ public class SysOperlogController extends BaseController
     @Autowired
     private ISysOperLogService operLogService;
 
+    /**
+     * 操作日志分页查询接口
+     */
     @PreAuthorize("@ss.hasPermi('monitor:operlog:list')")
     @GetMapping("/list")
     public TableDataInfo list(SysOperLog operLog)
@@ -40,6 +41,9 @@ public class SysOperlogController extends BaseController
         return getDataTable(list);
     }
 
+    /**
+     * 操作日志导出excel接口
+     */
     @Log(title = "操作日志", businessType = BusinessType.EXPORT)
     @PreAuthorize("@ss.hasPermi('monitor:operlog:export')")
     @PostMapping("/export")
@@ -50,6 +54,9 @@ public class SysOperlogController extends BaseController
         util.exportExcel(response, list, "操作日志");
     }
 
+    /**
+     * 操作日志删除接口
+     */
     @Log(title = "操作日志", businessType = BusinessType.DELETE)
     @PreAuthorize("@ss.hasPermi('monitor:operlog:remove')")
     @DeleteMapping("/{operIds}")
@@ -58,6 +65,9 @@ public class SysOperlogController extends BaseController
         return toAjax(operLogService.deleteOperLogByIds(operIds));
     }
 
+    /**
+     * 操作日志清空接口
+     */
     @Log(title = "操作日志", businessType = BusinessType.CLEAN)
     @PreAuthorize("@ss.hasPermi('monitor:operlog:remove')")
     @DeleteMapping("/clean")

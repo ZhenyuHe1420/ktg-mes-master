@@ -15,14 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/system/autocode")
 public class SysAutoCodeController {
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
 
+    /**
+     * 获取一个自动生成的编码
+     * @param ruleCode 规则编码
+     * @param inputCharacter 输入字符
+     */
     @ApiOperation("获取一个自动生成的编码")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "ruleCode", value = "规则编码", required = true, dataType = "String", paramType = "path", dataTypeClass = String.class),
-            @ApiImplicitParam(name = "inputCharacter", value = "输入字符", required = false,dataType = "String", paramType = "path", dataTypeClass = String.class)
+        @ApiImplicitParam(name = "ruleCode", value = "规则编码", required = true, dataType = "String", paramType = "path", dataTypeClass = String.class),
+        @ApiImplicitParam(name = "inputCharacter", value = "输入字符", required = false,dataType = "String", paramType = "path", dataTypeClass = String.class)
     })
     @GetMapping(value = {"/get/{ruleCode}/{inputCharacter}","/get/{ruleCode}"})
     public String getAutoCode(@PathVariable String ruleCode,@PathVariable(required = false) String inputCharacter){

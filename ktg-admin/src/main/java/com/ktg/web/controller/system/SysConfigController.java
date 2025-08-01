@@ -25,8 +25,6 @@ import com.ktg.system.service.ISysConfigService;
 
 /**
  * 参数配置 信息操作处理
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/system/config")
@@ -47,6 +45,9 @@ public class SysConfigController extends BaseController
         return getDataTable(list);
     }
 
+    /**
+     * 导出参数设置excel
+     */
     @Log(title = "参数管理", businessType = BusinessType.EXPORT)
     @PreAuthorize("@ss.hasPermi('system:config:export')")
     @PostMapping("/export")
@@ -89,6 +90,7 @@ public class SysConfigController extends BaseController
             return AjaxResult.error("新增参数'" + config.getConfigName() + "'失败，参数键名已存在");
         }
         config.setCreateBy(getUsername());
+        config.setUpdateBy(getUsername());
         return toAjax(configService.insertConfig(config));
     }
 

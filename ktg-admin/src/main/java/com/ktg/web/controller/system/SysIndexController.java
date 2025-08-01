@@ -8,8 +8,6 @@ import com.ktg.common.utils.StringUtils;
 
 /**
  * 首页
- *
- * @author ruoyi
  */
 @RestController
 public class SysIndexController
