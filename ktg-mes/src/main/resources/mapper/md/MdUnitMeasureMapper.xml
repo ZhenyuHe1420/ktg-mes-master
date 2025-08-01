@@ -6,33 +6,36 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
     <resultMap type="MdUnitMeasure" id="MdUnitMeasureResult">
         <result property="measureId"    column="measure_id"    />
-        <result property="measureCode"    column="measure_code"    />
-        <result property="measureName"    column="measure_name"    />
-        <result property="primaryFlag"    column="primary_flag"    />
+        <result property="measureCode"  column="measure_code"  />
+        <result property="measureName"  column="measure_name"  />
+        <result property="primaryFlag"  column="primary_flag"  />
         <result property="primaryId"    column="primary_id"    />
-        <result property="changeRate"    column="change_rate"    />
-        <result property="enableFlag"    column="enable_flag"    />
-        <result property="remark"    column="remark"    />
-        <result property="attr1"    column="attr1"    />
-        <result property="attr2"    column="attr2"    />
-        <result property="attr3"    column="attr3"    />
-        <result property="attr4"    column="attr4"    />
-        <result property="createBy"    column="create_by"    />
-        <result property="createTime"    column="create_time"    />
-        <result property="updateBy"    column="update_by"    />
-        <result property="updateTime"    column="update_time"    />
+        <result property="changeRate"   column="change_rate"   />
+        <result property="enableFlag"   column="enable_flag"   />
+        <result property="remark"       column="remark"    />
+        <result property="attr1"        column="attr1"    />
+        <result property="attr2"        column="attr2"    />
+        <result property="attr3"        column="attr3"    />
+        <result property="attr4"        column="attr4"    />
+        <result property="createBy"     column="create_by"    />
+        <result property="createTime"   column="create_time"    />
+        <result property="updateBy"     column="update_by"    />
+        <result property="updateTime"   column="update_time"    />
     </resultMap>
 
     <sql id="selectMdUnitMeasureVo">
-        select measure_id, measure_code, measure_name, primary_flag, primary_id, change_rate, enable_flag, remark, attr1, attr2, attr3, attr4, create_by, create_time, update_by, update_time from md_unit_measure
+        select
+            measure_id, measure_code, measure_name, primary_flag, primary_id, change_rate, enable_flag, remark, attr1,
+            attr2, attr3, attr4, create_by, create_time, update_by, update_time
+        from md_unit_measure
     </sql>
 
     <select id="selectMdUnitMeasureList" parameterType="MdUnitMeasure" resultMap="MdUnitMeasureResult">
         <include refid="selectMdUnitMeasureVo"/>
         <where>
-            <if test="measureCode != null  and measureCode != ''"> and measure_code = #{measureCode}</if>
-            <if test="measureName != null  and measureName != ''"> and measure_name like concat('%', #{measureName}, '%')</if>
-            <if test="primaryFlag != null  and primaryFlag != ''"> and primary_flag = #{primaryFlag}</if>
+            <if test="measureCode != null and measureCode != ''"> and measure_code = #{measureCode}</if>
+            <if test="measureName != null and measureName != ''"> and measure_name like concat('%', #{measureName}, '%')</if>
+            <if test="primaryFlag != null and primaryFlag != ''"> and primary_flag = #{primaryFlag}</if>
             <if test="primaryId != null "> and primary_id = #{primaryId}</if>
             <if test="changeRate != null "> and change_rate = #{changeRate}</if>
             <if test="enableFlag != null  and enableFlag != ''"> and enable_flag = #{enableFlag}</if>
@@ -117,10 +120,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </trim>
         where measure_id = #{measureId}
     </update>
-
-    <delete id="deleteMdUnitMeasureByMeasureId" parameterType="Long">
-        delete from md_unit_measure where measure_id = #{measureId}
-    </delete>
 
     <delete id="deleteMdUnitMeasureByMeasureIds" parameterType="String">
         delete from md_unit_measure where measure_id in

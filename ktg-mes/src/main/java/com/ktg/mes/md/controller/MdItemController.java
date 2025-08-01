@@ -1,7 +1,6 @@
 package com.ktg.mes.md.controller;
 
 import com.ktg.common.utils.poi.ExcelUtil;
-import com.ktg.mes.aspect.BarcodeGen;
 import com.ktg.mes.md.domain.*;
 import com.ktg.mes.md.service.*;
 import com.ktg.common.annotation.Log;
@@ -18,36 +17,27 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
 @RequestMapping("/mes/md/mditem")
 public class MdItemController extends BaseController {
-
     @Autowired
     private IMdItemService mdItemService;
-
     @Autowired
     private IItemTypeService iItemTypeService;
-
     @Autowired
     private IMdUnitMeasureService mdUnitMeasureService;
-
     @Autowired
     private IMdProductBomService mdProductBomService;
-
     @Autowired
     private IMdItemBatchConfigService mdItemBatchConfigService;
-
     @Autowired
     private WmBarCodeUtil barcodeUtil;
 
     /**
      * 列表查询
-     * @param mdItem
-     * @return
      */
     @GetMapping("/list")
     public TableDataInfo list(MdItem mdItem){
@@ -71,7 +61,6 @@ public class MdItemController extends BaseController {
 
     /**
      * 下载导入模板
-     * @param response
      */
     @PostMapping("/importTemplate")
     public void importTemplate(HttpServletResponse response)
@@ -80,13 +69,10 @@ public class MdItemController extends BaseController {
         util.importTemplateExcel(response, "物料产品数据");
     }
 
-
     /**
      * 从模板导入供应商数据
      * @param file
      * @param updateSupport
-     * @return
-     * @throws Exception
      */
     @Log(title = "物料管理", businessType = BusinessType.IMPORT)
     @PreAuthorize("@ss.hasPermi('mes:md:mditem:import')")
@@ -100,13 +86,9 @@ public class MdItemController extends BaseController {
         return AjaxResult.success(message);
     }
 
-
-
-
     /**
      * 主键查询
      * @param itemId
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:md:mditem:query')")
     @GetMapping(value = "/{itemId}")
@@ -116,8 +98,6 @@ public class MdItemController extends BaseController {
 
     /**
      * 新增
-     * @param mdItem
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:md:mditem:add')")
     @Log(title = "物料管理",businessType = BusinessType.INSERT)
@@ -149,8 +129,6 @@ public class MdItemController extends BaseController {
 
     /**
      * 更新
-     * @param mdItem
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:md:mditem:edit')")
     @Log(title = "物料管理",businessType = BusinessType.UPDATE)
@@ -202,7 +180,6 @@ public class MdItemController extends BaseController {
                 }
             }
         }
-
 
         ItemType type =iItemTypeService.selectItemTypeById(mdItem.getItemTypeId());
         if(StringUtils.isNotNull(type)){
