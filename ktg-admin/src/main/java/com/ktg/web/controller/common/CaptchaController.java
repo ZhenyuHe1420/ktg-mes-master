@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.config.RuoYiConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.FastByteArrayOutputStream;
@@ -22,8 +21,6 @@ import com.ktg.system.service.ISysConfigService;
 
 /**
  * 验证码操作处理
- * 
- * @author ruoyi
  */
 @RestController
 public class CaptchaController
@@ -31,14 +28,15 @@ public class CaptchaController
     @Resource(name = "captchaProducer")
     private Producer captchaProducer;
 
+    // 是第三方依赖的方法去产生验证码的
     @Resource(name = "captchaProducerMath")
     private Producer captchaProducerMath;
 
     @Autowired
     private RedisCache redisCache;
-    
     @Autowired
     private ISysConfigService configService;
+
     /**
      * 生成验证码
      */
@@ -62,8 +60,10 @@ public class CaptchaController
 
         // 生成验证码
         String captchaType = RuoYiConfig.getCaptchaType();
+        // math 为数组计算 char为字符认证
         if ("math".equals(captchaType))
         {
+            // 例子capText得到： 6/1=?@6，那么capStr截取前面得到: 6/1 这个字符串，code截取后面得到：6 这个答案
             String capText = captchaProducerMath.createText();
             capStr = capText.substring(0, capText.lastIndexOf("@"));
             code = capText.substring(capText.lastIndexOf("@") + 1);

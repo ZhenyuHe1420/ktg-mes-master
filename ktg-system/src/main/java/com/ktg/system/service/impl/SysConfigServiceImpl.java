@@ -42,7 +42,6 @@ public class SysConfigServiceImpl implements ISysConfigService
 
     /**
      * 查询参数配置信息
-     * 
      * @param configId 参数配置ID
      * @return 参数配置信息
      */
@@ -57,7 +56,6 @@ public class SysConfigServiceImpl implements ISysConfigService
 
     /**
      * 根据键名查询参数配置信息
-     * 
      * @param configKey 参数key
      * @return 参数键值
      */
@@ -82,7 +80,6 @@ public class SysConfigServiceImpl implements ISysConfigService
 
     /**
      * 获取验证码开关
-     * 
      * @return true开启，false关闭
      */
     @Override

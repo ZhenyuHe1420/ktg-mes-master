@@ -123,7 +123,6 @@ public class FileUtils
 
     /**
      * 文件名称验证
-     * 
      * @param filename 文件名称
      * @return true 正常 false 非法
      */
@@ -134,7 +133,6 @@ public class FileUtils
 
     /**
      * 检查文件是否可下载
-     * 
      * @param resource 需要下载的文件
      * @return true 正常 false 非法
      */

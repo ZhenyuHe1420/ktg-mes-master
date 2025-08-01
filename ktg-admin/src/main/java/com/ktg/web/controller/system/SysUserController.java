@@ -3,7 +3,6 @@ package com.ktg.web.controller.system;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.core.domain.vo.SysUserExcelVO;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,8 +34,6 @@ import com.ktg.system.service.ISysUserService;
 
 /**
  * 用户信息
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/system/user")
@@ -44,10 +41,8 @@ public class SysUserController extends BaseController
 {
     @Autowired
     private ISysUserService userService;
-
     @Autowired
     private ISysRoleService roleService;
-
     @Autowired
     private ISysPostService postService;
 

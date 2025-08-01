@@ -14,7 +14,7 @@ ktg-mes:
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数组计算 char 字符验证
-  captchaType: math
+  captchaType: char
 
 # 开发环境配置
 server:
@@ -135,7 +135,7 @@ xss:
 
 #Mino配置
 minio:
-  url: http://192.168.1.254:9000
+  url: http://localhost:9000
   accessKey: minioadmin
   secretKey: minioadmin
-  bucketName: lx-mes
+  bucketName: ktgmes

@@ -9,8 +9,6 @@ import com.ktg.framework.web.domain.Server;
 
 /**
  * 服务器监控
- * 
- * @author ktg
  */
 @RestController
 @RequestMapping("/monitor/server")
