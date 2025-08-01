@@ -153,9 +153,7 @@ public class ProFeedbackServiceImpl implements IProFeedbackService
 
     /**
      * 删除生产报工记录信息
-     * 
      * @param recordId 生产报工记录主键
-     * @return 结果
      */
     @Override
     public int deleteProFeedbackByRecordId(Long recordId)

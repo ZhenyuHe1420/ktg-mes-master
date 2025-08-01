@@ -57,10 +57,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </resultMap>
 
     <sql id="selectProFeedbackVo">
-        select f.record_id, f.feedback_code, f.feedback_type, f.workstation_id, f.workstation_code, f.workstation_name,f.route_id,f.route_code, f.process_id, f.process_code, f.process_name,p.is_check, f.workorder_id, f.workorder_code, f.workorder_name, f.task_id, f.task_code,f.item_id,f.item_code,f.item_name,f.specification,f.unit_of_measure, f.unit_name, f.expire_date, f.lot_number, f.quantity, f.quantity_feedback, f.quantity_qualified, f.quantity_unquanlified,f.quantity_uncheck, f.quantity_labor_scrap, f.quantity_material_scrap, f.quantity_other_scrap, f.user_name, f.nick_name, f.feedback_channel, f.feedback_time,f.record_user,f.record_nick,f.status, f.remark, f.attr1, f.attr2, f.attr3, f.attr4, f.create_by, f.create_time, f.update_by, f.update_time
+        select
+            f.record_id, f.feedback_code, f.feedback_type, f.workstation_id, f.workstation_code, f.workstation_name,
+            f.route_id,f.route_code, f.process_id, f.process_code, f.process_name,p.is_check, f.workorder_id,
+            f.workorder_code, f.workorder_name, f.task_id, f.task_code,f.item_id,f.item_code,f.item_name,f.specification,
+            f.unit_of_measure, f.unit_name, f.expire_date, f.lot_number, f.quantity, f.quantity_feedback,
+            f.quantity_qualified, f.quantity_unquanlified,f.quantity_uncheck,
+            f.user_name, f.nick_name, f.feedback_channel, f.feedback_time,f.record_user,f.record_nick,f.status, f.remark, f.attr1, f.attr2, f.attr3, f.attr4, f.create_by, f.create_time, f.update_by, f.update_time
         from pro_feedback f
-            left join pro_route_process p
-                on f.process_id = p.process_id and f.route_id = p.route_id
+        left join pro_route_process p on f.process_id = p.process_id and f.route_id = p.route_id
     </sql>
 
     <select id="selectProFeedbackList" parameterType="ProFeedback" resultMap="ProFeedbackResult">

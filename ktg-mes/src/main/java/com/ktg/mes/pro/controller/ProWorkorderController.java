@@ -44,19 +44,14 @@ public class ProWorkorderController extends BaseController
 {
     @Autowired
     private IProWorkorderService proWorkorderService;
-
     @Autowired
     private IProWorkorderBomService proWorkorderBomService;
-
     @Autowired
     private IMdProductBomService mdProductBomService;
-
     @Autowired
     private IMdItemBatchConfigService mdItemBatchConfigService;
-
     @Autowired
     private IProTaskService proTaskService;
-
     @Autowired
     private WmBarCodeUtil wmBarCodeUtil;
 
@@ -367,12 +362,9 @@ public class ProWorkorderController extends BaseController
 
     /**
      * 首页生产工单查询
-     * @param proWorkorder
-     * @return
      */
     @GetMapping("/getHomeList")
     public AjaxResult getHomeList(ProWorkorder proWorkorder) {
         return proWorkorderService.getHomeList(proWorkorder);
     }
-
 }

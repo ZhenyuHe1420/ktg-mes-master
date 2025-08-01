@@ -78,7 +78,7 @@ public class ItemTypeController extends BaseController {
     @PostMapping
     public AjaxResult add(@Validated @RequestBody ItemType itemType){
         if (UserConstants.NOT_UNIQUE.equals(iItemTypeService.checkItemTypeCodeUnique(itemType))){
-            return AjaxResult.error("分类:"+itemType.getItemTypeName()+",编码已存在");
+            return AjaxResult.error("分类:"+itemType.getItemTypeCode()+",编码已存在");
         }
         if (UserConstants.NOT_UNIQUE.equals(iItemTypeService.checkItemTypeNameUnique(itemType))){
             return AjaxResult.error("分类:"+itemType.getItemTypeName()+",名称已存在");

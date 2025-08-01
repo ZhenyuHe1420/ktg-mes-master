@@ -2,8 +2,6 @@ package com.ktg.web.controller.system;
 
 import java.util.Iterator;
 import java.util.List;
-
-import com.ktg.system.strategy.AutoCodeUtil;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -27,8 +25,6 @@ import com.ktg.system.service.ISysDeptService;
 
 /**
  * 部门信息
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/system/dept")
@@ -36,9 +32,6 @@ public class SysDeptController extends BaseController
 {
     @Autowired
     private ISysDeptService deptService;
-
-    @Autowired
-    private AutoCodeUtil autoCodeUtil;
 
     /**
      * 获取部门列表
@@ -56,7 +49,10 @@ public class SysDeptController extends BaseController
     @GetMapping("/list/exclude/{deptId}")
     public AjaxResult excludeChild(@PathVariable(value = "deptId", required = false) Long deptId)
     {
+        // 查询全部
         List<SysDept> depts = deptService.selectDeptList(new SysDept());
+
+        // 排除本部门，及本部门底下的子部门
         Iterator<SysDept> it = depts.iterator();
         while (it.hasNext())
         {
@@ -120,6 +116,7 @@ public class SysDeptController extends BaseController
             return AjaxResult.error("新增部门'" + dept.getDeptCode() + "'失败，部门编码已存在");
         }
         dept.setCreateBy(getUsername());
+        dept.setUpdateBy(getUsername());
         return toAjax(deptService.insertDept(dept));
     }
 

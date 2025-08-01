@@ -46,17 +46,13 @@ public interface ProFeedbackMapper
 
     /**
      * 删除生产报工记录
-     * 
      * @param recordId 生产报工记录主键
-     * @return 结果
      */
     public int deleteProFeedbackByRecordId(Long recordId);
 
     /**
      * 批量删除生产报工记录
-     * 
      * @param recordIds 需要删除的数据主键集合
-     * @return 结果
      */
     public int deleteProFeedbackByRecordIds(Long[] recordIds);
 

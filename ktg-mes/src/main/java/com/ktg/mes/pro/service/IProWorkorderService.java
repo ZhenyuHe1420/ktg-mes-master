@@ -72,11 +72,8 @@ public interface IProWorkorderService
      */
     public int deleteProWorkorderByWorkorderId(Long workorderId);
 
-
     /**
      * 首页生产工单查询
-     * @param proWorkorder
-     * @return
      */
     AjaxResult getHomeList(ProWorkorder proWorkorder);
 }

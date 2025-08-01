@@ -69,7 +69,6 @@ public interface IProFeedbackService
     /**
      * 根据 workorderIds 查询
      * @param workorderIds
-     * @return
      */
     List<ProFeedback> selectByWorkorderIds(List<Long> workorderIds);
 }
