@@ -25,8 +25,6 @@ import com.ktg.system.service.ISysPostService;
 
 /**
  * 岗位信息操作处理
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/system/post")
@@ -48,7 +46,6 @@ public class SysPostController extends BaseController
 
     /**
      * 查询所有有效岗位信息以List方式返回
-     * @return
      */
     @GetMapping("/listAll")
     public AjaxResult listAll(){
@@ -95,6 +92,7 @@ public class SysPostController extends BaseController
             return AjaxResult.error("新增岗位'" + post.getPostName() + "'失败，岗位编码已存在");
         }
         post.setCreateBy(getUsername());
+        post.setUpdateBy(getUsername());
         return toAjax(postService.insertPost(post));
     }
 

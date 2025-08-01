@@ -96,7 +96,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="status != null and status != ''">status,</if>
  			<if test="remark != null and remark != ''">remark,</if>
  			<if test="createBy != null and createBy != ''">create_by,</if>
- 			create_time
+			<if test="updateBy != null and updateBy != ''">update_by,</if>
+ 			create_time, update_time
  		)values(
  			<if test="postId != null and postId != 0">#{postId},</if>
  			<if test="postCode != null and postCode != ''">#{postCode},</if>
@@ -105,7 +106,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="status != null and status != ''">#{status},</if>
  			<if test="remark != null and remark != ''">#{remark},</if>
  			<if test="createBy != null and createBy != ''">#{createBy},</if>
- 			sysdate()
+			<if test="updateBy != null and updateBy != ''">#{updateBy},</if>
+ 			sysdate(), sysdate()
  		)
 	</insert>
 
