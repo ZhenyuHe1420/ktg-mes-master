@@ -40,7 +40,6 @@ public class AutoCodeUtil {
     @Log(title = "生成业务编号",businessType = BusinessType.INSERT)
     synchronized
     public String genSerialCode(String ruleCode,String inputCharacter){
-
         //查找编码规则
         SysAutoCodeRule rule = iAutoCodeRuleService.getOne(ruleCode);
         Assert.notNull(rule,"未获取到指定类型:[{}]的业务编码生成规则",ruleCode);
@@ -80,7 +79,6 @@ public class AutoCodeUtil {
      * 根据编码规则的配置进行补齐操作
      * @param rule
      * @param sb
-     * @return
      */
     private String paddingStr(SysAutoCodeRule rule,StringBuilder sb){
         String isPadding = rule.getIsPadded();
@@ -113,7 +111,7 @@ public class AutoCodeUtil {
 
     private void saveAutoCodeResult(SysAutoCodeRule rule,String autoCode,String inputChar){
         Boolean flag = threadLocal.get(); //针对当前线程的判断 flag = true则数据库中没有当前规则的生成记录
-        if(flag !=null && flag){
+        if(flag != null && flag){
             SysAutoCodeResult rs = new SysAutoCodeResult();
             rs.setRuleId(rule.getRuleId());
             rs.setGenDate(DateUtil.format(LocalDateTime.now(),"yyyyMMddHHmmss"));
@@ -122,7 +120,7 @@ public class AutoCodeUtil {
             rs.setLastSerialNo(Integer.parseInt(lastSerialNo));
             rs.setLastInputChar(inputChar);
             iAutoCodeResultService.saveAutoCodeResult(rs);
-        }else{
+        } else {
             //直接更新对应的记录（我们默认非流水号模式下一个RULE_CODE只有一种方式）
             SysAutoCodeResult bo = new SysAutoCodeResult();
             bo.setRuleId(rule.getRuleId());
