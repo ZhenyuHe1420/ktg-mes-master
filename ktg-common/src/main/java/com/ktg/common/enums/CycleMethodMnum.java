@@ -1,7 +1,9 @@
 package com.ktg.common.enums;
 
+/**
+ * 时间周期枚举
+ */
 public enum  CycleMethodMnum {
-
     CYCLE_METHOD_YEAR("YEAR","按年"),
     CYCLE_METHOD_MONTH("MONTH","按月"),
     CYCLE_METHOD_DAY("DAY","按日"),

@@ -1,7 +1,9 @@
 package com.ktg.common.enums;
 
+/**
+ * 部件类型枚举
+ */
 public enum  PartTypeEnum {
-
     PART_TYPE_INPUTCHAR("INPUTCHAR","传入字符",0),
     PART_TYPE_NOWDATE("NOWDATE","当前日期",1),
     PART_TYPE_FIXCHAR("FIXCHAR","固定字符",2),

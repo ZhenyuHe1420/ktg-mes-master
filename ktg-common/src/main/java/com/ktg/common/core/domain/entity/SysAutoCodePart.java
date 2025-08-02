@@ -3,7 +3,6 @@ package com.ktg.common.core.domain.entity;
 import com.ktg.common.core.domain.BaseEntity;
 
 public class SysAutoCodePart extends BaseEntity {
-
     private static final long serialVersionUID = 1L;
 
     private Long partId;

@@ -2,8 +2,6 @@ package com.ktg.common.constant;
 
 /**
  * 代码生成通用常量
- * 
- * @author ruoyi
  */
 public class GenConstants
 {
@@ -96,9 +94,6 @@ public class GenConstants
 
     /** 长整型 */
     public static final String TYPE_LONG = "Long";
-
-    /** 浮点型 */
-    public static final String TYPE_DOUBLE = "Double";
 
     /** 高精度计算类型 */
     public static final String TYPE_BIGDECIMAL = "BigDecimal";

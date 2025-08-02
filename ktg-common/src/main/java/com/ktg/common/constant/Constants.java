@@ -1,11 +1,7 @@
 package com.ktg.common.constant;
 
-import io.jsonwebtoken.Claims;
-
 /**
  * 通用常量信息
- * 
- * @author ruoyi
  */
 public class Constants
 {
@@ -98,31 +94,6 @@ public class Constants
      * 令牌前缀
      */
     public static final String LOGIN_USER_KEY = "login_user_key";
-
-    /**
-     * 用户ID
-     */
-    public static final String JWT_USERID = "userid";
-
-    /**
-     * 用户名称
-     */
-    public static final String JWT_USERNAME = Claims.SUBJECT;
-
-    /**
-     * 用户头像
-     */
-    public static final String JWT_AVATAR = "avatar";
-
-    /**
-     * 创建时间
-     */
-    public static final String JWT_CREATED = "created";
-
-    /**
-     * 用户权限
-     */
-    public static final String JWT_AUTHORITIES = "authorities";
 
     /**
      * 参数管理 cache key

@@ -5,8 +5,6 @@ import com.ktg.common.utils.StringUtils;
 
 /**
  * 基础异常
- * 
- * @author ktg
  */
 public class BaseException extends RuntimeException
 {

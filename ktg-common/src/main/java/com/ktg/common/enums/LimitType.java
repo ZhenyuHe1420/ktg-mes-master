@@ -2,10 +2,7 @@ package com.ktg.common.enums;
 
 /**
  * 限流类型
- *
- * @author ruoyi
  */
-
 public enum LimitType
 {
     /**

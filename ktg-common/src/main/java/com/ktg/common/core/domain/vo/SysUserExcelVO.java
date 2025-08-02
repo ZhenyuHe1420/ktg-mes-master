@@ -5,7 +5,6 @@ import com.ktg.common.annotation.Excels;
 import com.ktg.common.core.domain.BaseEntity;
 import com.ktg.common.core.domain.entity.SysDept;
 import com.ktg.common.core.domain.entity.SysRole;
-
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -14,11 +13,9 @@ public class SysUserExcelVO extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
     /** 用户ID */
-//    @Excel(name = "用户序号", cellType = ColumnType.NUMERIC, prompt = "用户编号")
     private Long userId;
 
     /** 部门ID */
-
     private Long deptId;
 
     /** 部门Code */
