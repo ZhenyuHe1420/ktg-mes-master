@@ -16,7 +16,6 @@
     </description>
 
     <dependencies>
-
         <!-- SpringBoot Web容器 -->
          <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,7 +63,5 @@
             <groupId>com.ktg</groupId>
             <artifactId>ktg-system</artifactId>
         </dependency>
-
     </dependencies>
-
 </project>
