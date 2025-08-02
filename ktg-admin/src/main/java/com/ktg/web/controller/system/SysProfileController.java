@@ -26,8 +26,6 @@ import com.ktg.system.service.ISysUserService;
 
 /**
  * 个人信息 业务处理
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/system/user/profile")
@@ -35,7 +33,6 @@ public class SysProfileController extends BaseController
 {
     @Autowired
     private ISysUserService userService;
-
     @Autowired
     private TokenService tokenService;
 
@@ -63,18 +60,17 @@ public class SysProfileController extends BaseController
         LoginUser loginUser = getLoginUser();
         SysUser sysUser = loginUser.getUser();
         user.setUserName(sysUser.getUserName());
-        if (StringUtils.isNotEmpty(user.getPhonenumber())
-                && UserConstants.NOT_UNIQUE.equals(userService.checkPhoneUnique(user)))
+        if (StringUtils.isNotEmpty(user.getPhonenumber()) && UserConstants.NOT_UNIQUE.equals(userService.checkPhoneUnique(user)))
         {
             return AjaxResult.error("修改用户'" + user.getUserName() + "'失败，手机号码已存在");
         }
-        if (StringUtils.isNotEmpty(user.getEmail())
-                && UserConstants.NOT_UNIQUE.equals(userService.checkEmailUnique(user)))
+        if (StringUtils.isNotEmpty(user.getEmail()) && UserConstants.NOT_UNIQUE.equals(userService.checkEmailUnique(user)))
         {
             return AjaxResult.error("修改用户'" + user.getUserName() + "'失败，邮箱账号已存在");
         }
         user.setUserId(sysUser.getUserId());
         user.setPassword(null);
+        user.setUpdateBy(sysUser.getUserName());
         if (userService.updateUserProfile(user) > 0)
         {
             // 更新缓存用户信息

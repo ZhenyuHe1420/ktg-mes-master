@@ -166,7 +166,8 @@
 		<if test="icon != null and icon != ''">icon,</if>
 		<if test="remark != null and remark != ''">remark,</if>
 		<if test="createBy != null and createBy != ''">create_by,</if>
-		create_time
+		<if test="updateBy != null and updateBy != ''">update_by,</if>
+		create_time, update_time
 		)values(
 		<if test="menuId != null and menuId != 0">#{menuId},</if>
 		<if test="parentId != null and parentId != 0">#{parentId},</if>
@@ -184,7 +185,8 @@
 		<if test="icon != null and icon != ''">#{icon},</if>
 		<if test="remark != null and remark != ''">#{remark},</if>
 		<if test="createBy != null and createBy != ''">#{createBy},</if>
-		sysdate()
+		<if test="updateBy != null and updateBy != ''">#{updateBy},</if>
+		sysdate(), sysdate()
 		)
 	</insert>
 	

@@ -277,9 +277,7 @@ public class SysMenuServiceImpl implements ISysMenuService
 
     /**
      * 新增保存菜单信息
-     * 
      * @param menu 菜单信息
-     * @return 结果
      */
     @Override
     public int insertMenu(SysMenu menu)

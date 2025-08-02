@@ -8,9 +8,8 @@ ktg-mes:
   copyrightYear: 2022
   # 实例演示开关
   demoEnabled: true
-  # 文件路径 示例（ Windows配置D:/ktg/uploadPath，Linux配置 /home/ktg/uploadPath）
-  profile: D:/source_code/j2eeworkspace/ktg-mes/upload
-  #profile: /home/www/uploadPath
+  # 文件路径
+  profile: D:/else/ktg-mes/upload
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数组计算 char 字符验证
@@ -46,8 +45,8 @@ spring:
     enabled: false # 是否启用RabbitMQ
     host: localhost # RabbitMQ 服务的地址
     port: 5672 # RabbitMQ 服务的端口
-    username: mes # RabbitMQ 服务的账号
-    password: mes # RabbitMQ 服务的密码
+    username: guest # RabbitMQ 服务的账号
+    password: guest # RabbitMQ 服务的密码
     virtual-host: / # 默认虚拟主机
     consumer:
       batchSize: 100 # 消费者每次拉取消息的数量

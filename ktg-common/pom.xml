@@ -16,7 +16,6 @@
     </description>
 
     <dependencies>
-
         <!-- Spring框架基本的核心工具 -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -156,7 +155,5 @@
             <artifactId>ureport2-console</artifactId>
             <version>2.2.9</version>
         </dependency>
-
     </dependencies>
-
 </project>

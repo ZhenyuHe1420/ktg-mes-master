@@ -44,9 +44,7 @@ public class SysNoticeServiceImpl implements ISysNoticeService
 
     /**
      * 新增公告
-     * 
      * @param notice 公告信息
-     * @return 结果
      */
     @Override
     public int insertNotice(SysNotice notice)
@@ -56,26 +54,12 @@ public class SysNoticeServiceImpl implements ISysNoticeService
 
     /**
      * 修改公告
-     * 
      * @param notice 公告信息
-     * @return 结果
      */
     @Override
     public int updateNotice(SysNotice notice)
     {
         return noticeMapper.updateNotice(notice);
-    }
-
-    /**
-     * 删除公告对象
-     * 
-     * @param noticeId 公告ID
-     * @return 结果
-     */
-    @Override
-    public int deleteNoticeById(Long noticeId)
-    {
-        return noticeMapper.deleteNoticeById(noticeId);
     }
 
     /**

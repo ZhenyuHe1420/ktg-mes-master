@@ -68,9 +68,7 @@ public interface SysUserMapper
 
     /**
      * 修改用户信息
-     * 
      * @param user 用户信息
-     * @return 结果
      */
     public int updateUser(SysUser user);
 

@@ -18,7 +18,6 @@ public class UReportConfig implements BuildinDatasource {
 
     /**
      * 返回数据源的名称
-     * @return
      */
     @Override
     public String name() {

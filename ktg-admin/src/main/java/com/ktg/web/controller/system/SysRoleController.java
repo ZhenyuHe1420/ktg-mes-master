@@ -32,8 +32,6 @@ import com.ktg.system.service.ISysUserService;
 
 /**
  * 角色信息
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/system/role")
@@ -41,13 +39,10 @@ public class SysRoleController extends BaseController
 {
     @Autowired
     private ISysRoleService roleService;
-
     @Autowired
     private TokenService tokenService;
-    
     @Autowired
     private SysPermissionService permissionService;
-    
     @Autowired
     private ISysUserService userService;
 

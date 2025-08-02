@@ -2,12 +2,8 @@ package com.ktg.web.controller.system;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.core.domain.entity.SysUser;
-import com.ktg.common.utils.StringUtils;
 import com.ktg.framework.message.MessageProvider;
-import com.ktg.system.service.ISysUserService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 消息Controller
- * 
- * @author yinjinlu
- * @date 2023-03-06
  */
 @RestController
 @RequestMapping("/system/message")
@@ -39,8 +32,6 @@ public class SysMessageController extends BaseController
 {
     @Autowired
     private ISysMessageService sysMessageService;
-    @Autowired
-    private ISysUserService sysUserService;
     @Autowired
     private MessageProvider messageProvider;
 
@@ -110,8 +101,7 @@ public class SysMessageController extends BaseController
 	@DeleteMapping("/{messageIds}")
     public AjaxResult remove(@PathVariable Long[] messageIds)
     {
-        for (Long messageId: messageIds
-             ) {
+        for (Long messageId: messageIds) {
             SysMessage sysMessage = sysMessageService.selectSysMessageByMessageId(messageId);
             sysMessage.setDeletedFlag(UserConstants.YES);
             sysMessageService.updateSysMessage(sysMessage);
@@ -121,7 +111,6 @@ public class SysMessageController extends BaseController
 
     /**
      * 全部已读
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('system:message:READ')")
     @GetMapping("/read")
