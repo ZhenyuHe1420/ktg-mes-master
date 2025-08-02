@@ -10,21 +10,17 @@ import com.ktg.system.service.ISysRoleService;
 
 /**
  * 用户权限处理
- * 
- * @author ruoyi
  */
 @Component
 public class SysPermissionService
 {
     @Autowired
     private ISysRoleService roleService;
-
     @Autowired
     private ISysMenuService menuService;
 
     /**
      * 获取角色数据权限
-     * 
      * @param user 用户信息
      * @return 角色权限信息
      */

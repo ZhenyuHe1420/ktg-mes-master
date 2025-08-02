@@ -15,8 +15,6 @@ import com.ktg.common.utils.StringUtils;
 
 /**
  * 认证失败处理类 返回未授权
- * 
- * @author ruoyi
  */
 @Component
 public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint, Serializable
@@ -24,8 +22,7 @@ public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint, S
     private static final long serialVersionUID = -8970718410437077606L;
 
     @Override
-    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException e)
-            throws IOException
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException
     {
         int code = HttpStatus.UNAUTHORIZED;
         String msg = StringUtils.format("请求访问：{}，认证失败，无法访问系统资源", request.getRequestURI());

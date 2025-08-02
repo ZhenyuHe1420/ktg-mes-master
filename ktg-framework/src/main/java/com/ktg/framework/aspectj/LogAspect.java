@@ -29,8 +29,6 @@ import com.ktg.system.domain.SysOperLog;
 
 /**
  * 操作日志记录处理
- * 
- * @author ruoyi
  */
 @Aspect
 @Component
@@ -40,7 +38,6 @@ public class LogAspect
 
     /**
      * 处理完请求后执行
-     *
      * @param joinPoint 切点
      */
     @AfterReturning(pointcut = "@annotation(controllerLog)", returning = "jsonResult")
@@ -51,7 +48,6 @@ public class LogAspect
 
     /**
      * 拦截异常操作
-     * 
      * @param joinPoint 切点
      * @param e 异常
      */

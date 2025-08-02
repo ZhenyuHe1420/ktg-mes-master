@@ -22,8 +22,6 @@ import com.ktg.common.utils.ip.IpUtils;
 
 /**
  * 限流处理
- *
- * @author ruoyi
  */
 @Aspect
 @Component

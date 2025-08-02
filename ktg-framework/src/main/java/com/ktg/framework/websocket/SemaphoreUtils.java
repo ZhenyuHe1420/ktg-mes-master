@@ -6,8 +6,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 信号量相关处理
- * 
- * @author ruoyi
  */
 public class SemaphoreUtils
 {
@@ -18,9 +16,6 @@ public class SemaphoreUtils
 
     /**
      * 获取信号量
-     * 
-     * @param semaphore
-     * @return
      */
     public static boolean tryAcquire(Semaphore semaphore)
     {
@@ -40,12 +35,9 @@ public class SemaphoreUtils
 
     /**
      * 释放信号量
-     * 
-     * @param semaphore
      */
     public static void release(Semaphore semaphore)
     {
-
         try
         {
             semaphore.release();

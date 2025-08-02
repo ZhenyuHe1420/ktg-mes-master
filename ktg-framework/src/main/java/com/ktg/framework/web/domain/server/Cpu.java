@@ -4,8 +4,6 @@ import com.ktg.common.utils.Arith;
 
 /**
  * CPU相关信息
- * 
- * @author ruoyi
  */
 public class Cpu
 {

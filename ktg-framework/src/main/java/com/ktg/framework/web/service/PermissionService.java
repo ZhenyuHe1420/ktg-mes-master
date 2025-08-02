@@ -10,8 +10,6 @@ import com.ktg.common.utils.StringUtils;
 
 /**
  * RuoYi首创 自定义权限实现，ss取自SpringSecurity首字母
- * 
- * @author ruoyi
  */
 @Service("ss")
 public class PermissionService
@@ -28,7 +26,6 @@ public class PermissionService
 
     /**
      * 验证用户是否具备某权限
-     * 
      * @param permission 权限字符串
      * @return 用户是否具备某权限
      */

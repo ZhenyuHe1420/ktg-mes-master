@@ -20,8 +20,6 @@ import com.ktg.framework.security.handle.LogoutSuccessHandlerImpl;
 
 /**
  * spring security配置
- *
- * @author ruoyi
  */
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter
@@ -58,9 +56,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 
     /**
      * 解决 无法直接注入 AuthenticationManager
-     *
-     * @return
-     * @throws Exception
      */
     @Bean
     @Override
@@ -117,7 +112,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                 .antMatchers("/websocket/**").anonymous()
                 .antMatchers("/print/client/getAll").anonymous()
                 .antMatchers("/system/autocode/get/**").permitAll()
-                .antMatchers("/mobile/print/printerconfig/*").permitAll()
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated()
                 .and()

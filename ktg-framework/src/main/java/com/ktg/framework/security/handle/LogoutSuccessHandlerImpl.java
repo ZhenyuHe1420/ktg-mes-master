@@ -21,8 +21,6 @@ import com.ktg.framework.web.service.TokenService;
 
 /**
  * 自定义退出处理类 返回成功
- * 
- * @author ruoyi
  */
 @Configuration
 public class LogoutSuccessHandlerImpl implements LogoutSuccessHandler
@@ -32,12 +30,9 @@ public class LogoutSuccessHandlerImpl implements LogoutSuccessHandler
 
     /**
      * 退出处理
-     * 
-     * @return
      */
     @Override
-    public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
-            throws IOException, ServletException
+    public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException
     {
         LoginUser loginUser = tokenService.getLoginUser(request);
         if (StringUtils.isNotNull(loginUser))

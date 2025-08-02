@@ -26,8 +26,6 @@ import com.ktg.common.utils.StringUtils;
 
 /**
  * Mybatis支持*匹配扫描包
- * 
- * @author ruoyi
  */
 @Configuration
 public class MyBatisConfig

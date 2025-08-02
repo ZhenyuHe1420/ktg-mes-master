@@ -26,8 +26,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * websocket 消息处理
- * 
- * @author ruoyi
  */
 @Component
 @ServerEndpoint("/websocket/message/{token}")

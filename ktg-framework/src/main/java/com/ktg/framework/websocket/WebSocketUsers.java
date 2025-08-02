@@ -13,8 +13,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * websocket 客户端用户集
- * 
- * @author ruoyi
  */
 public class WebSocketUsers
 {
@@ -41,9 +39,7 @@ public class WebSocketUsers
 
     /**
      * 移除用户
-     *
      * @param session 用户信息
-     *
      * @return 移除结果
      */
     public static boolean remove(Session session)
@@ -72,7 +68,6 @@ public class WebSocketUsers
 
     /**
      * 移出用户
-     *
      * @param key 键
      */
     public static boolean remove(String key)
@@ -93,7 +88,6 @@ public class WebSocketUsers
 
     /**
      * 获取在线用户列表
-     *
      * @return 返回用户集合
      */
     public static Map<String, Session> getUsers()
@@ -103,7 +97,6 @@ public class WebSocketUsers
 
     /**
      * 群发消息文本消息
-     *
      * @param message 消息内容
      */
     public static void sendMessageToUsersByText(String message)
@@ -117,7 +110,6 @@ public class WebSocketUsers
 
     /**
      * 发送文本消息
-     *
      * @param session 自己的用户名
      * @param message 消息内容
      */

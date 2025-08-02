@@ -17,8 +17,6 @@ import com.ktg.framework.datasource.DynamicDataSourceContextHolder;
 
 /**
  * 多数据源处理
- * 
- * @author ruoyi
  */
 @Aspect
 @Order(1)
@@ -27,8 +25,7 @@ public class DataSourceAspect
 {
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Pointcut("@annotation(com.ktg.common.annotation.DataSource)"
-            + "|| @within(com.ktg.common.annotation.DataSource)")
+    @Pointcut("@annotation(com.ktg.common.annotation.DataSource)" + "|| @within(com.ktg.common.annotation.DataSource)")
     public void dsPointCut()
     {
 

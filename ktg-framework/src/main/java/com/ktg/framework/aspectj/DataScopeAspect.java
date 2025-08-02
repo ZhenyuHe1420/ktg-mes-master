@@ -14,8 +14,6 @@ import com.ktg.common.utils.SecurityUtils;
 
 /**
  * 数据过滤处理
- *
- * @author ruoyi
  */
 @Aspect
 @Component
@@ -68,15 +66,13 @@ public class DataScopeAspect
             // 如果是超级管理员，则不过滤数据
             if (StringUtils.isNotNull(currentUser) && !currentUser.isAdmin())
             {
-                dataScopeFilter(joinPoint, currentUser, controllerDataScope.deptAlias(),
-                        controllerDataScope.userAlias());
+                dataScopeFilter(joinPoint, currentUser, controllerDataScope.deptAlias(), controllerDataScope.userAlias());
             }
         }
     }
 
     /**
      * 数据范围过滤
-     *
      * @param joinPoint 切点
      * @param user 用户
      * @param userAlias 别名

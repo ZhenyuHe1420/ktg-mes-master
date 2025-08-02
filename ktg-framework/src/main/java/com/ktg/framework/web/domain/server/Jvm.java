@@ -6,8 +6,6 @@ import com.ktg.common.utils.DateUtils;
 
 /**
  * JVM相关信息
- * 
- * @author ruoyi
  */
 public class Jvm
 {
