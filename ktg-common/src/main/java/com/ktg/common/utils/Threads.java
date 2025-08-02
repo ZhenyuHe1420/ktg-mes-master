@@ -9,28 +9,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 线程相关工具类.
- * 
- * @author ruoyi
+ * 线程相关工具类
  */
 public class Threads
 {
     private static final Logger logger = LoggerFactory.getLogger(Threads.class);
-
-    /**
-     * sleep等待,单位为毫秒
-     */
-    public static void sleep(long milliseconds)
-    {
-        try
-        {
-            Thread.sleep(milliseconds);
-        }
-        catch (InterruptedException e)
-        {
-            return;
-        }
-    }
 
     /**
      * 停止线程池

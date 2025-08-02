@@ -7,14 +7,11 @@ import com.ktg.common.utils.StringUtils;
 
 /**
  * 获取IP方法
- * 
- * @author ruoyi
  */
 public class IpUtils
 {
     /**
      * 获取客户端IP
-     * 
      * @param request 请求对象
      * @return IP地址
      */
@@ -52,9 +49,7 @@ public class IpUtils
 
     /**
      * 检查是否为内部IP地址
-     * 
      * @param ip IP地址
-     * @return 结果
      */
     public static boolean internalIp(String ip)
     {
@@ -64,9 +59,7 @@ public class IpUtils
 
     /**
      * 检查是否为内部IP地址
-     * 
      * @param addr byte地址
-     * @return 结果
      */
     private static boolean internalIp(byte[] addr)
     {
@@ -107,7 +100,6 @@ public class IpUtils
 
     /**
      * 将IPv4地址转换成字节
-     * 
      * @param text IPv4地址
      * @return byte 字节
      */
@@ -195,7 +187,6 @@ public class IpUtils
 
     /**
      * 获取IP地址
-     * 
      * @return 本地IP地址
      */
     public static String getHostIp()
@@ -212,7 +203,6 @@ public class IpUtils
 
     /**
      * 获取主机名
-     * 
      * @return 本地主机名
      */
     public static String getHostName()
@@ -229,7 +219,6 @@ public class IpUtils
 
     /**
      * 从多级反向代理中获得第一个非unknown IP地址
-     *
      * @param ip 获得的IP地址
      * @return 第一个非unknown IP地址
      */
@@ -253,7 +242,6 @@ public class IpUtils
 
     /**
      * 检测给定字符串是否为未知，多用于检测HTTP请求相关
-     *
      * @param checkString 被检测的字符串
      * @return 是否未知
      */

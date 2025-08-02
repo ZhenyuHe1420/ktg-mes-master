@@ -16,8 +16,6 @@ import com.ktg.common.core.text.Convert;
 
 /**
  * 客户端工具类
- * 
- * @author ruoyi
  */
 public class ServletUtils
 {
@@ -30,14 +28,6 @@ public class ServletUtils
     }
 
     /**
-     * 获取String参数
-     */
-    public static String getParameter(String name, String defaultValue)
-    {
-        return Convert.toStr(getRequest().getParameter(name), defaultValue);
-    }
-
-    /**
      * 获取Integer参数
      */
     public static Integer getParameterToInt(String name)
@@ -46,27 +36,11 @@ public class ServletUtils
     }
 
     /**
-     * 获取Integer参数
-     */
-    public static Integer getParameterToInt(String name, Integer defaultValue)
-    {
-        return Convert.toInt(getRequest().getParameter(name), defaultValue);
-    }
-
-    /**
      * 获取Boolean参数
      */
     public static Boolean getParameterToBool(String name)
     {
         return Convert.toBool(getRequest().getParameter(name));
-    }
-
-    /**
-     * 获取Boolean参数
-     */
-    public static Boolean getParameterToBool(String name, Boolean defaultValue)
-    {
-        return Convert.toBool(getRequest().getParameter(name), defaultValue);
     }
 
     /**
@@ -85,14 +59,6 @@ public class ServletUtils
         return getRequestAttributes().getResponse();
     }
 
-    /**
-     * 获取session
-     */
-    public static HttpSession getSession()
-    {
-        return getRequest().getSession();
-    }
-
     public static ServletRequestAttributes getRequestAttributes()
     {
         RequestAttributes attributes = RequestContextHolder.getRequestAttributes();
@@ -101,7 +67,6 @@ public class ServletUtils
 
     /**
      * 将字符串渲染到客户端
-     * 
      * @param response 渲染对象
      * @param string 待渲染的字符串
      */
@@ -121,55 +86,7 @@ public class ServletUtils
     }
 
     /**
-     * 是否是Ajax异步请求
-     * 
-     * @param request
-     */
-    public static boolean isAjaxRequest(HttpServletRequest request)
-    {
-        String accept = request.getHeader("accept");
-        if (accept != null && accept.contains("application/json"))
-        {
-            return true;
-        }
-
-        String xRequestedWith = request.getHeader("X-Requested-With");
-        if (xRequestedWith != null && xRequestedWith.contains("XMLHttpRequest"))
-        {
-            return true;
-        }
-
-        String uri = request.getRequestURI();
-        if (StringUtils.inStringIgnoreCase(uri, ".json", ".xml"))
-        {
-            return true;
-        }
-
-        String ajax = request.getParameter("__ajax");
-        return StringUtils.inStringIgnoreCase(ajax, "json", "xml");
-    }
-
-    /**
-     * 内容编码
-     *
-     * @param str 内容
-     * @return 编码后的内容
-     */
-    public static String urlEncode(String str)
-    {
-        try
-        {
-            return URLEncoder.encode(str, Constants.UTF8);
-        }
-        catch (UnsupportedEncodingException e)
-        {
-            return StringUtils.EMPTY;
-        }
-    }
-
-    /**
      * 内容解码
-     *
      * @param str 内容
      * @return 解码后的内容
      */
@@ -184,5 +101,4 @@ public class ServletUtils
             return StringUtils.EMPTY;
         }
     }
-
 }

@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Objects;
-
 import com.ktg.common.config.MinioConfig;
 import com.ktg.common.config.RuoYiConfig;
 import org.apache.commons.io.FilenameUtils;
@@ -19,8 +18,6 @@ import com.ktg.common.utils.uuid.Seq;
 
 /**
  * 文件上传工具类
- *
- * @author ruoyi
  */
 public class FileUploadUtils
 {
@@ -49,7 +46,6 @@ public class FileUploadUtils
         return defaultBaseDir;
     }
 
-
     /**
      * Minio默认上传的地址
      */
@@ -62,10 +58,8 @@ public class FileUploadUtils
 
     /**
      * 以默认配置进行文件上传
-     *
      * @param file 上传的文件
      * @return 文件名称
-     * @throws Exception
      */
     public static final String upload(MultipartFile file) throws IOException
     {
@@ -81,11 +75,9 @@ public class FileUploadUtils
 
     /**
      * 根据文件路径上传
-     *
      * @param baseDir 相对应用的基目录
      * @param file 上传的文件
      * @return 文件名称
-     * @throws IOException
      */
     public static final String upload(String baseDir, MultipartFile file) throws IOException
     {
@@ -101,7 +93,6 @@ public class FileUploadUtils
 
     /**
      * 文件上传
-     *
      * @param baseDir 相对应用的基目录
      * @param file 上传的文件
      * @param allowedExtension 上传文件类型
@@ -132,35 +123,14 @@ public class FileUploadUtils
 
     /**
      * 以默认BucketName配置上传到Minio服务器
-     *
      * @param file 上传的文件
      * @return 文件名称
-     * @throws Exception
      */
     public static final String uploadMinio(MultipartFile file) throws IOException
     {
         try
         {
             return uploadMinino(getBucketName(), file, MimeTypeUtils.DEFAULT_ALLOWED_EXTENSION);
-        }
-        catch (Exception e)
-        {
-            throw new IOException(e.getMessage(), e);
-        }
-    }
-
-    /**
-     * 自定义bucketName配置上传到Minio服务器
-     *
-     * @param file 上传的文件
-     * @return 文件名称
-     * @throws Exception
-     */
-    public static final String uploadMinio(MultipartFile file, String bucketName) throws IOException
-    {
-        try
-        {
-            return uploadMinino(bucketName, file, MimeTypeUtils.DEFAULT_ALLOWED_EXTENSION);
         }
         catch (Exception e)
         {
@@ -189,7 +159,6 @@ public class FileUploadUtils
             throw new IOException(e.getMessage(), e);
         }
     }
-
 
     /**
      * 编码文件名
@@ -223,11 +192,7 @@ public class FileUploadUtils
 
     /**
      * 文件大小校验
-     *
      * @param file 上传的文件
-     * @return
-     * @throws FileSizeLimitExceededException 如果超出最大大小
-     * @throws InvalidExtensionException
      */
     public static final void assertAllowed(MultipartFile file, String[] allowedExtension)
             throws FileSizeLimitExceededException, InvalidExtensionException
@@ -272,10 +237,6 @@ public class FileUploadUtils
 
     /**
      * 判断MIME类型是否是允许的MIME类型
-     *
-     * @param extension
-     * @param allowedExtension
-     * @return
      */
     public static final boolean isAllowedExtension(String extension, String[] allowedExtension)
     {
@@ -291,7 +252,6 @@ public class FileUploadUtils
 
     /**
      * 获取文件名的后缀
-     *
      * @param file 表单文件
      * @return 后缀名
      */

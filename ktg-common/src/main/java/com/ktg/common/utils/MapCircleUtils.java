@@ -5,9 +5,7 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 /**
- * @author yinjinlu
- * @description 物料BOM环形依赖关系有向图检测
- * @date 2024/12/18
+ * 物料BOM环形依赖关系有向图检测
  */
 @Service
 public class MapCircleUtils {
@@ -36,7 +34,6 @@ public class MapCircleUtils {
         adj.putIfAbsent(v, new ArrayList<>());
         adj.putIfAbsent(w, new ArrayList<>());
         adj.get(v).add(w);
-//        adj.get(w).add(v); // 对于无向图，添加反向边
     }
 
     /**
@@ -47,21 +44,11 @@ public class MapCircleUtils {
         adj.putIfAbsent(vertex, new ArrayList<>());
     }
 
-
-    /**
-     * 返回图中的顶点数量
-     * @return
-     */
-    public int getVertices() {
-        return adj.size();
-    }
-
     /**
      * 检测从顶点 v 出发是否存在环
      * @param v
      * @param visited
      * @param onStack
-     * @return
      */
     private boolean isCircleUtil(Long v, boolean[] visited, boolean[] onStack) {
         if (visited[v.intValue()]) {
@@ -87,7 +74,6 @@ public class MapCircleUtils {
 
     /**
      * 图中顶点索引的最大值
-     * @return
      */
     private Long getMaxVertextIndex(){
         return adj.isEmpty() ? -1L : Collections.max(adj.keySet());
@@ -95,7 +81,6 @@ public class MapCircleUtils {
 
     /**
      * 检测图中是否存在环
-     * @return
      */
     public boolean hasCircle() {
         Long max = getMaxVertextIndex();

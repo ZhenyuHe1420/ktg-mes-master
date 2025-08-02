@@ -13,15 +13,9 @@ import org.apache.commons.lang3.time.DateFormatUtils;
 
 /**
  * 时间工具类
- * 
- * @author ruoyi
  */
 public class DateUtils extends org.apache.commons.lang3.time.DateUtils
 {
-    public static String YYYY = "yyyy";
-
-    public static String YYYY_MM = "yyyy-MM";
-
     public static String YYYY_MM_DD = "yyyy-MM-dd";
 
     public static String YYYYMMDDHHMMSS = "yyyyMMddHHmmss";
@@ -35,7 +29,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils
 
     /**
      * 获取当前Date型日期
-     * 
      * @return Date() 当前日期
      */
     public static Date getNowDate()
@@ -45,8 +38,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils
 
     /**
      * 获取当前日期, 默认格式为yyyy-MM-dd
-     * 
-     * @return String
      */
     public static String getDate()
     {
@@ -68,26 +59,9 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils
         return parseDateToStr(format, new Date());
     }
 
-    public static final String dateTime(final Date date)
-    {
-        return parseDateToStr(YYYY_MM_DD, date);
-    }
-
     public static final String parseDateToStr(final String format, final Date date)
     {
         return new SimpleDateFormat(format).format(date);
-    }
-
-    public static final Date dateTime(final String format, final String ts)
-    {
-        try
-        {
-            return new SimpleDateFormat(format).parse(ts);
-        }
-        catch (ParseException e)
-        {
-            throw new RuntimeException(e);
-        }
     }
 
     /**
@@ -97,15 +71,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils
     {
         Date now = new Date();
         return DateFormatUtils.format(now, "yyyy/MM/dd");
-    }
-
-    /**
-     * 日期路径 即年/月/日 如20180808
-     */
-    public static final String dateTime()
-    {
-        Date now = new Date();
-        return DateFormatUtils.format(now, "yyyyMMdd");
     }
 
     /**
@@ -137,14 +102,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils
     }
 
     /**
-     * 计算相差天数
-     */
-    public static int differentDaysByMillisecond(Date date1, Date date2)
-    {
-        return Math.abs((int) ((date2.getTime() - date1.getTime()) / (1000 * 3600 * 24)));
-    }
-
-    /**
      * 计算两个时间差
      */
     public static String getDatePoor(Date endDate, Date nowDate)
@@ -152,7 +109,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils
         long nd = 1000 * 24 * 60 * 60;
         long nh = 1000 * 60 * 60;
         long nm = 1000 * 60;
-        // long ns = 1000;
         // 获得两个时间的毫秒时间差异
         long diff = endDate.getTime() - nowDate.getTime();
         // 计算差多少天

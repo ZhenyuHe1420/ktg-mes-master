@@ -11,13 +11,14 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * Minio工具类
+ */
 public class MinioUtil {
     /**
      * 上传文件
-     *
      * @param bucketName 桶名称
      * @param fileName
-     * @throws IOException
      */
     public static String uploadFile(String bucketName, String fileName, MultipartFile multipartFile) throws IOException
     {

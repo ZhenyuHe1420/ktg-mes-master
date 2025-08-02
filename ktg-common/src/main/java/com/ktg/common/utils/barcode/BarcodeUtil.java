@@ -14,7 +14,6 @@ import org.krysalis.barcode4j.impl.upcean.EAN13Bean;
 import org.krysalis.barcode4j.impl.upcean.UPCABean;
 import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
 import org.krysalis.barcode4j.tools.UnitConv;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
@@ -26,6 +25,9 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * 条形码工具类
+ */
 public class BarcodeUtil {
 	private static final String CHARSET = "utf-8";
 	private static final String FORMAT_NAME = "PNG";
@@ -61,12 +63,12 @@ public class BarcodeUtil {
 		}
         return file;
     }
+
     /**
      * 生成一维条形码
      * @param msg 条形码的内容
      * @param barCodeFormat 条形码格式 see {@link UserConstants}
      * @param destFilePath  条形码存储的路径
-     * @throws Exception 
      */
     public static void generateLineCode(String msg,String barCodeFormat,String destFilePath) throws Exception {
     	AbstractBarcodeBean bean = null;
@@ -110,12 +112,10 @@ public class BarcodeUtil {
     }
     /**
      * 生成带logo二维码，并保存到磁盘
-     *
      * @param content      二维码的内容
      * @param imgPath      二维码内部插入的图片路径，如果不需要可以传空
      * @param destFilePath     整个二维码存储的路径
      * @param needCompress 二维码内部插入的图片是否需要压缩的标识
-     * @throws Exception 异常
      */
     public static void generateQRCode(String content, String imgPath, String destFilePath, boolean needCompress) throws Exception {
         BufferedImage image = createQrCode(content, imgPath, needCompress);
@@ -162,14 +162,13 @@ public class BarcodeUtil {
         insertImage(image, imagePath, needCompress);
         return image;
     }
+
     /**
      * 将logo插入二维码中间
-     *
      * @param source       生成的二位码存储对象
      * @param imagePath    二维码内部图片的路径
      * 一般的业务场景会把插入的小logo放到oss生成url
      * @param needCompress 二维码内部图片是否需要压缩
-     * @throws IOException 异常
      */
     private static void insertImage(BufferedImage source, String imagePath, boolean needCompress) throws IOException {
         File file = new File(imagePath);
@@ -205,12 +204,9 @@ public class BarcodeUtil {
         graphics.draw(shape);
         graphics.dispose();
     }
-    
-    
+
     public static void main(String[] args) {
     	String msg="item12345678";
-    	String EANmsg="012345678901";
-    	String UPCmsg="12345678901";
     	String path = "D:/test/barcode/"+UUID.randomUUID()+".png";  
     	generateBarCode(msg, UserConstants.QR_CODE, path);
 	}
