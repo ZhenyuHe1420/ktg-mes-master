@@ -30,8 +30,6 @@ import com.ktg.generator.service.IGenTableService;
 
 /**
  * 代码生成 操作处理
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/tool/gen")
@@ -39,7 +37,6 @@ public class GenController extends BaseController
 {
     @Autowired
     private IGenTableService genTableService;
-
     @Autowired
     private IGenTableColumnService genTableColumnService;
 

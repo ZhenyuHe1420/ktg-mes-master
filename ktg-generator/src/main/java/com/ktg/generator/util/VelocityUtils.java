@@ -14,8 +14,6 @@ import com.ktg.generator.domain.GenTableColumn;
 
 /**
  * 模板处理工具类
- * 
- * @author ruoyi
  */
 public class VelocityUtils
 {
@@ -30,7 +28,6 @@ public class VelocityUtils
 
     /**
      * 设置模板变量信息
-     *
      * @return 模板列表
      */
     public static VelocityContext prepareContext(GenTable genTable)

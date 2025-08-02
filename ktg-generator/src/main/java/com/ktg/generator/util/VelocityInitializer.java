@@ -6,8 +6,6 @@ import com.ktg.common.constant.Constants;
 
 /**
  * VelocityEngine工厂
- * 
- * @author ktg
  */
 public class VelocityInitializer
 {
