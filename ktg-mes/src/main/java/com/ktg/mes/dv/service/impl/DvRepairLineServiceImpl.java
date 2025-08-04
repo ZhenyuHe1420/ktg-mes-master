@@ -10,9 +10,6 @@ import com.ktg.mes.dv.service.IDvRepairLineService;
 
 /**
  * 设备维修单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-08-08
  */
 @Service
 public class DvRepairLineServiceImpl implements IDvRepairLineService 
@@ -22,7 +19,6 @@ public class DvRepairLineServiceImpl implements IDvRepairLineService
 
     /**
      * 查询设备维修单行
-     * 
      * @param lineId 设备维修单行主键
      * @return 设备维修单行
      */
@@ -34,7 +30,6 @@ public class DvRepairLineServiceImpl implements IDvRepairLineService
 
     /**
      * 查询设备维修单行列表
-     * 
      * @param dvRepairLine 设备维修单行
      * @return 设备维修单行
      */
@@ -46,9 +41,7 @@ public class DvRepairLineServiceImpl implements IDvRepairLineService
 
     /**
      * 新增设备维修单行
-     * 
      * @param dvRepairLine 设备维修单行
-     * @return 结果
      */
     @Override
     public int insertDvRepairLine(DvRepairLine dvRepairLine)
@@ -59,9 +52,7 @@ public class DvRepairLineServiceImpl implements IDvRepairLineService
 
     /**
      * 修改设备维修单行
-     * 
      * @param dvRepairLine 设备维修单行
-     * @return 结果
      */
     @Override
     public int updateDvRepairLine(DvRepairLine dvRepairLine)
@@ -72,30 +63,11 @@ public class DvRepairLineServiceImpl implements IDvRepairLineService
 
     /**
      * 批量删除设备维修单行
-     * 
      * @param lineIds 需要删除的设备维修单行主键
-     * @return 结果
      */
     @Override
     public int deleteDvRepairLineByLineIds(Long[] lineIds)
     {
         return dvRepairLineMapper.deleteDvRepairLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除设备维修单行信息
-     * 
-     * @param lineId 设备维修单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteDvRepairLineByLineId(Long lineId)
-    {
-        return dvRepairLineMapper.deleteDvRepairLineByLineId(lineId);
-    }
-
-    @Override
-    public int deleteByRepairId(Long repairId) {
-        return dvRepairLineMapper.deleteByRepairId(repairId);
     }
 }

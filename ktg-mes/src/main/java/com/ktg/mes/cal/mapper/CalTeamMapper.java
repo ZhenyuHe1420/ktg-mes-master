@@ -35,12 +35,6 @@ public interface CalTeamMapper
     int updateCalTeam(CalTeam calTeam);
 
     /**
-     * 删除班组
-     * @param teamId 班组主键
-     */
-    int deleteCalTeamByTeamId(Long teamId);
-
-    /**
      * 批量删除班组
      * @param teamIds 需要删除的数据主键集合
      */

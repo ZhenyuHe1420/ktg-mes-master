@@ -10,9 +10,6 @@ import com.ktg.mes.dv.service.IDvMaintenRecordService;
 
 /**
  * 设备保养记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-12-26
  */
 @Service
 public class DvMaintenRecordServiceImpl implements IDvMaintenRecordService 
@@ -22,7 +19,6 @@ public class DvMaintenRecordServiceImpl implements IDvMaintenRecordService
 
     /**
      * 查询设备保养记录
-     * 
      * @param recordId 设备保养记录主键
      * @return 设备保养记录
      */
@@ -34,7 +30,6 @@ public class DvMaintenRecordServiceImpl implements IDvMaintenRecordService
 
     /**
      * 查询设备保养记录列表
-     * 
      * @param dvMaintenRecord 设备保养记录
      * @return 设备保养记录
      */
@@ -46,9 +41,7 @@ public class DvMaintenRecordServiceImpl implements IDvMaintenRecordService
 
     /**
      * 新增设备保养记录
-     * 
      * @param dvMaintenRecord 设备保养记录
-     * @return 结果
      */
     @Override
     public int insertDvMaintenRecord(DvMaintenRecord dvMaintenRecord)
@@ -59,9 +52,7 @@ public class DvMaintenRecordServiceImpl implements IDvMaintenRecordService
 
     /**
      * 修改设备保养记录
-     * 
      * @param dvMaintenRecord 设备保养记录
-     * @return 结果
      */
     @Override
     public int updateDvMaintenRecord(DvMaintenRecord dvMaintenRecord)
@@ -72,25 +63,11 @@ public class DvMaintenRecordServiceImpl implements IDvMaintenRecordService
 
     /**
      * 批量删除设备保养记录
-     * 
      * @param recordIds 需要删除的设备保养记录主键
-     * @return 结果
      */
     @Override
     public int deleteDvMaintenRecordByRecordIds(Long[] recordIds)
     {
         return dvMaintenRecordMapper.deleteDvMaintenRecordByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除设备保养记录信息
-     * 
-     * @param recordId 设备保养记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteDvMaintenRecordByRecordId(Long recordId)
-    {
-        return dvMaintenRecordMapper.deleteDvMaintenRecordByRecordId(recordId);
     }
 }

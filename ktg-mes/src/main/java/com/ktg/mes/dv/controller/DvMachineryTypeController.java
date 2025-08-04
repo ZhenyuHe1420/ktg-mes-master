@@ -2,7 +2,6 @@ package com.ktg.mes.dv.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.dv.domain.DvMachinery;
@@ -28,9 +27,6 @@ import com.ktg.common.utils.poi.ExcelUtil;
 
 /**
  * 设备类型Controller
- * 
- * @author yinjinlu
- * @date 2022-05-08
  */
 @RestController
 @RequestMapping("/mes/dv/machinerytype")
@@ -38,12 +34,11 @@ public class DvMachineryTypeController extends BaseController
 {
     @Autowired
     private IDvMachineryTypeService dvMachineryTypeService;
-
     @Autowired
     private IDvMachineryService dvMachineryService;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
+
     /**
      * 查询设备类型列表
      */

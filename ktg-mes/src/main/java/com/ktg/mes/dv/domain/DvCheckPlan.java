@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 设备点检计划头对象 dv_check_plan
- * 
- * @author yinjinlu
- * @date 2022-06-16
  */
 public class DvCheckPlan extends BaseEntity
 {

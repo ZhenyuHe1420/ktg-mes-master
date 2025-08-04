@@ -37,12 +37,6 @@ public interface CalPlanTeamMapper
     int updateCalPlanTeam(CalPlanTeam calPlanTeam);
 
     /**
-     * 删除计划班组
-     * @param recordId 计划班组主键
-     */
-    int deleteCalPlanTeamByRecordId(Long recordId);
-
-    /**
      * 批量删除计划班组
      * @param recordIds 需要删除的数据主键集合
      */

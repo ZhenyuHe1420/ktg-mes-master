@@ -33,16 +33,4 @@ public interface CalTeamshiftMapper
      * @param calTeamshift 班组排班
      */
     int updateCalTeamshift(CalTeamshift calTeamshift);
-
-    /**
-     * 删除班组排班
-     * @param recordId 班组排班主键
-     */
-    int deleteCalTeamshiftByRecordId(Long recordId);
-
-    /**
-     * 批量删除班组排班
-     * @param recordIds 需要删除的数据主键集合
-     */
-    int deleteCalTeamshiftByRecordIds(Long[] recordIds);
 }

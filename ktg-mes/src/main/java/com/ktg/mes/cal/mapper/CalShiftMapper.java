@@ -37,12 +37,6 @@ public interface CalShiftMapper
     int updateCalShift(CalShift calShift);
 
     /**
-     * 删除计划班次
-     * @param shiftId 计划班次主键
-     */
-    int deleteCalShiftByShiftId(Long shiftId);
-
-    /**
      * 批量删除计划班次
      * @param shiftIds 需要删除的数据主键集合
      */

@@ -31,18 +31,6 @@ public interface CalTeamMemberMapper
      */
     int insertCalTeamMember(CalTeamMember calTeamMember);
 
-    /**
-     * 修改班组成员
-     * @param calTeamMember 班组成员
-     */
-    int updateCalTeamMember(CalTeamMember calTeamMember);
-
-    /**
-     * 删除班组成员
-     * @param memberId 班组成员主键
-     */
-    int deleteCalTeamMemberByMemberId(Long memberId);
-
     int deleteByTeamId(Long teamId);
 
     /**

@@ -25,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 点检项目Controller
- * 
- * @author yinjinlu
- * @date 2022-06-18
  */
 @RestController
 @RequestMapping("/mes/dv/checksubject")

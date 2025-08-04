@@ -35,12 +35,6 @@ public interface CalPlanMapper
     int updateCalPlan(CalPlan calPlan);
 
     /**
-     * 删除排班计划
-     * @param planId 排班计划主键
-     */
-    int deleteCalPlanByPlanId(Long planId);
-
-    /**
      * 批量删除排班计划
      * @param planIds 需要删除的数据主键集合
      */

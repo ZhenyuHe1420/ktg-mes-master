@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 点检项目对象 dv_check_subject
- * 
- * @author yinjinlu
- * @date 2022-06-18
  */
 public class DvCheckSubject extends BaseEntity
 {

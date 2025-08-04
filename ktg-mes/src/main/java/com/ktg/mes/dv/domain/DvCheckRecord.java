@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 设备点检记录对象 dv_check_record
- * 
- * @author yinjinlu
- * @date 2024-12-26
  */
 public class DvCheckRecord extends BaseEntity
 {

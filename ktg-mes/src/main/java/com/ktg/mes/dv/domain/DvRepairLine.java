@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 设备维修单行对象 dv_repair_line
- * 
- * @author yinjinlu
- * @date 2022-08-08
  */
 public class DvRepairLine extends BaseEntity
 {

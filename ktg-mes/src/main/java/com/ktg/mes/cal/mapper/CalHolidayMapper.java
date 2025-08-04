@@ -35,12 +35,6 @@ public interface CalHolidayMapper
     int updateCalHoliday(CalHoliday calHoliday);
 
     /**
-     * 删除节假日设置
-     * @param holidayId 节假日设置主键
-     */
-    int deleteCalHolidayByHolidayId(Long holidayId);
-
-    /**
      * 批量删除节假日设置
      * @param holidayIds 需要删除的数据主键集合
      */

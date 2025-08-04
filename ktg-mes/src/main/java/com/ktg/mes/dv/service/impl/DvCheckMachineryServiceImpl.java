@@ -1,7 +1,6 @@
 package com.ktg.mes.dv.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.dv.service.IDvCheckMachineryService;
 
 /**
  * 点检设备Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-06-17
  */
 @Service
 public class DvCheckMachineryServiceImpl implements IDvCheckMachineryService 
@@ -25,7 +21,6 @@ public class DvCheckMachineryServiceImpl implements IDvCheckMachineryService
 
     /**
      * 查询点检设备
-     * 
      * @param recordId 点检设备主键
      * @return 点检设备
      */
@@ -37,7 +32,6 @@ public class DvCheckMachineryServiceImpl implements IDvCheckMachineryService
 
     /**
      * 查询点检设备列表
-     * 
      * @param dvCheckMachinery 点检设备
      * @return 点检设备
      */
@@ -59,9 +53,7 @@ public class DvCheckMachineryServiceImpl implements IDvCheckMachineryService
 
     /**
      * 新增点检设备
-     * 
      * @param dvCheckMachinery 点检设备
-     * @return 结果
      */
     @Override
     public int insertDvCheckMachinery(DvCheckMachinery dvCheckMachinery)
@@ -72,9 +64,7 @@ public class DvCheckMachineryServiceImpl implements IDvCheckMachineryService
 
     /**
      * 修改点检设备
-     * 
      * @param dvCheckMachinery 点检设备
-     * @return 结果
      */
     @Override
     public int updateDvCheckMachinery(DvCheckMachinery dvCheckMachinery)
@@ -85,26 +75,12 @@ public class DvCheckMachineryServiceImpl implements IDvCheckMachineryService
 
     /**
      * 批量删除点检设备
-     * 
      * @param recordIds 需要删除的点检设备主键
-     * @return 结果
      */
     @Override
     public int deleteDvCheckMachineryByRecordIds(Long[] recordIds)
     {
         return dvCheckMachineryMapper.deleteDvCheckMachineryByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除点检设备信息
-     * 
-     * @param recordId 点检设备主键
-     * @return 结果
-     */
-    @Override
-    public int deleteDvCheckMachineryByRecordId(Long recordId)
-    {
-        return dvCheckMachineryMapper.deleteDvCheckMachineryByRecordId(recordId);
     }
 
     @Override

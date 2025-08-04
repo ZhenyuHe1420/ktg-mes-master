@@ -1,7 +1,6 @@
 package com.ktg.mes.dv.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.utils.DateUtils;
@@ -15,9 +14,6 @@ import com.ktg.mes.dv.service.IDvRepairService;
 
 /**
  * 设备维修单Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-08-06
  */
 @Service
 public class DvRepairServiceImpl implements IDvRepairService 
@@ -27,7 +23,6 @@ public class DvRepairServiceImpl implements IDvRepairService
 
     /**
      * 查询设备维修单
-     * 
      * @param repairId 设备维修单主键
      * @return 设备维修单
      */
@@ -39,7 +34,6 @@ public class DvRepairServiceImpl implements IDvRepairService
 
     /**
      * 查询设备维修单列表
-     * 
      * @param dvRepair 设备维修单
      * @return 设备维修单
      */
@@ -61,9 +55,7 @@ public class DvRepairServiceImpl implements IDvRepairService
 
     /**
      * 新增设备维修单
-     * 
      * @param dvRepair 设备维修单
-     * @return 结果
      */
     @Override
     public int insertDvRepair(DvRepair dvRepair)
@@ -74,9 +66,7 @@ public class DvRepairServiceImpl implements IDvRepairService
 
     /**
      * 修改设备维修单
-     * 
      * @param dvRepair 设备维修单
-     * @return 结果
      */
     @Override
     public int updateDvRepair(DvRepair dvRepair)
@@ -87,9 +77,7 @@ public class DvRepairServiceImpl implements IDvRepairService
 
     /**
      * 批量删除设备维修单
-     * 
      * @param repairIds 需要删除的设备维修单主键
-     * @return 结果
      */
     @Override
     public int deleteDvRepairByRepairIds(Long[] repairIds)
@@ -98,21 +86,7 @@ public class DvRepairServiceImpl implements IDvRepairService
     }
 
     /**
-     * 删除设备维修单信息
-     * 
-     * @param repairId 设备维修单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteDvRepairByRepairId(Long repairId)
-    {
-        return dvRepairMapper.deleteDvRepairByRepairId(repairId);
-    }
-
-    /**
      * 根据设备编码查询设备维修单列表
-     * @param repairDTO
-     * @return
      */
     @Override
     public AjaxResult getRepairList(DvRepairDTO repairDTO) {

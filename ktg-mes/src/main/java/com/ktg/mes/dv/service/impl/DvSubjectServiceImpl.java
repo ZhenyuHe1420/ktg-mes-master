@@ -13,9 +13,6 @@ import com.ktg.mes.dv.service.IDvSubjectService;
 
 /**
  * 设备点检保养项目Service业务层处理
- *
- * @author yinjinlu
- * @date 2022-06-16
  */
 @Service
 public class DvSubjectServiceImpl implements IDvSubjectService
@@ -25,7 +22,6 @@ public class DvSubjectServiceImpl implements IDvSubjectService
 
     /**
      * 查询设备点检保养项目
-     *
      * @param subjectId 设备点检保养项目主键
      * @return 设备点检保养项目
      */
@@ -37,7 +33,6 @@ public class DvSubjectServiceImpl implements IDvSubjectService
 
     /**
      * 查询设备点检保养项目列表
-     *
      * @param dvSubject 设备点检保养项目
      * @return 设备点检保养项目
      */
@@ -59,9 +54,7 @@ public class DvSubjectServiceImpl implements IDvSubjectService
 
     /**
      * 新增设备点检保养项目
-     *
      * @param dvSubject 设备点检保养项目
-     * @return 结果
      */
     @Override
     public int insertDvSubject(DvSubject dvSubject)
@@ -72,9 +65,7 @@ public class DvSubjectServiceImpl implements IDvSubjectService
 
     /**
      * 修改设备点检保养项目
-     *
      * @param dvSubject 设备点检保养项目
-     * @return 结果
      */
     @Override
     public int updateDvSubject(DvSubject dvSubject)
@@ -85,25 +76,11 @@ public class DvSubjectServiceImpl implements IDvSubjectService
 
     /**
      * 批量删除设备点检保养项目
-     *
      * @param subjectIds 需要删除的设备点检保养项目主键
-     * @return 结果
      */
     @Override
     public int deleteDvSubjectBySubjectIds(Long[] subjectIds)
     {
         return dvSubjectMapper.deleteDvSubjectBySubjectIds(subjectIds);
-    }
-
-    /**
-     * 删除设备点检保养项目信息
-     *
-     * @param subjectId 设备点检保养项目主键
-     * @return 结果
-     */
-    @Override
-    public int deleteDvSubjectBySubjectId(Long subjectId)
-    {
-        return dvSubjectMapper.deleteDvSubjectBySubjectId(subjectId);
     }
 }

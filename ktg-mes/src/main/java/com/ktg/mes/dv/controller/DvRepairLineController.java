@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 设备维修单行Controller
- * 
- * @author yinjinlu
- * @date 2022-08-08
  */
 @RestController
 @RequestMapping("/mes/dv/repairline")

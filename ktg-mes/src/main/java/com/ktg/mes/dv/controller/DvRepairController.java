@@ -2,7 +2,6 @@ package com.ktg.mes.dv.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.dv.domain.dto.DvRepairDTO;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -26,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 设备维修单Controller
- * 
- * @author yinjinlu
- * @date 2022-08-06
  */
 @RestController
 @RequestMapping("/mes/dv/repair")

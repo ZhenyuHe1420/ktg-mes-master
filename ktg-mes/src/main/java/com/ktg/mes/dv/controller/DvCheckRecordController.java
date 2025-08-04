@@ -2,7 +2,6 @@ package com.ktg.mes.dv.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.dv.domain.DvCheckRecordLine;
 import com.ktg.mes.dv.domain.DvCheckSubject;
@@ -31,9 +30,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 设备点检记录Controller
- * 
- * @author yinjinlu
- * @date 2024-12-26
  */
 @RestController
 @RequestMapping("/mes/dv/checkrecord")
@@ -41,10 +37,8 @@ public class DvCheckRecordController extends BaseController
 {
     @Autowired
     private IDvCheckRecordService dvCheckRecordService;
-
     @Autowired
     private IDvCheckSubjectService dvCheckSubjectService;
-
     @Autowired
     private IDvCheckRecordLineService dvCheckRecordLineService;
 
@@ -166,7 +160,6 @@ public class DvCheckRecordController extends BaseController
 	@DeleteMapping("/{recordIds}")
     public AjaxResult remove(@PathVariable Long[] recordIds)
     {
-
         for(Long recordId : recordIds){
             dvCheckRecordLineService.deleteDvCheckRecordLineByRecordId(recordId);
         }

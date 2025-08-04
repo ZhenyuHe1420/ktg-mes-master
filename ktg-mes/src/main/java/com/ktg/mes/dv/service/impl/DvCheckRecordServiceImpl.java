@@ -10,9 +10,6 @@ import com.ktg.mes.dv.service.IDvCheckRecordService;
 
 /**
  * 设备点检记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-12-26
  */
 @Service
 public class DvCheckRecordServiceImpl implements IDvCheckRecordService 
@@ -22,7 +19,6 @@ public class DvCheckRecordServiceImpl implements IDvCheckRecordService
 
     /**
      * 查询设备点检记录
-     * 
      * @param recordId 设备点检记录主键
      * @return 设备点检记录
      */
@@ -34,7 +30,6 @@ public class DvCheckRecordServiceImpl implements IDvCheckRecordService
 
     /**
      * 查询设备点检记录列表
-     * 
      * @param dvCheckRecord 设备点检记录
      * @return 设备点检记录
      */
@@ -46,9 +41,7 @@ public class DvCheckRecordServiceImpl implements IDvCheckRecordService
 
     /**
      * 新增设备点检记录
-     * 
      * @param dvCheckRecord 设备点检记录
-     * @return 结果
      */
     @Override
     public int insertDvCheckRecord(DvCheckRecord dvCheckRecord)
@@ -59,9 +52,7 @@ public class DvCheckRecordServiceImpl implements IDvCheckRecordService
 
     /**
      * 修改设备点检记录
-     * 
      * @param dvCheckRecord 设备点检记录
-     * @return 结果
      */
     @Override
     public int updateDvCheckRecord(DvCheckRecord dvCheckRecord)
@@ -72,25 +63,11 @@ public class DvCheckRecordServiceImpl implements IDvCheckRecordService
 
     /**
      * 批量删除设备点检记录
-     * 
      * @param recordIds 需要删除的设备点检记录主键
-     * @return 结果
      */
     @Override
     public int deleteDvCheckRecordByRecordIds(Long[] recordIds)
     {
         return dvCheckRecordMapper.deleteDvCheckRecordByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除设备点检记录信息
-     * 
-     * @param recordId 设备点检记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteDvCheckRecordByRecordId(Long recordId)
-    {
-        return dvCheckRecordMapper.deleteDvCheckRecordByRecordId(recordId);
     }
 }

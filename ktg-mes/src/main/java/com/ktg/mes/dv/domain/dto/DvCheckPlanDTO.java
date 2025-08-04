@@ -8,5 +8,4 @@ public class DvCheckPlanDTO {
     private String planType;
 
     private String machineryCode;
-
 }

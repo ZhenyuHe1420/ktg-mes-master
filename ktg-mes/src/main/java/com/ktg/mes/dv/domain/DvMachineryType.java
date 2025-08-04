@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.TreeEntity;
 
 /**
  * 设备类型对象 dv_machinery_type
- * 
- * @author yinjinlu
- * @date 2022-05-08
  */
 public class DvMachineryType extends TreeEntity
 {

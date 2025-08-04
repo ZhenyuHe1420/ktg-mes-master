@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 设备保养记录行Controller
- * 
- * @author yinjinlu
- * @date 2024-12-26
  */
 @RestController
 @RequestMapping("/mes/dv/maintenrecordline")

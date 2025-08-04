@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 设备保养记录对象 dv_mainten_record
- * 
- * @author yinjinlu
- * @date 2024-12-26
  */
 public class DvMaintenRecord extends BaseEntity
 {

@@ -1,14 +1,12 @@
 package com.ktg.mes.dv.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.dv.domain.dto.DvCheckPlanDTO;
 import com.ktg.mes.dv.service.IDvCheckMachineryService;
-import org.aspectj.weaver.loadtime.Aj;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ktg.mes.dv.mapper.DvCheckPlanMapper;
@@ -17,22 +15,17 @@ import com.ktg.mes.dv.service.IDvCheckPlanService;
 
 /**
  * 设备点检计划头Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-06-16
  */
 @Service
 public class DvCheckPlanServiceImpl implements IDvCheckPlanService 
 {
     @Autowired
     private DvCheckPlanMapper dvCheckPlanMapper;
-
     @Autowired
     private IDvCheckMachineryService dvCheckMachineryService;
 
     /**
      * 查询设备点检计划头
-     * 
      * @param planId 设备点检计划头主键
      * @return 设备点检计划头
      */
@@ -44,7 +37,6 @@ public class DvCheckPlanServiceImpl implements IDvCheckPlanService
 
     /**
      * 查询设备点检计划头列表
-     * 
      * @param dvCheckPlan 设备点检计划头
      * @return 设备点检计划头
      */
@@ -66,9 +58,7 @@ public class DvCheckPlanServiceImpl implements IDvCheckPlanService
 
     /**
      * 新增设备点检计划头
-     * 
      * @param dvCheckPlan 设备点检计划头
-     * @return 结果
      */
     @Override
     public int insertDvCheckPlan(DvCheckPlan dvCheckPlan)
@@ -79,9 +69,7 @@ public class DvCheckPlanServiceImpl implements IDvCheckPlanService
 
     /**
      * 修改设备点检计划头
-     * 
      * @param dvCheckPlan 设备点检计划头
-     * @return 结果
      */
     @Override
     public int updateDvCheckPlan(DvCheckPlan dvCheckPlan)
@@ -92,9 +80,7 @@ public class DvCheckPlanServiceImpl implements IDvCheckPlanService
 
     /**
      * 批量删除设备点检计划头
-     * 
      * @param planIds 需要删除的设备点检计划头主键
-     * @return 结果
      */
     @Override
     public int deleteDvCheckPlanByPlanIds(Long[] planIds)
@@ -103,20 +89,7 @@ public class DvCheckPlanServiceImpl implements IDvCheckPlanService
     }
 
     /**
-     * 删除设备点检计划头信息
-     * 
-     * @param planId 设备点检计划头主键
-     * @return 结果
-     */
-    @Override
-    public int deleteDvCheckPlanByPlanId(Long planId)
-    {
-        return dvCheckPlanMapper.deleteDvCheckPlanByPlanId(planId);
-    }
-
-    /**
      * 根据设备编码和计划类型查询设备点检计划头列表
-     * @return
      */
     @Override
     public AjaxResult getCheckPlan(DvCheckPlanDTO checkPlanDTO) {
@@ -129,11 +102,4 @@ public class DvCheckPlanServiceImpl implements IDvCheckPlanService
         }
         return AjaxResult.success();
     }
-
-    @Override
-    public DvCheckPlan selectDvCheckPlanByMachineryCodeAndType(String machineryCode, String planType) {
-        return dvCheckPlanMapper.selectDvCheckPlanByMachineryCodeAndType(machineryCode, planType);
-    }
-
-
 }

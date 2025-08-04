@@ -26,14 +26,11 @@ public class DvMachineryServiceImpl implements IDvMachineryService
 {
     @Autowired
     private DvMachineryMapper dvMachineryMapper;
-
-
     @Autowired
     private WmBarCodeUtil wmBarCodeUtil;
 
     /**
      * 查询设备
-     * 
      * @param machineryId 设备主键
      * @return 设备
      */
@@ -45,7 +42,6 @@ public class DvMachineryServiceImpl implements IDvMachineryService
 
     /**
      * 查询设备列表
-     * 
      * @param dvMachinery 设备
      * @return 设备
      */
@@ -57,9 +53,7 @@ public class DvMachineryServiceImpl implements IDvMachineryService
 
     /**
      * 新增设备
-     *
      * @param dvMachinery 设备
-     * @return 结果
      */
     @Override
     public AjaxResult insertDvMachinery(DvMachinery dvMachinery)
@@ -76,9 +70,7 @@ public class DvMachineryServiceImpl implements IDvMachineryService
 
     /**
      * 修改设备
-     *
      * @param dvMachinery 设备
-     * @return 结果
      */
     @Override
     public AjaxResult updateDvMachinery(DvMachinery dvMachinery)
@@ -89,26 +81,12 @@ public class DvMachineryServiceImpl implements IDvMachineryService
 
     /**
      * 批量删除设备
-     * 
      * @param machineryIds 需要删除的设备主键
-     * @return 结果
      */
     @Override
     public int deleteDvMachineryByMachineryIds(Long[] machineryIds)
     {
         return dvMachineryMapper.deleteDvMachineryByMachineryIds(machineryIds);
-    }
-
-    /**
-     * 删除设备信息
-     * 
-     * @param machineryId 设备主键
-     * @return 结果
-     */
-    @Override
-    public int deleteDvMachineryByMachineryId(Long machineryId)
-    {
-        return dvMachineryMapper.deleteDvMachineryByMachineryId(machineryId);
     }
 
     /**

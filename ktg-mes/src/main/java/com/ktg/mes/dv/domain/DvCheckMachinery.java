@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 点检设备对象 dv_check_machinery
- * 
- * @author yinjinlu
- * @date 2022-06-17
  */
 public class DvCheckMachinery extends BaseEntity
 {

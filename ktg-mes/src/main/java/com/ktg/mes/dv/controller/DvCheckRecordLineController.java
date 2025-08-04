@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 设备点检记录行Controller
- * 
- * @author yinjinlu
- * @date 2024-12-26
  */
 @RestController
 @RequestMapping("/mes/dv/checkrecordline")
@@ -101,7 +98,4 @@ public class DvCheckRecordLineController extends BaseController
     {
         return toAjax(dvCheckRecordLineService.deleteDvCheckRecordLineByLineIds(lineIds));
     }
-
-
-
 }

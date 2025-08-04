@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 设备点检保养项目对象 dv_subject
- * 
- * @author yinjinlu
- * @date 2022-06-16
  */
 public class DvSubject extends BaseEntity
 {

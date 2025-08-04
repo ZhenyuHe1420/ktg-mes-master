@@ -10,9 +10,6 @@ import java.util.Date;
 
 /**
  * 设备对象 dv_machinery
- * 
- * @author yinjinlu
- * @date 2022-05-08
  */
 public class DvMachinery extends BaseEntity
 {

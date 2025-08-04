@@ -2,7 +2,6 @@ package com.ktg.mes.dv.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.dv.domain.DvCheckMachinery;
@@ -32,9 +31,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 设备点检计划头Controller
- * 
- * @author yinjinlu
- * @date 2022-06-16
  */
 @RestController
 @RequestMapping("/mes/dv/checkplan")
@@ -42,10 +38,8 @@ public class DvCheckPlanController extends BaseController
 {
     @Autowired
     private IDvCheckPlanService dvCheckPlanService;
-
     @Autowired
     IDvCheckMachineryService dvCheckMachineryService;
-
     @Autowired
     IDvCheckSubjectService dvCheckSubjectService;
 
@@ -147,14 +141,11 @@ public class DvCheckPlanController extends BaseController
             dvCheckSubjectService.deleteByPlanId(planId);
         }
 
-
-
         return toAjax(dvCheckPlanService.deleteDvCheckPlanByPlanIds(planIds));
     }
 
     /**
      * 根据设备编码和计划类型查询设备点检计划头列表
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:dv:checkplan:list')")
     @GetMapping("/getCheckPlan")
