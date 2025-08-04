@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 过程检验单对象 qc_ipqc
- * 
- * @author yinjinlu
- * @date 2022-08-29
  */
 public class QcIpqc extends BaseEntity
 {

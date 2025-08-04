@@ -1,7 +1,6 @@
 package com.ktg.mes.qc.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.qc.service.IQcRqcService;
 
 /**
  * 退料检验单Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-06
  */
 @Service
 public class QcRqcServiceImpl implements IQcRqcService 
@@ -25,7 +21,6 @@ public class QcRqcServiceImpl implements IQcRqcService
 
     /**
      * 查询退料检验单
-     * 
      * @param rqcId 退料检验单主键
      * @return 退料检验单
      */
@@ -37,7 +32,6 @@ public class QcRqcServiceImpl implements IQcRqcService
 
     /**
      * 查询退料检验单列表
-     * 
      * @param qcRqc 退料检验单
      * @return 退料检验单
      */
@@ -46,7 +40,6 @@ public class QcRqcServiceImpl implements IQcRqcService
     {
         return qcRqcMapper.selectQcRqcList(qcRqc);
     }
-
 
     @Override
     public String checkCodeUnique(QcRqc qcRqc) {
@@ -60,9 +53,7 @@ public class QcRqcServiceImpl implements IQcRqcService
 
     /**
      * 新增退料检验单
-     * 
      * @param qcRqc 退料检验单
-     * @return 结果
      */
     @Override
     public int insertQcRqc(QcRqc qcRqc)
@@ -73,9 +64,7 @@ public class QcRqcServiceImpl implements IQcRqcService
 
     /**
      * 修改退料检验单
-     * 
      * @param qcRqc 退料检验单
-     * @return 结果
      */
     @Override
     public int updateQcRqc(QcRqc qcRqc)
@@ -86,25 +75,11 @@ public class QcRqcServiceImpl implements IQcRqcService
 
     /**
      * 批量删除退料检验单
-     * 
      * @param rqcIds 需要删除的退料检验单主键
-     * @return 结果
      */
     @Override
     public int deleteQcRqcByRqcIds(Long[] rqcIds)
     {
         return qcRqcMapper.deleteQcRqcByRqcIds(rqcIds);
-    }
-
-    /**
-     * 删除退料检验单信息
-     * 
-     * @param rqcId 退料检验单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcRqcByRqcId(Long rqcId)
-    {
-        return qcRqcMapper.deleteQcRqcByRqcId(rqcId);
     }
 }

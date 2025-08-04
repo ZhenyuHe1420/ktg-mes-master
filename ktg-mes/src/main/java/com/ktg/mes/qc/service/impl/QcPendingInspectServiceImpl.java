@@ -10,7 +10,6 @@ import java.util.List;
 
 @Service
 public class QcPendingInspectServiceImpl implements IQcPendingInspectService {
-
     @Autowired
     private QcPendingInspectMapper qcPendingInspectMapper;
 

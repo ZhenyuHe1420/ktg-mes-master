@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 直连队列 处理器
- *
- * @author raft
  */
 @Slf4j
 @Component

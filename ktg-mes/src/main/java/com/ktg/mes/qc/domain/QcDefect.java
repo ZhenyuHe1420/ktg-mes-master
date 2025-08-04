@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 常见缺陷对象 qc_defect
- * 
- * @author yinjinlu
- * @date 2022-05-19
  */
 public class QcDefect extends BaseEntity
 {

@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 检测模板-产品对象 qc_template_product
- * 
- * @author yinjinlu
- * @date 2022-05-18
  */
 public class QcTemplateProduct extends BaseEntity
 {

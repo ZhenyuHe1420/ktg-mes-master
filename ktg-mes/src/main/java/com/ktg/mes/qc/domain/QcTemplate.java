@@ -1,7 +1,5 @@
 package com.ktg.mes.qc.domain;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
@@ -9,9 +7,6 @@ import java.util.Arrays;
 
 /**
  * 检测模板对象 qc_template
- * 
- * @author yinjinlu
- * @date 2022-05-17
  */
 public class QcTemplate extends BaseEntity
 {

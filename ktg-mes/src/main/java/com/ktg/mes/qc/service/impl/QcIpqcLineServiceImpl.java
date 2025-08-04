@@ -10,9 +10,6 @@ import com.ktg.mes.qc.service.IQcIpqcLineService;
 
 /**
  * 过程检验单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-08-30
  */
 @Service
 public class QcIpqcLineServiceImpl implements IQcIpqcLineService 
@@ -22,7 +19,6 @@ public class QcIpqcLineServiceImpl implements IQcIpqcLineService
 
     /**
      * 查询过程检验单行
-     * 
      * @param lineId 过程检验单行主键
      * @return 过程检验单行
      */
@@ -34,7 +30,6 @@ public class QcIpqcLineServiceImpl implements IQcIpqcLineService
 
     /**
      * 查询过程检验单行列表
-     * 
      * @param qcIpqcLine 过程检验单行
      * @return 过程检验单行
      */
@@ -46,9 +41,7 @@ public class QcIpqcLineServiceImpl implements IQcIpqcLineService
 
     /**
      * 新增过程检验单行
-     * 
      * @param qcIpqcLine 过程检验单行
-     * @return 结果
      */
     @Override
     public int insertQcIpqcLine(QcIpqcLine qcIpqcLine)
@@ -59,9 +52,7 @@ public class QcIpqcLineServiceImpl implements IQcIpqcLineService
 
     /**
      * 修改过程检验单行
-     * 
      * @param qcIpqcLine 过程检验单行
-     * @return 结果
      */
     @Override
     public int updateQcIpqcLine(QcIpqcLine qcIpqcLine)
@@ -80,26 +71,12 @@ public class QcIpqcLineServiceImpl implements IQcIpqcLineService
 
     /**
      * 批量删除过程检验单行
-     * 
      * @param lineIds 需要删除的过程检验单行主键
-     * @return 结果
      */
     @Override
     public int deleteQcIpqcLineByLineIds(Long[] lineIds)
     {
         return qcIpqcLineMapper.deleteQcIpqcLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除过程检验单行信息
-     * 
-     * @param lineId 过程检验单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcIpqcLineByLineId(Long lineId)
-    {
-        return qcIpqcLineMapper.deleteQcIpqcLineByLineId(lineId);
     }
 
     @Override

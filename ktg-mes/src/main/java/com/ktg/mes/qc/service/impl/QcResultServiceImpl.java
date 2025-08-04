@@ -10,9 +10,6 @@ import com.ktg.mes.qc.service.IQcResultService;
 
 /**
  * 检测结果记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-11-29
  */
 @Service
 public class QcResultServiceImpl implements IQcResultService 
@@ -22,7 +19,6 @@ public class QcResultServiceImpl implements IQcResultService
 
     /**
      * 查询检测结果记录
-     * 
      * @param resultId 检测结果记录主键
      * @return 检测结果记录
      */
@@ -34,7 +30,6 @@ public class QcResultServiceImpl implements IQcResultService
 
     /**
      * 查询检测结果记录列表
-     * 
      * @param qcResult 检测结果记录
      * @return 检测结果记录
      */
@@ -46,9 +41,7 @@ public class QcResultServiceImpl implements IQcResultService
 
     /**
      * 新增检测结果记录
-     * 
      * @param qcResult 检测结果记录
-     * @return 结果
      */
     @Override
     public int insertQcResult(QcResult qcResult)
@@ -59,9 +52,7 @@ public class QcResultServiceImpl implements IQcResultService
 
     /**
      * 修改检测结果记录
-     * 
      * @param qcResult 检测结果记录
-     * @return 结果
      */
     @Override
     public int updateQcResult(QcResult qcResult)
@@ -72,25 +63,11 @@ public class QcResultServiceImpl implements IQcResultService
 
     /**
      * 批量删除检测结果记录
-     * 
      * @param resultIds 需要删除的检测结果记录主键
-     * @return 结果
      */
     @Override
     public int deleteQcResultByResultIds(Long[] resultIds)
     {
         return qcResultMapper.deleteQcResultByResultIds(resultIds);
-    }
-
-    /**
-     * 删除检测结果记录信息
-     * 
-     * @param resultId 检测结果记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcResultByResultId(Long resultId)
-    {
-        return qcResultMapper.deleteQcResultByResultId(resultId);
     }
 }

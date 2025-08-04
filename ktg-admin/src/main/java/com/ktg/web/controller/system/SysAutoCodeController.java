@@ -32,5 +32,4 @@ public class SysAutoCodeController {
     public String getAutoCode(@PathVariable String ruleCode,@PathVariable(required = false) String inputCharacter){
         return autoCodeUtil.genSerialCode(ruleCode,inputCharacter);
     }
-
 }

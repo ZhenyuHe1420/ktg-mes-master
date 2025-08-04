@@ -1,7 +1,6 @@
 package com.ktg.mes.qc.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.qc.service.IQcTemplateProductService;
 
 /**
  * 检测模板-产品Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-18
  */
 @Service
 public class QcTemplateProductServiceImpl implements IQcTemplateProductService 
@@ -25,7 +21,6 @@ public class QcTemplateProductServiceImpl implements IQcTemplateProductService
 
     /**
      * 查询检测模板-产品
-     * 
      * @param recordId 检测模板-产品主键
      * @return 检测模板-产品
      */
@@ -37,7 +32,6 @@ public class QcTemplateProductServiceImpl implements IQcTemplateProductService
 
     /**
      * 查询检测模板-产品列表
-     * 
      * @param qcTemplateProduct 检测模板-产品
      * @return 检测模板-产品
      */
@@ -59,9 +53,7 @@ public class QcTemplateProductServiceImpl implements IQcTemplateProductService
 
     /**
      * 新增检测模板-产品
-     * 
      * @param qcTemplateProduct 检测模板-产品
-     * @return 结果
      */
     @Override
     public int insertQcTemplateProduct(QcTemplateProduct qcTemplateProduct)
@@ -72,9 +64,7 @@ public class QcTemplateProductServiceImpl implements IQcTemplateProductService
 
     /**
      * 修改检测模板-产品
-     * 
      * @param qcTemplateProduct 检测模板-产品
-     * @return 结果
      */
     @Override
     public int updateQcTemplateProduct(QcTemplateProduct qcTemplateProduct)
@@ -85,26 +75,12 @@ public class QcTemplateProductServiceImpl implements IQcTemplateProductService
 
     /**
      * 批量删除检测模板-产品
-     * 
      * @param recordIds 需要删除的检测模板-产品主键
-     * @return 结果
      */
     @Override
     public int deleteQcTemplateProductByRecordIds(Long[] recordIds)
     {
         return qcTemplateProductMapper.deleteQcTemplateProductByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除检测模板-产品信息
-     * 
-     * @param recordId 检测模板-产品主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcTemplateProductByRecordId(Long recordId)
-    {
-        return qcTemplateProductMapper.deleteQcTemplateProductByRecordId(recordId);
     }
 
     @Override

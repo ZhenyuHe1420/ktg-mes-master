@@ -10,9 +10,6 @@ import com.ktg.mes.qc.service.IQcDefectRecordService;
 
 /**
  * 检验单缺陷记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-08-30
  */
 @Service
 public class QcDefectRecordServiceImpl implements IQcDefectRecordService 
@@ -22,7 +19,6 @@ public class QcDefectRecordServiceImpl implements IQcDefectRecordService
 
     /**
      * 查询检验单缺陷记录
-     * 
      * @param recordId 检验单缺陷记录主键
      * @return 检验单缺陷记录
      */
@@ -34,7 +30,6 @@ public class QcDefectRecordServiceImpl implements IQcDefectRecordService
 
     /**
      * 查询检验单缺陷记录列表
-     * 
      * @param qcDefectRecord 检验单缺陷记录
      * @return 检验单缺陷记录
      */
@@ -46,9 +41,7 @@ public class QcDefectRecordServiceImpl implements IQcDefectRecordService
 
     /**
      * 新增检验单缺陷记录
-     * 
      * @param qcDefectRecord 检验单缺陷记录
-     * @return 结果
      */
     @Override
     public int insertQcDefectRecord(QcDefectRecord qcDefectRecord)
@@ -59,9 +52,7 @@ public class QcDefectRecordServiceImpl implements IQcDefectRecordService
 
     /**
      * 修改检验单缺陷记录
-     * 
      * @param qcDefectRecord 检验单缺陷记录
-     * @return 结果
      */
     @Override
     public int updateQcDefectRecord(QcDefectRecord qcDefectRecord)
@@ -72,26 +63,12 @@ public class QcDefectRecordServiceImpl implements IQcDefectRecordService
 
     /**
      * 批量删除检验单缺陷记录
-     * 
      * @param recordIds 需要删除的检验单缺陷记录主键
-     * @return 结果
      */
     @Override
     public int deleteQcDefectRecordByRecordIds(Long[] recordIds)
     {
         return qcDefectRecordMapper.deleteQcDefectRecordByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除检验单缺陷记录信息
-     * 
-     * @param recordId 检验单缺陷记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcDefectRecordByRecordId(Long recordId)
-    {
-        return qcDefectRecordMapper.deleteQcDefectRecordByRecordId(recordId);
     }
 
     @Override

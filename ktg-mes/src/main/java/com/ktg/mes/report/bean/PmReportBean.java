@@ -11,17 +11,13 @@ import org.apache.commons.collections.MapUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-
 @Component
 @Slf4j
 public class PmReportBean {
-
     @Autowired
     private IProWorkorderService proWorkorderService;
 

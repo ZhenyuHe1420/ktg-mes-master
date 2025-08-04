@@ -9,9 +9,6 @@ import java.util.List;
 
 /**
  * 检测结果记录对象 qc_result
- * 
- * @author yinjinlu
- * @date 2024-11-29
  */
 public class QcResult extends BaseEntity
 {

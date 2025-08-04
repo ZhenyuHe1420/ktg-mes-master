@@ -2,6 +2,7 @@ package com.ktg.mes.qc.domain;
 
 import javax.validation.Valid;
 import java.util.*;
+
 public class ValidList<E> implements List<E> {
 
     @Valid

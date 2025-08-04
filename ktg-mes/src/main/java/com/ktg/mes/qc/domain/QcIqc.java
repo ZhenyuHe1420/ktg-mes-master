@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 来料检验单对象 qc_iqc
- * 
- * @author yinjinlu
- * @date 2022-05-19
  */
 public class QcIqc extends BaseEntity
 {
@@ -42,7 +39,6 @@ public class QcIqc extends BaseEntity
     private String sourceDocCode;
 
     private Long sourceLineId;
-
 
     /** 供应商ID */
     @Excel(name = "供应商ID")

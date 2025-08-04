@@ -10,9 +10,6 @@ import com.ktg.mes.qc.service.IQcRqcLineService;
 
 /**
  * 退料检验单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-06
  */
 @Service
 public class QcRqcLineServiceImpl implements IQcRqcLineService 
@@ -22,7 +19,6 @@ public class QcRqcLineServiceImpl implements IQcRqcLineService
 
     /**
      * 查询退料检验单行
-     * 
      * @param lineId 退料检验单行主键
      * @return 退料检验单行
      */
@@ -34,7 +30,6 @@ public class QcRqcLineServiceImpl implements IQcRqcLineService
 
     /**
      * 查询退料检验单行列表
-     * 
      * @param qcRqcLine 退料检验单行
      * @return 退料检验单行
      */
@@ -46,9 +41,7 @@ public class QcRqcLineServiceImpl implements IQcRqcLineService
 
     /**
      * 新增退料检验单行
-     * 
      * @param qcRqcLine 退料检验单行
-     * @return 结果
      */
     @Override
     public int insertQcRqcLine(QcRqcLine qcRqcLine)
@@ -59,9 +52,7 @@ public class QcRqcLineServiceImpl implements IQcRqcLineService
 
     /**
      * 修改退料检验单行
-     * 
      * @param qcRqcLine 退料检验单行
-     * @return 结果
      */
     @Override
     public int updateQcRqcLine(QcRqcLine qcRqcLine)
@@ -72,26 +63,12 @@ public class QcRqcLineServiceImpl implements IQcRqcLineService
 
     /**
      * 批量删除退料检验单行
-     * 
      * @param lineIds 需要删除的退料检验单行主键
-     * @return 结果
      */
     @Override
     public int deleteQcRqcLineByLineIds(Long[] lineIds)
     {
         return qcRqcLineMapper.deleteQcRqcLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除退料检验单行信息
-     * 
-     * @param lineId 退料检验单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcRqcLineByLineId(Long lineId)
-    {
-        return qcRqcLineMapper.deleteQcRqcLineByLineId(lineId);
     }
 
     @Override

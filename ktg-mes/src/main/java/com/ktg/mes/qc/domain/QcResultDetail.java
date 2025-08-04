@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 检测结果明细记录对象 qc_result_detail
- * 
- * @author yinjinlu
- * @date 2024-11-29
  */
 public class QcResultDetail extends BaseEntity
 {
@@ -31,12 +28,9 @@ public class QcResultDetail extends BaseEntity
     @Excel(name = "检测项ID")
     private Long indexId;
 
-
     private String indexCode;
 
-
     private String indexName;
-
 
     /** 检测项类型 */
     @Excel(name = "检测项类型")

@@ -38,11 +38,6 @@ public class MdItemServiceImpl implements IMdItemService {
     }
 
     @Override
-    public List<MdItem> selectMdItemAll() {
-        return mdItemMapper.selectMdItemAll();
-    }
-
-    @Override
     public List<MdItem> getExeportList(MdItem mdItem) {
         return mdItemMapper.getExeportList(mdItem);
     }

@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 检测项对象 qc_index
- * 
- * @author yinjinlu
- * @date 2022-05-17
  */
 public class QcIndex extends BaseEntity
 {

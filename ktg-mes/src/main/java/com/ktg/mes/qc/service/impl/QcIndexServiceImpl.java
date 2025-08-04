@@ -1,7 +1,6 @@
 package com.ktg.mes.qc.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.qc.service.IQcIndexService;
 
 /**
  * 检测项Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-17
  */
 @Service
 public class QcIndexServiceImpl implements IQcIndexService 
@@ -25,7 +21,6 @@ public class QcIndexServiceImpl implements IQcIndexService
 
     /**
      * 查询检测项
-     * 
      * @param indexId 检测项主键
      * @return 检测项
      */
@@ -37,7 +32,6 @@ public class QcIndexServiceImpl implements IQcIndexService
 
     /**
      * 查询检测项列表
-     * 
      * @param qcIndex 检测项
      * @return 检测项
      */
@@ -69,9 +63,7 @@ public class QcIndexServiceImpl implements IQcIndexService
 
     /**
      * 新增检测项
-     * 
      * @param qcIndex 检测项
-     * @return 结果
      */
     @Override
     public int insertQcIndex(QcIndex qcIndex)
@@ -82,9 +74,7 @@ public class QcIndexServiceImpl implements IQcIndexService
 
     /**
      * 修改检测项
-     * 
      * @param qcIndex 检测项
-     * @return 结果
      */
     @Override
     public int updateQcIndex(QcIndex qcIndex)
@@ -95,25 +85,11 @@ public class QcIndexServiceImpl implements IQcIndexService
 
     /**
      * 批量删除检测项
-     * 
      * @param indexIds 需要删除的检测项主键
-     * @return 结果
      */
     @Override
     public int deleteQcIndexByIndexIds(Long[] indexIds)
     {
         return qcIndexMapper.deleteQcIndexByIndexIds(indexIds);
-    }
-
-    /**
-     * 删除检测项信息
-     * 
-     * @param indexId 检测项主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcIndexByIndexId(Long indexId)
-    {
-        return qcIndexMapper.deleteQcIndexByIndexId(indexId);
     }
 }

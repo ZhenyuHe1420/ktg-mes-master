@@ -10,9 +10,6 @@ import com.ktg.mes.qc.service.IQcResultDetailService;
 
 /**
  * 检测结果明细记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-11-29
  */
 @Service
 public class QcResultDetailServiceImpl implements IQcResultDetailService 
@@ -22,7 +19,6 @@ public class QcResultDetailServiceImpl implements IQcResultDetailService
 
     /**
      * 查询检测结果明细记录
-     * 
      * @param detailId 检测结果明细记录主键
      * @return 检测结果明细记录
      */
@@ -34,7 +30,6 @@ public class QcResultDetailServiceImpl implements IQcResultDetailService
 
     /**
      * 查询检测结果明细记录列表
-     * 
      * @param qcResultDetail 检测结果明细记录
      * @return 检测结果明细记录
      */
@@ -66,9 +61,7 @@ public class QcResultDetailServiceImpl implements IQcResultDetailService
 
     /**
      * 新增检测结果明细记录
-     * 
      * @param qcResultDetail 检测结果明细记录
-     * @return 结果
      */
     @Override
     public int insertQcResultDetail(QcResultDetail qcResultDetail)
@@ -79,9 +72,7 @@ public class QcResultDetailServiceImpl implements IQcResultDetailService
 
     /**
      * 修改检测结果明细记录
-     * 
      * @param qcResultDetail 检测结果明细记录
-     * @return 结果
      */
     @Override
     public int updateQcResultDetail(QcResultDetail qcResultDetail)
@@ -92,26 +83,12 @@ public class QcResultDetailServiceImpl implements IQcResultDetailService
 
     /**
      * 批量删除检测结果明细记录
-     * 
      * @param detailIds 需要删除的检测结果明细记录主键
-     * @return 结果
      */
     @Override
     public int deleteQcResultDetailByDetailIds(Long[] detailIds)
     {
         return qcResultDetailMapper.deleteQcResultDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除检测结果明细记录信息
-     * 
-     * @param detailId 检测结果明细记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcResultDetailByDetailId(Long detailId)
-    {
-        return qcResultDetailMapper.deleteQcResultDetailByDetailId(detailId);
     }
 
     @Override

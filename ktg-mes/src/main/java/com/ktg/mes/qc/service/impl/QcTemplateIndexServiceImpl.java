@@ -10,9 +10,6 @@ import com.ktg.mes.qc.service.IQcTemplateIndexService;
 
 /**
  * 检测模板-检测项Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-18
  */
 @Service
 public class QcTemplateIndexServiceImpl implements IQcTemplateIndexService 
@@ -22,7 +19,6 @@ public class QcTemplateIndexServiceImpl implements IQcTemplateIndexService
 
     /**
      * 查询检测模板-检测项
-     * 
      * @param recordId 检测模板-检测项主键
      * @return 检测模板-检测项
      */
@@ -34,7 +30,6 @@ public class QcTemplateIndexServiceImpl implements IQcTemplateIndexService
 
     /**
      * 查询检测模板-检测项列表
-     * 
      * @param qcTemplateIndex 检测模板-检测项
      * @return 检测模板-检测项
      */
@@ -46,9 +41,7 @@ public class QcTemplateIndexServiceImpl implements IQcTemplateIndexService
 
     /**
      * 新增检测模板-检测项
-     * 
      * @param qcTemplateIndex 检测模板-检测项
-     * @return 结果
      */
     @Override
     public int insertQcTemplateIndex(QcTemplateIndex qcTemplateIndex)
@@ -59,9 +52,7 @@ public class QcTemplateIndexServiceImpl implements IQcTemplateIndexService
 
     /**
      * 修改检测模板-检测项
-     * 
      * @param qcTemplateIndex 检测模板-检测项
-     * @return 结果
      */
     @Override
     public int updateQcTemplateIndex(QcTemplateIndex qcTemplateIndex)
@@ -72,26 +63,12 @@ public class QcTemplateIndexServiceImpl implements IQcTemplateIndexService
 
     /**
      * 批量删除检测模板-检测项
-     * 
      * @param recordIds 需要删除的检测模板-检测项主键
-     * @return 结果
      */
     @Override
     public int deleteQcTemplateIndexByRecordIds(Long[] recordIds)
     {
         return qcTemplateIndexMapper.deleteQcTemplateIndexByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除检测模板-检测项信息
-     * 
-     * @param recordId 检测模板-检测项主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcTemplateIndexByRecordId(Long recordId)
-    {
-        return qcTemplateIndexMapper.deleteQcTemplateIndexByRecordId(recordId);
     }
 
     @Override

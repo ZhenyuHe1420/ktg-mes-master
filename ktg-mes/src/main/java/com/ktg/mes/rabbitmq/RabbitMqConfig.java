@@ -37,7 +37,6 @@ public class RabbitMqConfig {
      * 绑定队列和交换机
      * @param topicExchange
      * @param deviceEventQueue
-     * @return
      */
     @Bean
     public Binding bindingDeviceEventQueue(TopicExchange topicExchange, Queue deviceEventQueue) {

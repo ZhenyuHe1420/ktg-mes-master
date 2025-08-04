@@ -10,9 +10,6 @@ import com.ktg.mes.qc.service.IQcIqcLineService;
 
 /**
  * 来料检验单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-19
  */
 @Service
 public class QcIqcLineServiceImpl implements IQcIqcLineService 
@@ -22,7 +19,6 @@ public class QcIqcLineServiceImpl implements IQcIqcLineService
 
     /**
      * 查询来料检验单行
-     * 
      * @param lineId 来料检验单行主键
      * @return 来料检验单行
      */
@@ -34,7 +30,6 @@ public class QcIqcLineServiceImpl implements IQcIqcLineService
 
     /**
      * 查询来料检验单行列表
-     * 
      * @param qcIqcLine 来料检验单行
      * @return 来料检验单行
      */
@@ -46,9 +41,7 @@ public class QcIqcLineServiceImpl implements IQcIqcLineService
 
     /**
      * 新增来料检验单行
-     * 
      * @param qcIqcLine 来料检验单行
-     * @return 结果
      */
     @Override
     public int insertQcIqcLine(QcIqcLine qcIqcLine)
@@ -59,9 +52,7 @@ public class QcIqcLineServiceImpl implements IQcIqcLineService
 
     /**
      * 修改来料检验单行
-     * 
      * @param qcIqcLine 来料检验单行
-     * @return 结果
      */
     @Override
     public int updateQcIqcLine(QcIqcLine qcIqcLine)
@@ -80,9 +71,7 @@ public class QcIqcLineServiceImpl implements IQcIqcLineService
 
     /**
      * 批量删除来料检验单行
-     * 
      * @param lineIds 需要删除的来料检验单行主键
-     * @return 结果
      */
     @Override
     public int deleteQcIqcLineByLineIds(Long[] lineIds)
@@ -93,17 +82,5 @@ public class QcIqcLineServiceImpl implements IQcIqcLineService
     @Override
     public int deleteByIqcId(Long iqcId) {
         return qcIqcLineMapper.deleteByIqcId(iqcId);
-    }
-
-    /**
-     * 删除来料检验单行信息
-     * 
-     * @param lineId 来料检验单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteQcIqcLineByLineId(Long lineId)
-    {
-        return qcIqcLineMapper.deleteQcIqcLineByLineId(lineId);
     }
 }

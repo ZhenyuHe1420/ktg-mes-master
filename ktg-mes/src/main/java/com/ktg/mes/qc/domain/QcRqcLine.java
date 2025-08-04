@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 退料检验单行对象 qc_rqc_line
- * 
- * @author yinjinlu
- * @date 2025-03-06
  */
 public class QcRqcLine extends BaseEntity
 {
