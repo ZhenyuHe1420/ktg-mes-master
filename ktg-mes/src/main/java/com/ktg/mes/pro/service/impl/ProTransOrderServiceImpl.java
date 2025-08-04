@@ -10,9 +10,6 @@ import com.ktg.mes.pro.service.IProTransOrderService;
 
 /**
  * 流转单Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-07-24
  */
 @Service
 public class ProTransOrderServiceImpl implements IProTransOrderService 
@@ -22,7 +19,6 @@ public class ProTransOrderServiceImpl implements IProTransOrderService
 
     /**
      * 查询流转单
-     * 
      * @param transOrderId 流转单主键
      * @return 流转单
      */
@@ -34,7 +30,6 @@ public class ProTransOrderServiceImpl implements IProTransOrderService
 
     /**
      * 查询流转单列表
-     * 
      * @param proTransOrder 流转单
      * @return 流转单
      */
@@ -46,9 +41,7 @@ public class ProTransOrderServiceImpl implements IProTransOrderService
 
     /**
      * 新增流转单
-     * 
      * @param proTransOrder 流转单
-     * @return 结果
      */
     @Override
     public int insertProTransOrder(ProTransOrder proTransOrder)
@@ -59,9 +52,7 @@ public class ProTransOrderServiceImpl implements IProTransOrderService
 
     /**
      * 修改流转单
-     * 
      * @param proTransOrder 流转单
-     * @return 结果
      */
     @Override
     public int updateProTransOrder(ProTransOrder proTransOrder)
@@ -72,25 +63,11 @@ public class ProTransOrderServiceImpl implements IProTransOrderService
 
     /**
      * 批量删除流转单
-     * 
      * @param transOrderIds 需要删除的流转单主键
-     * @return 结果
      */
     @Override
     public int deleteProTransOrderByTransOrderIds(Long[] transOrderIds)
     {
         return proTransOrderMapper.deleteProTransOrderByTransOrderIds(transOrderIds);
-    }
-
-    /**
-     * 删除流转单信息
-     * 
-     * @param transOrderId 流转单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProTransOrderByTransOrderId(Long transOrderId)
-    {
-        return proTransOrderMapper.deleteProTransOrderByTransOrderId(transOrderId);
     }
 }

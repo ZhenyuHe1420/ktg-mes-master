@@ -5,9 +5,6 @@ import com.ktg.mes.pro.domain.ProProcessContent;
 
 /**
  * 生产工序内容Mapper接口
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 public interface ProProcessContentMapper 
 {

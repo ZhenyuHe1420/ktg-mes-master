@@ -10,9 +10,6 @@ import com.ktg.mes.pro.service.IProProcessContentService;
 
 /**
  * 生产工序内容Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 @Service
 public class ProProcessContentServiceImpl implements IProProcessContentService 
@@ -22,7 +19,6 @@ public class ProProcessContentServiceImpl implements IProProcessContentService
 
     /**
      * 查询生产工序内容
-     * 
      * @param contentId 生产工序内容主键
      * @return 生产工序内容
      */
@@ -34,7 +30,6 @@ public class ProProcessContentServiceImpl implements IProProcessContentService
 
     /**
      * 查询生产工序内容列表
-     * 
      * @param proProcessContent 生产工序内容
      * @return 生产工序内容
      */
@@ -46,9 +41,7 @@ public class ProProcessContentServiceImpl implements IProProcessContentService
 
     /**
      * 新增生产工序内容
-     * 
      * @param proProcessContent 生产工序内容
-     * @return 结果
      */
     @Override
     public int insertProProcessContent(ProProcessContent proProcessContent)
@@ -59,9 +52,7 @@ public class ProProcessContentServiceImpl implements IProProcessContentService
 
     /**
      * 修改生产工序内容
-     * 
      * @param proProcessContent 生产工序内容
-     * @return 结果
      */
     @Override
     public int updateProProcessContent(ProProcessContent proProcessContent)
@@ -72,25 +63,11 @@ public class ProProcessContentServiceImpl implements IProProcessContentService
 
     /**
      * 批量删除生产工序内容
-     * 
      * @param contentIds 需要删除的生产工序内容主键
-     * @return 结果
      */
     @Override
     public int deleteProProcessContentByContentIds(Long[] contentIds)
     {
         return proProcessContentMapper.deleteProProcessContentByContentIds(contentIds);
-    }
-
-    /**
-     * 删除生产工序内容信息
-     * 
-     * @param contentId 生产工序内容主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProProcessContentByContentId(Long contentId)
-    {
-        return proProcessContentMapper.deleteProProcessContentByContentId(contentId);
     }
 }

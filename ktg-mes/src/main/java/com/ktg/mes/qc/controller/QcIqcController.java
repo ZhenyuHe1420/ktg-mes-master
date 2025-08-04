@@ -3,17 +3,13 @@ package com.ktg.mes.qc.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.common.utils.bean.BeanUtils;
-import com.ktg.mes.pro.domain.ProFeedback;
-import com.ktg.mes.pro.service.IProFeedbackService;
 import com.ktg.mes.qc.domain.*;
 import com.ktg.mes.qc.service.*;
 import com.ktg.mes.wm.domain.WmArrivalNoticeLine;
-import com.ktg.mes.wm.domain.WmItemRecptLine;
 import com.ktg.mes.wm.domain.WmOutsourceRecpt;
 import com.ktg.mes.wm.domain.WmOutsourceRecptLine;
 import com.ktg.mes.wm.service.*;
@@ -37,9 +33,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 来料检验单Controller
- * 
- * @author yinjinlu
- * @date 2022-05-19
  */
 @RestController
 @RequestMapping("/mes/qc/iqc")
@@ -47,31 +40,22 @@ public class QcIqcController extends BaseController
 {
     @Autowired
     private IQcIqcService qcIqcService;
-
     @Autowired
     private IQcTemplateProductService qcTemplateProductService;
-
     @Autowired
     private IQcTemplateIndexService qcTemplateIndexService;
-
     @Autowired
     private IQcIqcLineService qcIqcLineService;
-
     @Autowired
     private IQcDefectRecordService qcDefectRecordService;
-
     @Autowired
     private IWmArrivalNoticeLineService wmArrivalNoticeLineService;
-
     @Autowired
     private IWmArrivalNoticeService wmArrivalNoticeService;
-
     @Autowired
     private IWmOutsourceRecptLineService wmOutsourceRecptLineService;
-
     @Autowired
     private IWmOutsourceRecptService wmOutsourceRecptService;
-
 
     /**
      * 查询来料检验单列表
@@ -257,7 +241,6 @@ public class QcIqcController extends BaseController
 
     /**
      * 根据头信息生成行信息
-     * @param iqc
      */
     private void generateLine(QcIqc iqc){
         QcTemplateIndex param = new QcTemplateIndex();
@@ -285,5 +268,4 @@ public class QcIqcController extends BaseController
             }
         }
     }
-
 }

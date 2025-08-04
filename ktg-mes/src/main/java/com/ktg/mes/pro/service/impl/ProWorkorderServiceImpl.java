@@ -19,7 +19,6 @@ import com.ktg.mes.pro.service.IProRouteProductService;
 import com.ktg.mes.pro.service.IProWorkorderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,28 +28,21 @@ import java.util.stream.Collectors;
 
 /**
  * 生产工单Service业务层处理
- *
- * @author yinjinlu
- * @date 2022-05-09
  */
 @Service
 public class ProWorkorderServiceImpl implements IProWorkorderService
 {
     @Autowired
     private ProWorkorderMapper proWorkorderMapper;
-
     @Autowired
     private IProRouteProductService proRouteProductService;
-
     @Autowired
     private IProRouteProcessService proRouteProcessService;
-
     @Autowired
     private IProFeedbackService proFeedbackService;
 
     /**
      * 查询生产工单
-     *
      * @param workorderId 生产工单主键
      * @return 生产工单
      */
@@ -62,7 +54,6 @@ public class ProWorkorderServiceImpl implements IProWorkorderService
 
     /**
      * 查询生产工单
-     *
      * @param workorderId 生产工单主键
      * @return 生产工单
      */
@@ -74,7 +65,6 @@ public class ProWorkorderServiceImpl implements IProWorkorderService
 
     /**
      * 查询生产工单列表
-     *
      * @param proWorkorder 生产工单
      * @return 生产工单
      */
@@ -94,12 +84,9 @@ public class ProWorkorderServiceImpl implements IProWorkorderService
         return UserConstants.UNIQUE;
     }
 
-
     /**
      * 新增生产工单
-     *
      * @param proWorkorder 生产工单
-     * @return 结果
      */
     @Override
     public int insertProWorkorder(ProWorkorder proWorkorder)
@@ -117,9 +104,7 @@ public class ProWorkorderServiceImpl implements IProWorkorderService
 
     /**
      * 修改生产工单
-     *
      * @param proWorkorder 生产工单
-     * @return 结果
      */
     @Override
     public int updateProWorkorder(ProWorkorder proWorkorder)
@@ -130,26 +115,12 @@ public class ProWorkorderServiceImpl implements IProWorkorderService
 
     /**
      * 批量删除生产工单
-     *
      * @param workorderIds 需要删除的生产工单主键
-     * @return 结果
      */
     @Override
     public int deleteProWorkorderByWorkorderIds(Long[] workorderIds)
     {
         return proWorkorderMapper.deleteProWorkorderByWorkorderIds(workorderIds);
-    }
-
-    /**
-     * 删除生产工单信息
-     *
-     * @param workorderId 生产工单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProWorkorderByWorkorderId(Long workorderId)
-    {
-        return proWorkorderMapper.deleteProWorkorderByWorkorderId(workorderId);
     }
 
     @Override

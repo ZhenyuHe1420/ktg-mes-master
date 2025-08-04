@@ -3,7 +3,6 @@ package com.ktg.mes.qc.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
@@ -42,9 +41,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 过程检验单Controller
- * 
- * @author yinjinlu
- * @date 2022-08-29
  */
 @RestController
 @RequestMapping("/mes/qc/ipqc")
@@ -52,43 +48,30 @@ public class QcIpqcController extends BaseController
 {
     @Autowired
     private IQcIpqcService qcIpqcService;
-
     @Autowired
     private IProWorkorderService proWorkorderService;
-
     @Autowired
     private IQcTemplateIndexService qcTemplateIndexService;
-
     @Autowired
     private IQcTemplateService qcTemplateService;
-
     @Autowired
     private IQcIpqcLineService qcIpqcLineService;
-
     @Autowired
     private IQcDefectRecordService qcDefectRecordService;
-
     @Autowired
     private IProFeedbackService proFeedbackService;
-
     @Autowired
     private IWmProductProduceService productProduceService;
-
     @Autowired
     private IWmProductProduceLineService productProduceLineService;
-
     @Autowired
     private IWmProductProduceDetailService productProduceDetailService;
-
     @Autowired
     private WmWarehouseMapper wmWarehouseMapper;
-
     @Autowired
     private WmStorageLocationMapper wmStorageLocationMapper;
-
     @Autowired
     private WmStorageAreaMapper wmStorageAreaMapper;
-
 
     /**
      * 查询过程检验单列表
@@ -357,10 +340,8 @@ public class QcIpqcController extends BaseController
         return toAjax(qcIpqcService.deleteQcIpqcByIpqcIds(ipqcIds));
     }
 
-
     /**
      * 根据头信息生成行信息
-     * @param iqc
      */
     private void generateLine(QcIpqc iqc){
         QcTemplateIndex param = new QcTemplateIndex();

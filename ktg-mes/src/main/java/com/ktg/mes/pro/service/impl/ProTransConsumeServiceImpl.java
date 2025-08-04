@@ -10,9 +10,6 @@ import com.ktg.mes.pro.service.IProTransConsumeService;
 
 /**
  * 物料消耗记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-07-24
  */
 @Service
 public class ProTransConsumeServiceImpl implements IProTransConsumeService 
@@ -22,7 +19,6 @@ public class ProTransConsumeServiceImpl implements IProTransConsumeService
 
     /**
      * 查询物料消耗记录
-     * 
      * @param recordId 物料消耗记录主键
      * @return 物料消耗记录
      */
@@ -34,7 +30,6 @@ public class ProTransConsumeServiceImpl implements IProTransConsumeService
 
     /**
      * 查询物料消耗记录列表
-     * 
      * @param proTransConsume 物料消耗记录
      * @return 物料消耗记录
      */
@@ -46,9 +41,7 @@ public class ProTransConsumeServiceImpl implements IProTransConsumeService
 
     /**
      * 新增物料消耗记录
-     * 
      * @param proTransConsume 物料消耗记录
-     * @return 结果
      */
     @Override
     public int insertProTransConsume(ProTransConsume proTransConsume)
@@ -59,9 +52,7 @@ public class ProTransConsumeServiceImpl implements IProTransConsumeService
 
     /**
      * 修改物料消耗记录
-     * 
      * @param proTransConsume 物料消耗记录
-     * @return 结果
      */
     @Override
     public int updateProTransConsume(ProTransConsume proTransConsume)
@@ -72,25 +63,11 @@ public class ProTransConsumeServiceImpl implements IProTransConsumeService
 
     /**
      * 批量删除物料消耗记录
-     * 
      * @param recordIds 需要删除的物料消耗记录主键
-     * @return 结果
      */
     @Override
     public int deleteProTransConsumeByRecordIds(Long[] recordIds)
     {
         return proTransConsumeMapper.deleteProTransConsumeByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除物料消耗记录信息
-     * 
-     * @param recordId 物料消耗记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProTransConsumeByRecordId(Long recordId)
-    {
-        return proTransConsumeMapper.deleteProTransConsumeByRecordId(recordId);
     }
 }

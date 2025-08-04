@@ -2,7 +2,6 @@ package com.ktg.mes.qc.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +24,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 检测项Controller
- * 
- * @author yinjinlu
- * @date 2022-05-17
  */
 @RestController
 @RequestMapping("/mes/qc/qcindex")

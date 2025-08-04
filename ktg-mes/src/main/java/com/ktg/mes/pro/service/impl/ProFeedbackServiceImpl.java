@@ -2,16 +2,12 @@ package com.ktg.mes.pro.service.impl;
 
 import java.math.BigDecimal;
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.mes.pro.domain.ProTask;
 import com.ktg.mes.pro.domain.ProWorkorder;
 import com.ktg.mes.pro.mapper.ProTaskMapper;
 import com.ktg.mes.pro.mapper.ProWorkorderMapper;
-import com.ktg.mes.pro.service.IProTaskService;
-import com.ktg.mes.pro.service.IProWorkorderService;
-import com.ktg.mes.wm.domain.WmItemConsumeLine;
 import com.ktg.mes.wm.domain.WmProductProduceLine;
 import com.ktg.mes.wm.mapper.WmProductProduceLineMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,29 +19,21 @@ import org.springframework.util.CollectionUtils;
 
 /**
  * 生产报工记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-07-10
  */
 @Service
 public class ProFeedbackServiceImpl implements IProFeedbackService 
 {
     @Autowired
     private ProFeedbackMapper proFeedbackMapper;
-
     @Autowired
     private ProTaskMapper proTaskMapper;
-
     @Autowired
     private ProWorkorderMapper proWorkorderMapper;
-
     @Autowired
     private WmProductProduceLineMapper wmProductProduceLineMapper;
 
-
     /**
      * 查询生产报工记录
-     * 
      * @param recordId 生产报工记录主键
      * @return 生产报工记录
      */
@@ -57,7 +45,6 @@ public class ProFeedbackServiceImpl implements IProFeedbackService
 
     /**
      * 查询生产报工记录列表
-     * 
      * @param proFeedback 生产报工记录
      * @return 生产报工记录
      */
@@ -69,9 +56,7 @@ public class ProFeedbackServiceImpl implements IProFeedbackService
 
     /**
      * 新增生产报工记录
-     * 
      * @param proFeedback 生产报工记录
-     * @return 结果
      */
     @Override
     public int insertProFeedback(ProFeedback proFeedback)
@@ -82,9 +67,7 @@ public class ProFeedbackServiceImpl implements IProFeedbackService
 
     /**
      * 修改生产报工记录
-     * 
      * @param proFeedback 生产报工记录
-     * @return 结果
      */
     @Override
     public int updateProFeedback(ProFeedback proFeedback)
@@ -141,24 +124,12 @@ public class ProFeedbackServiceImpl implements IProFeedbackService
 
     /**
      * 批量删除生产报工记录
-     * 
      * @param recordIds 需要删除的生产报工记录主键
-     * @return 结果
      */
     @Override
     public int deleteProFeedbackByRecordIds(Long[] recordIds)
     {
         return proFeedbackMapper.deleteProFeedbackByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除生产报工记录信息
-     * @param recordId 生产报工记录主键
-     */
-    @Override
-    public int deleteProFeedbackByRecordId(Long recordId)
-    {
-        return proFeedbackMapper.deleteProFeedbackByRecordId(recordId);
     }
 
     @Override

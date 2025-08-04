@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 出货检验单行Controller
- * 
- * @author yinjinlu
- * @date 2022-09-01
  */
 @RestController
 @RequestMapping("/mes/qc/oqcline")

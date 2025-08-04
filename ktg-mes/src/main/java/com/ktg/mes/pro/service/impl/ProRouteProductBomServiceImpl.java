@@ -15,9 +15,6 @@ import com.ktg.mes.pro.service.IProRouteProductBomService;
 
 /**
  * 产品制程物料BOMService业务层处理
- * 
- * @author yinjinlu
- * @date 2022-09-12
  */
 @Service
 public class ProRouteProductBomServiceImpl implements IProRouteProductBomService 
@@ -27,7 +24,6 @@ public class ProRouteProductBomServiceImpl implements IProRouteProductBomService
 
     /**
      * 查询产品制程物料BOM
-     * 
      * @param recordId 产品制程物料BOM主键
      * @return 产品制程物料BOM
      */
@@ -39,7 +35,6 @@ public class ProRouteProductBomServiceImpl implements IProRouteProductBomService
 
     /**
      * 查询产品制程物料BOM列表
-     * 
      * @param proRouteProductBom 产品制程物料BOM
      * @return 产品制程物料BOM
      */
@@ -61,9 +56,7 @@ public class ProRouteProductBomServiceImpl implements IProRouteProductBomService
 
     /**
      * 新增产品制程物料BOM
-     * 
      * @param proRouteProductBom 产品制程物料BOM
-     * @return 结果
      */
     @Override
     public int insertProRouteProductBom(ProRouteProductBom proRouteProductBom)
@@ -74,9 +67,7 @@ public class ProRouteProductBomServiceImpl implements IProRouteProductBomService
 
     /**
      * 修改产品制程物料BOM
-     * 
      * @param proRouteProductBom 产品制程物料BOM
-     * @return 结果
      */
     @Override
     public int updateProRouteProductBom(ProRouteProductBom proRouteProductBom)
@@ -87,26 +78,12 @@ public class ProRouteProductBomServiceImpl implements IProRouteProductBomService
 
     /**
      * 批量删除产品制程物料BOM
-     * 
      * @param recordIds 需要删除的产品制程物料BOM主键
-     * @return 结果
      */
     @Override
     public int deleteProRouteProductBomByRecordIds(Long[] recordIds)
     {
         return proRouteProductBomMapper.deleteProRouteProductBomByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除产品制程物料BOM信息
-     * 
-     * @param recordId 产品制程物料BOM主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProRouteProductBomByRecordId(Long recordId)
-    {
-        return proRouteProductBomMapper.deleteProRouteProductBomByRecordId(recordId);
     }
 
     @Override

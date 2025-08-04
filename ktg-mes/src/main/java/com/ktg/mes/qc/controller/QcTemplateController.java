@@ -2,7 +2,6 @@ package com.ktg.mes.qc.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.ArrayUtil;
 import com.ktg.common.constant.UserConstants;
@@ -31,9 +30,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 检测模板Controller
- * 
- * @author yinjinlu
- * @date 2022-05-17
  */
 @RestController
 @RequestMapping("/mes/qc/qctemplate")
@@ -41,10 +37,8 @@ public class QcTemplateController extends BaseController
 {
     @Autowired
     private IQcTemplateService qcTemplateService;
-
     @Autowired
     private IQcTemplateIndexService qcTemplateIndexService;
-
     @Autowired
     private IQcTemplateProductService qcTemplateProductService;
 
@@ -158,9 +152,7 @@ public class QcTemplateController extends BaseController
 	@DeleteMapping("/{templateIds}")
     public AjaxResult remove(@PathVariable Long[] templateIds)
     {
-
-        for (Long id:templateIds
-             ) {
+        for (Long id:templateIds) {
             //删除当前模板下所有检测项数据
             qcTemplateIndexService.deleteByTemplateId(id);
             //删除当前模板下所有检测产品

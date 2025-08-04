@@ -1,14 +1,12 @@
 package com.ktg.mes.pro.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.pro.domain.ProRouteProcess;
 import com.ktg.mes.pro.service.IProRouteProcessService;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ktg.mes.pro.mapper.ProProcessMapper;
@@ -17,22 +15,17 @@ import com.ktg.mes.pro.service.IProProcessService;
 
 /**
  * 生产工序Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-11
  */
 @Service
 public class ProProcessServiceImpl implements IProProcessService 
 {
     @Autowired
     private ProProcessMapper proProcessMapper;
-
     @Autowired
     private IProRouteProcessService proRouteProcessService;
 
     /**
      * 查询生产工序
-     * 
      * @param processId 生产工序主键
      * @return 生产工序
      */
@@ -44,7 +37,6 @@ public class ProProcessServiceImpl implements IProProcessService
 
     /**
      * 查询生产工序列表
-     * 
      * @param proProcess 生产工序
      * @return 生产工序
      */
@@ -56,8 +48,6 @@ public class ProProcessServiceImpl implements IProProcessService
 
     /**
      * 检查工序编码是否唯一
-     * @param proProcess
-     * @return
      */
     @Override
     public String checkProcessCodeUnique(ProProcess proProcess) {
@@ -69,11 +59,8 @@ public class ProProcessServiceImpl implements IProProcessService
         return UserConstants.UNIQUE;
     }
 
-
     /**
      * 检查工序名称是否唯一
-     * @param proProcess
-     * @return
      */
     @Override
     public String checkProcessNameUnique(ProProcess proProcess) {
@@ -87,9 +74,7 @@ public class ProProcessServiceImpl implements IProProcessService
 
     /**
      * 新增生产工序
-     * 
      * @param proProcess 生产工序
-     * @return 结果
      */
     @Override
     public int insertProProcess(ProProcess proProcess)
@@ -100,9 +85,7 @@ public class ProProcessServiceImpl implements IProProcessService
 
     /**
      * 修改生产工序
-     * 
      * @param proProcess 生产工序
-     * @return 结果
      */
     @Override
     public int updateProProcess(ProProcess proProcess)
@@ -113,9 +96,7 @@ public class ProProcessServiceImpl implements IProProcessService
 
     /**
      * 批量删除生产工序
-     *
      * @param processIds 需要删除的生产工序主键
-     * @return 结果
      */
     @Override
     public AjaxResult deleteProProcessByProcessIds(Long[] processIds)
@@ -127,17 +108,5 @@ public class ProProcessServiceImpl implements IProProcessService
         }
         proProcessMapper.deleteProProcessByProcessIds(processIds);
         return AjaxResult.success();
-    }
-
-    /**
-     * 删除生产工序信息
-     * 
-     * @param processId 生产工序主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProProcessByProcessId(Long processId)
-    {
-        return proProcessMapper.deleteProProcessByProcessId(processId);
     }
 }

@@ -10,9 +10,6 @@ import com.ktg.mes.pro.service.IProWorkorderBomService;
 
 /**
  * 生产工单BOM组成Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-09
  */
 @Service
 public class ProWorkorderBomServiceImpl implements IProWorkorderBomService 
@@ -22,7 +19,6 @@ public class ProWorkorderBomServiceImpl implements IProWorkorderBomService
 
     /**
      * 查询生产工单BOM组成
-     * 
      * @param lineId 生产工单BOM组成主键
      * @return 生产工单BOM组成
      */
@@ -34,7 +30,6 @@ public class ProWorkorderBomServiceImpl implements IProWorkorderBomService
 
     /**
      * 查询生产工单BOM组成列表
-     * 
      * @param proWorkorderBom 生产工单BOM组成
      * @return 生产工单BOM组成
      */
@@ -46,9 +41,7 @@ public class ProWorkorderBomServiceImpl implements IProWorkorderBomService
 
     /**
      * 新增生产工单BOM组成
-     * 
      * @param proWorkorderBom 生产工单BOM组成
-     * @return 结果
      */
     @Override
     public int insertProWorkorderBom(ProWorkorderBom proWorkorderBom)
@@ -59,9 +52,7 @@ public class ProWorkorderBomServiceImpl implements IProWorkorderBomService
 
     /**
      * 修改生产工单BOM组成
-     * 
      * @param proWorkorderBom 生产工单BOM组成
-     * @return 结果
      */
     @Override
     public int updateProWorkorderBom(ProWorkorderBom proWorkorderBom)
@@ -72,26 +63,12 @@ public class ProWorkorderBomServiceImpl implements IProWorkorderBomService
 
     /**
      * 批量删除生产工单BOM组成
-     * 
      * @param lineIds 需要删除的生产工单BOM组成主键
-     * @return 结果
      */
     @Override
     public int deleteProWorkorderBomByLineIds(Long[] lineIds)
     {
         return proWorkorderBomMapper.deleteProWorkorderBomByLineIds(lineIds);
-    }
-
-    /**
-     * 删除生产工单BOM组成信息
-     * 
-     * @param lineId 生产工单BOM组成主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProWorkorderBomByLineId(Long lineId)
-    {
-        return proWorkorderBomMapper.deleteProWorkorderBomByLineId(lineId);
     }
 
     @Override

@@ -10,9 +10,6 @@ import com.ktg.mes.pro.service.IProSnProcessService;
 
 /**
  * SN流转-工序信息Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-11-22
  */
 @Service
 public class ProSnProcessServiceImpl implements IProSnProcessService 
@@ -22,7 +19,6 @@ public class ProSnProcessServiceImpl implements IProSnProcessService
 
     /**
      * 查询SN流转-工序信息
-     * 
      * @param recordId SN流转-工序信息主键
      * @return SN流转-工序信息
      */
@@ -34,7 +30,6 @@ public class ProSnProcessServiceImpl implements IProSnProcessService
 
     /**
      * 查询SN流转-工序信息列表
-     * 
      * @param proSnProcess SN流转-工序信息
      * @return SN流转-工序信息
      */
@@ -46,9 +41,7 @@ public class ProSnProcessServiceImpl implements IProSnProcessService
 
     /**
      * 新增SN流转-工序信息
-     * 
      * @param proSnProcess SN流转-工序信息
-     * @return 结果
      */
     @Override
     public int insertProSnProcess(ProSnProcess proSnProcess)
@@ -59,9 +52,7 @@ public class ProSnProcessServiceImpl implements IProSnProcessService
 
     /**
      * 修改SN流转-工序信息
-     * 
      * @param proSnProcess SN流转-工序信息
-     * @return 结果
      */
     @Override
     public int updateProSnProcess(ProSnProcess proSnProcess)
@@ -72,25 +63,11 @@ public class ProSnProcessServiceImpl implements IProSnProcessService
 
     /**
      * 批量删除SN流转-工序信息
-     * 
      * @param recordIds 需要删除的SN流转-工序信息主键
-     * @return 结果
      */
     @Override
     public int deleteProSnProcessByRecordIds(Long[] recordIds)
     {
         return proSnProcessMapper.deleteProSnProcessByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除SN流转-工序信息信息
-     * 
-     * @param recordId SN流转-工序信息主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProSnProcessByRecordId(Long recordId)
-    {
-        return proSnProcessMapper.deleteProSnProcessByRecordId(recordId);
     }
 }

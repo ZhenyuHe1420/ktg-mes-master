@@ -2,12 +2,10 @@ package com.ktg.mes.qc.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.qc.domain.*;
 import com.ktg.mes.qc.service.*;
-import net.sf.jsqlparser.util.validation.metadata.DatabaseException;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,9 +27,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 检测结果记录Controller
- * 
- * @author yinjinlu
- * @date 2024-11-29
  */
 @RestController
 @RequestMapping("/mes/qc/qcresult")
@@ -39,25 +34,18 @@ public class QcResultController extends BaseController
 {
     @Autowired
     private IQcResultService qcResultService;
-
     @Autowired
     private IQcResultDetailService qcResultDetailService;
-
     @Autowired
     private IQcIndexService qcIndexService;
-
     @Autowired
     private IQcIqcService iqcService;
-
     @Autowired
     private IQcIpqcService pqcService;
-
     @Autowired
     private IQcOqcService oqcService;
-
     @Autowired
     private IQcRqcService rqcService;
-
 
     /**
      * 查询检测结果记录列表

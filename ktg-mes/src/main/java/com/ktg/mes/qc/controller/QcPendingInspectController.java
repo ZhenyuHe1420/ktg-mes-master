@@ -15,10 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/mes/qc/pending")
 public class QcPendingInspectController extends BaseController {
-
     @Autowired
     private IQcPendingInspectService qcPendingInspectService;
-
 
     /**
      * 获取待检验任务

@@ -1,11 +1,9 @@
 package com.ktg.mes.pro.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ktg.mes.pro.mapper.ProTaskIssueMapper;
@@ -14,9 +12,6 @@ import com.ktg.mes.pro.service.IProTaskIssueService;
 
 /**
  * 生产任务投料Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-07-22
  */
 @Service
 public class ProTaskIssueServiceImpl implements IProTaskIssueService 
@@ -26,7 +21,6 @@ public class ProTaskIssueServiceImpl implements IProTaskIssueService
 
     /**
      * 查询生产任务投料
-     * 
      * @param recordId 生产任务投料主键
      * @return 生产任务投料
      */
@@ -38,7 +32,6 @@ public class ProTaskIssueServiceImpl implements IProTaskIssueService
 
     /**
      * 查询生产任务投料列表
-     * 
      * @param proTaskIssue 生产任务投料
      * @return 生产任务投料
      */
@@ -59,9 +52,7 @@ public class ProTaskIssueServiceImpl implements IProTaskIssueService
 
     /**
      * 新增生产任务投料
-     * 
      * @param proTaskIssue 生产任务投料
-     * @return 结果
      */
     @Override
     public int insertProTaskIssue(ProTaskIssue proTaskIssue)
@@ -72,9 +63,7 @@ public class ProTaskIssueServiceImpl implements IProTaskIssueService
 
     /**
      * 修改生产任务投料
-     * 
      * @param proTaskIssue 生产任务投料
-     * @return 结果
      */
     @Override
     public int updateProTaskIssue(ProTaskIssue proTaskIssue)
@@ -85,25 +74,11 @@ public class ProTaskIssueServiceImpl implements IProTaskIssueService
 
     /**
      * 批量删除生产任务投料
-     * 
      * @param recordIds 需要删除的生产任务投料主键
-     * @return 结果
      */
     @Override
     public int deleteProTaskIssueByRecordIds(Long[] recordIds)
     {
         return proTaskIssueMapper.deleteProTaskIssueByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除生产任务投料信息
-     * 
-     * @param recordId 生产任务投料主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProTaskIssueByRecordId(Long recordId)
-    {
-        return proTaskIssueMapper.deleteProTaskIssueByRecordId(recordId);
     }
 }

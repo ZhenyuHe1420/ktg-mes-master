@@ -1,10 +1,8 @@
 package com.ktg.mes.qc.controller;
 
-import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.bean.BeanUtils;
@@ -35,9 +33,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 退料检验单Controller
- * 
- * @author yinjinlu
- * @date 2025-03-06
  */
 @RestController
 @RequestMapping("/mes/qc/rqc")
@@ -45,28 +40,18 @@ public class QcRqcController extends BaseController
 {
     @Autowired
     private IQcRqcService qcRqcService;
-
     @Autowired
     private IQcRqcLineService qcRqcLineService;
-
     @Autowired
     private IQcTemplateProductService qcTemplateProductService;
-
     @Autowired
     private IWmRtIssueLineService wmRtIssueLineService;
-
     @Autowired
     private IWmRtIssueService wmRtIssueService;
-
     @Autowired
     private IWmRtSalesLineService wmRtSalesLineService;
-
     @Autowired
     private IWmRtSalesService wmRtSalesService;
-
-    @Autowired
-    private IWmBatchService wmBatchService;
-
     @Autowired
     private IQcTemplateIndexService qcTemplateIndexService;
 
@@ -302,7 +287,6 @@ public class QcRqcController extends BaseController
 
     /**
      * 根据头信息生成行信息
-     * @param rqc
      */
     private void generateLine(QcRqc rqc){
         QcTemplateIndex param = new QcTemplateIndex();

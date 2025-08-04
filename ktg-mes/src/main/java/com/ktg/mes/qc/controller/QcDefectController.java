@@ -2,7 +2,6 @@ package com.ktg.mes.qc.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.system.strategy.AutoCodeUtil;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -26,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 常见缺陷Controller
- * 
- * @author yinjinlu
- * @date 2022-05-19
  */
 @RestController
 @RequestMapping("/mes/qc/qcdefect")
@@ -36,7 +32,6 @@ public class QcDefectController extends BaseController
 {
     @Autowired
     private IQcDefectService qcDefectService;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
 

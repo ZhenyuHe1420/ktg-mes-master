@@ -10,9 +10,6 @@ import com.ktg.mes.pro.service.IProAndonConfigService;
 
 /**
  * 安灯呼叫配置Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-04-28
  */
 @Service
 public class ProAndonConfigServiceImpl implements IProAndonConfigService 
@@ -22,7 +19,6 @@ public class ProAndonConfigServiceImpl implements IProAndonConfigService
 
     /**
      * 查询安灯呼叫配置
-     * 
      * @param configId 安灯呼叫配置主键
      * @return 安灯呼叫配置
      */
@@ -34,7 +30,6 @@ public class ProAndonConfigServiceImpl implements IProAndonConfigService
 
     /**
      * 查询安灯呼叫配置列表
-     * 
      * @param proAndonConfig 安灯呼叫配置
      * @return 安灯呼叫配置
      */
@@ -46,9 +41,7 @@ public class ProAndonConfigServiceImpl implements IProAndonConfigService
 
     /**
      * 新增安灯呼叫配置
-     * 
      * @param proAndonConfig 安灯呼叫配置
-     * @return 结果
      */
     @Override
     public int insertProAndonConfig(ProAndonConfig proAndonConfig)
@@ -59,9 +52,7 @@ public class ProAndonConfigServiceImpl implements IProAndonConfigService
 
     /**
      * 修改安灯呼叫配置
-     * 
      * @param proAndonConfig 安灯呼叫配置
-     * @return 结果
      */
     @Override
     public int updateProAndonConfig(ProAndonConfig proAndonConfig)
@@ -72,25 +63,11 @@ public class ProAndonConfigServiceImpl implements IProAndonConfigService
 
     /**
      * 批量删除安灯呼叫配置
-     * 
      * @param configIds 需要删除的安灯呼叫配置主键
-     * @return 结果
      */
     @Override
     public int deleteProAndonConfigByConfigIds(Long[] configIds)
     {
         return proAndonConfigMapper.deleteProAndonConfigByConfigIds(configIds);
-    }
-
-    /**
-     * 删除安灯呼叫配置信息
-     * 
-     * @param configId 安灯呼叫配置主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProAndonConfigByConfigId(Long configId)
-    {
-        return proAndonConfigMapper.deleteProAndonConfigByConfigId(configId);
     }
 }

@@ -10,9 +10,6 @@ import com.ktg.mes.pro.service.IProCardProcessService;
 
 /**
  * 工序流转卡-工序信息Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-07-04
  */
 @Service
 public class ProCardProcessServiceImpl implements IProCardProcessService 
@@ -22,7 +19,6 @@ public class ProCardProcessServiceImpl implements IProCardProcessService
 
     /**
      * 查询工序流转卡-工序信息
-     * 
      * @param recordId 工序流转卡-工序信息主键
      * @return 工序流转卡-工序信息
      */
@@ -34,7 +30,6 @@ public class ProCardProcessServiceImpl implements IProCardProcessService
 
     /**
      * 查询工序流转卡-工序信息列表
-     * 
      * @param proCardProcess 工序流转卡-工序信息
      * @return 工序流转卡-工序信息
      */
@@ -46,9 +41,7 @@ public class ProCardProcessServiceImpl implements IProCardProcessService
 
     /**
      * 新增工序流转卡-工序信息
-     * 
      * @param proCardProcess 工序流转卡-工序信息
-     * @return 结果
      */
     @Override
     public int insertProCardProcess(ProCardProcess proCardProcess)
@@ -59,9 +52,7 @@ public class ProCardProcessServiceImpl implements IProCardProcessService
 
     /**
      * 修改工序流转卡-工序信息
-     * 
      * @param proCardProcess 工序流转卡-工序信息
-     * @return 结果
      */
     @Override
     public int updateProCardProcess(ProCardProcess proCardProcess)
@@ -72,25 +63,11 @@ public class ProCardProcessServiceImpl implements IProCardProcessService
 
     /**
      * 批量删除工序流转卡-工序信息
-     * 
      * @param recordIds 需要删除的工序流转卡-工序信息主键
-     * @return 结果
      */
     @Override
     public int deleteProCardProcessByRecordIds(Long[] recordIds)
     {
         return proCardProcessMapper.deleteProCardProcessByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除工序流转卡-工序信息信息
-     * 
-     * @param recordId 工序流转卡-工序信息主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProCardProcessByRecordId(Long recordId)
-    {
-        return proCardProcessMapper.deleteProCardProcessByRecordId(recordId);
     }
 }

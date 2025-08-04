@@ -3,7 +3,6 @@ package com.ktg.mes.pro.service.impl;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import cn.hutool.core.collection.CollectionUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
@@ -14,7 +13,6 @@ import com.ktg.mes.md.mapper.MdWorkstationMapper;
 import com.ktg.mes.pro.domain.*;
 import com.ktg.mes.pro.mapper.ProRouteMapper;
 import com.ktg.mes.pro.mapper.ProRouteProductMapper;
-import com.ktg.mes.pro.mapper.ProWorkorderMapper;
 import com.ktg.mes.pro.service.IProProcessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,32 +22,23 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 工艺组成Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-13
  */
 @Service
 public class ProRouteProcessServiceImpl implements IProRouteProcessService 
 {
     @Autowired
     private ProRouteMapper proRouteMapper;
-
     @Autowired
     private ProRouteProcessMapper proRouteProcessMapper;
-
-
     @Autowired
     private ProRouteProductMapper proRouteProductMapper;
-
     @Autowired
     private MdWorkstationMapper mdWorkstationMapper;
-
     @Autowired
     private IProProcessService proProcessService;
 
     /**
      * 查询工艺组成
-     * 
      * @param recordId 工艺组成主键
      * @return 工艺组成
      */
@@ -61,7 +50,6 @@ public class ProRouteProcessServiceImpl implements IProRouteProcessService
 
     /**
      * 查询工艺组成列表
-     * 
      * @param proRouteProcess 工艺组成
      * @return 工艺组成
      */
@@ -143,9 +131,7 @@ public class ProRouteProcessServiceImpl implements IProRouteProcessService
 
     /**
      * 新增工艺组成
-     * 
      * @param proRouteProcess 工艺组成
-     * @return 结果
      */
     @Override
     public int insertProRouteProcess(ProRouteProcess proRouteProcess)
@@ -156,9 +142,7 @@ public class ProRouteProcessServiceImpl implements IProRouteProcessService
 
     /**
      * 修改工艺组成
-     * 
      * @param proRouteProcess 工艺组成
-     * @return 结果
      */
     @Override
     public int updateProRouteProcess(ProRouteProcess proRouteProcess)
@@ -169,9 +153,7 @@ public class ProRouteProcessServiceImpl implements IProRouteProcessService
 
     /**
      * 批量删除工艺组成
-     * 
      * @param recordIds 需要删除的工艺组成主键
-     * @return 结果
      */
     @Override
     @Transactional
@@ -200,18 +182,6 @@ public class ProRouteProcessServiceImpl implements IProRouteProcessService
             }
         }
         return status;
-    }
-
-    /**
-     * 删除工艺组成信息
-     * 
-     * @param recordId 工艺组成主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProRouteProcessByRecordId(Long recordId)
-    {
-        return proRouteProcessMapper.deleteProRouteProcessByRecordId(recordId);
     }
 
     @Override

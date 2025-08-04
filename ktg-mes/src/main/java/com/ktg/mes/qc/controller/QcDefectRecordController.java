@@ -2,7 +2,6 @@ package com.ktg.mes.qc.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
@@ -30,9 +29,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 检验单缺陷记录Controller
- * 
- * @author yinjinlu
- * @date 2022-08-30
  */
 @RestController
 @RequestMapping("/mes/qc/defectrecord")
@@ -40,25 +36,18 @@ public class QcDefectRecordController extends BaseController
 {
     @Autowired
     private IQcDefectRecordService qcDefectRecordService;
-
     @Autowired
     private IQcIqcLineService qcIqcLineService;
-
     @Autowired
     private IQcIqcService qcIqcService;
-
     @Autowired
     private IQcIpqcLineService qcIpqcLineService;
-
     @Autowired
     private IQcIpqcService qcIpqcService;
-
     @Autowired
     private IQcOqcService qcOqcService;
-
     @Autowired
     private IQcOqcLineService qcOqcLineService;
-
 
     /**
      * 查询检验单缺陷记录列表

@@ -26,9 +26,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 检测结果明细记录Controller
- * 
- * @author yinjinlu
- * @date 2024-11-29
  */
 @RestController
 @RequestMapping("/mes/qc/qcresultdetail")
@@ -49,11 +46,6 @@ public class QcResultDetailController extends BaseController
         return getDataTable(list);
     }
 
-    /**
-     *
-     * @param qcResultDetail
-     * @return
-     */
     @PreAuthorize("@ss.hasPermi('mes:qc:qcresult:list')")
     @GetMapping("/listDetails")
     public AjaxResult listDetails(QcResultDetail qcResultDetail){
@@ -78,7 +70,6 @@ public class QcResultDetailController extends BaseController
         }
         return AjaxResult.success(details);
     }
-
 
     /**
      * 导出检测结果明细记录列表

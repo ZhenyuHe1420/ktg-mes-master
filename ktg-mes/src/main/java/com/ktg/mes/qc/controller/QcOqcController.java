@@ -3,7 +3,6 @@ package com.ktg.mes.qc.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
@@ -37,9 +36,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 出货检验单Controller
- * 
- * @author yinjinlu
- * @date 2022-08-31
  */
 @RestController
 @RequestMapping("/mes/qc/oqc")
@@ -47,19 +43,14 @@ public class QcOqcController extends BaseController
 {
     @Autowired
     private IQcOqcService qcOqcService;
-
     @Autowired
     private IQcOqcLineService qcOqcLineService;
-
     @Autowired
     private IQcTemplateProductService qcTemplateProductService;
-
     @Autowired
     private IQcTemplateIndexService qcTemplateIndexService;
-
     @Autowired
     private IWmProductSalesService wmProductSalesService;
-
     @Autowired
     private IWmProductSalesLineService wmProductSalesLineService;
 
@@ -129,7 +120,6 @@ public class QcOqcController extends BaseController
         if(qcOqc.getQuantityCheck().compareTo(qcOqc.getQuantityUnqualified().add(qcOqc.getQuantityQualified()))!=0){
             return AjaxResult.error("质检数量必须等于合格数量+不合格数量!");
         }
-
 
         //根据来源单据初始化其他头信息
         if(qcOqc.getSourceDocId()!= null){
@@ -246,15 +236,13 @@ public class QcOqcController extends BaseController
 
     /**
      * 根据头信息生成行信息
-     * @param oqc
      */
     private void generateLine(QcOqc oqc){
         QcTemplateIndex param = new QcTemplateIndex();
         param.setTemplateId(oqc.getTemplateId());
         List<QcTemplateIndex> indexs = qcTemplateIndexService.selectQcTemplateIndexList(param);
         if(CollUtil.isNotEmpty(indexs)){
-            for (QcTemplateIndex index:indexs
-            ) {
+            for (QcTemplateIndex index:indexs) {
                 QcOqcLine line = new QcOqcLine();
                 line.setOqcId(oqc.getOqcId());
                 line.setIndexId(index.getIndexId());

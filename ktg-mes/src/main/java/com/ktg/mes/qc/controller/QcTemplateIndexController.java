@@ -2,7 +2,6 @@ package com.ktg.mes.qc.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.mes.qc.domain.QcIndex;
 import com.ktg.mes.qc.service.IQcIndexService;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -26,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 检测模板-检测项Controller
- * 
- * @author yinjinlu
- * @date 2022-05-18
  */
 @RestController
 @RequestMapping("/mes/qc/templateindex")
@@ -36,7 +32,6 @@ public class QcTemplateIndexController extends BaseController
 {
     @Autowired
     private IQcTemplateIndexService qcTemplateIndexService;
-
     @Autowired
     private IQcIndexService qcIndexService;
 

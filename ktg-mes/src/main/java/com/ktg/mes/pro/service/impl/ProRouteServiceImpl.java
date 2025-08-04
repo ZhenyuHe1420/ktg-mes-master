@@ -1,7 +1,6 @@
 package com.ktg.mes.pro.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.pro.service.IProRouteService;
 
 /**
  * 工艺路线Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 @Service
 public class ProRouteServiceImpl implements IProRouteService 
@@ -25,7 +21,6 @@ public class ProRouteServiceImpl implements IProRouteService
 
     /**
      * 查询工艺路线
-     * 
      * @param routeId 工艺路线主键
      * @return 工艺路线
      */
@@ -37,7 +32,6 @@ public class ProRouteServiceImpl implements IProRouteService
 
     /**
      * 查询工艺路线列表
-     * 
      * @param proRoute 工艺路线
      * @return 工艺路线
      */
@@ -46,12 +40,6 @@ public class ProRouteServiceImpl implements IProRouteService
     {
         return proRouteMapper.selectProRouteList(proRoute);
     }
-
-    @Override
-    public ProRoute getRouteByProductId(Long itemId) {
-        return proRouteMapper.getRouteByProductId(itemId);
-    }
-
 
     @Override
     public String checkRouteCodeUnique(ProRoute proRoute) {
@@ -65,9 +53,7 @@ public class ProRouteServiceImpl implements IProRouteService
 
     /**
      * 新增工艺路线
-     * 
      * @param proRoute 工艺路线
-     * @return 结果
      */
     @Override
     public int insertProRoute(ProRoute proRoute)
@@ -78,9 +64,7 @@ public class ProRouteServiceImpl implements IProRouteService
 
     /**
      * 修改工艺路线
-     * 
      * @param proRoute 工艺路线
-     * @return 结果
      */
     @Override
     public int updateProRoute(ProRoute proRoute)
@@ -91,25 +75,11 @@ public class ProRouteServiceImpl implements IProRouteService
 
     /**
      * 批量删除工艺路线
-     * 
      * @param routeIds 需要删除的工艺路线主键
-     * @return 结果
      */
     @Override
     public int deleteProRouteByRouteIds(Long[] routeIds)
     {
         return proRouteMapper.deleteProRouteByRouteIds(routeIds);
-    }
-
-    /**
-     * 删除工艺路线信息
-     * 
-     * @param routeId 工艺路线主键
-     * @return 结果
-     */
-    @Override
-    public int deleteProRouteByRouteId(Long routeId)
-    {
-        return proRouteMapper.deleteProRouteByRouteId(routeId);
     }
 }
