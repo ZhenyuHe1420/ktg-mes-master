@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * SN流转-工序信息Controller
- * 
- * @author yinjinlu
- * @date 2024-11-22
  */
 @RestController
 @RequestMapping("/mes/pro/prosnprocess")

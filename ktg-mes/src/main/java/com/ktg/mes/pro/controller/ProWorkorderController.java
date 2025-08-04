@@ -34,9 +34,6 @@ import java.util.stream.Collectors;
 
 /**
  * 生产工单Controller
- *
- * @author yinjinlu
- * @date 2022-05-09
  */
 @RestController
 @RequestMapping("/mes/pro/workorder")
@@ -296,11 +293,9 @@ public class ProWorkorderController extends BaseController
         return results;
     }
 
-
     /**
      * 完成工单
      * @param workorderId
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:pro:workorder:edit')")
     @Log(title = "生产工单", businessType = BusinessType.UPDATE)
@@ -331,7 +326,6 @@ public class ProWorkorderController extends BaseController
     /**
      * 取消工单
      * @param workorderId
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:pro:workorder:edit')")
     @Log(title = "生产工单", businessType = BusinessType.UPDATE)
@@ -358,7 +352,6 @@ public class ProWorkorderController extends BaseController
         proWorkorderService.updateProWorkorder(workorder);
         return AjaxResult.success();
     }
-
 
     /**
      * 首页生产工单查询

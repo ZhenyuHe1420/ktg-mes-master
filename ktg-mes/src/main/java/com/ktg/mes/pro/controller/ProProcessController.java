@@ -2,9 +2,7 @@ package com.ktg.mes.pro.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
-import org.aspectj.weaver.loadtime.Aj;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,9 +24,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产工序Controller
- * 
- * @author yinjinlu
- * @date 2022-05-11
  */
 @RestController
 @RequestMapping("/mes/pro/process")

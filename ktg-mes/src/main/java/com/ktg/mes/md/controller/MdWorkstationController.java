@@ -37,9 +37,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 工作站Controller
- * 
- * @author yinjinlu
- * @date 2022-05-10
  */
 @RestController
 @RequestMapping("/mes/md/workstation")
@@ -47,31 +44,22 @@ public class MdWorkstationController extends BaseController
 {
     @Autowired
     private IMdWorkstationService mdWorkstationService;
-
     @Autowired
     private IMdWorkstationMachineService mdWorkstationMachineService;
-
     @Autowired
     private IMdWorkstationToolService mdWorkstationToolService;
-
     @Autowired
     private IMdWorkstationWorkerService mdWorkstationWorkerService;
-
     @Autowired
     private IProProcessService proProcessService;
-
     @Autowired
     private IMdWorkshopService mdWorkshopService;
-
     @Autowired
     private IWmWarehouseService wmWarehouseService;
-
     @Autowired
     private IWmStorageLocationService wmStorageLocationService;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
-
     @Autowired
     private WmBarCodeUtil barCodeUtil;
 
@@ -230,8 +218,7 @@ public class MdWorkstationController extends BaseController
 	@DeleteMapping("/{workstationIds}")
     public AjaxResult remove(@PathVariable Long[] workstationIds)
     {
-        for (Long workstationId: workstationIds
-             ) {
+        for (Long workstationId: workstationIds) {
             mdWorkstationMachineService.deleteByWorkstationId(workstationId);
             mdWorkstationToolService.deleteByWorkstationId(workstationId);
             mdWorkstationWorkerService.deleteByWorkstationId(workstationId);

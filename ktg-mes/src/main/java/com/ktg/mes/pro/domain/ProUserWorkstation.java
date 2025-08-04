@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 用户工作站绑定关系对象 pro_user_workstation
- * 
- * @author yinjinlu
- * @date 2023-02-20
  */
 public class ProUserWorkstation extends BaseEntity
 {

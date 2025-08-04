@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 生产工序对象 pro_process
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 public class ProProcess extends BaseEntity
 {

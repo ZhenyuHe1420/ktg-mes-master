@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品SIPController
- * 
- * @author yinjinlu
- * @date 2023-10-31
  */
 @RestController
 @RequestMapping("/mes/md/sip")

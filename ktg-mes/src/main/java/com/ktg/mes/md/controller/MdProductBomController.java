@@ -25,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品BOM关系Controller
- * 
- * @author yinjinlu
- * @date 2022-05-09
  */
 @RestController
 @RequestMapping("/mes/md/bom")

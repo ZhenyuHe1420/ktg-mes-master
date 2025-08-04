@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 供应商对象 md_vendor
- * 
- * @author yinjinlu
- * @date 2022-05-06
  */
 public class MdVendor extends BaseEntity
 {

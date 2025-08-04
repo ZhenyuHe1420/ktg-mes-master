@@ -1,13 +1,10 @@
 package com.ktg.mes.pro.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.math.BigDecimal;
 import java.util.Date;
 
 public class GanttData {
-
-
     private static final long serialVersionUID = 1L;
 
     /**

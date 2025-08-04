@@ -9,9 +9,6 @@ import java.math.BigDecimal;
 
 /**
  * 单位对象 md_unit_measure
- * 
- * @author ruoyi
- * @date 2022-04-27
  */
 public class MdUnitMeasure extends BaseEntity
 {

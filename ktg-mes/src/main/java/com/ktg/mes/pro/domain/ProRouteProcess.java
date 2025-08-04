@@ -1,15 +1,10 @@
 package com.ktg.mes.pro.domain;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 工艺组成对象 pro_route_process
- * 
- * @author yinjinlu
- * @date 2022-05-13
  */
 public class ProRouteProcess extends BaseEntity
 {

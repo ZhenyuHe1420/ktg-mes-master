@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 物料消耗记录Controller
- * 
- * @author yinjinlu
- * @date 2022-07-24
  */
 @RestController
 @RequestMapping("/mes/pro/transconsume")

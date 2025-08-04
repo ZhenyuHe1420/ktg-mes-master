@@ -2,8 +2,6 @@ package com.ktg.mes.md.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
-import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.md.domain.MdWorkstation;
 import com.ktg.mes.md.service.IMdWorkstationService;
@@ -28,9 +26,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 设备资源Controller
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 @RestController
 @RequestMapping("/mes/md/workstationmachine")
@@ -38,7 +33,6 @@ public class MdWorkstationMachineController extends BaseController
 {
     @Autowired
     private IMdWorkstationMachineService mdWorkstationMachineService;
-
     @Autowired
     private IMdWorkstationService mdWorkstationService;
 

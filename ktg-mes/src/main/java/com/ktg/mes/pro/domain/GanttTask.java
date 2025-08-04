@@ -1,10 +1,5 @@
 package com.ktg.mes.pro.domain;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.ktg.common.annotation.Excel;
-
-import java.math.BigDecimal;
-import java.util.Date;
 import java.util.List;
 
 public class GanttTask {

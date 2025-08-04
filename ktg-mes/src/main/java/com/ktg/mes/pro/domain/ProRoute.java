@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 工艺路线对象 pro_route
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 public class ProRoute extends BaseEntity
 {

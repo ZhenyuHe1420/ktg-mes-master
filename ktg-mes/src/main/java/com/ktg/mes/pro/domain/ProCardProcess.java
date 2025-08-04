@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 工序流转卡-工序信息对象 pro_card_process
- * 
- * @author yinjinlu
- * @date 2024-07-04
  */
 public class ProCardProcess extends BaseEntity
 {

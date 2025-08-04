@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 安灯呼叫配置对象 pro_andon_config
- * 
- * @author yinjinlu
- * @date 2025-04-28
  */
 public class ProAndonConfig extends BaseEntity
 {

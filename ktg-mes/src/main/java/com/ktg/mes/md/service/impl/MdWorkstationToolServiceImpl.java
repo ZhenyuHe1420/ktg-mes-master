@@ -1,7 +1,6 @@
 package com.ktg.mes.md.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.md.service.IMdWorkstationToolService;
 
 /**
  * 工装夹具资源Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 @Service
 public class MdWorkstationToolServiceImpl implements IMdWorkstationToolService
@@ -25,7 +21,6 @@ public class MdWorkstationToolServiceImpl implements IMdWorkstationToolService
 
     /**
      * 查询工装夹具资源
-     * 
      * @param recordId 工装夹具资源主键
      * @return 工装夹具资源
      */
@@ -37,7 +32,6 @@ public class MdWorkstationToolServiceImpl implements IMdWorkstationToolService
 
     /**
      * 查询工装夹具资源列表
-     * 
      * @param mdWorkstationTool 工装夹具资源
      * @return 工装夹具资源
      */
@@ -59,9 +53,7 @@ public class MdWorkstationToolServiceImpl implements IMdWorkstationToolService
 
     /**
      * 新增工装夹具资源
-     * 
      * @param mdWorkstationTool 工装夹具资源
-     * @return 结果
      */
     @Override
     public int insertMdWorkstationTool(MdWorkstationTool mdWorkstationTool)
@@ -72,9 +64,7 @@ public class MdWorkstationToolServiceImpl implements IMdWorkstationToolService
 
     /**
      * 修改工装夹具资源
-     * 
      * @param mdWorkstationTool 工装夹具资源
-     * @return 结果
      */
     @Override
     public int updateMdWorkstationTool(MdWorkstationTool mdWorkstationTool)
@@ -85,26 +75,12 @@ public class MdWorkstationToolServiceImpl implements IMdWorkstationToolService
 
     /**
      * 批量删除工装夹具资源
-     * 
      * @param recordIds 需要删除的工装夹具资源主键
-     * @return 结果
      */
     @Override
     public int deleteMdWorkstationToolByRecordIds(Long[] recordIds)
     {
         return mdWorkstationToolMapper.deleteMdWorkstationToolByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除工装夹具资源信息
-     * 
-     * @param recordId 工装夹具资源主键
-     * @return 结果
-     */
-    @Override
-    public int deleteMdWorkstationToolByRecordId(Long recordId)
-    {
-        return mdWorkstationToolMapper.deleteMdWorkstationToolByRecordId(recordId);
     }
 
     @Override

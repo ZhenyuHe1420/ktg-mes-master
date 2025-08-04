@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 安灯呼叫记录对象 pro_andon_record
- * 
- * @author yinjinlu
- * @date 2025-04-27
  */
 public class ProAndonRecord extends BaseEntity
 {

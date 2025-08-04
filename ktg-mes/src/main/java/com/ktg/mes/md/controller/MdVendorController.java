@@ -2,10 +2,8 @@ package com.ktg.mes.md.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.util.ObjectUtil;
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.core.domain.entity.SysUser;
 import com.ktg.mes.wm.utils.WmBarCodeUtil;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +27,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 /**
  * 供应商Controller
- * 
- * @author yinjinlu
- * @date 2022-05-06
  */
 @RestController
 @RequestMapping("/mes/md/vendor")
@@ -39,7 +34,6 @@ public class  MdVendorController extends BaseController
 {
     @Autowired
     private IMdVendorService mdVendorService;
-
     @Autowired
     private WmBarCodeUtil barCodeUtil;
 
@@ -69,7 +63,6 @@ public class  MdVendorController extends BaseController
 
     /**
      * 下载导入模板
-     * @param response
      */
     @PostMapping("/importTemplate")
     public void importTemplate(HttpServletResponse response)
@@ -78,13 +71,10 @@ public class  MdVendorController extends BaseController
         util.importTemplateExcel(response, "供应商数据");
     }
 
-
     /**
      * 从模板导入供应商数据
      * @param file
      * @param updateSupport
-     * @return
-     * @throws Exception
      */
     @Log(title = "供应商", businessType = BusinessType.IMPORT)
     @PreAuthorize("@ss.hasPermi('mes:md:vendor:import')")

@@ -2,7 +2,6 @@ package com.ktg.mes.pro.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +24,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品制程物料BOMController
- * 
- * @author yinjinlu
- * @date 2022-09-12
  */
 @RestController
 @RequestMapping("/mes/pro/routeproductbom")

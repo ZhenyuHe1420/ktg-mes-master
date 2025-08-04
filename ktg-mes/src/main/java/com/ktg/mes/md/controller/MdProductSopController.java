@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品SOPController
- * 
- * @author yinjinlu
- * @date 2022-07-26
  */
 @RestController
 @RequestMapping("/mes/md/sop")

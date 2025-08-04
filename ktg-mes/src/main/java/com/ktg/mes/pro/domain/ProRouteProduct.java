@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 产品制程对象 pro_route_product
- * 
- * @author yinjinlu
- * @date 2022-05-14
  */
 public class ProRouteProduct extends BaseEntity
 {

@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 生产工单BOM组成对象 pro_workorder_bom
- * 
- * @author yinjinlu
- * @date 2022-05-09
  */
 public class ProWorkorderBom extends BaseEntity
 {

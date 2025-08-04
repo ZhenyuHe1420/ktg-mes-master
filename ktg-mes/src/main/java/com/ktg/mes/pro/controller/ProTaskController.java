@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
@@ -32,9 +31,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产任务Controller
- * 
- * @author yinjinlu
- * @date 2022-05-14
  */
 @RestController
 @RequestMapping("/mes/pro/protask")
@@ -42,19 +38,14 @@ public class ProTaskController extends BaseController
 {
     @Autowired
     private IProTaskService proTaskService;
-
     @Autowired
     private IProWorkorderService proWorkorderService;
-
     @Autowired
     private IProRouteProductService proRouteProductService;
-
     @Autowired
     private IProProcessService proProcessService;
-
     @Autowired
     private IProRouteService proRouteService;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
 
@@ -166,7 +157,6 @@ public class ProTaskController extends BaseController
 
     /**
      * 按照最新的模式只展示工序级别的生产进度
-     * @return
      */
     @GetMapping("/listTaskListByWorkorder")
     public AjaxResult getWorkorderProcessTypeTaskList(ProWorkorder proWorkorder){
@@ -245,12 +235,9 @@ public class ProTaskController extends BaseController
             return AjaxResult.error("当前生产任务对应的工序信息无效！"+proTask.getProcessId());
         }
 
-
         //自动生成任务编号和名称
         proTask.setTaskCode(autoCodeUtil.genSerialCode(UserConstants.TASK_CODE,null));
         proTask.setTaskName(new StringBuilder().append(proTask.getItemName()).append("【").append(proTask.getQuantity().toString()).append("】").append(proTask.getUnitOfMeasure()).toString());
-
-
 
         return toAjax(proTaskService.insertProTask(proTask));
     }

@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 物料消耗记录对象 pro_trans_consume
- * 
- * @author yinjinlu
- * @date 2022-07-24
  */
 public class ProTransConsume extends BaseEntity
 {

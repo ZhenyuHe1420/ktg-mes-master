@@ -15,9 +15,6 @@ import com.ktg.mes.md.service.IMdProductSopService;
 
 /**
  * 产品SOPService业务层处理
- * 
- * @author yinjinlu
- * @date 2022-07-26
  */
 @Service
 public class MdProductSopServiceImpl implements IMdProductSopService
@@ -27,7 +24,6 @@ public class MdProductSopServiceImpl implements IMdProductSopService
 
     /**
      * 查询产品SOP
-     * 
      * @param sopId 产品SOP主键
      * @return 产品SOP
      */
@@ -39,7 +35,6 @@ public class MdProductSopServiceImpl implements IMdProductSopService
 
     /**
      * 查询产品SOP列表
-     * 
      * @param mdProdutSop 产品SOP
      * @return 产品SOP
      */
@@ -53,9 +48,7 @@ public class MdProductSopServiceImpl implements IMdProductSopService
 
     /**
      * 新增产品SOP
-     *
      * @param mdProdutSop 产品SOP
-     * @return 结果
      */
     @Override
     public AjaxResult insertMdProductSop(MdProductSop mdProdutSop)
@@ -75,9 +68,7 @@ public class MdProductSopServiceImpl implements IMdProductSopService
 
     /**
      * 修改产品SOP
-     *
      * @param mdProdutSop 产品SOP
-     * @return 结果
      */
     @Override
     public AjaxResult updateMdProductSop(MdProductSop mdProdutSop)
@@ -97,25 +88,11 @@ public class MdProductSopServiceImpl implements IMdProductSopService
 
     /**
      * 批量删除产品SOP
-     * 
      * @param sopIds 需要删除的产品SOP主键
-     * @return 结果
      */
     @Override
     public int deleteMdProductSopBySopIds(Long[] sopIds)
     {
         return mdProductSopMapper.deleteMdProductSopBySopIds(sopIds);
-    }
-
-    /**
-     * 删除产品SOP信息
-     * 
-     * @param sopId 产品SOP主键
-     * @return 结果
-     */
-    @Override
-    public int deleteMdProductSopBySopId(Long sopId)
-    {
-        return mdProductSopMapper.deleteMdProductSopBySopId(sopId);
     }
 }

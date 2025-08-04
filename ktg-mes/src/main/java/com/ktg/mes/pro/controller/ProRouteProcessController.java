@@ -2,13 +2,11 @@ package com.ktg.mes.pro.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.pro.domain.ProProcess;
 import com.ktg.mes.pro.domain.ProRouteProduct;
-import com.ktg.mes.pro.domain.ProWorkorder;
 import com.ktg.mes.pro.service.IProProcessService;
 import com.ktg.mes.pro.service.IProRouteProductService;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -32,9 +30,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 工艺组成Controller
- * 
- * @author yinjinlu
- * @date 2022-05-13
  */
 @RestController
 @RequestMapping("/mes/pro/routeprocess")
@@ -42,10 +37,8 @@ public class ProRouteProcessController extends BaseController
 {
     @Autowired
     private IProRouteProcessService proRouteProcessService;
-
     @Autowired
     private IProRouteProductService proRouteProductService;
-
     @Autowired
     private IProProcessService proProcessService;
 
@@ -60,10 +53,8 @@ public class ProRouteProcessController extends BaseController
         return getDataTable(list);
     }
 
-
     /**
      * 查询指定产品的工艺组成
-     * @return
      */
     @GetMapping("/listProductProcess/{productId}")
     public AjaxResult listProductProcess(@PathVariable("productId") Long productId){
@@ -79,7 +70,6 @@ public class ProRouteProcessController extends BaseController
             return AjaxResult.error("当前产品未配置工艺路线！");
         }
     }
-
 
     /**
      * 导出工艺组成列表
@@ -157,30 +147,6 @@ public class ProRouteProcessController extends BaseController
     public AjaxResult edit(@RequestBody ProRouteProcess proRouteProcess)
     {
         return proRouteProcessService.editProRouteProcess(proRouteProcess);
-
-
-
-        //更新上一个工序的nextProcess
-//        ProRouteProcess preProcess = proRouteProcessService.findPreProcess(proRouteProcess);
-//        if(StringUtils.isNotNull(preProcess)){
-//            preProcess.setNextProcessId(proRouteProcess.getProcessId());
-//            preProcess.setNextProcessCode(proRouteProcess.getProcessCode());
-//            preProcess.setNextProcessName(proRouteProcess.getProcessName());
-//            proRouteProcessService.updateProRouteProcess(preProcess);
-//        }
-//
-//        //设置当前工序的nextProcess
-//        ProRouteProcess nextProcess = proRouteProcessService.findNextProcess(proRouteProcess);
-//        if(StringUtils.isNotNull(nextProcess)){
-//            proRouteProcess.setNextProcessId(nextProcess.getProcessId());
-//            proRouteProcess.setNextProcessCode(nextProcess.getProcessCode());
-//            proRouteProcess.setNextProcessName(nextProcess.getProcessName());
-//        }else{
-//            proRouteProcess.setNextProcessId(0L);
-//            proRouteProcess.setNextProcessName("无");
-//        }
-
-//        return toAjax(proRouteProcessService.updateProRouteProcess(proRouteProcess));
     }
 
     /**

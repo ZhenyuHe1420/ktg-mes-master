@@ -1,17 +1,12 @@
 package com.ktg.mes.pro.controller;
 
 import java.math.BigDecimal;
-import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollectionUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
-import com.ktg.mes.md.domain.MdProductBom;
 import com.ktg.mes.md.domain.MdWorkstation;
-import com.ktg.mes.md.service.IMdItemService;
-import com.ktg.mes.md.service.IMdProductBomService;
 import com.ktg.mes.md.service.IMdWorkstationService;
 import com.ktg.mes.pro.domain.*;
 import com.ktg.mes.pro.service.IProRouteProcessService;
@@ -19,7 +14,6 @@ import com.ktg.mes.pro.service.IProTaskService;
 import com.ktg.mes.pro.service.IProWorkorderService;
 import com.ktg.mes.wm.domain.*;
 import com.ktg.mes.wm.domain.tx.ItemConsumeTxBean;
-import com.ktg.mes.wm.domain.tx.ProductProductTxBean;
 import com.ktg.mes.wm.service.*;
 import com.ktg.system.strategy.AutoCodeUtil;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -43,9 +37,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产报工记录Controller
- * 
- * @author yinjinlu
- * @date 2022-07-10
  */
 @RestController
 @RequestMapping("/mes/pro/feedback")
@@ -53,40 +44,20 @@ public class ProFeedbackController extends BaseController
 {
     @Autowired
     private IProFeedbackService proFeedbackService;
-
     @Autowired
     private IProTaskService proTaskService;
-
     @Autowired
     private IProRouteProcessService proRouteProcessService;
-
     @Autowired
     private IProWorkorderService proWorkorderService;
-
     @Autowired
     private IMdWorkstationService mdWorkstationService;
-
-    @Autowired
-    private IMdProductBomService mdProductBomService;
-
     @Autowired
     private IWmItemConsumeService wmItemConsumeService;
-
-    @Autowired
-    private IWmItemConsumeLineService wmItemConsumeLineService;
-
-    @Autowired
-    private IWmItemConsumeDetailService wmItemConsumeDetailService;
-
-    @Autowired
-    private IWmMaterialStockService wmMaterialStockService;
-
     @Autowired
     private IWmProductProduceService wmProductProduceService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
 
@@ -253,7 +224,6 @@ public class ProFeedbackController extends BaseController
      *   3.2更新生产任务的生产数量和状态
      *   3.3更新生产工单的生产数量和状态
      * @param recordId
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:pro:feedback:edit')")
     @Log(title = "生产报工执行", businessType = BusinessType.UPDATE)
@@ -319,7 +289,6 @@ public class ProFeedbackController extends BaseController
 
     /**
      * 执行物料消耗库存动作
-     * @param record
      */
     private void executeItemConsume(WmItemConsume record){
         //需要在此处进行分批次领料的线边库扣减
@@ -328,8 +297,4 @@ public class ProFeedbackController extends BaseController
         record.setStatus(UserConstants.ORDER_STATUS_FINISHED);
         wmItemConsumeService.updateWmItemConsume(record);
     }
-
-
-
-
 }

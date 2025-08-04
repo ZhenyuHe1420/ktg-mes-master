@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 安灯呼叫记录Controller
- * 
- * @author yinjinlu
- * @date 2025-04-27
  */
 @RestController
 @RequestMapping("/mes/pro/andonrecord")

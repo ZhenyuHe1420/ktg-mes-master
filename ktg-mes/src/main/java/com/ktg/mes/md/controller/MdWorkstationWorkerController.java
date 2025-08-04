@@ -28,9 +28,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 人力资源Controller
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 @RestController
 @RequestMapping("/mes/md/workstationworker")
@@ -38,7 +35,6 @@ public class MdWorkstationWorkerController extends BaseController
 {
     @Autowired
     private IMdWorkstationWorkerService mdWorkstationWorkerService;
-
     @Autowired
     private ISysPostService sysPostService;
 

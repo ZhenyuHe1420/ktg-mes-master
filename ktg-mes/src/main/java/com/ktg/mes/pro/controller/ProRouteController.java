@@ -4,9 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.pro.domain.ProRouteProcess;
 import com.ktg.mes.pro.domain.ProRouteProduct;
 import com.ktg.mes.pro.domain.ProRouteProductBom;
@@ -36,9 +34,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 工艺路线Controller
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 @RestController
 @RequestMapping("/mes/pro/proroute")
@@ -46,13 +41,10 @@ public class ProRouteController extends BaseController
 {
     @Autowired
     private IProRouteService proRouteService;
-
     @Autowired
     private IProRouteProcessService proRouteProcessService;
-
     @Autowired
     private IProRouteProductService proRouteProductService;
-
     @Autowired
     private IProRouteProductBomService proRouteProductBomService;
 
@@ -165,8 +157,7 @@ public class ProRouteController extends BaseController
 	@DeleteMapping("/{routeIds}")
     public AjaxResult remove(@PathVariable Long[] routeIds)
     {
-        for (Long routeId:routeIds
-             ) {
+        for (Long routeId:routeIds) {
             proRouteProcessService.deleteByRouteId(routeId);
             proRouteProductService.deleteByRouteId(routeId);
             proRouteProductBomService.deleteByRouteId(routeId);

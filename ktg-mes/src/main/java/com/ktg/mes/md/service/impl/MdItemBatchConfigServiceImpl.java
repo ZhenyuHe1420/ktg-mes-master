@@ -10,27 +10,12 @@ import com.ktg.mes.md.service.IMdItemBatchConfigService;
 
 /**
  * 物料批次属性配置Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-02-05
  */
 @Service
 public class MdItemBatchConfigServiceImpl implements IMdItemBatchConfigService 
 {
     @Autowired
     private MdItemBatchConfigMapper mdItemBatchConfigMapper;
-
-    /**
-     * 查询物料批次属性配置
-     * 
-     * @param configId 物料批次属性配置主键
-     * @return 物料批次属性配置
-     */
-    @Override
-    public MdItemBatchConfig selectMdItemBatchConfigByConfigId(Long configId)
-    {
-        return mdItemBatchConfigMapper.selectMdItemBatchConfigByConfigId(configId);
-    }
 
     /**
      * 查询物料批次属性配置列表
@@ -51,9 +36,7 @@ public class MdItemBatchConfigServiceImpl implements IMdItemBatchConfigService
 
     /**
      * 新增物料批次属性配置
-     * 
      * @param mdItemBatchConfig 物料批次属性配置
-     * @return 结果
      */
     @Override
     public int insertMdItemBatchConfig(MdItemBatchConfig mdItemBatchConfig)
@@ -64,9 +47,7 @@ public class MdItemBatchConfigServiceImpl implements IMdItemBatchConfigService
 
     /**
      * 修改物料批次属性配置
-     * 
      * @param mdItemBatchConfig 物料批次属性配置
-     * @return 结果
      */
     @Override
     public int updateMdItemBatchConfig(MdItemBatchConfig mdItemBatchConfig)
@@ -77,25 +58,11 @@ public class MdItemBatchConfigServiceImpl implements IMdItemBatchConfigService
 
     /**
      * 批量删除物料批次属性配置
-     * 
      * @param configIds 需要删除的物料批次属性配置主键
-     * @return 结果
      */
     @Override
     public int deleteMdItemBatchConfigByConfigIds(Long[] configIds)
     {
         return mdItemBatchConfigMapper.deleteMdItemBatchConfigByConfigIds(configIds);
-    }
-
-    /**
-     * 删除物料批次属性配置信息
-     * 
-     * @param configId 物料批次属性配置主键
-     * @return 结果
-     */
-    @Override
-    public int deleteMdItemBatchConfigByConfigId(Long configId)
-    {
-        return mdItemBatchConfigMapper.deleteMdItemBatchConfigByConfigId(configId);
     }
 }

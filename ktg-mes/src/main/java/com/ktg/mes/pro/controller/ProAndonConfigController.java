@@ -2,8 +2,6 @@ package com.ktg.mes.pro.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
-import com.ktg.mes.qc.domain.QcDefectRecord;
 import com.ktg.mes.qc.domain.ValidList;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +23,9 @@ import com.ktg.common.enums.BusinessType;
 import com.ktg.mes.pro.domain.ProAndonConfig;
 import com.ktg.mes.pro.service.IProAndonConfigService;
 import com.ktg.common.utils.poi.ExcelUtil;
-import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 安灯呼叫配置Controller
- * 
- * @author yinjinlu
- * @date 2025-04-28
  */
 @RestController
 @RequestMapping("/mes/pro/andonconfig")

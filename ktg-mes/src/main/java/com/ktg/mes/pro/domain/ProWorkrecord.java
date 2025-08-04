@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 上下工记录对象 pro_workrecord
- * 
- * @author yinjinlu
- * @date 2023-02-20
  */
 public class ProWorkrecord extends BaseEntity
 {

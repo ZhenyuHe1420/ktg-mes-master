@@ -12,9 +12,6 @@ import com.ktg.common.core.domain.TreeEntity;
 
 /**
  * 生产工单对象 pro_workorder
- * 
- * @author yinjinlu
- * @date 2022-05-15
  */
 public class ProWorkorder extends TreeEntity
 {

@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 生产任务投料对象 pro_task_issue
- * 
- * @author yinjinlu
- * @date 2022-07-22
  */
 public class ProTaskIssue extends BaseEntity
 {

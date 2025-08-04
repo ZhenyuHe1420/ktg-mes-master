@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 车间对象 md_workshop
- * 
- * @author yinjinlu
- * @date 2022-05-07
  */
 public class MdWorkshop extends BaseEntity
 {

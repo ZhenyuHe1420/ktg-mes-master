@@ -13,15 +13,11 @@ import com.ktg.mes.wm.utils.WmBarCodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
  * 车间Controller
- *
- * @author yinjinlu
- * @date 2022-05-07
  */
 @RestController
 @RequestMapping("/mes/md/workshop")
@@ -29,9 +25,9 @@ public class MdWorkshopController extends BaseController
 {
     @Autowired
     private IMdWorkshopService mdWorkshopService;
-
     @Autowired
     private WmBarCodeUtil wmBarCodeUtil;
+
     /**
      * 查询车间列表
      */
@@ -45,7 +41,6 @@ public class MdWorkshopController extends BaseController
 
     /**
      * 获取所有可用车间
-     * @return
      */
     @GetMapping("/listAll")
     public AjaxResult listAll(){

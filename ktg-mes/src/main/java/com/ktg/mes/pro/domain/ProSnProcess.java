@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * SN流转-工序信息对象 pro_sn_process
- * 
- * @author yinjinlu
- * @date 2024-11-22
  */
 public class ProSnProcess extends BaseEntity
 {

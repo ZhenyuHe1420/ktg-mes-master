@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 工序流转卡-工序信息Controller
- * 
- * @author yinjinlu
- * @date 2024-07-04
  */
 @RestController
 @RequestMapping("/mes/pro/procardprocess")

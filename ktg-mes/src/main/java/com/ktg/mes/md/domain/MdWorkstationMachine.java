@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 设备资源对象 md_workstation_machine
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 public class MdWorkstationMachine extends BaseEntity
 {

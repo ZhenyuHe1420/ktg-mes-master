@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 产品BOM关系对象 md_product_bom
- * 
- * @author yinjinlu
- * @date 2022-05-09
  */
 public class MdProductBom extends BaseEntity
 {

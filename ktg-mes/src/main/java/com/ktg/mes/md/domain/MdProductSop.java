@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 产品SOP对象 md_produt_sop
- * 
- * @author yinjinlu
- * @date 2022-07-26
  */
 public class MdProductSop extends BaseEntity
 {

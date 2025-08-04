@@ -2,7 +2,6 @@ package com.ktg.mes.md.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +24,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 物料批次属性配置Controller
- * 
- * @author yinjinlu
- * @date 2025-02-05
  */
 @RestController
 @RequestMapping("/mes/md/batchconfig")

@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产工单BOM组成Controller
- * 
- * @author yinjinlu
- * @date 2022-05-09
  */
 @RestController
 @RequestMapping("/mes/pro/workorderbom")

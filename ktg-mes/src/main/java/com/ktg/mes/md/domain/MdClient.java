@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 客户对象 md_client
- * 
- * @author yinjinlu
- * @date 2022-05-06
  */
 public class MdClient extends BaseEntity
 {

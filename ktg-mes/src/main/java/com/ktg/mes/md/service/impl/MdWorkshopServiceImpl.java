@@ -1,11 +1,9 @@
 package com.ktg.mes.md.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ktg.mes.md.mapper.MdWorkshopMapper;
@@ -14,9 +12,6 @@ import com.ktg.mes.md.service.IMdWorkshopService;
 
 /**
  * 车间Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-07
  */
 @Service
 public class MdWorkshopServiceImpl implements IMdWorkshopService 
@@ -26,7 +21,6 @@ public class MdWorkshopServiceImpl implements IMdWorkshopService
 
     /**
      * 查询车间
-     * 
      * @param workshopId 车间主键
      * @return 车间
      */
@@ -38,7 +32,6 @@ public class MdWorkshopServiceImpl implements IMdWorkshopService
 
     /**
      * 查询车间列表
-     * 
      * @param mdWorkshop 车间
      * @return 车间
      */
@@ -70,9 +63,7 @@ public class MdWorkshopServiceImpl implements IMdWorkshopService
 
     /**
      * 新增车间
-     * 
      * @param mdWorkshop 车间
-     * @return 结果
      */
     @Override
     public int insertMdWorkshop(MdWorkshop mdWorkshop)
@@ -83,9 +74,7 @@ public class MdWorkshopServiceImpl implements IMdWorkshopService
 
     /**
      * 修改车间
-     * 
      * @param mdWorkshop 车间
-     * @return 结果
      */
     @Override
     public int updateMdWorkshop(MdWorkshop mdWorkshop)
@@ -96,25 +85,11 @@ public class MdWorkshopServiceImpl implements IMdWorkshopService
 
     /**
      * 批量删除车间
-     * 
      * @param workshopIds 需要删除的车间主键
-     * @return 结果
      */
     @Override
     public int deleteMdWorkshopByWorkshopIds(Long[] workshopIds)
     {
         return mdWorkshopMapper.deleteMdWorkshopByWorkshopIds(workshopIds);
-    }
-
-    /**
-     * 删除车间信息
-     * 
-     * @param workshopId 车间主键
-     * @return 结果
-     */
-    @Override
-    public int deleteMdWorkshopByWorkshopId(Long workshopId)
-    {
-        return mdWorkshopMapper.deleteMdWorkshopByWorkshopId(workshopId);
     }
 }

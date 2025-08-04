@@ -9,9 +9,6 @@ import java.math.BigDecimal;
 
 /**
  * 产品制程物料BOM对象 pro_route_product_bom
- * 
- * @author yinjinlu
- * @date 2022-09-12
  */
 public class ProRouteProductBom extends BaseEntity
 {

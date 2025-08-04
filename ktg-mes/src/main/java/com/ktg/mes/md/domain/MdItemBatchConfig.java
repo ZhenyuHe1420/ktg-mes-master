@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 物料批次属性配置对象 md_item_batch_config
- * 
- * @author yinjinlu
- * @date 2025-02-05
  */
 public class MdItemBatchConfig extends BaseEntity
 {

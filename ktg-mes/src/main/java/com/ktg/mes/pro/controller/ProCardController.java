@@ -2,13 +2,8 @@ package com.ktg.mes.pro.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.utils.StringUtils;
-import com.ktg.mes.pro.domain.ProWorkorder;
-import com.ktg.mes.pro.service.IProWorkorderService;
 import com.ktg.mes.wm.utils.WmBarCodeUtil;
-import com.ktg.system.strategy.AutoCodeUtil;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 工序流转卡Controller
- * 
- * @author yinjinlu
- * @date 2024-07-04
  */
 @RestController
 @RequestMapping("/mes/pro/procard")
@@ -40,7 +32,6 @@ public class ProCardController extends BaseController
 {
     @Autowired
     private IProCardService proCardService;
-
     @Autowired
     private WmBarCodeUtil wmBarCodeUtil;
 

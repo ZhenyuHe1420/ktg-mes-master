@@ -4,7 +4,6 @@ import cn.hutool.core.util.ObjectUtil;
 import com.ktg.common.core.domain.entity.ItemType;
 import com.ktg.common.exception.ServiceException;
 import com.ktg.common.utils.bean.BeanValidators;
-import com.ktg.mes.md.domain.MdVendor;
 import com.ktg.mes.md.mapper.ItemTypeMapper;
 import com.ktg.mes.md.service.IMdItemService;
 import com.ktg.common.constant.UserConstants;
@@ -22,19 +21,14 @@ import java.util.List;
 
 @Service
 public class MdItemServiceImpl implements IMdItemService {
-
     @Autowired
     private MdItemMapper mdItemMapper;
-
     @Autowired
     private ItemTypeMapper itemTypeMapper;
-
     @Autowired
     protected Validator validator;
-
     @Autowired
     private WmBarCodeUtil barCodeUtil;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
 
@@ -150,7 +144,6 @@ public class MdItemServiceImpl implements IMdItemService {
         return successMsg.toString();
     }
 
-
     @Override
     public MdItem selectMdItemById(Long itemId) {
         return mdItemMapper.selectMdItemById(itemId);
@@ -191,10 +184,5 @@ public class MdItemServiceImpl implements IMdItemService {
     @Override
     public int deleteByItemIds(Long[] itemIds) {
         return mdItemMapper.deleteMdItemByIds(itemIds);
-    }
-
-    @Override
-    public int deleteByItemId(Long itemId) {
-        return mdItemMapper.deleteMdItemById(itemId);
     }
 }

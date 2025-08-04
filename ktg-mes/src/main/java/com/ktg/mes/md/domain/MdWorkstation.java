@@ -1,15 +1,10 @@
 package com.ktg.mes.md.domain;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 工作站对象 md_workstation
- * 
- * @author yinjinlu
- * @date 2022-05-10
  */
 public class MdWorkstation extends BaseEntity
 {

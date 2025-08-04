@@ -1,17 +1,14 @@
 package com.ktg.mes.md.service.impl;
 
 import java.util.List;
-
 import cn.hutool.core.util.ObjectUtil;
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.core.domain.entity.SysUser;
 import com.ktg.common.exception.ServiceException;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.common.utils.bean.BeanValidators;
 import com.ktg.mes.wm.utils.WmBarCodeUtil;
 import com.ktg.system.strategy.AutoCodeUtil;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ktg.mes.md.mapper.MdVendorMapper;
@@ -22,28 +19,21 @@ import javax.validation.Validator;
 
 /**
  * 供应商Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-06
  */
 @Service
 public class MdVendorServiceImpl implements IMdVendorService 
 {
     @Autowired
     private MdVendorMapper mdVendorMapper;
-
     @Autowired
     protected Validator validator;
-
     @Autowired
     private WmBarCodeUtil barCodeUtil;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
 
     /**
      * 查询供应商
-     * 
      * @param vendorId 供应商主键
      * @return 供应商
      */
@@ -55,7 +45,6 @@ public class MdVendorServiceImpl implements IMdVendorService
 
     /**
      * 查询供应商列表
-     * 
      * @param mdVendor 供应商
      * @return 供应商
      */
@@ -169,9 +158,7 @@ public class MdVendorServiceImpl implements IMdVendorService
 
     /**
      * 新增供应商
-     * 
      * @param mdVendor 供应商
-     * @return 结果
      */
     @Override
     public int insertMdVendor(MdVendor mdVendor)
@@ -182,9 +169,7 @@ public class MdVendorServiceImpl implements IMdVendorService
 
     /**
      * 修改供应商
-     * 
      * @param mdVendor 供应商
-     * @return 结果
      */
     @Override
     public int updateMdVendor(MdVendor mdVendor)
@@ -195,25 +180,11 @@ public class MdVendorServiceImpl implements IMdVendorService
 
     /**
      * 批量删除供应商
-     * 
      * @param vendorIds 需要删除的供应商主键
-     * @return 结果
      */
     @Override
     public int deleteMdVendorByVendorIds(Long[] vendorIds)
     {
         return mdVendorMapper.deleteMdVendorByVendorIds(vendorIds);
-    }
-
-    /**
-     * 删除供应商信息
-     * 
-     * @param vendorId 供应商主键
-     * @return 结果
-     */
-    @Override
-    public int deleteMdVendorByVendorId(Long vendorId)
-    {
-        return mdVendorMapper.deleteMdVendorByVendorId(vendorId);
     }
 }

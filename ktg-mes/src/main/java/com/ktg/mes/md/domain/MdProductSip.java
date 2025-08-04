@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 产品SIP对象 md_product_sip
- * 
- * @author yinjinlu
- * @date 2023-10-31
  */
 public class MdProductSip extends BaseEntity
 {

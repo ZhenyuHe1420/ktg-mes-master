@@ -2,7 +2,6 @@ package com.ktg.mes.pro.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.wm.utils.WmBarCodeUtil;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -26,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 流转单Controller
- * 
- * @author yinjinlu
- * @date 2022-07-24
  */
 @RestController
 @RequestMapping("/mes/pro/transorder")
@@ -36,7 +32,6 @@ public class ProTransOrderController extends BaseController
 {
     @Autowired
     private IProTransOrderService proTransOrderService;
-
     @Autowired
     private WmBarCodeUtil wmBarCodeUtil;
 

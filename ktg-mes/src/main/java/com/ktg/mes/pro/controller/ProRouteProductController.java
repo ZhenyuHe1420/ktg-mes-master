@@ -2,7 +2,6 @@ package com.ktg.mes.pro.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.pro.domain.ProRouteProductBom;
@@ -29,9 +28,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品制程Controller
- * 
- * @author yinjinlu
- * @date 2022-05-14
  */
 @RestController
 @RequestMapping("/mes/pro/routeproduct")
@@ -39,7 +35,6 @@ public class ProRouteProductController extends BaseController
 {
     @Autowired
     private IProRouteProductService proRouteProductService;
-
     @Autowired
     private IProRouteProductBomService proRouteProductBomService;
 

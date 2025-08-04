@@ -8,9 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class MdItem extends BaseEntity {
-
     private static final long serialVersionUID = 1L;
-
 
     private Long itemId;
     @Excel(name = "物料/产品编码")

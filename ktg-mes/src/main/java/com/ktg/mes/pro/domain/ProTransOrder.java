@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 流转单对象 pro_trans_order
- * 
- * @author yinjinlu
- * @date 2022-07-24
  */
 public class ProTransOrder extends BaseEntity
 {

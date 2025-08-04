@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 生产任务对象 pro_task
- * 
- * @author yinjinlu
- * @date 2022-05-15
  */
 public class ProTask extends BaseEntity
 {

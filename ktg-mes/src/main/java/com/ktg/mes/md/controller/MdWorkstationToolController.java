@@ -2,7 +2,6 @@ package com.ktg.mes.md.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.tm.domain.TmToolType;
 import com.ktg.mes.tm.service.ITmToolTypeService;
@@ -27,9 +26,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 工装夹具资源Controller
- * 
- * @author yinjinlu
- * @date 2022-05-12
  */
 @RestController
 @RequestMapping("/mes/md/workstationtool")
@@ -37,7 +33,6 @@ public class MdWorkstationToolController extends BaseController
 {
     @Autowired
     private IMdWorkstationToolService mdWorkstationToolService;
-
     @Autowired
     private ITmToolTypeService toolTypeService;
 

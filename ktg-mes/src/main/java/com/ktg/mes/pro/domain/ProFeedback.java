@@ -3,16 +3,11 @@ package com.ktg.mes.pro.domain;
 import java.math.BigDecimal;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 生产报工记录对象 pro_feedback
- * 
- * @author yinjinlu
- * @date 2022-07-10
  */
 public class ProFeedback extends BaseEntity
 {

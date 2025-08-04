@@ -2,28 +2,27 @@ package com.ktg.mes.md.service;
 
 import com.ktg.common.core.domain.TreeSelect;
 import com.ktg.common.core.domain.entity.ItemType;
-
 import java.util.List;
 
 public interface IItemTypeService {
 
-    public List<ItemType> selectItemTypeList(ItemType itemType);
+    List<ItemType> selectItemTypeList(ItemType itemType);
 
-    public ItemType selectItemTypeById(Long itemTypeId);
+    ItemType selectItemTypeById(Long itemTypeId);
 
-    public List<TreeSelect> buildTreeSelect(List<ItemType> list);
+    List<TreeSelect> buildTreeSelect(List<ItemType> list);
 
-    public String checkItemTypeCodeUnique(ItemType itemType);
+    String checkItemTypeCodeUnique(ItemType itemType);
 
-    public String checkItemTypeNameUnique(ItemType itemType);
+    String checkItemTypeNameUnique(ItemType itemType);
 
-    public Integer insertItemType(ItemType itemType);
+    Integer insertItemType(ItemType itemType);
 
-    public Integer updateItemType(ItemType itemType);
+    Integer updateItemType(ItemType itemType);
 
-    public Integer removeItemType(Long itemTypeId);
+    Integer removeItemType(Long itemTypeId);
 
-    public boolean checkHasChild(Long itemTypeId);
+    boolean checkHasChild(Long itemTypeId);
 
-    public boolean checkHasItem(Long itemTypeId);
+    boolean checkHasItem(Long itemTypeId);
 }

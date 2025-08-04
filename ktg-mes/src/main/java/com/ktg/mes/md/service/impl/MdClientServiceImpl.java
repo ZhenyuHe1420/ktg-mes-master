@@ -21,28 +21,21 @@ import javax.validation.Validator;
 
 /**
  * 客户Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-06
  */
 @Service
 public class MdClientServiceImpl implements IMdClientService 
 {
     @Autowired
     private MdClientMapper mdClientMapper;
-
     @Autowired
     protected Validator validator;
-
     @Autowired
     private WmBarCodeUtil barCodeUtil;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
 
     /**
      * 查询客户
-     * 
      * @param clientId 客户主键
      * @return 客户
      */
@@ -54,7 +47,6 @@ public class MdClientServiceImpl implements IMdClientService
 
     /**
      * 查询客户列表
-     * 
      * @param mdClient 客户
      * @return 客户
      */
@@ -96,9 +88,7 @@ public class MdClientServiceImpl implements IMdClientService
 
     /**
      * 新增客户
-     * 
      * @param mdClient 客户
-     * @return 结果
      */
     @Override
     public int insertMdClient(MdClient mdClient)
@@ -109,9 +99,7 @@ public class MdClientServiceImpl implements IMdClientService
 
     /**
      * 修改客户
-     * 
      * @param mdClient 客户
-     * @return 结果
      */
     @Override
     public int updateMdClient(MdClient mdClient)
@@ -122,9 +110,7 @@ public class MdClientServiceImpl implements IMdClientService
 
     /**
      * 批量删除客户
-     * 
      * @param clientIds 需要删除的客户主键
-     * @return 结果
      */
     @Override
     public int deleteMdClientByClientIds(Long[] clientIds)
@@ -133,24 +119,10 @@ public class MdClientServiceImpl implements IMdClientService
     }
 
     /**
-     * 删除客户信息
-     * 
-     * @param clientId 客户主键
-     * @return 结果
-     */
-    @Override
-    public int deleteMdClientByClientId(Long clientId)
-    {
-        return mdClientMapper.deleteMdClientByClientId(clientId);
-    }
-
-
-    /**
      * 导入客户信息
      * @param clientList
      * @param isUpdateSupport
      * @param operName
-     * @return
      */
     @Override
     public String importClient(List<MdClient> clientList, Boolean isUpdateSupport, String operName) {
@@ -202,12 +174,6 @@ public class MdClientServiceImpl implements IMdClientService
                         failureMsg.append("<br/>" + failureNum + "、客户 " + client.getClientName() + " 已存在");
                     }
                 }
-
-
-
-
-
-
             }catch (Exception e){
                 failureNum++;
                 String msg = "<br/>" + failureNum + "、客户 " + client.getClientName() + " 导入失败：";

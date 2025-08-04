@@ -2,9 +2,6 @@ package com.ktg.mes.pro.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
-import com.ktg.mes.md.domain.MdProductSop;
-import com.ktg.mes.md.service.IMdProductSopService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产任务投料Controller
- * 
- * @author yinjinlu
- * @date 2022-07-22
  */
 @RestController
 @RequestMapping("/mes/pro/taskissue")
@@ -36,7 +30,6 @@ public class ProTaskIssueController extends BaseController
 {
     @Autowired
     private IProTaskIssueService proTaskIssueService;
-
 
     /**
      * 查询生产任务投料列表
