@@ -1,17 +1,12 @@
 package com.ktg.mes.cal.domain;
 
-import java.util.Date;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
- * 计划班次对象 cal_shift
- * 
- * @author yinjinlu
- * @date 2022-06-06
+ * 计划班次对象
  */
 public class CalShift extends BaseEntity
 {

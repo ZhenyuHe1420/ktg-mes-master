@@ -1,7 +1,6 @@
 package com.ktg.mes.cal.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.cal.service.ICalTeamService;
 
 /**
  * 班组Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-06-05
  */
 @Service
 public class CalTeamServiceImpl implements ICalTeamService 
@@ -25,7 +21,6 @@ public class CalTeamServiceImpl implements ICalTeamService
 
     /**
      * 查询班组
-     * 
      * @param teamId 班组主键
      * @return 班组
      */
@@ -37,7 +32,6 @@ public class CalTeamServiceImpl implements ICalTeamService
 
     /**
      * 查询班组列表
-     * 
      * @param calTeam 班组
      * @return 班组
      */
@@ -49,9 +43,7 @@ public class CalTeamServiceImpl implements ICalTeamService
 
     /**
      * 新增班组
-     * 
      * @param calTeam 班组
-     * @return 结果
      */
     @Override
     public int insertCalTeam(CalTeam calTeam)
@@ -62,9 +54,7 @@ public class CalTeamServiceImpl implements ICalTeamService
 
     /**
      * 修改班组
-     * 
      * @param calTeam 班组
-     * @return 结果
      */
     @Override
     public int updateCalTeam(CalTeam calTeam)
@@ -75,26 +65,12 @@ public class CalTeamServiceImpl implements ICalTeamService
 
     /**
      * 批量删除班组
-     * 
      * @param teamIds 需要删除的班组主键
-     * @return 结果
      */
     @Override
     public int deleteCalTeamByTeamIds(Long[] teamIds)
     {
         return calTeamMapper.deleteCalTeamByTeamIds(teamIds);
-    }
-
-    /**
-     * 删除班组信息
-     * 
-     * @param teamId 班组主键
-     * @return 结果
-     */
-    @Override
-    public int deleteCalTeamByTeamId(Long teamId)
-    {
-        return calTeamMapper.deleteCalTeamByTeamId(teamId);
     }
 
     @Override

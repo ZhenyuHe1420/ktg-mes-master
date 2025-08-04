@@ -8,10 +8,7 @@ import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
- * 节假日设置对象 cal_holiday
- * 
- * @author yinjinlu
- * @date 2022-06-08
+ * 节假日设置对象
  */
 public class CalHoliday extends BaseEntity
 {

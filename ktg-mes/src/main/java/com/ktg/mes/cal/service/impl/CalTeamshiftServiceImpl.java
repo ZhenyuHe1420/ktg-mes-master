@@ -2,10 +2,8 @@ package com.ktg.mes.cal.service.impl;
 
 import java.util.Date;
 import java.util.List;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.utils.DateUtils;
 import com.ktg.mes.cal.domain.CalPlan;
 import com.ktg.mes.cal.domain.CalPlanTeam;
 import com.ktg.mes.cal.domain.CalShift;
@@ -22,98 +20,18 @@ import com.ktg.mes.cal.service.ICalTeamshiftService;
 
 /**
  * 班组排班Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-06-11
  */
 @Service
 public class CalTeamshiftServiceImpl implements ICalTeamshiftService 
 {
     @Autowired
     private CalTeamshiftMapper calTeamshiftMapper;
-
     @Autowired
     private CalPlanMapper calPlanMapper;
-
     @Autowired
     private CalShiftMapper calShiftMapper;
-
     @Autowired
     private CalPlanTeamMapper calPlanTeamMapper;
-
-    /**
-     * 查询班组排班
-     * 
-     * @param recordId 班组排班主键
-     * @return 班组排班
-     */
-    @Override
-    public CalTeamshift selectCalTeamshiftByRecordId(Long recordId)
-    {
-        return calTeamshiftMapper.selectCalTeamshiftByRecordId(recordId);
-    }
-
-    /**
-     * 查询班组排班列表
-     * 
-     * @param calTeamshift 班组排班
-     * @return 班组排班
-     */
-    @Override
-    public List<CalTeamshift> selectCalTeamshiftList(CalTeamshift calTeamshift)
-    {
-        return calTeamshiftMapper.selectCalTeamshiftList(calTeamshift);
-    }
-
-    /**
-     * 新增班组排班
-     * 
-     * @param calTeamshift 班组排班
-     * @return 结果
-     */
-    @Override
-    public int insertCalTeamshift(CalTeamshift calTeamshift)
-    {
-        calTeamshift.setCreateTime(DateUtils.getNowDate());
-        return calTeamshiftMapper.insertCalTeamshift(calTeamshift);
-    }
-
-    /**
-     * 修改班组排班
-     * 
-     * @param calTeamshift 班组排班
-     * @return 结果
-     */
-    @Override
-    public int updateCalTeamshift(CalTeamshift calTeamshift)
-    {
-        calTeamshift.setUpdateTime(DateUtils.getNowDate());
-        return calTeamshiftMapper.updateCalTeamshift(calTeamshift);
-    }
-
-    /**
-     * 批量删除班组排班
-     * 
-     * @param recordIds 需要删除的班组排班主键
-     * @return 结果
-     */
-    @Override
-    public int deleteCalTeamshiftByRecordIds(Long[] recordIds)
-    {
-        return calTeamshiftMapper.deleteCalTeamshiftByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除班组排班信息
-     * 
-     * @param recordId 班组排班主键
-     * @return 结果
-     */
-    @Override
-    public int deleteCalTeamshiftByRecordId(Long recordId)
-    {
-        return calTeamshiftMapper.deleteCalTeamshiftByRecordId(recordId);
-    }
 
     /**
      * 根据排班计划生成每个班组的明细排班记录
@@ -379,5 +297,4 @@ public class CalTeamshiftServiceImpl implements ICalTeamshiftService
             calTeamshiftMapper.insertCalTeamshift(calTeamshift);
         }
     }
-
 }

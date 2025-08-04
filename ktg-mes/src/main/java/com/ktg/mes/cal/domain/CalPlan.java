@@ -8,10 +8,7 @@ import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
- * 排班计划对象 cal_plan
- * 
- * @author yinjinlu
- * @date 2022-06-06
+ * 排班计划对象
  */
 public class CalPlan extends BaseEntity
 {

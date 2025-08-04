@@ -1,7 +1,6 @@
 package com.ktg.mes.cal.domain;
 
 import com.ktg.common.core.domain.BaseEntity;
-
 import java.util.Date;
 import java.util.List;
 
@@ -21,7 +20,6 @@ public class CalCalendar extends BaseEntity {
     private Long teamId;
 
     private Long userId;
-
 
     /**
      * 返回值部分

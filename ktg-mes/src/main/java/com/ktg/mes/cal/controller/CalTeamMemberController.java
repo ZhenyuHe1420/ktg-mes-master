@@ -17,10 +17,7 @@ import com.ktg.common.utils.poi.ExcelUtil;
 import com.ktg.common.core.page.TableDataInfo;
 
 /**
- * 班组成员Controller
- * 
- * @author yinjinlu
- * @date 2022-06-05
+ * 班组成员
  */
 @RestController
 @RequestMapping("/mes/cal/teammember")

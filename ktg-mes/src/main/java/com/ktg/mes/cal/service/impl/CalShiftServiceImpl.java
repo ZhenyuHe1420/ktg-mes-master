@@ -12,9 +12,6 @@ import com.ktg.mes.cal.service.ICalShiftService;
 
 /**
  * 计划班次Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-06-06
  */
 @Service
 public class CalShiftServiceImpl implements ICalShiftService 
@@ -24,7 +21,6 @@ public class CalShiftServiceImpl implements ICalShiftService
 
     /**
      * 查询计划班次
-     * 
      * @param shiftId 计划班次主键
      * @return 计划班次
      */
@@ -36,7 +32,6 @@ public class CalShiftServiceImpl implements ICalShiftService
 
     /**
      * 查询计划班次列表
-     * 
      * @param calShift 计划班次
      * @return 计划班次
      */
@@ -44,13 +39,6 @@ public class CalShiftServiceImpl implements ICalShiftService
     public List<CalShift> selectCalShiftList(CalShift calShift)
     {
         return calShiftMapper.selectCalShiftList(calShift);
-    }
-
-    @Override
-    public List<CalShift> selectCalShiftListByPlanId(Long planId) {
-        CalShift param = new CalShift();
-        param.setPlanId(planId);
-        return calShiftMapper.selectCalShiftList(param);
     }
 
     @Override
@@ -110,9 +98,7 @@ public class CalShiftServiceImpl implements ICalShiftService
 
     /**
      * 新增计划班次
-     * 
      * @param calShift 计划班次
-     * @return 结果
      */
     @Override
     public int insertCalShift(CalShift calShift)
@@ -123,9 +109,7 @@ public class CalShiftServiceImpl implements ICalShiftService
 
     /**
      * 修改计划班次
-     * 
      * @param calShift 计划班次
-     * @return 结果
      */
     @Override
     public int updateCalShift(CalShift calShift)
@@ -136,26 +120,12 @@ public class CalShiftServiceImpl implements ICalShiftService
 
     /**
      * 批量删除计划班次
-     * 
      * @param shiftIds 需要删除的计划班次主键
-     * @return 结果
      */
     @Override
     public int deleteCalShiftByShiftIds(Long[] shiftIds)
     {
         return calShiftMapper.deleteCalShiftByShiftIds(shiftIds);
-    }
-
-    /**
-     * 删除计划班次信息
-     * 
-     * @param shiftId 计划班次主键
-     * @return 结果
-     */
-    @Override
-    public int deleteCalShiftByShiftId(Long shiftId)
-    {
-        return calShiftMapper.deleteCalShiftByShiftId(shiftId);
     }
 
     @Override

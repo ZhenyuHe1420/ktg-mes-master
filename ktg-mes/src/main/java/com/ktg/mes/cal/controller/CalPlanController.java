@@ -1,10 +1,7 @@
 package com.ktg.mes.cal.controller;
 
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollectionUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.cal.domain.CalPlanTeam;
@@ -32,10 +29,7 @@ import com.ktg.common.utils.poi.ExcelUtil;
 import com.ktg.common.core.page.TableDataInfo;
 
 /**
- * 排班计划Controller
- * 
- * @author yinjinlu
- * @date 2022-06-06
+ * 排班计划
  */
 @RestController
 @RequestMapping("/mes/cal/calplan")
@@ -43,13 +37,10 @@ public class CalPlanController extends BaseController
 {
     @Autowired
     private ICalPlanService calPlanService;
-
     @Autowired
     private ICalShiftService calShiftService;
-
     @Autowired
     private ICalPlanTeamService calPlanTeamService;
-
     @Autowired
     private ICalTeamshiftService calTeamshiftService;
 
@@ -106,7 +97,6 @@ public class CalPlanController extends BaseController
         return toAjax(ret);
     }
 
-
     /**
      * 修改排班计划
      */
@@ -117,7 +107,6 @@ public class CalPlanController extends BaseController
     public AjaxResult edit(@RequestBody CalPlan calPlan)
     {
         if(UserConstants.ORDER_STATUS_CONFIRMED.equals(calPlan.getStatus())){
-
             //检查班组配置
             List<CalPlanTeam> teams = calPlanTeamService.selectCalPlanTeamListByPlanId(calPlan.getPlanId());
             if(CollectionUtil.isEmpty(teams)){

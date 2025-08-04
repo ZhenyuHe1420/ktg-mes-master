@@ -2,39 +2,23 @@ package com.ktg.mes.cal.service.impl;
 
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.mes.cal.domain.CalCalendar;
-import com.ktg.mes.cal.domain.CalHoliday;
 import com.ktg.mes.cal.domain.CalTeamMember;
 import com.ktg.mes.cal.domain.CalTeamshift;
-import com.ktg.mes.cal.mapper.CalPlanMapper;
 import com.ktg.mes.cal.mapper.CalTeamMemberMapper;
 import com.ktg.mes.cal.mapper.CalTeamshiftMapper;
 import com.ktg.mes.cal.service.ICalCalendarService;
-import com.ktg.mes.cal.service.ICalHolidayService;
-import com.ktg.mes.cal.service.ICalTeamMemberService;
 import com.ktg.mes.cal.utils.CalendarUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class CalCalendarServiceImpl implements ICalCalendarService {
-
-    @Autowired
-    private CalPlanMapper calPlanMapper;
-
     @Autowired
     private CalTeamshiftMapper calTeamshiftMapper;
-
     @Autowired
     private CalTeamMemberMapper calTeamMemberMapper;
-
-
-
 
    /**
      * 1.循环生成当前月份每一天的CalCalendar
@@ -43,14 +27,12 @@ public class CalCalendarServiceImpl implements ICalCalendarService {
      * 4.设置CalShiftTeamBean
      * @param day
      * @param calenderType
-     * @return
      */
     @Override
     public List<CalCalendar> getCalendarByType(Date day, String calenderType) {
         List<CalCalendar>  calendars = null;
         calendars = CalendarUtil.getDays(day);
-        for (CalCalendar cal:calendars
-                ) {
+        for (CalCalendar cal:calendars) {
             CalTeamshift param2 = new CalTeamshift();
             param2.setTheDay(cal.getTheDay());
             param2.setCalendarType(calenderType);
@@ -67,8 +49,7 @@ public class CalCalendarServiceImpl implements ICalCalendarService {
     public List<CalCalendar> getCalendarByTeam(Date day, Long teamId) {
         List<CalCalendar>  calendars = null;
         calendars = CalendarUtil.getDays(day);
-        for (CalCalendar cal:calendars
-                ) {
+        for (CalCalendar cal:calendars) {
             CalTeamshift param2 = new CalTeamshift();
             param2.setTheDay(cal.getTheDay());
             param2.setTeamId(teamId);
@@ -91,8 +72,7 @@ public class CalCalendarServiceImpl implements ICalCalendarService {
         if(CollUtil.isNotEmpty(members)){
             Long teamId = members.get(0).getTeamId();
             calendars = CalendarUtil.getDays(day);
-            for (CalCalendar cal:calendars
-                    ) {
+            for (CalCalendar cal:calendars) {
                 CalTeamshift param2 = new CalTeamshift();
                 param2.setTheDay(cal.getTheDay());
                 param2.setTeamId(teamId);

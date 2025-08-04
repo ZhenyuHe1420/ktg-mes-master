@@ -1,7 +1,6 @@
 package com.ktg.mes.cal.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.cal.service.ICalPlanService;
 
 /**
  * 排班计划Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-06-06
  */
 @Service
 public class CalPlanServiceImpl implements ICalPlanService 
@@ -25,7 +21,6 @@ public class CalPlanServiceImpl implements ICalPlanService
 
     /**
      * 查询排班计划
-     * 
      * @param planId 排班计划主键
      * @return 排班计划
      */
@@ -37,7 +32,6 @@ public class CalPlanServiceImpl implements ICalPlanService
 
     /**
      * 查询排班计划列表
-     * 
      * @param calPlan 排班计划
      * @return 排班计划
      */
@@ -49,9 +43,7 @@ public class CalPlanServiceImpl implements ICalPlanService
 
     /**
      * 新增排班计划
-     * 
      * @param calPlan 排班计划
-     * @return 结果
      */
     @Override
     public int insertCalPlan(CalPlan calPlan)
@@ -62,9 +54,7 @@ public class CalPlanServiceImpl implements ICalPlanService
 
     /**
      * 修改排班计划
-     * 
      * @param calPlan 排班计划
-     * @return 结果
      */
     @Override
     public int updateCalPlan(CalPlan calPlan)
@@ -75,26 +65,12 @@ public class CalPlanServiceImpl implements ICalPlanService
 
     /**
      * 批量删除排班计划
-     * 
      * @param planIds 需要删除的排班计划主键
-     * @return 结果
      */
     @Override
     public int deleteCalPlanByPlanIds(Long[] planIds)
     {
         return calPlanMapper.deleteCalPlanByPlanIds(planIds);
-    }
-
-    /**
-     * 删除排班计划信息
-     * 
-     * @param planId 排班计划主键
-     * @return 结果
-     */
-    @Override
-    public int deleteCalPlanByPlanId(Long planId)
-    {
-        return calPlanMapper.deleteCalPlanByPlanId(planId);
     }
 
     @Override

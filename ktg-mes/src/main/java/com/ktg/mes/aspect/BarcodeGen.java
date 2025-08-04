@@ -8,7 +8,6 @@ import java.lang.annotation.*;
 public @interface BarcodeGen {
     /**
      * 业务类型
-     * @return
      */
     String barcodeType();
 }

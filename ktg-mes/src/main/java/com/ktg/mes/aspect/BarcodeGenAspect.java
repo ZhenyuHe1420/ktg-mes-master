@@ -1,6 +1,5 @@
 package com.ktg.mes.aspect;
 
-import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.mes.wm.domain.WmBarcodeConfig;
 import com.ktg.mes.wm.service.IWmBarcodeConfigService;
@@ -18,7 +17,6 @@ import java.util.List;
 @Aspect
 @Component
 public class BarcodeGenAspect {
-
     private static final Logger log = LoggerFactory.getLogger(BarcodeGenAspect.class);
 
     @Autowired
@@ -43,9 +41,6 @@ public class BarcodeGenAspect {
         if(CollectionUtils.isEmpty(confgs)){
            log.warn("当前类型的业务未配置对应的条码生成规则！{}",gen.barcodeType());
         }
-
-        Long businessId = (Long)returnResult.get("data"); //获取业务ID
-
     }
 
 }

@@ -6,10 +6,7 @@ import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
- * 计划班组对象 cal_plan_team
- * 
- * @author yinjinlu
- * @date 2022-06-07
+ * 计划班组对象
  */
 public class CalPlanTeam extends BaseEntity
 {

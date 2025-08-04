@@ -26,10 +26,7 @@ import com.ktg.common.utils.poi.ExcelUtil;
 import com.ktg.common.core.page.TableDataInfo;
 
 /**
- * 班组Controller
- * 
- * @author yinjinlu
- * @date 2022-06-05
+ * 班组
  */
 @RestController
 @RequestMapping("/mes/cal/team")
@@ -37,7 +34,6 @@ public class CalTeamController extends BaseController
 {
     @Autowired
     private ICalTeamService calTeamService;
-
     @Autowired
     private ICalTeamMemberService calTeamMemberService;
 
@@ -122,8 +118,7 @@ public class CalTeamController extends BaseController
 	@DeleteMapping("/{teamIds}")
     public AjaxResult remove(@PathVariable Long[] teamIds)
     {
-        for (Long teamId:teamIds
-             ) {
+        for (Long teamId:teamIds) {
             calTeamMemberService.deleteByTeamId(teamId);
         }
         return toAjax(calTeamService.deleteCalTeamByTeamIds(teamIds));

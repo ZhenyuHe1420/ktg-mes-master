@@ -13,9 +13,6 @@ import com.ktg.mes.cal.service.ICalPlanTeamService;
 
 /**
  * 计划班组Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-06-07
  */
 @Service
 public class CalPlanTeamServiceImpl implements ICalPlanTeamService 
@@ -25,7 +22,6 @@ public class CalPlanTeamServiceImpl implements ICalPlanTeamService
 
     /**
      * 查询计划班组
-     * 
      * @param recordId 计划班组主键
      * @return 计划班组
      */
@@ -37,7 +33,6 @@ public class CalPlanTeamServiceImpl implements ICalPlanTeamService
 
     /**
      * 查询计划班组列表
-     * 
      * @param calPlanTeam 计划班组
      * @return 计划班组
      */
@@ -66,9 +61,7 @@ public class CalPlanTeamServiceImpl implements ICalPlanTeamService
 
     /**
      * 新增计划班组
-     * 
      * @param calPlanTeam 计划班组
-     * @return 结果
      */
     @Override
     public int insertCalPlanTeam(CalPlanTeam calPlanTeam)
@@ -79,9 +72,7 @@ public class CalPlanTeamServiceImpl implements ICalPlanTeamService
 
     /**
      * 修改计划班组
-     * 
      * @param calPlanTeam 计划班组
-     * @return 结果
      */
     @Override
     public int updateCalPlanTeam(CalPlanTeam calPlanTeam)
@@ -92,26 +83,12 @@ public class CalPlanTeamServiceImpl implements ICalPlanTeamService
 
     /**
      * 批量删除计划班组
-     * 
      * @param recordIds 需要删除的计划班组主键
-     * @return 结果
      */
     @Override
     public int deleteCalPlanTeamByRecordIds(Long[] recordIds)
     {
         return calPlanTeamMapper.deleteCalPlanTeamByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除计划班组信息
-     * 
-     * @param recordId 计划班组主键
-     * @return 结果
-     */
-    @Override
-    public int deleteCalPlanTeamByRecordId(Long recordId)
-    {
-        return calPlanTeamMapper.deleteCalPlanTeamByRecordId(recordId);
     }
 
     @Override

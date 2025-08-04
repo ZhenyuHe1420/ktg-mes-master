@@ -10,9 +10,6 @@ import com.ktg.mes.cal.service.ICalHolidayService;
 
 /**
  * 节假日设置Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-06-08
  */
 @Service
 public class CalHolidayServiceImpl implements ICalHolidayService 
@@ -22,7 +19,6 @@ public class CalHolidayServiceImpl implements ICalHolidayService
 
     /**
      * 查询节假日设置
-     * 
      * @param holidayId 节假日设置主键
      * @return 节假日设置
      */
@@ -34,7 +30,6 @@ public class CalHolidayServiceImpl implements ICalHolidayService
 
     /**
      * 查询节假日设置列表
-     * 
      * @param calHoliday 节假日设置
      * @return 节假日设置
      */
@@ -46,9 +41,7 @@ public class CalHolidayServiceImpl implements ICalHolidayService
 
     /**
      * 新增节假日设置
-     * 
      * @param calHoliday 节假日设置
-     * @return 结果
      */
     @Override
     public int insertCalHoliday(CalHoliday calHoliday)
@@ -59,9 +52,7 @@ public class CalHolidayServiceImpl implements ICalHolidayService
 
     /**
      * 修改节假日设置
-     * 
      * @param calHoliday 节假日设置
-     * @return 结果
      */
     @Override
     public int updateCalHoliday(CalHoliday calHoliday)
@@ -72,25 +63,11 @@ public class CalHolidayServiceImpl implements ICalHolidayService
 
     /**
      * 批量删除节假日设置
-     * 
      * @param holidayIds 需要删除的节假日设置主键
-     * @return 结果
      */
     @Override
     public int deleteCalHolidayByHolidayIds(Long[] holidayIds)
     {
         return calHolidayMapper.deleteCalHolidayByHolidayIds(holidayIds);
-    }
-
-    /**
-     * 删除节假日设置信息
-     * 
-     * @param holidayId 节假日设置主键
-     * @return 结果
-     */
-    @Override
-    public int deleteCalHolidayByHolidayId(Long holidayId)
-    {
-        return calHolidayMapper.deleteCalHolidayByHolidayId(holidayId);
     }
 }

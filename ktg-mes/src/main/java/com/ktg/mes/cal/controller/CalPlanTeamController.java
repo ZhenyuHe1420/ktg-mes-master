@@ -2,7 +2,6 @@ package com.ktg.mes.cal.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,10 +23,7 @@ import com.ktg.common.utils.poi.ExcelUtil;
 import com.ktg.common.core.page.TableDataInfo;
 
 /**
- * 计划班组Controller
- * 
- * @author yinjinlu
- * @date 2022-06-07
+ * 计划班组
  */
 @RestController
 @RequestMapping("/mes/cal/planteam")
