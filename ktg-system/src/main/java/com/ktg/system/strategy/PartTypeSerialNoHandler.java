@@ -8,14 +8,12 @@ import com.ktg.system.service.IAutoCodeResultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Component
 @Order(3)
 public class PartTypeSerialNoHandler implements PartTypeTemplate {
-
     @Autowired
     private IAutoCodeResultService iAutoCodeResultService;
 

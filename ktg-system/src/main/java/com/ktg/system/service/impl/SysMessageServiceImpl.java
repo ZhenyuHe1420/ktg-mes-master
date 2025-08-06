@@ -1,7 +1,6 @@
 package com.ktg.system.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +11,6 @@ import com.ktg.system.service.ISysMessageService;
 
 /**
  * 消息Service业务层处理
- * 
- * @author yinjinlu
- * @date 2023-03-06
  */
 @Service
 public class SysMessageServiceImpl implements ISysMessageService 
@@ -24,7 +20,6 @@ public class SysMessageServiceImpl implements ISysMessageService
 
     /**
      * 查询消息
-     * 
      * @param messageId 消息主键
      * @return 消息
      */
@@ -36,7 +31,6 @@ public class SysMessageServiceImpl implements ISysMessageService
 
     /**
      * 查询消息列表
-     * 
      * @param sysMessage 消息
      * @return 消息
      */
@@ -48,9 +42,7 @@ public class SysMessageServiceImpl implements ISysMessageService
 
     /**
      * 新增消息
-     * 
      * @param sysMessage 消息
-     * @return 结果
      */
     @Override
     public int insertSysMessage(SysMessage sysMessage)
@@ -61,9 +53,7 @@ public class SysMessageServiceImpl implements ISysMessageService
 
     /**
      * 修改消息
-     * 
      * @param sysMessage 消息
-     * @return 结果
      */
     @Override
     public int updateSysMessage(SysMessage sysMessage)
@@ -73,32 +63,7 @@ public class SysMessageServiceImpl implements ISysMessageService
     }
 
     /**
-     * 批量删除消息
-     * 
-     * @param messageIds 需要删除的消息主键
-     * @return 结果
-     */
-    @Override
-    public int deleteSysMessageByMessageIds(Long[] messageIds)
-    {
-        return sysMessageMapper.deleteSysMessageByMessageIds(messageIds);
-    }
-
-    /**
-     * 删除消息信息
-     * 
-     * @param messageId 消息主键
-     * @return 结果
-     */
-    @Override
-    public int deleteSysMessageByMessageId(Long messageId)
-    {
-        return sysMessageMapper.deleteSysMessageByMessageId(messageId);
-    }
-
-    /**
      * 全部已读
-     * @return
      */
     @Override
     public AjaxResult allRead() {

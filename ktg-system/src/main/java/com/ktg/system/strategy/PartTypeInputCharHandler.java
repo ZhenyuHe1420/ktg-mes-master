@@ -8,8 +8,6 @@ import org.springframework.util.Assert;
 @Component
 @Order(0)
 public class PartTypeInputCharHandler implements PartTypeTemplate {
-
-
     @Override
     public String partHandle(SysAutoCodePart sysAutoCodePart) {
         String inputCharacter = sysAutoCodePart.getInputCharacter();

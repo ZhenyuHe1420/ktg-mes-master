@@ -5,12 +5,10 @@ import com.ktg.system.mapper.SysAutoCodeResultMapper;
 import com.ktg.system.service.IAutoCodeResultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 public class SysAutoCodeResultServiceImpl implements IAutoCodeResultService {
-
     @Autowired
     private SysAutoCodeResultMapper sysAutoCodeResultMapper;
 

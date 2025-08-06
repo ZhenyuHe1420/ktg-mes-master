@@ -8,12 +8,10 @@ import com.ktg.system.mapper.SysAutoCodeRuleMapper;
 import com.ktg.system.service.IAutoCodeRuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 public class SysAutoCodeRuleServiceImpl implements IAutoCodeRuleService {
-
     @Autowired
     private SysAutoCodeRuleMapper sysAutoCodeRuleMapper;
 

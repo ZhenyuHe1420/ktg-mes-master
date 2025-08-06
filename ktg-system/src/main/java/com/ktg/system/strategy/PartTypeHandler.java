@@ -9,7 +9,6 @@ import java.util.List;
 
 @Component
 public class PartTypeHandler {
-
     @Autowired
     List<PartTypeTemplate> partTypeTemplates;
 

@@ -10,8 +10,6 @@ import com.ktg.system.service.ISysDictDataService;
 
 /**
  * 字典 业务层处理
- * 
- * @author ktg
  */
 @Service
 public class SysDictDataServiceImpl implements ISysDictDataService
@@ -32,19 +30,6 @@ public class SysDictDataServiceImpl implements ISysDictDataService
     }
 
     /**
-     * 根据字典类型和字典键值查询字典数据信息
-     * 
-     * @param dictType 字典类型
-     * @param dictValue 字典键值
-     * @return 字典标签
-     */
-    @Override
-    public String selectDictLabel(String dictType, String dictValue)
-    {
-        return dictDataMapper.selectDictLabel(dictType, dictValue);
-    }
-
-    /**
      * 根据字典数据ID查询信息
      * 
      * @param dictCode 字典数据ID
@@ -58,7 +43,6 @@ public class SysDictDataServiceImpl implements ISysDictDataService
 
     /**
      * 批量删除字典数据信息
-     * 
      * @param dictCodes 需要删除的字典数据ID
      */
     @Override
@@ -75,9 +59,7 @@ public class SysDictDataServiceImpl implements ISysDictDataService
 
     /**
      * 新增保存字典数据信息
-     * 
      * @param data 字典数据信息
-     * @return 结果
      */
     @Override
     public int insertDictData(SysDictData data)
@@ -93,9 +75,7 @@ public class SysDictDataServiceImpl implements ISysDictDataService
 
     /**
      * 修改保存字典数据信息
-     * 
      * @param data 字典数据信息
-     * @return 结果
      */
     @Override
     public int updateDictData(SysDictData data)

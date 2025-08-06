@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 消息对象 sys_message
- * 
- * @author yinjinlu
- * @date 2023-03-06
  */
 public class SysMessage extends BaseEntity
 {

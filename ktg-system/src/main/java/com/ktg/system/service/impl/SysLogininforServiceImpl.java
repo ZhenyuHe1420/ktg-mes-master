@@ -13,7 +13,6 @@ import com.ktg.system.service.ISysLogininforService;
 @Service
 public class SysLogininforServiceImpl implements ISysLogininforService
 {
-
     @Autowired
     private SysLogininforMapper logininforMapper;
 

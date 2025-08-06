@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 通用代办对象 sys_todo_list
- * 
- * @author yinjinlu
- * @date 2025-04-27
  */
 public class SysTodoList extends BaseEntity
 {

@@ -57,23 +57,23 @@ public interface SysPostMapper
      * 修改岗位信息
      * @param post 岗位信息
      */
-    public int updatePost(SysPost post);
+    int updatePost(SysPost post);
 
     /**
      * 新增岗位信息
      * @param post 岗位信息
      */
-    public int insertPost(SysPost post);
+    int insertPost(SysPost post);
 
     /**
      * 校验岗位名称
      * @param postName 岗位名称
      */
-    public SysPost checkPostNameUnique(String postName);
+    SysPost checkPostNameUnique(String postName);
 
     /**
      * 校验岗位编码
      * @param postCode 岗位编码
      */
-    public SysPost checkPostCodeUnique(String postCode);
+    SysPost checkPostCodeUnique(String postCode);
 }

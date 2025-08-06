@@ -88,7 +88,6 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 根据条件分页查询未分配用户角色列表
-     * 
      * @param user 用户信息
      * @return 用户信息集合信息
      */
@@ -101,7 +100,6 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 通过用户名查询用户
-     * 
      * @param userName 用户名
      * @return 用户对象信息
      */
@@ -111,7 +109,6 @@ public class SysUserServiceImpl implements ISysUserService
         return userMapper.selectUserByUserName(userName);
     }
 
-
     @Override
     public SysUser selectUserByMobile(String mobile) {
         return userMapper.selectUserByMobile(mobile);
@@ -119,7 +116,6 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 通过用户ID查询用户
-     * 
      * @param userId 用户ID
      * @return 用户对象信息
      */
@@ -131,9 +127,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 查询用户所属角色组
-     * 
      * @param userName 用户名
-     * @return 结果
      */
     @Override
     public String selectUserRoleGroup(String userName)
@@ -148,9 +142,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 查询用户所属岗位组
-     * 
      * @param userName 用户名
-     * @return 结果
      */
     @Override
     public String selectUserPostGroup(String userName)
@@ -165,9 +157,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 校验用户名称是否唯一
-     * 
      * @param userName 用户名称
-     * @return 结果
      */
     @Override
     public String checkUserNameUnique(String userName)
@@ -182,9 +172,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 校验手机号码是否唯一
-     *
      * @param user 用户信息
-     * @return
      */
     @Override
     public String checkPhoneUnique(SysUser user)
@@ -200,9 +188,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 校验email是否唯一
-     *
      * @param user 用户信息
-     * @return
      */
     @Override
     public String checkEmailUnique(SysUser user)
@@ -218,7 +204,6 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 校验用户是否允许操作
-     * 
      * @param user 用户信息
      */
     @Override
@@ -232,7 +217,6 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 校验用户是否有数据权限
-     * 
      * @param userId 用户id
      */
     @Override
@@ -252,9 +236,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 新增保存用户信息
-     * 
      * @param user 用户信息
-     * @return 结果
      */
     @Override
     @Transactional
@@ -271,9 +253,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 注册用户信息
-     * 
      * @param user 用户信息
-     * @return 结果
      */
     @Override
     public boolean registerUser(SysUser user)
@@ -283,9 +263,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 修改保存用户信息
-     * 
      * @param user 用户信息
-     * @return 结果
      */
     @Override
     @Transactional
@@ -305,7 +283,6 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 用户授权角色
-     * 
      * @param userId 用户ID
      * @param roleIds 角色组
      */
@@ -319,9 +296,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 修改用户状态
-     * 
      * @param user 用户信息
-     * @return 结果
      */
     @Override
     public int updateUserStatus(SysUser user)
@@ -331,9 +306,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 修改用户基本信息
-     * 
      * @param user 用户信息
-     * @return 结果
      */
     @Override
     public int updateUserProfile(SysUser user)
@@ -343,10 +316,8 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 修改用户头像
-     * 
      * @param userName 用户名
      * @param avatar 头像地址
-     * @return 结果
      */
     @Override
     public boolean updateUserAvatar(String userName, String avatar)
@@ -356,9 +327,7 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 重置用户密码
-     * 
      * @param user 用户信息
-     * @return 结果
      */
     @Override
     public int resetPwd(SysUser user)
@@ -368,10 +337,8 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 重置用户密码
-     * 
      * @param userName 用户名
      * @param password 密码
-     * @return 结果
      */
     @Override
     public int resetUserPwd(String userName, String password)
@@ -381,7 +348,6 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 新增用户角色信息
-     * 
      * @param user 用户对象
      */
     public void insertUserRole(SysUser user)
@@ -480,7 +446,6 @@ public class SysUserServiceImpl implements ISysUserService
      * @param userList 用户数据列表
      * @param isUpdateSupport 是否更新支持，如果已存在，则进行更新数据
      * @param operName 操作用户
-     * @return 结果
      */
     @Override
     public String importUser(List<SysUserExcelVO> userList, Boolean isUpdateSupport, String operName)
