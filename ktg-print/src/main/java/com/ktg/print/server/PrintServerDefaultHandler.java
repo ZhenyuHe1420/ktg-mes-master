@@ -3,14 +3,11 @@ package com.ktg.print.server;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-
 import java.net.SocketAddress;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class PrintServerDefaultHandler extends ChannelInboundHandlerAdapter {
-
     public static ConcurrentHashMap<SocketAddress, Channel> chanelMap = new ConcurrentHashMap<>();
-
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {

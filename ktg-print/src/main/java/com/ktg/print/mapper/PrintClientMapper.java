@@ -1,9 +1,7 @@
 package com.ktg.print.mapper;
 
-import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.print.domain.PrintClient;
 import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
 
 public interface PrintClientMapper {

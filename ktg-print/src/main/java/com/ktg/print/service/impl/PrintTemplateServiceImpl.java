@@ -1,7 +1,6 @@
 package com.ktg.print.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +11,6 @@ import com.ktg.print.service.IPrintTemplateService;
 
 /**
  * 打印模板配置Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-04-17
  */
 @Service
 public class PrintTemplateServiceImpl implements IPrintTemplateService 
@@ -24,7 +20,6 @@ public class PrintTemplateServiceImpl implements IPrintTemplateService
 
     /**
      * 查询打印模板配置
-     * 
      * @param templateId 打印模板配置主键
      * @return 打印模板配置
      */
@@ -36,7 +31,6 @@ public class PrintTemplateServiceImpl implements IPrintTemplateService
 
     /**
      * 查询打印模板配置列表
-     * 
      * @param printTemplate 打印模板配置
      * @return 打印模板配置
      */
@@ -48,9 +42,7 @@ public class PrintTemplateServiceImpl implements IPrintTemplateService
 
     /**
      * 新增打印模板配置
-     *
      * @param printTemplate 打印模板配置
-     * @return 结果
      */
     @Override
     public AjaxResult insertPrintTemplate(PrintTemplate printTemplate)
@@ -69,9 +61,7 @@ public class PrintTemplateServiceImpl implements IPrintTemplateService
 
     /**
      * 修改打印模板配置
-     * 
      * @param printTemplate 打印模板配置
-     * @return 结果
      */
     @Override
     public int updatePrintTemplate(PrintTemplate printTemplate)
@@ -82,25 +72,11 @@ public class PrintTemplateServiceImpl implements IPrintTemplateService
 
     /**
      * 批量删除打印模板配置
-     * 
      * @param templateIds 需要删除的打印模板配置主键
-     * @return 结果
      */
     @Override
     public int deletePrintTemplateByTemplateIds(Long[] templateIds)
     {
         return printTemplateMapper.deletePrintTemplateByTemplateIds(templateIds);
-    }
-
-    /**
-     * 删除打印模板配置信息
-     * 
-     * @param templateId 打印模板配置主键
-     * @return 结果
-     */
-    @Override
-    public int deletePrintTemplateByTemplateId(Long templateId)
-    {
-        return printTemplateMapper.deletePrintTemplateByTemplateId(templateId);
     }
 }

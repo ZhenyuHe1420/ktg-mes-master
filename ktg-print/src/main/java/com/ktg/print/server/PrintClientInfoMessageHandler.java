@@ -3,12 +3,10 @@ package com.ktg.print.server;
 import com.ktg.print.protocol.PrintMessageProto;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-
 import java.net.SocketAddress;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class PrintClientInfoMessageHandler extends SimpleChannelInboundHandler<PrintMessageProto.Printer> {
-
     public static ConcurrentHashMap<String, SocketAddress> socketAddressMap = new ConcurrentHashMap<>();
 
     @Override

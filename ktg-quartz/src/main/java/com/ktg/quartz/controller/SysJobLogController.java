@@ -21,8 +21,6 @@ import com.ktg.quartz.service.ISysJobLogService;
 
 /**
  * 调度日志操作处理
- * 
- * @author ruoyi
  */
 @RestController
 @RequestMapping("/monitor/jobLog")
@@ -65,7 +63,6 @@ public class SysJobLogController extends BaseController
     {
         return AjaxResult.success(jobLogService.selectJobLogById(jobLogId));
     }
-
 
     /**
      * 删除定时任务调度日志

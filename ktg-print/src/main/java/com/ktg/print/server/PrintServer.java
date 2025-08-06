@@ -13,19 +13,15 @@ import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.stereotype.Component;
-
 import javax.annotation.PostConstruct;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 //@Component
 public class PrintServer implements DisposableBean {
-
     EventLoopGroup bossGroup = null;
     EventLoopGroup workerGroup = null;
     int port = 9016;
-
 
     @PostConstruct
     public void nettyServerInit() {
@@ -44,7 +40,6 @@ public class PrintServer implements DisposableBean {
     }
 
     public class service implements Runnable {
-
         @Override
         public void run() {
             bossGroup = new NioEventLoopGroup(1);

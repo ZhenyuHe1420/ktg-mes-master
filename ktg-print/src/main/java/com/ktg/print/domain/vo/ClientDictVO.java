@@ -8,11 +8,9 @@ import java.util.List;
 
 @Data
 public class ClientDictVO {
-
     // 车间列表
     private List<MdWorkshop> workshopList;
 
     // 工作站列表
     private List<MdWorkstation> workstations;
-
 }

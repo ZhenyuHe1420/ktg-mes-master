@@ -6,19 +6,14 @@ import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.core.page.TableDataInfo;
 import com.ktg.common.enums.BusinessType;
 import com.ktg.print.domain.PrintClient;
-import com.ktg.print.domain.PrintPrinterConfig;
 import com.ktg.print.service.IPrintClientService;
-import org.aspectj.weaver.loadtime.Aj;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/print/client")
 public class PrintClientController extends BaseController {
-
     @Autowired
     private IPrintClientService clientService;
 
@@ -39,11 +34,8 @@ public class PrintClientController extends BaseController {
         return getDataTable(list);
     }
 
-
     /**
      * 打印机客户端新增
-     * @param client
-     * @return
      */
     @Log(title = "打印机客户端配置", businessType = BusinessType.INSERT)
     @PostMapping("/add")
@@ -54,7 +46,6 @@ public class PrintClientController extends BaseController {
     /**
      * 打印机客户端详情
      * @param clientId
-     * @return
      */
     @GetMapping("/{clientId}")
     public AjaxResult getInfo(@PathVariable("clientId") Long clientId) {
@@ -63,8 +54,6 @@ public class PrintClientController extends BaseController {
 
     /**
      * 打印机客户端修改
-     * @param client
-     * @return
      */
     @Log(title = "客户端配置", businessType = BusinessType.UPDATE)
     @PostMapping("/edit")
@@ -75,7 +64,6 @@ public class PrintClientController extends BaseController {
     /**
      * 删除客户端配置
      * @param clientIds
-     * @return
      */
     @Log(title = "客户端配置", businessType = BusinessType.DELETE)
     @GetMapping("/remove/{clientIds}")

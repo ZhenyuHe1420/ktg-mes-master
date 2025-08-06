@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 打印模板配置对象 print_template
- * 
- * @author yinjinlu
- * @date 2024-04-17
  */
 public class PrintTemplate extends BaseEntity
 {

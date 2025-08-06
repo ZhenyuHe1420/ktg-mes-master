@@ -4,30 +4,21 @@ import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
-import com.ktg.mes.md.domain.MdWorkshop;
 import com.ktg.mes.md.domain.MdWorkstation;
-import com.ktg.mes.md.service.IMdWorkshopService;
 import com.ktg.mes.md.service.IMdWorkstationService;
 import com.ktg.print.domain.PrintClient;
 import com.ktg.print.domain.vo.ClientDictVO;
 import com.ktg.print.mapper.PrintClientMapper;
 import com.ktg.print.service.IPrintClientService;
-import org.aspectj.weaver.loadtime.Aj;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class PrintClientServiceImpl implements IPrintClientService {
-
     @Autowired
     private PrintClientMapper clientMapper;
-
-    @Autowired
-    private IMdWorkshopService mdWorkshopService;
-
     @Autowired
     private IMdWorkstationService mdWorkstationService;
 
@@ -88,8 +79,6 @@ public class PrintClientServiceImpl implements IPrintClientService {
 
     /**
      * 校验客户端编码是否唯一
-     * @param client
-     * @return
      */
     private String checkClientCodeUnique(PrintClient client) {
         PrintClient printClient = clientMapper.checkCilentCodeUnique(client);

@@ -1,16 +1,11 @@
 package com.ktg.print.domain;
 
 import lombok.Data;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 打印机配置对象 print_printer_config
- * 
- * @author yinjinlu
- * @date 2023-09-01
  */
 @Data
 public class PrintPrinterConfig extends BaseEntity

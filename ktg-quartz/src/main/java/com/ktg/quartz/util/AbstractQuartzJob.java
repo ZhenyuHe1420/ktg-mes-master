@@ -18,8 +18,6 @@ import com.ktg.quartz.service.ISysJobLogService;
 
 /**
  * 抽象quartz调用
- *
- * @author ruoyi
  */
 public abstract class AbstractQuartzJob implements Job
 {
@@ -53,7 +51,6 @@ public abstract class AbstractQuartzJob implements Job
 
     /**
      * 执行前
-     *
      * @param context 工作执行上下文对象
      * @param sysJob 系统计划任务
      */
@@ -64,7 +61,6 @@ public abstract class AbstractQuartzJob implements Job
 
     /**
      * 执行后
-     *
      * @param context 工作执行上下文对象
      * @param sysJob 系统计划任务
      */
@@ -98,7 +94,6 @@ public abstract class AbstractQuartzJob implements Job
 
     /**
      * 执行方法，由子类重载
-     *
      * @param context 工作执行上下文对象
      * @param sysJob 系统计划任务
      * @throws Exception 执行过程中的异常

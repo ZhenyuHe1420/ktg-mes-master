@@ -6,7 +6,6 @@ import lombok.Data;
 
 @Data
 public class PrintClient extends BaseEntity {
-
     private static final long serialVersionUID = 1L;
 
     /** 打印机客户端ID */

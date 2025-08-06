@@ -2,7 +2,6 @@ package com.ktg.print.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.print.domain.PrintPrinterConfig;
 import com.ktg.print.service.IPrintPrinterConfigService;
@@ -20,15 +19,11 @@ import com.ktg.common.annotation.Log;
 import com.ktg.common.core.controller.BaseController;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.enums.BusinessType;
-
 import com.ktg.common.utils.poi.ExcelUtil;
 import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 打印机配置Controller
- * 
- * @author yinjinlu
- * @date 2023-09-01
  */
 @RestController
 @RequestMapping("/print/printerconfig")
@@ -115,7 +110,6 @@ public class PrintPrinterConfigController extends BaseController
 
     /**
      * 查询默认打印机
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('print:printerconfig:query')")
     @GetMapping("/getDefaultPrint/{clientId}")
@@ -125,8 +119,6 @@ public class PrintPrinterConfigController extends BaseController
 
     /**
      * 设置默认打印机
-     * @param printPrinterConfig
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('print:printerconfig:query')")
     @PostMapping("/editDefaultPrint")

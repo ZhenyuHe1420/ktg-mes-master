@@ -10,14 +10,11 @@ import com.ktg.quartz.domain.SysJob;
 
 /**
  * 任务执行工具
- *
- * @author ruoyi
  */
 public class JobInvokeUtil
 {
     /**
      * 执行方法
-     *
      * @param sysJob 系统任务
      */
     public static void invokeMethod(SysJob sysJob) throws Exception
@@ -41,7 +38,6 @@ public class JobInvokeUtil
 
     /**
      * 调用任务方法
-     *
      * @param bean 目标对象
      * @param methodName 方法名称
      * @param methodParams 方法参数
@@ -64,7 +60,6 @@ public class JobInvokeUtil
 
     /**
      * 校验是否为为class包名
-     * 
      * @param invokeTarget 名称
      * @return true是 false否
      */
@@ -75,7 +70,6 @@ public class JobInvokeUtil
 
     /**
      * 获取bean名称
-     * 
      * @param invokeTarget 目标字符串
      * @return bean名称
      */
@@ -87,7 +81,6 @@ public class JobInvokeUtil
 
     /**
      * 获取bean方法
-     * 
      * @param invokeTarget 目标字符串
      * @return method方法
      */
@@ -99,7 +92,6 @@ public class JobInvokeUtil
 
     /**
      * 获取method方法参数相关列表
-     * 
      * @param invokeTarget 目标字符串
      * @return method方法相关参数列表
      */
@@ -146,7 +138,6 @@ public class JobInvokeUtil
 
     /**
      * 获取参数类型
-     * 
      * @param methodParams 参数相关列表
      * @return 参数类型列表
      */
@@ -164,7 +155,6 @@ public class JobInvokeUtil
 
     /**
      * 获取参数值
-     * 
      * @param methodParams 参数相关列表
      * @return 参数值列表
      */

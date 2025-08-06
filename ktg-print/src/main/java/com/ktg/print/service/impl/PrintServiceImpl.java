@@ -2,8 +2,6 @@ package com.ktg.print.service.impl;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.core.domain.AjaxResult;
-import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.dv.domain.DvMachinery;
 import com.ktg.mes.dv.service.IDvMachineryService;
@@ -20,36 +18,23 @@ import com.ktg.mes.wm.domain.WmBarcode;
 import com.ktg.mes.wm.service.IWmBarcodeService;
 import com.ktg.print.domain.PrintBarcodeModel;
 import com.ktg.print.domain.PrintPrinterConfig;
-import com.ktg.print.domain.PrintTemplate;
-import com.ktg.print.mapper.PrintTemplateMapper;
 import com.ktg.print.protocol.PrintMessageProto;
-import com.ktg.print.server.PrintClientInfoMessageHandler;
-import com.ktg.print.server.PrintServerDefaultHandler;
 import com.ktg.print.service.IPrintPrinterConfigService;
 import com.ktg.print.service.IPrintService;
-import com.ktg.print.service.IPrintTemplateService;
-import io.netty.channel.Channel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
-
-import java.net.SocketAddress;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
  * 标签打印业务处理类
- *
- * @author yinjinlu
- * @date 2024-04-17
  */
 @Service
 public class PrintServiceImpl implements IPrintService {
-
     @Autowired
     private IPrintPrinterConfigService printPrinterConfigService;
     @Autowired
@@ -140,26 +125,7 @@ public class PrintServiceImpl implements IPrintService {
                 msg = PrintMessageProto.Printer.newBuilder().setMaterialProducts(materialProducts).setDataType(dataType).setPrintInfo(printInfo).build();
                 break;
             case UserConstants.BARCODE_TYPE_PACKAGE:
-//                String materialCode = params.get("materialCode");
-//                String materialName = params.get("materialName");
-//                String specificationAndModel = params.get("specificationAndModel");
-//                String param = params.get("param");
-//                PrintMessageProto.Printer.DataType dataType = PrintMessageProto.Printer.DataType.Material_Products;
-//                PrintMessageProto.Printer.MaterialProducts materialProducts = PrintMessageProto.Printer.MaterialProducts.newBuilder().setMaterialCode(materialCode).setMaterialName(materialName).setSpecificationAndModel(specificationAndModel).setParam(param).build();
-//                // 构造对应的消息对象
-//                msg = PrintMessageProto.Printer.newBuilder().setMaterialProducts(materialProducts).setDataType(dataType).setPrintInfo(printInfo).build();
-//                break;
             case UserConstants.BARCODE_TYPE_STOCK:
-                //仓库标签打印
-                //封装模板数据
-//                String warehouseCode = params.get("warehouseCode");
-//                String warehouseName = params.get("warehouseName");
-//                String personInCharge = params.get("personInCharge");
-//                dataType = PrintMessageProto.Printer.DataType.Warehouse_;
-//                PrintMessageProto.Printer.Warehouse warehouse = PrintMessageProto.Printer.Warehouse.newBuilder().setWarehouseCode(warehouseCode).setWarehouseName(warehouseName).setPersonInCharge(personInCharge).build();
-//                // 构造对应的消息对象
-//                msg = PrintMessageProto.Printer.newBuilder().setWarehouse(warehouse).setDataType(dataType).setPrintInfo(printInfo).build();
-//                break;
             case UserConstants.BARCODE_TYPE_MACHINERY:
                 //设备标签打印
                 //封装模板数据
@@ -311,81 +277,18 @@ public class PrintServiceImpl implements IPrintService {
                 msg = PrintMessageProto.Printer.newBuilder().setWarehouseArea(warehouseArea).setDataType(dataType).setPrintInfo(printInfo).build();
                 break;
             case UserConstants.BARCODE_TYPE_TRANSORDER:
-                // 流转单标签打印
-                //封装模板数据
-                //String sampleCode =params.get("sampleCode");
-                //String qcObject =params.get("qcObject");
-                //String sampleTime =params.get("sampleTime");
-                //String batchCode =params.get("batchCode");
-                //PrintMessageProt//o.Printer.IQCPrintMessage iQCPrintMessage = PrintMessageProto.Printer.IQCPrintMessage.newBuilder().setSampleCode(sampleCode).setQcObject(qcObject).setSampleTime(sampleTime).setBatchCode(batchCode).build();
-                // 构造对应的消息对象
-//                msg = PrintMessageProto.Printer.newBuilder().setIqcPrintMessage(iQCPrintMessage).setDataType(dataType).setPrintInfo(printClientInfoMessage).build();
                 break;
             case UserConstants.BARCODE_TYPE_CLIENT:
-                // 客户标签打印
-                //封装模板数据
-                //String sampleCode =params.get("sampleCode");
-                //String qcObject =params.get("qcObject");
-                //String sampleTime =params.get("sampleTime");
-                //String batchCode =params.get("batchCode");
-                //PrintMessageProt//o.Printer.IQCPrintMessage iQCPrintMessage = PrintMessageProto.Printer.IQCPrintMessage.newBuilder().setSampleCode(sampleCode).setQcObject(qcObject).setSampleTime(sampleTime).setBatchCode(batchCode).build();
-                // 构造对应的消息对象
-//                msg = PrintMessageProto.Printer.newBuilder().setIqcPrintMessage(iQCPrintMessage).setDataType(dataType).setPrintInfo(printClientInfoMessage).build();
                 break;
             case UserConstants.BARCODE_TYPE_VENDOR:
-                // 供应商标签打印
-                //封装模板数据
-                //String sampleCode =params.get("sampleCode");
-                //String qcObject =params.get("qcObject");
-                //String sampleTime =params.get("sampleTime");
-                //String batchCode =params.get("batchCode");
-                //PrintMessageProt//o.Printer.IQCPrintMessage iQCPrintMessage = PrintMessageProto.Printer.IQCPrintMessage.newBuilder().setSampleCode(sampleCode).setQcObject(qcObject).setSampleTime(sampleTime).setBatchCode(batchCode).build();
-                // 构造对应的消息对象
-//                msg = PrintMessageProto.Printer.newBuilder().setIqcPrintMessage(iQCPrintMessage).setDataType(dataType).setPrintInfo(printClientInfoMessage).build();
                 break;
             case UserConstants.BARCODE_TYPE_WORKSHOP:
-                // 工作站标签打印
-                //封装模板数据
-                //String sampleCode =params.get("sampleCode");
-                //String qcObject =params.get("qcObject");
-                //String sampleTime =params.get("sampleTime");
-                //String batchCode =params.get("batchCode");
-                //PrintMessageProt//o.Printer.IQCPrintMessage iQCPrintMessage = PrintMessageProto.Printer.IQCPrintMessage.newBuilder().setSampleCode(sampleCode).setQcObject(qcObject).setSampleTime(sampleTime).setBatchCode(batchCode).build();
-                // 构造对应的消息对象
-//                msg = PrintMessageProto.Printer.newBuilder().setIqcPrintMessage(iQCPrintMessage).setDataType(dataType).setPrintInfo(printClientInfoMessage).build();
                 break;
             case UserConstants.BARCODE_TYPE_WORKORDER:
-                // 生产工单标签打印
-                //封装模板数据
-                //String sampleCode =params.get("sampleCode");
-                //String qcObject =params.get("qcObject");
-                //String sampleTime =params.get("sampleTime");
-                //String batchCode =params.get("batchCode");
-                //PrintMessageProt//o.Printer.IQCPrintMessage iQCPrintMessage = PrintMessageProto.Printer.IQCPrintMessage.newBuilder().setSampleCode(sampleCode).setQcObject(qcObject).setSampleTime(sampleTime).setBatchCode(batchCode).build();
-                // 构造对应的消息对象
-//                msg = PrintMessageProto.Printer.newBuilder().setIqcPrintMessage(iQCPrintMessage).setDataType(dataType).setPrintInfo(printClientInfoMessage).build();
                 break;
             case UserConstants.BARCODE_TYPE_TOOL:
-                // 工装夹具标签打印
-                //封装模板数据
-                //String sampleCode =params.get("sampleCode");
-                //String qcObject =params.get("qcObject");
-                //String sampleTime =params.get("sampleTime");
-                //String batchCode =params.get("batchCode");
-                //PrintMessageProt//o.Printer.IQCPrintMessage iQCPrintMessage = PrintMessageProto.Printer.IQCPrintMessage.newBuilder().setSampleCode(sampleCode).setQcObject(qcObject).setSampleTime(sampleTime).setBatchCode(batchCode).build();
-                // 构造对应的消息对象
-//                msg = PrintMessageProto.Printer.newBuilder().setIqcPrintMessage(iQCPrintMessage).setDataType(dataType).setPrintInfo(printClientInfoMessage).build();
                 break;
             case UserConstants.BARCODE_TYPE_SN:
-                // SN标签打印
-                //封装模板数据
-                //String sampleCode =params.get("sampleCode");
-                //String qcObject =params.get("qcObject");
-                //String sampleTime =params.get("sampleTime");
-                //String batchCode =params.get("batchCode");
-                //PrintMessageProt//o.Printer.IQCPrintMessage iQCPrintMessage = PrintMessageProto.Printer.IQCPrintMessage.newBuilder().setSampleCode(sampleCode).setQcObject(qcObject).setSampleTime(sampleTime).setBatchCode(batchCode).build();
-                // 构造对应的消息对象
-//                msg = PrintMessageProto.Printer.newBuilder().setIqcPrintMessage(iQCPrintMessage).setDataType(dataType).setPrintInfo(printClientInfoMessage).build();
                 break;
             case UserConstants.TEST_TYPE_PRINTER:
                 // 测试模板

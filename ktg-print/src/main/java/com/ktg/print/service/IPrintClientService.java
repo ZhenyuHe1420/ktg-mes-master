@@ -2,7 +2,6 @@ package com.ktg.print.service;
 
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.print.domain.PrintClient;
-
 import java.util.List;
 
 public interface IPrintClientService {

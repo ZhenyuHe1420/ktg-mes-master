@@ -1,7 +1,6 @@
 package com.ktg.print.service.impl;
 
 import java.util.List;
-
 import cn.hutool.core.util.ObjectUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
@@ -15,9 +14,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 打印机配置Service业务层处理
- *
- * @author yinjinlu
- * @date 2023-09-01
  */
 @Service
 public class PrintPrinterConfigServiceImpl implements IPrintPrinterConfigService
@@ -27,7 +23,6 @@ public class PrintPrinterConfigServiceImpl implements IPrintPrinterConfigService
 
     /**
      * 查询打印机配置
-     *
      * @param printerId 打印机配置主键
      * @return 打印机配置
      */
@@ -44,7 +39,6 @@ public class PrintPrinterConfigServiceImpl implements IPrintPrinterConfigService
 
     /**
      * 查询打印机配置列表
-     *
      * @param printPrinterConfig 打印机配置
      * @return 打印机配置
      */
@@ -56,7 +50,6 @@ public class PrintPrinterConfigServiceImpl implements IPrintPrinterConfigService
 
     @Override
     public String checkPrinterCodeUnique(PrintPrinterConfig config) {
-
         PrintPrinterConfig p = printPrinterConfigMapper.checkPrinterCodeUnique(config);
 
         Long configId = config.getPrinterId() == null? -1L:config.getPrinterId();
@@ -69,9 +62,7 @@ public class PrintPrinterConfigServiceImpl implements IPrintPrinterConfigService
 
     /**
      * 新增打印机配置
-     *
      * @param printPrinterConfig 打印机配置
-     * @return 结果
      */
     @Override
     public int insertPrintPrinterConfig(PrintPrinterConfig printPrinterConfig)
@@ -89,9 +80,7 @@ public class PrintPrinterConfigServiceImpl implements IPrintPrinterConfigService
 
     /**
      * 修改打印机配置
-     *
      * @param printPrinterConfig 打印机配置
-     * @return 结果
      */
     @Override
     public int updatePrintPrinterConfig(PrintPrinterConfig printPrinterConfig)
@@ -102,26 +91,12 @@ public class PrintPrinterConfigServiceImpl implements IPrintPrinterConfigService
 
     /**
      * 批量删除打印机配置
-     *
      * @param printerIds 需要删除的打印机配置主键
-     * @return 结果
      */
     @Override
     public int deletePrintPrinterConfigByPrinterIds(Long[] printerIds)
     {
         return printPrinterConfigMapper.deletePrintPrinterConfigByPrinterIds(printerIds);
-    }
-
-    /**
-     * 删除打印机配置信息
-     *
-     * @param printerId 打印机配置主键
-     * @return 结果
-     */
-    @Override
-    public int deletePrintPrinterConfigByPrinterId(Long printerId)
-    {
-        return printPrinterConfigMapper.deletePrintPrinterConfigByPrinterId(printerId);
     }
 
     @Override
@@ -132,7 +107,6 @@ public class PrintPrinterConfigServiceImpl implements IPrintPrinterConfigService
         } else {
             return AjaxResult.error("默认打印机不存在");
         }
-
     }
 
     @Override
@@ -158,5 +132,4 @@ public class PrintPrinterConfigServiceImpl implements IPrintPrinterConfigService
             return AjaxResult.error("修改默认打印机失败: " + e.getMessage());
         }
     }
-
 }
