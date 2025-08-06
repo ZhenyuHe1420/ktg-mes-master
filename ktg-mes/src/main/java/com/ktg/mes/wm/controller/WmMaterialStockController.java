@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 库存记录Controller
- * 
- * @author yinjinlu
- * @date 2022-05-30
  */
 @RestController
 @RequestMapping("/mes/wm/wmstock")

@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 产品销售出库行对象 wm_product_salse_line
- * 
- * @author yinjinlu
- * @date 2022-10-05
  */
 public class WmProductSalesLine extends BaseEntity
 {

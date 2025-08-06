@@ -2,17 +2,10 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.md.domain.MdItem;
 import com.ktg.mes.md.service.IMdItemService;
-import com.ktg.mes.wm.domain.WmStorageArea;
-import com.ktg.mes.wm.domain.WmStorageLocation;
-import com.ktg.mes.wm.domain.WmWarehouse;
-import com.ktg.mes.wm.service.IWmStorageAreaService;
-import com.ktg.mes.wm.service.IWmStorageLocationService;
-import com.ktg.mes.wm.service.IWmWarehouseService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,9 +27,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品销售退货行Controller
- * 
- * @author yinjinlu
- * @date 2022-10-06
  */
 @RestController
 @RequestMapping("/mes/wm/rtsalesline")
@@ -44,7 +34,6 @@ public class WmRtSalesLineController extends BaseController
 {
     @Autowired
     private IWmRtSalesLineService wmRtSalesLineService;
-
     @Autowired
     private IMdItemService mdItemService;
 

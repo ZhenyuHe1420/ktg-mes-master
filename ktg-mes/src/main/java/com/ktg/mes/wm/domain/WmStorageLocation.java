@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 库区设置对象 wm_storage_location
- * 
- * @author yinjinlu
- * @date 2022-05-07
  */
 public class WmStorageLocation extends BaseEntity
 {

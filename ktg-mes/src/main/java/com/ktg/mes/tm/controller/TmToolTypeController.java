@@ -2,7 +2,6 @@ package com.ktg.mes.tm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +24,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 工装夹具类型Controller
- * 
- * @author yinjinlu
- * @date 2022-05-10
  */
 @RestController
 @RequestMapping("/mes/tm/tooltype")
@@ -53,7 +49,6 @@ public class TmToolTypeController extends BaseController
         List<TmToolType> list = tmToolTypeService.selectTmToolTypeList(tmToolType);
         return AjaxResult.success(list);
     }
-
 
     /**
      * 导出工装夹具类型列表

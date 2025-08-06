@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 批次记录 wm_batch
- * 
- * @author yinjinlu
- * @date 2025-02-24
  */
 public class WmBatch extends BaseEntity
 {

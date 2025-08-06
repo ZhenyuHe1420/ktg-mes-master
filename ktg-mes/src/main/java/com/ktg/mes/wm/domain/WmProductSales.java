@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 销售出库单对象 wm_product_salse
- * 
- * @author yinjinlu
- * @date 2022-10-04
  */
 public class WmProductSales extends BaseEntity
 {
@@ -27,7 +24,6 @@ public class WmProductSales extends BaseEntity
     /** 出库单名称 */
     @Excel(name = "出库单名称")
     private String salesName;
-
 
     private Long noticeId;
 

@@ -2,12 +2,9 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.*;
-import com.ktg.mes.wm.domain.tx.ItemRecptTxBean;
 import com.ktg.mes.wm.domain.tx.MiscRecptTxBean;
 import com.ktg.mes.wm.service.IStorageCoreService;
 import com.ktg.mes.wm.service.IWmMiscRecptLineService;
@@ -32,9 +29,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 杂项入库单Controller
- * 
- * @author yinjinlu
- * @date 2025-05-15
  */
 @RestController
 @RequestMapping("/mes/wm/miscrecpt")
@@ -42,10 +36,8 @@ public class WmMiscRecptController extends BaseController
 {
     @Autowired
     private IWmMiscRecptService wmMiscRecptService;
-
     @Autowired
     private IWmMiscRecptLineService wmMiscRecptLineService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 
@@ -127,7 +119,6 @@ public class WmMiscRecptController extends BaseController
 
     /**
      * 执行入库
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:wm:itemrecpt:edit')")
     @Log(title = "物料入库单", businessType = BusinessType.UPDATE)
@@ -149,7 +140,6 @@ public class WmMiscRecptController extends BaseController
 
         return AjaxResult.success();
     }
-
 
     /**
      * 删除杂项入库单

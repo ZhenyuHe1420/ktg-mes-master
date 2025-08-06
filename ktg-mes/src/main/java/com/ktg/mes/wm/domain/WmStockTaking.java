@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 库存盘点记录对象 wm_stock_taking
- * 
- * @author yinjinlu
- * @date 2023-08-17
  */
 public class WmStockTaking extends BaseEntity
 {

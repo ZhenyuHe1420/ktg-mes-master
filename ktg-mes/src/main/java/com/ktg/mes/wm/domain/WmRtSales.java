@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 产品销售退货单对象 wm_rt_salse
- * 
- * @author yinjinlu
- * @date 2022-10-06
  */
 public class WmRtSales extends BaseEntity
 {

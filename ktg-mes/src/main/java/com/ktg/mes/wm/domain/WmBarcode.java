@@ -1,15 +1,10 @@
 package com.ktg.mes.wm.domain;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 条码清单对象 wm_barcode
- * 
- * @author yinjinlu
- * @date 2022-08-01
  */
 public class WmBarcode extends BaseEntity
 {

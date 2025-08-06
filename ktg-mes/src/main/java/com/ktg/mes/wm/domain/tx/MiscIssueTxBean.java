@@ -1,8 +1,6 @@
 package com.ktg.mes.wm.domain.tx;
 
 import com.ktg.common.core.domain.BaseEntity;
-import org.codehaus.jackson.map.Serializers;
-
 import java.math.BigDecimal;
 
 public class MiscIssueTxBean extends BaseEntity {

@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 供应商退货行Controller
- * 
- * @author yinjinlu
- * @date 2022-06-13
  */
 @RestController
 @RequestMapping("/mes/wm/rtvendorline")
@@ -57,8 +54,6 @@ public class WmRtVendorLineController extends BaseController
         List<WmRtVendorLine> list = wmRtVendorLineService.selectWmRtVendorLineListWithDetail(wmRtVendorLine);
         return getDataTable(list);
     }
-
-
 
     /**
      * 导出供应商退货行列表

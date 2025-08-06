@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 发货通知单行Controller
- * 
- * @author yinjinlu
- * @date 2025-03-14
  */
 @RestController
 @RequestMapping("/mes/wm/salesnoticeline")

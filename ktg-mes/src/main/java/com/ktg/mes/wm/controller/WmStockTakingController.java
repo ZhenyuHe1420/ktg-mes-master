@@ -11,14 +11,12 @@ import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.*;
 import com.ktg.mes.wm.service.*;
 import com.ktg.system.strategy.AutoCodeUtil;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
-
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
@@ -27,26 +25,18 @@ import java.util.Map;
 @RestController
 @RequestMapping("/mes/wm/stocktaking")
 public class WmStockTakingController extends BaseController {
-
     @Autowired
     private IWmStockTakingService wmStockTakingService;
-
     @Autowired
     private IWmStockTakingLineService wmStockTakingLineService;
-
     @Autowired
     private IWmStockTakingResultService wmStockTakingResultService;
-
     @Autowired
     private IWmStockTakingPlanService wmStockTakingPlanService;
-
     @Autowired
     private IWmMaterialStockService wmMaterialStockService;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
-
-
 
     /**
      * 查询库存盘点记录列表

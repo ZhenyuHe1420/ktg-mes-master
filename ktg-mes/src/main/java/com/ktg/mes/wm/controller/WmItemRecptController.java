@@ -2,7 +2,6 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
@@ -29,9 +28,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 物料入库单Controller
- * 
- * @author yinjinlu
- * @date 2022-05-22
  */
 @RestController
 @RequestMapping("/mes/wm/itemrecpt")
@@ -39,25 +35,12 @@ public class WmItemRecptController extends BaseController
 {
     @Autowired
     private IWmItemRecptService wmItemRecptService;
-
     @Autowired
     private IWmItemRecptLineService wmItemRecptLineService;
-
     @Autowired
     private IWmItemRecptDetailService wmItemRecptDetailService;
-
     @Autowired
     private IWmArrivalNoticeService wmArrivalNoticeService;
-
-    @Autowired
-    private IWmWarehouseService wmWarehouseService;
-
-    @Autowired
-    private IWmStorageLocationService wmStorageLocationService;
-
-    @Autowired
-    private IWmStorageAreaService wmStorageAreaService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 
@@ -133,7 +116,6 @@ public class WmItemRecptController extends BaseController
         return toAjax(wmItemRecptService.updateWmItemRecpt(wmItemRecpt));
     }
 
-
     /**
      * 修改物料入库单
      */
@@ -187,7 +169,6 @@ public class WmItemRecptController extends BaseController
 
     /**
      * 执行入库
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:wm:itemrecpt:edit')")
     @Log(title = "物料入库单", businessType = BusinessType.UPDATE)
@@ -216,7 +197,6 @@ public class WmItemRecptController extends BaseController
 
         return AjaxResult.success();
     }
-
 
     /**
      * 删除物料入库单

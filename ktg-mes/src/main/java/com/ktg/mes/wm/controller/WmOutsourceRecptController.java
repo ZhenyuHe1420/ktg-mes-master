@@ -3,16 +3,11 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
-import ch.qos.logback.core.util.StringCollectionUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.pro.domain.ProWorkorder;
 import com.ktg.mes.pro.service.IProWorkorderService;
-import com.ktg.mes.wm.domain.WmItemRecpt;
 import com.ktg.mes.wm.domain.WmOutsourceRecptLine;
-import com.ktg.mes.wm.domain.WmRtIssueLine;
-import com.ktg.mes.wm.domain.tx.ItemRecptTxBean;
 import com.ktg.mes.wm.domain.tx.OutsourceRecptTxBean;
 import com.ktg.mes.wm.service.IStorageCoreService;
 import com.ktg.mes.wm.service.IWmOutsourceRecptDetailService;
@@ -41,9 +36,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 外协入库单Controller
- * 
- * @author yinjinlu
- * @date 2023-10-30
  */
 @RestController
 @RequestMapping("/mes/wm/outsourcerecpt")
@@ -51,19 +43,14 @@ public class WmOutsourceRecptController extends BaseController
 {
     @Autowired
     private IWmOutsourceRecptService wmOutsourceRecptService;
-
     @Autowired
     private IWmOutsourceRecptLineService wmOutsourceRecptLineService;
-
     @Autowired
     private IWmOutsourceRecptDetailService wmOutsourceRecptDetailService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
-
     @Autowired
     private IProWorkorderService proWorkorderService;
-
 
     /**
      * 查询外协入库单列表
@@ -188,7 +175,6 @@ public class WmOutsourceRecptController extends BaseController
 
     /**
      * 执行入库
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:wm:outsourcerecpt:edit')")
     @Log(title = "外协入库单", businessType = BusinessType.UPDATE)
@@ -232,5 +218,4 @@ public class WmOutsourceRecptController extends BaseController
 
         return AjaxResult.success();
     }
-
 }

@@ -2,10 +2,7 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
-import com.ktg.mes.wm.service.IWmStorageAreaService;
-import com.ktg.mes.wm.service.IWmStorageLocationService;
 import com.ktg.mes.wm.utils.WmBarCodeUtil;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +26,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 仓库设置Controller
- * 
- * @author yinjinlu
- * @date 2022-05-07
  */
 @RestController
 @RequestMapping("/mes/wm/warehouse")
@@ -39,13 +33,6 @@ public class WmWarehouseController extends BaseController
 {
     @Autowired
     private IWmWarehouseService wmWarehouseService;
-
-    @Autowired
-    private IWmStorageLocationService wmStorageLocationService;
-
-    @Autowired
-    private IWmStorageAreaService wmStorageAreaService;
-
     @Autowired
     private WmBarCodeUtil wmBarCodeUtil;
 
@@ -62,7 +49,6 @@ public class WmWarehouseController extends BaseController
 
     /**
      * 查询树型的列表
-     * @return
      */
     @GetMapping("/getTreeList")
     public AjaxResult getTreeList(){

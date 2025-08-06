@@ -4,13 +4,11 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.ktg.common.annotation.Excel;
 import com.ktg.mes.wm.domain.WmItemRecptLine;
 import lombok.Data;
-
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
 public class ProcurementRecordVO extends WmItemRecptLine {
-
     private static final long serialVersionUID = 1L;
 
     /** 入库单ID */

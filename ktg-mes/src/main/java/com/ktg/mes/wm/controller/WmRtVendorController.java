@@ -2,7 +2,6 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.wm.domain.WmRtVendorLine;
 import com.ktg.mes.wm.domain.tx.RtVendorTxBean;
@@ -32,9 +31,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 供应商退货Controller
- * 
- * @author yinjinlu
- * @date 2022-06-13
  */
 @RestController
 @RequestMapping("/mes/wm/rtvendor")
@@ -42,15 +38,13 @@ public class WmRtVendorController extends BaseController
 {
     @Autowired
     private IWmRtVendorService wmRtVendorService;
-
     @Autowired
     private IWmRtVendorLineService wmRtVendorLineService;
-
     @Autowired
     private IWmRtVendorDetailService wmRtVendorDetailService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
+
     /**
      * 查询供应商退货列表
      */
@@ -102,7 +96,6 @@ public class WmRtVendorController extends BaseController
         }
         return AjaxResult.success(flag);
     }
-
 
     /**
      * 新增供应商退货
@@ -161,6 +154,7 @@ public class WmRtVendorController extends BaseController
 
             wmRtVendorLineService.deleteByRtId(rtId);
         }
+
         return toAjax(wmRtVendorService.deleteWmRtVendorByRtIds(rtIds));
     }
 
@@ -188,6 +182,4 @@ public class WmRtVendorController extends BaseController
 
         return AjaxResult.success();
     }
-
-
 }

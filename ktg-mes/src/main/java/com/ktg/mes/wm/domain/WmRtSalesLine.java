@@ -1,10 +1,7 @@
 package com.ktg.mes.wm.domain;
 
 import java.math.BigDecimal;
-import java.util.Date;
 import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ktg.common.annotation.Excel;
@@ -12,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 产品销售退货行对象 wm_rt_salse_line
- * 
- * @author yinjinlu
- * @date 2022-10-06
  */
 public class WmRtSalesLine extends BaseEntity
 {

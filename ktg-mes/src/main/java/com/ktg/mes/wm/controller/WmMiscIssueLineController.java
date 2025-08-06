@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.*;
 import com.ktg.mes.wm.service.*;
@@ -26,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 杂项出库单行Controller
- * 
- * @author yinjinlu
- * @date 2025-05-15
  */
 @RestController
 @RequestMapping("/mes/wm/miscissueline")
@@ -36,16 +32,12 @@ public class WmMiscIssueLineController extends BaseController
 {
     @Autowired
     private IWmMiscIssueLineService wmMiscIssueLineService;
-
     @Autowired
     private IWmMiscIssueDetailService wmMiscIssueDetailService;
-
     @Autowired
     private IWmWarehouseService wmWarehouseService;
-
     @Autowired
     private IWmStorageLocationService wmStorageLocationService;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
 

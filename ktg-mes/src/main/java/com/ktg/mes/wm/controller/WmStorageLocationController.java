@@ -2,9 +2,7 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
-import com.ktg.mes.wm.domain.WmStorageArea;
 import com.ktg.mes.wm.service.IWmStorageAreaService;
 import com.ktg.mes.wm.utils.WmBarCodeUtil;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -22,9 +20,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 库区设置Controller
- * 
- * @author yinjinlu
- * @date 2022-05-07
  */
 @RestController
 @RequestMapping("/mes/wm/location")
@@ -32,10 +27,8 @@ public class WmStorageLocationController extends BaseController
 {
     @Autowired
     private IWmStorageLocationService wmStorageLocationService;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
-
     @Autowired
     private WmBarCodeUtil wmBarCodeUtil;
 
@@ -115,7 +108,6 @@ public class WmStorageLocationController extends BaseController
         return wmStorageLocationService.deleteWmStorageLocationByLocationIds(locationIds);
     }
 
-
     /**
      * 设置库区下所有库位是否允许产品混放
      */
@@ -137,5 +129,4 @@ public class WmStorageLocationController extends BaseController
         wmStorageAreaService.updateWmStorageAreaBatchMixing(locationId, flag==true?UserConstants.YES:UserConstants.NO);
         return AjaxResult.success();
     }
-
 }

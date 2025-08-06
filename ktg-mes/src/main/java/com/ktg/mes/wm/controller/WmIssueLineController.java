@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.mes.md.domain.MdProductBom;
 import com.ktg.mes.md.service.IMdProductBomService;
 import com.ktg.mes.pro.domain.ProWorkorder;
@@ -32,9 +31,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产领料单行Controller
- * 
- * @author yinjinlu
- * @date 2022-07-14
  */
 @RestController
 @RequestMapping("/mes/wm/issueline")
@@ -42,16 +38,12 @@ public class WmIssueLineController extends BaseController
 {
     @Autowired
     private IWmIssueLineService wmIssueLineService;
-
     @Autowired
     private IWmIssueHeaderService wmIssueHeaderService;
-
     @Autowired
     private IProWorkorderService proWorkorderService;
-
     @Autowired
     private IMdProductBomService mdProductBomService;
-
 
     /**
      * 查询生产领料单行列表
@@ -76,7 +68,6 @@ public class WmIssueLineController extends BaseController
         List<WmIssueLine> list = wmIssueLineService.selectWmIssueLineWithDetailList(wmIssueLine);
         return getDataTable(list);
     }
-
 
     /**
      * 导出生产领料单行列表
@@ -139,7 +130,6 @@ public class WmIssueLineController extends BaseController
 
         return toAjax(wmIssueLineService.updateWmIssueLine(wmIssueLine));
     }
-
 
     private boolean checkBom(WmIssueLine wmIssueLine){
         //BOM领料验证（防错料）

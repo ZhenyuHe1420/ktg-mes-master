@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 工装夹具类型对象 tm_tool_type
- * 
- * @author yinjinlu
- * @date 2022-05-10
  */
 public class TmToolType extends BaseEntity
 {

@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 发货通知单对象 wm_sales_notice
- * 
- * @author yinjinlu
- * @date 2025-03-14
  */
 public class WmSalesNotice extends BaseEntity
 {

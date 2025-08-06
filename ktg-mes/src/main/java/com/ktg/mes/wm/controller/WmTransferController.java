@@ -2,9 +2,7 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.*;
 import com.ktg.mes.wm.domain.tx.TransferTxBean;
 import com.ktg.mes.wm.service.*;
@@ -30,9 +28,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 转移单Controller
- * 
- * @author yinjinlu
- * @date 2022-11-28
  */
 @RestController
 @RequestMapping("/mes/wm/transfer")
@@ -40,16 +35,12 @@ public class WmTransferController extends BaseController
 {
     @Autowired
     private IWmTransferService wmTransferService;
-
     @Autowired
     private IWmTransferLineService wmTransferLineService;
-
     @Autowired
     private IWmTransferDetailService wmTransferDetailService;
-
     @Autowired
     private IWmMaterialStockService wmMaterialStockService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 
@@ -115,7 +106,6 @@ public class WmTransferController extends BaseController
         if(UserConstants.NOT_UNIQUE.equals(wmTransferService.checkUnique(wmTransfer))){
             return AjaxResult.error("转移单编号已存在");
         }
-
 
         WmTransferLine param = new WmTransferLine();
         param.setTransferId(wmTransfer.getTransferId());

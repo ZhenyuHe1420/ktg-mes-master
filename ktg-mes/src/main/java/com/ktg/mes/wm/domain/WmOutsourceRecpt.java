@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 外协入库单对象 wm_outsource_recpt
- * 
- * @author yinjinlu
- * @date 2023-10-30
  */
 public class WmOutsourceRecpt extends BaseEntity
 {

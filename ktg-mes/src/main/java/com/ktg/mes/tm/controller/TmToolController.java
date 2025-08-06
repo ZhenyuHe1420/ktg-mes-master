@@ -15,15 +15,11 @@ import com.ktg.mes.wm.utils.WmBarCodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
  * 工装夹具清单Controller
- *
- * @author yinjinlu
- * @date 2022-05-11
  */
 @RestController
 @RequestMapping("/mes/tm/tool")
@@ -31,11 +27,11 @@ public class TmToolController extends BaseController
 {
     @Autowired
     private ITmToolService tmToolService;
-
     @Autowired
     private ITmToolTypeService tmToolTypeService;
     @Autowired
     private WmBarCodeUtil wmBarCodeUtil;
+
     /**
      * 查询工装夹具清单列表
      */

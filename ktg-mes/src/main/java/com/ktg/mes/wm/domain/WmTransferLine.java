@@ -12,9 +12,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 转移单行对象 wm_transfer_line
- * 
- * @author yinjinlu
- * @date 2022-11-28
  */
 public class WmTransferLine extends BaseEntity
 {

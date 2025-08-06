@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.*;
 import com.ktg.mes.wm.service.*;
@@ -27,9 +26,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 物料入库单行Controller
- * 
- * @author yinjinlu
- * @date 2022-05-22
  */
 @RestController
 @RequestMapping("/mes/wm/itemrecptline")
@@ -37,13 +33,10 @@ public class WmItemRecptLineController extends BaseController
 {
     @Autowired
     private IWmItemRecptService wmItemRecptService;
-
     @Autowired
     private IWmItemRecptLineService wmItemRecptLineService;
-
     @Autowired
     private IWmBatchService wmBatchService;
-
 
     /**
      * 查询物料入库单行列表
@@ -67,7 +60,6 @@ public class WmItemRecptLineController extends BaseController
         List<WmItemRecptLine> list = wmItemRecptLineService.selectWmItemRecptLineWithDetail(wmItemRecptLine);
         return getDataTable(list);
     }
-
 
     /**
      * 导出物料入库单行列表

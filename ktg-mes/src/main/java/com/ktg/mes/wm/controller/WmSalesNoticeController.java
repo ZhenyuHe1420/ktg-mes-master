@@ -2,7 +2,6 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +26,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 发货通知单Controller
- * 
- * @author yinjinlu
- * @date 2025-03-14
  */
 @RestController
 @RequestMapping("/mes/wm/salesnotice")

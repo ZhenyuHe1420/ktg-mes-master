@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品销售出库行Controller
- * 
- * @author yinjinlu
- * @date 2022-10-05
  */
 @RestController
 @RequestMapping("/mes/wm/productsalesline")
@@ -66,8 +63,6 @@ public class WmProductSalesLineController extends BaseController
         List<WmProductSalesLine> list = wmProductSalesLineService.selectWmProductSalesLineWithDetailList(wmProductSalesLine);
         return getDataTable(list);
     }
-
-
 
     /**
      * 导出产品销售出库行列表

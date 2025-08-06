@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 库存盘点方案参数对象 wm_stock_taking_param
- * 
- * @author yinjinlu
- * @date 2025-03-31
  */
 public class WmStockTakingParam extends BaseEntity
 {

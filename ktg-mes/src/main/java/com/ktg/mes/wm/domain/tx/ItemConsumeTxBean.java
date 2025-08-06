@@ -1,7 +1,6 @@
 package com.ktg.mes.wm.domain.tx;
 
 import com.ktg.common.core.domain.BaseEntity;
-
 import java.math.BigDecimal;
 
 public class ItemConsumeTxBean extends BaseEntity {

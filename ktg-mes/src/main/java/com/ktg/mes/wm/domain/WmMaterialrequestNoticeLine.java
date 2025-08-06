@@ -7,9 +7,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 备料通知单明细对象 wm_materialrequest_notice_line
- * 
- * @author yinjinlu
- * @date 2024-12-13
  */
 public class WmMaterialrequestNoticeLine extends BaseEntity
 {

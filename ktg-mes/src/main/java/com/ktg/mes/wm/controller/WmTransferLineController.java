@@ -2,7 +2,6 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.WmStorageArea;
 import com.ktg.mes.wm.domain.WmStorageLocation;
@@ -31,9 +30,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 转移单行Controller
- * 
- * @author yinjinlu
- * @date 2022-11-28
  */
 @RestController
 @RequestMapping("/mes/wm/transferline")
@@ -41,15 +37,13 @@ public class WmTransferLineController extends BaseController
 {
     @Autowired
     private IWmTransferLineService wmTransferLineService;
-
     @Autowired
     private IWmWarehouseService wmWarehouseService;
-
     @Autowired
     private IWmStorageLocationService wmStorageLocationService;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
+
     /**
      * 查询转移单行列表
      */
@@ -62,7 +56,6 @@ public class WmTransferLineController extends BaseController
         return getDataTable(list);
     }
 
-
     /**
      * 查询转移单行列表（含明细）
      */
@@ -74,7 +67,6 @@ public class WmTransferLineController extends BaseController
         List<WmTransferLine> list = wmTransferLineService.selectWmTransferLineWithDetailList(wmTransferLine);
         return getDataTable(list);
     }
-
 
     /**
      * 导出转移单行列表

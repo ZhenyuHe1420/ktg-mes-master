@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.pro.domain.ProWorkorder;
@@ -30,25 +29,17 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 外协入库单行Controller
- * 
- * @author yinjinlu
- * @date 2023-10-30
  */
 @RestController
 @RequestMapping("/mes/wm/outsourcerecptline")
 public class WmOutsourceRecptLineController extends BaseController
 {
-
     @Autowired
     private IWmOutsourceRecptService wmOutsourceRecptService;
-
     @Autowired
     private IWmOutsourceRecptLineService wmOutsourceRecptLineService;
-
     @Autowired
     private IProWorkorderService proWorkorderService;
-
-
     @Autowired
     private IWmBatchService wmBatchService;
 
@@ -75,7 +66,6 @@ public class WmOutsourceRecptLineController extends BaseController
         List<WmOutsourceRecptLine> list = wmOutsourceRecptLineService.selectWmOutsourceRecptLineWithDetailList(wmOutsourceRecptLine);
         return getDataTable(list);
     }
-
 
     /**
      * 导出外协入库单行列表

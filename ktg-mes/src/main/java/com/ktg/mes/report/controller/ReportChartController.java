@@ -29,9 +29,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 图形报组件Controller
- * 
- * @author yinjinlu
- * @date 2025-05-12
  */
 @RestController
 @RequestMapping("/mes/report/chart")
@@ -39,7 +36,6 @@ public class ReportChartController extends BaseController
 {
     @Autowired
     private IReportChartService reportChartService;
-
     @Autowired
     private ISysRoleService roleService;
 
@@ -57,7 +53,6 @@ public class ReportChartController extends BaseController
 
     /**
      * 根据当前用户的角色权限查询图形报组件列表
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:report:chart:list')")
     @GetMapping("/getMyCharts")
@@ -71,7 +66,6 @@ public class ReportChartController extends BaseController
         List<ReportChart> list = reportChartService.getMyCharts(roleIds.toArray(new Long[roleIds.size()]));
         return AjaxResult.success(list);
     }
-
 
     /**
      * 导出图形报组件列表

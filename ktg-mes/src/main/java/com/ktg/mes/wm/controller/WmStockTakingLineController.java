@@ -1,14 +1,12 @@
 package com.ktg.mes.wm.controller;
 
 import com.ktg.common.annotation.Log;
-import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.controller.BaseController;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.core.page.TableDataInfo;
 import com.ktg.common.enums.BusinessType;
 import com.ktg.common.utils.poi.ExcelUtil;
 import com.ktg.mes.wm.domain.WmStockTakingLine;
-import com.ktg.mes.wm.domain.WmStorageArea;
 import com.ktg.mes.wm.service.IWmStockTakingLineService;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,5 +87,4 @@ public class WmStockTakingLineController extends BaseController {
     {
         return toAjax(wmStockTakingLineService.deleteWmStockTakingLineByLineIds(lineIds));
     }
-
 }

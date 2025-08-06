@@ -9,9 +9,6 @@ import java.math.BigDecimal;
 
 /**
  * 库存盘点结果对象 wm_stock_taking_result
- * 
- * @author yinjinlu
- * @date 2023-08-22
  */
 public class WmStockTakingResult extends BaseEntity
 {

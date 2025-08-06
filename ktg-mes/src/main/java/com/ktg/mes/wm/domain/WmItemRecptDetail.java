@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 物料入库单明细对象 wm_item_recpt_detail
- * 
- * @author yinjinlu
- * @date 2025-02-28
  */
 public class WmItemRecptDetail extends BaseEntity
 {

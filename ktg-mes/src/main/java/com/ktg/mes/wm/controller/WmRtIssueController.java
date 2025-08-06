@@ -2,10 +2,8 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.*;
 import com.ktg.mes.wm.domain.tx.RtIssueTxBean;
 import com.ktg.mes.wm.service.*;
@@ -31,9 +29,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产退料单头Controller
- * 
- * @author yinjinlu
- * @date 2022-09-15
  */
 @RestController
 @RequestMapping("/mes/wm/rtissue")
@@ -41,13 +36,10 @@ public class WmRtIssueController extends BaseController
 {
     @Autowired
     private IWmRtIssueService wmRtIssueService;
-
     @Autowired
     private IWmRtIssueLineService wmRtIssueLineService;
-
     @Autowired
     private IWmRtIssueDetailService wmRtIssueDetailService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 
@@ -169,7 +161,6 @@ public class WmRtIssueController extends BaseController
             }
         }
 
-
         return toAjax(wmRtIssueService.updateWmRtIssue(wmRtIssue));
     }
 
@@ -196,7 +187,6 @@ public class WmRtIssueController extends BaseController
     /**
      * 执行退料
      * @param rtId
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:wm:rtissue:edit')")
     @Log(title = "生产退料单头", businessType = BusinessType.UPDATE)
@@ -215,7 +205,6 @@ public class WmRtIssueController extends BaseController
 
         //执行生产退料
         storageCoreService.processRtIssue(beans);
-
 
         rtIssue.setStatus(UserConstants.ORDER_STATUS_FINISHED);
         wmRtIssueService.updateWmRtIssue(rtIssue);

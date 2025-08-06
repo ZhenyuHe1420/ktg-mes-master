@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 销售退货记录明细对象 wm_rt_sales_detail
- * 
- * @author yinjinlu
- * @date 2025-03-16
  */
 public class WmRtSalesDetail extends BaseEntity
 {

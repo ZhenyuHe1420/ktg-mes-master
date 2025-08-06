@@ -31,9 +31,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品入库录Controller
- * 
- * @author yinjinlu
- * @date 2022-09-22
  */
 @RestController
 @RequestMapping("/mes/wm/productrecpt")
@@ -41,13 +38,10 @@ public class WmProductRecptController extends BaseController
 {
     @Autowired
     private IWmProductRecptService wmProductRecptService;
-
     @Autowired
     private IWmProductRecptLineService wmProductRecptLineService;
-
     @Autowired
     private IWmProductRecptDetailService wmProductRecptDetailService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 
@@ -85,7 +79,6 @@ public class WmProductRecptController extends BaseController
     {
         return AjaxResult.success(wmProductRecptService.selectWmProductRecptByRecptId(recptId));
     }
-
 
     @GetMapping("/checkQuantity/{recptId}")
     public AjaxResult checkQuantity(@PathVariable("recptId") Long recptId){
@@ -169,7 +162,6 @@ public class WmProductRecptController extends BaseController
 
     /**
      * 执行入库
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:wm:productrecpt:edit')")
     @Log(title = "产品入库记录", businessType = BusinessType.UPDATE)
@@ -193,5 +185,4 @@ public class WmProductRecptController extends BaseController
 
         return AjaxResult.success();
     }
-
 }

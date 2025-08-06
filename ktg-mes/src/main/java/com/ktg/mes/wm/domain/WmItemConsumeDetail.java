@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 物料消耗记录明细对象 wm_item_consume_detail
- * 
- * @author yinjinlu
- * @date 2025-03-07
  */
 public class WmItemConsumeDetail extends BaseEntity
 {

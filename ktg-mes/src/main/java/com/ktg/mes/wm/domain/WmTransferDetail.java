@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 转移调拨单明细对象 wm_transfer_detail
- * 
- * @author yinjinlu
- * @date 2025-03-18
  */
 public class WmTransferDetail extends BaseEntity
 {

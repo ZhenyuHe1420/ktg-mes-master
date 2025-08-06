@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 物料消耗记录明细Controller
- * 
- * @author yinjinlu
- * @date 2025-03-07
  */
 @RestController
 @RequestMapping("/mes/wm/itemconsumedetail")

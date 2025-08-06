@@ -16,11 +16,7 @@ import java.util.List;
 
 /**
  * Mysql 报表存储
- * @author yanshikui
- * @version 2022年10月7日
- *
  */
-
 @Component
 // 该注解可以利用其 prefix属性值 + 类的属性名 在yml中配置属性值
 @ConfigurationProperties(prefix = "ureport.mysql.provider")

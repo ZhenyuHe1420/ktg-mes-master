@@ -2,12 +2,10 @@ package com.ktg.mes.wm.domain.tx;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.ktg.common.core.domain.BaseEntity;
-
 import java.math.BigDecimal;
 import java.util.Date;
 
 public class ProductRecptTxBean extends BaseEntity {
-
     private static final long serialVersionUID = 1L;
 
     /** 库存记录ID **/

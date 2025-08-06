@@ -7,13 +7,8 @@ import java.util.Date;
 
 /**
  *  Ureport文件 实体类
- * @author yanshikui
- * @version 2022年10月7日
- *
  */
-
 public class UreportFileEntity extends BaseEntity {
-
     private static final long serialVersionUID = 1L;
     private Long id;
     private String name;

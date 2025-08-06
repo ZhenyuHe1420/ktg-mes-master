@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.WmStorageArea;
 import com.ktg.mes.wm.domain.WmStorageLocation;
@@ -32,9 +31,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品入库记录明细Controller
- * 
- * @author yinjinlu
- * @date 2025-03-13
  */
 @RestController
 @RequestMapping("/mes/wm/productrecptdetail")
@@ -42,13 +38,10 @@ public class WmProductRecptDetailController extends BaseController
 {
     @Autowired
     private IWmProductRecptDetailService wmProductRecptDetailService;
-
     @Autowired
     private IWmWarehouseService wmWarehouseService;
-
     @Autowired
     private IWmStorageLocationService wmStorageLocationService;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
 
@@ -123,7 +116,6 @@ public class WmProductRecptDetailController extends BaseController
         if(BigDecimal.ZERO.compareTo(wmProductRecptDetail.getQuantity()) >= 0){
             return AjaxResult.error("入库数量必须大于0!");
         }
-
 
         return toAjax(wmProductRecptDetailService.insertWmProductRecptDetail(wmProductRecptDetail));
     }

@@ -2,7 +2,6 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.WmBarcode;
@@ -28,9 +27,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 库位设置Controller
- * 
- * @author yinjinlu
- * @date 2022-05-08
  */
 @RestController
 @RequestMapping("/mes/wm/area")
@@ -38,7 +34,6 @@ public class WmStorageAreaController extends BaseController
 {
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
-
     @Autowired
     private WmBarCodeUtil barCodeUtil;
 

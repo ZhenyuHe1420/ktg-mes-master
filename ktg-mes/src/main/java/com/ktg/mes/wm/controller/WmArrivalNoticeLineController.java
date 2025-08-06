@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 到货通知单行Controller
- * 
- * @author yinjinlu
- * @date 2024-11-12
  */
 @RestController
 @RequestMapping("/mes/wm/arrivalnoticeline")

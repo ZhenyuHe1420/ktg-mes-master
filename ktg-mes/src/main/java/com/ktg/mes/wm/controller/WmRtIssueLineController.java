@@ -2,9 +2,7 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.*;
 import com.ktg.mes.wm.service.*;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -26,9 +24,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产退料单行Controller
- * 
- * @author yinjinlu
- * @date 2022-09-15
  */
 @RestController
 @RequestMapping("/mes/wm/rtissueline")
@@ -36,18 +31,8 @@ public class WmRtIssueLineController extends BaseController
 {
     @Autowired
     private IWmRtIssueService wmRtIssueService;
-
     @Autowired
     private IWmRtIssueLineService wmRtIssueLineService;
-
-    @Autowired
-    private IWmWarehouseService wmWarehouseService;
-
-    @Autowired
-    private IWmStorageLocationService wmStorageLocationService;
-
-    @Autowired
-    private IWmStorageAreaService wmStorageAreaService;
 
     /**
      * 查询生产退料单行列表

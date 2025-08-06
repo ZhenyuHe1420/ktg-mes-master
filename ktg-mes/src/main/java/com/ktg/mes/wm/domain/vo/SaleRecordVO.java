@@ -2,12 +2,10 @@ package com.ktg.mes.wm.domain.vo;
 
 import com.ktg.common.annotation.Excel;
 import lombok.Data;
-
 import java.math.BigDecimal;
 
 @Data
 public class SaleRecordVO {
-
     private static final long serialVersionUID = 1L;
 
     /** 行ID */

@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品销售出库记录明细Controller
- * 
- * @author yinjinlu
- * @date 2025-03-14
  */
 @RestController
 @RequestMapping("/mes/wm/productsalesdetail")

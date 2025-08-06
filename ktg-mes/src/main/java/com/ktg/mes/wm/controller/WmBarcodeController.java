@@ -7,15 +7,8 @@ import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.core.page.TableDataInfo;
 import com.ktg.common.enums.BusinessType;
 import com.ktg.common.utils.poi.ExcelUtil;
-import com.ktg.mes.dv.service.IDvMachineryService;
-import com.ktg.mes.md.service.IMdClientService;
-import com.ktg.mes.md.service.IMdItemService;
-import com.ktg.mes.md.service.IMdVendorService;
-import com.ktg.mes.md.service.IMdWorkstationService;
-import com.ktg.mes.pro.service.IProWorkorderService;
 import com.ktg.mes.wm.domain.WmBarcode;
 import com.ktg.mes.wm.service.*;
-import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.CollectionUtils;
@@ -26,9 +19,6 @@ import java.util.List;
 
 /**
  * 条码清单Controller
- * 
- * @author yinjinlu
- * @date 2022-08-01
  */
 @RestController
 @RequestMapping("/mes/wm/barcode")
@@ -127,5 +117,4 @@ public class WmBarcodeController extends BaseController
         }
         return AjaxResult.success();
     }
-
 }

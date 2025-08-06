@@ -10,9 +10,6 @@ import java.util.List;
 
 /**
  * 图形报组件对象 report_chart
- * 
- * @author yinjinlu
- * @date 2025-05-12
  */
 public class ReportChart extends BaseEntity
 {

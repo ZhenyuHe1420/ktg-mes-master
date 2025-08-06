@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 杂项入库单对象 wm_misc_recpt
- * 
- * @author yinjinlu
- * @date 2025-05-15
  */
 public class WmMiscRecpt extends BaseEntity
 {

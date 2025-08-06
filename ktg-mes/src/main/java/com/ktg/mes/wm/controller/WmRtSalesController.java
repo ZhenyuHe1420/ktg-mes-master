@@ -2,9 +2,7 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.*;
 import com.ktg.mes.wm.domain.tx.RtSalesTxBean;
 import com.ktg.mes.wm.service.*;
@@ -30,9 +28,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品销售退货单Controller
- * 
- * @author yinjinlu
- * @date 2022-10-06
  */
 @RestController
 @RequestMapping("/mes/wm/rtsales")
@@ -40,22 +35,10 @@ public class WmRtSalesController extends BaseController
 {
     @Autowired
     private IWmRtSalesService wmRtSalesService;
-
     @Autowired
     private IWmRtSalesLineService wmRtSalesLineService;
-
     @Autowired
     private IWmRtSalesDetailService wmRtSalesDetailService;
-
-    @Autowired
-    private IWmWarehouseService wmWarehouseService;
-
-    @Autowired
-    private IWmStorageLocationService wmStorageLocationService;
-
-    @Autowired
-    private IWmStorageAreaService wmStorageAreaService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 
@@ -156,7 +139,6 @@ public class WmRtSalesController extends BaseController
             }
         }
 
-
         return toAjax(wmRtSalesService.updateWmRtSales(wmRtSales));
     }
 
@@ -184,7 +166,6 @@ public class WmRtSalesController extends BaseController
     /**
      * 执行退货
      * @param rtId
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:wm:rtsales:edit')")
     @Log(title = "产品销售退货单", businessType = BusinessType.UPDATE)
@@ -207,5 +188,4 @@ public class WmRtSalesController extends BaseController
         wmRtSalesService.updateWmRtSales(rtSales);
         return AjaxResult.success();
     }
-
 }

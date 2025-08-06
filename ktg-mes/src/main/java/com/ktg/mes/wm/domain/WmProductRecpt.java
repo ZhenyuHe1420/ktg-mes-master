@@ -9,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 产品入库录对象 wm_product_recpt
- * 
- * @author yinjinlu
- * @date 2022-09-22
  */
 public class WmProductRecpt extends BaseEntity
 {

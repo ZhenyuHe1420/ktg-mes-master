@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 库存事务对象 wm_transaction
- * 
- * @author yinjinlu
- * @date 2022-05-24
  */
 public class WmTransaction extends BaseEntity
 {

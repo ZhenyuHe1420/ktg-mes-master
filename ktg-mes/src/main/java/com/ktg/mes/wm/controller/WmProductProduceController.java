@@ -2,7 +2,6 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.mes.wm.service.IWmProductProduceLineService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品产出记录Controller
- * 
- * @author yinjinlu
- * @date 2022-09-21
  */
 @RestController
 @RequestMapping("/mes/wm/productproduce")
@@ -36,9 +32,9 @@ public class WmProductProduceController extends BaseController
 {
     @Autowired
     private IWmProductProduceService wmProductProduceService;
-
     @Autowired
     private IWmProductProduceLineService wmProductProduceLineService;
+
     /**
      * 查询产品产出记录列表
      */

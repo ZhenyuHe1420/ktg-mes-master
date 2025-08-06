@@ -1,6 +1,5 @@
 package com.ktg.mes.wm.domain;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -10,9 +9,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 库存盘点方案对象 wm_stock_taking_plan
- * 
- * @author yinjinlu
- * @date 2025-03-21
  */
 public class WmStockTakingPlan extends BaseEntity
 {

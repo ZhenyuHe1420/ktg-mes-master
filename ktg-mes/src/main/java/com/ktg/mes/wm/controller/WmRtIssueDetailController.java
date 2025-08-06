@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.WmStorageArea;
@@ -35,9 +34,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产退料单明细Controller
- * 
- * @author yinjinlu
- * @date 2025-03-05
  */
 @RestController
 @RequestMapping("/mes/wm/rtissuedetail")
@@ -45,13 +41,10 @@ public class WmRtIssueDetailController extends BaseController
 {
     @Autowired
     private IWmRtIssueDetailService wmRtIssueDetailService;
-
     @Autowired
     private IWmWarehouseService wmWarehouseService;
-
     @Autowired
     private IWmStorageLocationService wmStorageLocationService;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
 
@@ -138,7 +131,6 @@ public class WmRtIssueDetailController extends BaseController
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             return AjaxResult.error("物料明细行总数量超出退料单行数量，请重新调整！");
         };
-
 
         return AjaxResult.success(wmRtIssueDetail);
     }

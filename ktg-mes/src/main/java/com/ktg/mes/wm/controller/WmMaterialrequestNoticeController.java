@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 备料通知单Controller
- * 
- * @author yinjinlu
- * @date 2024-12-13
  */
 @RestController
 @RequestMapping("/mes/wm/mrnotice")

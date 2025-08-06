@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 装箱明细Controller
- * 
- * @author yinjinlu
- * @date 2022-10-11
  */
 @RestController
 @RequestMapping("/mes/wm/packageline")

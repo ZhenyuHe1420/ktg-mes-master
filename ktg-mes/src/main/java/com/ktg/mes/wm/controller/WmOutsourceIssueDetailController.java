@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 外协领料单明细Controller
- * 
- * @author yinjinlu
- * @date 2025-04-12
  */
 @RestController
 @RequestMapping("/mes/wm/outsourceissuedetail")

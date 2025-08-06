@@ -2,10 +2,8 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
-import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.*;
 import com.ktg.mes.wm.domain.tx.IssueTxBean;
 import com.ktg.mes.wm.service.*;
@@ -31,9 +29,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产领料单头Controller
- * 
- * @author yinjinlu
- * @date 2022-07-14
  */
 @RestController
 @RequestMapping("/mes/wm/issueheader")
@@ -41,13 +36,10 @@ public class WmIssueHeaderController extends BaseController
 {
     @Autowired
     private IWmIssueHeaderService wmIssueHeaderService;
-
     @Autowired
     private IWmIssueLineService wmIssueLineService;
-
     @Autowired
     private IWmIssueDetailService wmIssueDetailService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 
@@ -117,7 +109,6 @@ public class WmIssueHeaderController extends BaseController
         return toAjax(wmIssueHeaderService.updateWmIssueHeader(wmIssueHeader));
     }
 
-
     @GetMapping("/checkQuantity/{issueId}")
     public AjaxResult checkQuantity(@PathVariable("issueId") Long issueId){
 
@@ -160,7 +151,6 @@ public class WmIssueHeaderController extends BaseController
 
     /**
      * 执行出库
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:wm:issueheader:edit')")
     @Log(title = "生产领料单头", businessType = BusinessType.UPDATE)
@@ -185,6 +175,4 @@ public class WmIssueHeaderController extends BaseController
         wmIssueHeaderService.updateWmIssueHeader(header);
         return AjaxResult.success();
     }
-
-
 }

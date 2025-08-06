@@ -10,9 +10,6 @@ import java.util.Date;
 
 /**
  * SN码对象 wm_sn
- * 
- * @author yinjinlu
- * @date 2022-12-08
  */
 public class WmSn extends BaseEntity
 {

@@ -2,14 +2,6 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
-import com.ktg.common.utils.StringUtils;
-import com.ktg.mes.wm.domain.WmStorageArea;
-import com.ktg.mes.wm.domain.WmStorageLocation;
-import com.ktg.mes.wm.domain.WmWarehouse;
-import com.ktg.mes.wm.service.IWmStorageAreaService;
-import com.ktg.mes.wm.service.IWmStorageLocationService;
-import com.ktg.mes.wm.service.IWmWarehouseService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品入库记录行Controller
- * 
- * @author yinjinlu
- * @date 2022-09-22
  */
 @RestController
 @RequestMapping("/mes/wm/productrecptline")
@@ -41,15 +30,6 @@ public class WmProductRecptLineController extends BaseController
 {
     @Autowired
     private IWmProductRecptLineService wmProductRecptLineService;
-
-    @Autowired
-    private IWmWarehouseService wmWarehouseService;
-
-    @Autowired
-    private IWmStorageLocationService wmStorageLocationService;
-
-    @Autowired
-    private IWmStorageAreaService wmStorageAreaService;
 
     /**
      * 查询产品入库记录行列表
@@ -74,8 +54,6 @@ public class WmProductRecptLineController extends BaseController
         List<WmProductRecptLine> list = wmProductRecptLineService.selectWmProductRecptLineWithDetailList(wmProductRecptLine);
         return getDataTable(list);
     }
-
-
 
     /**
      * 导出产品入库记录行列表

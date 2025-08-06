@@ -1,6 +1,5 @@
 package com.ktg.mes.wm.domain;
 
-import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 public class WmPosition extends BaseEntity {

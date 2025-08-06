@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 库位设置对象 wm_storage_area
- * 
- * @author yinjinlu
- * @date 2022-05-08
  */
 public class WmStorageArea extends BaseEntity
 {

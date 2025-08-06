@@ -8,9 +8,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 杂项入库单行对象 wm_misc_recpt_line
- * 
- * @author yinjinlu
- * @date 2025-05-15
  */
 public class WmMiscRecptLine extends BaseEntity
 {

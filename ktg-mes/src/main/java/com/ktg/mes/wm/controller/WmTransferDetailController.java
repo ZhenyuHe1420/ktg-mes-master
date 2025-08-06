@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.WmStorageArea;
@@ -34,9 +33,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 转移调拨单明细Controller
- * 
- * @author yinjinlu
- * @date 2025-03-18
  */
 @RestController
 @RequestMapping("/mes/wm/transferdetail")
@@ -44,13 +40,10 @@ public class WmTransferDetailController extends BaseController
 {
     @Autowired
     private IWmTransferDetailService wmTransferDetailService;
-
     @Autowired
     private IWmWarehouseService wmWarehouseService;
-
     @Autowired
     private IWmStorageLocationService wmStorageLocationService;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
 

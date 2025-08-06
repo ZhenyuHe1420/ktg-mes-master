@@ -6,14 +6,10 @@ import com.ktg.mes.report.mapper.UreportFileTblMapper;
 import com.ktg.mes.report.service.IUreportFileTblService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /**
  * 报表管理Service业务层处理
- *
- * @author yanshikui
- * @date 2022-10-07
  */
 @Service
 public class UreportFileTblServiceImpl implements IUreportFileTblService
@@ -23,7 +19,6 @@ public class UreportFileTblServiceImpl implements IUreportFileTblService
 
     /**
      * 查询报表管理
-     *
      * @param id 报表管理主键
      * @return 报表管理
      */
@@ -35,7 +30,6 @@ public class UreportFileTblServiceImpl implements IUreportFileTblService
 
     /**
      * 查询报表管理列表
-     *
      * @param ureportFileTbl 报表管理
      * @return 报表管理
      */
@@ -47,9 +41,7 @@ public class UreportFileTblServiceImpl implements IUreportFileTblService
 
     /**
      * 新增报表管理
-     *
      * @param ureportFileTbl 报表管理
-     * @return 结果
      */
     @Override
     public int insertUreportFileTbl(UreportFileTbl ureportFileTbl)
@@ -60,9 +52,7 @@ public class UreportFileTblServiceImpl implements IUreportFileTblService
 
     /**
      * 修改报表管理
-     *
      * @param ureportFileTbl 报表管理
-     * @return 结果
      */
     @Override
     public int updateUreportFileTbl(UreportFileTbl ureportFileTbl)
@@ -73,25 +63,11 @@ public class UreportFileTblServiceImpl implements IUreportFileTblService
 
     /**
      * 批量删除报表管理
-     *
      * @param ids 需要删除的报表管理主键
-     * @return 结果
      */
     @Override
     public int deleteUreportFileTblByIds(Long[] ids)
     {
         return ureportFileTblMapper.deleteUreportFileTblByIds(ids);
-    }
-
-    /**
-     * 删除报表管理信息
-     *
-     * @param id 报表管理主键
-     * @return 结果
-     */
-    @Override
-    public int deleteUreportFileTblById(Long id)
-    {
-        return ureportFileTblMapper.deleteUreportFileTblById(id);
     }
 }

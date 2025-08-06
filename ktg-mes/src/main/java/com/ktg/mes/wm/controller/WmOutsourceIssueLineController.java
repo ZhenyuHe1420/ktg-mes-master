@@ -3,13 +3,10 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.mes.md.domain.MdProductBom;
 import com.ktg.mes.md.service.IMdProductBomService;
 import com.ktg.mes.pro.domain.ProWorkorder;
 import com.ktg.mes.pro.service.IProWorkorderService;
-import com.ktg.mes.wm.domain.WmIssueHeader;
-import com.ktg.mes.wm.domain.WmIssueLine;
 import com.ktg.mes.wm.domain.WmOutsourceIssue;
 import com.ktg.mes.wm.service.IWmOutsourceIssueService;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -34,9 +31,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 外协领料单行Controller
- * 
- * @author yinjinlu
- * @date 2023-10-30
  */
 @RestController
 @RequestMapping("/mes/wm/outsourceissueline")
@@ -44,13 +38,10 @@ public class WmOutsourceIssueLineController extends BaseController
 {
     @Autowired
     private IWmOutsourceIssueService wmIssueHeaderService;
-
     @Autowired
     private IWmOutsourceIssueLineService wmOutsourceIssueLineService;
-
     @Autowired
     private IProWorkorderService proWorkorderService;
-
     @Autowired
     private IMdProductBomService mdProductBomService;
 
@@ -138,7 +129,6 @@ public class WmOutsourceIssueLineController extends BaseController
 
         return toAjax(wmOutsourceIssueLineService.updateWmOutsourceIssueLine(wmOutsourceIssueLine));
     }
-
 
     private boolean checkBom(WmOutsourceIssueLine wmIssueLine){
         //BOM领料验证（防错料）

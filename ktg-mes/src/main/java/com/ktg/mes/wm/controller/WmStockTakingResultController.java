@@ -24,9 +24,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 库存盘点结果Controller
- * 
- * @author yinjinlu
- * @date 2023-08-22
  */
 @RestController
 @RequestMapping("/mes/wm/stocktakingresult")

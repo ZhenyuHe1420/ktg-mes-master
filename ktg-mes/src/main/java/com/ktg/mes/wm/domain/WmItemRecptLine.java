@@ -12,9 +12,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 物料入库单行对象 wm_item_recpt_line
- * 
- * @author yinjinlu
- * @date 2022-05-22
  */
 public class WmItemRecptLine extends BaseEntity
 {

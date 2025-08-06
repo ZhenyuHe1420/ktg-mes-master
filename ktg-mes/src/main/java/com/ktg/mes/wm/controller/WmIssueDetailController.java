@@ -24,9 +24,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 生产领料单明细Controller
- * 
- * @author yinjinlu
- * @date 2025-03-04
  */
 @RestController
 @RequestMapping("/mes/wm/issuedetail")

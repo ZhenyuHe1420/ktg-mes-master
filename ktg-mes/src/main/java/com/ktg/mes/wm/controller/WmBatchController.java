@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +25,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 批次记录Controller
- * 
- * @author yinjinlu
- * @date 2025-02-24
  */
 @RestController
 @RequestMapping("/mes/wm/batch")
@@ -48,7 +44,6 @@ public class WmBatchController extends BaseController
         return getDataTable(list);
     }
 
-
     /**
      * 批次追踪（向前）
      * 追踪当前批次的物资都用在哪些生产工单的哪些批次中
@@ -60,7 +55,6 @@ public class WmBatchController extends BaseController
         List<WmBatch> list = getForwardBatchList(wmBatch.getBatchCode());
         return getDataTable(list);
     }
-
 
     private List<WmBatch> getForwardBatchList(String batchCode){
         List<WmBatch> results = new ArrayList<WmBatch>();

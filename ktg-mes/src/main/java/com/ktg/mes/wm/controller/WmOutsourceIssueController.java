@@ -2,13 +2,9 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
-import com.ktg.mes.wm.domain.WmIssueHeader;
-import com.ktg.mes.wm.domain.WmIssueLine;
 import com.ktg.mes.wm.domain.WmOutsourceIssueLine;
-import com.ktg.mes.wm.domain.tx.IssueTxBean;
 import com.ktg.mes.wm.domain.tx.OutsourceIssueTxBean;
 import com.ktg.mes.wm.service.IStorageCoreService;
 import com.ktg.mes.wm.service.IWmOutsourceIssueDetailService;
@@ -37,9 +33,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 外协领料单头Controller
- * 
- * @author yinjinlu
- * @date 2023-10-30
  */
 @RestController
 @RequestMapping("/mes/wm/outsourceissue")
@@ -47,13 +40,10 @@ public class WmOutsourceIssueController extends BaseController
 {
     @Autowired
     private IWmOutsourceIssueService wmOutsourceIssueService;
-
     @Autowired
     private IWmOutsourceIssueLineService wmOutsourceIssueLineService;
-
     @Autowired
     private IWmOutsourceIssueDetailService wmIssueDetailService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 
@@ -137,7 +127,6 @@ public class WmOutsourceIssueController extends BaseController
         return AjaxResult.success(flag);
     }
 
-
     /**
      * 删除外协领料单头
      */
@@ -161,7 +150,6 @@ public class WmOutsourceIssueController extends BaseController
 
     /**
      * 执行出库
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:wm:outsourceissue:edit')")
     @Log(title = "外协领料单头", businessType = BusinessType.UPDATE)

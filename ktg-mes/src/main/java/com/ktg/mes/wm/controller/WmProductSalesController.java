@@ -42,13 +42,10 @@ public class WmProductSalesController extends BaseController
 {
     @Autowired
     private IWmProductSalesService wmProductSalesService;
-
     @Autowired
     private IWmProductSalesLineService wmProductSalesLineService;
-
     @Autowired
     private IWmProductSalesDetailService wmProductSalesDetailService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 
@@ -103,7 +100,6 @@ public class WmProductSalesController extends BaseController
         }
         return AjaxResult.success(flag);
     }
-
 
     /**
      * 新增销售出库单
@@ -186,7 +182,6 @@ public class WmProductSalesController extends BaseController
 
     /**
      * 执行出库
-     * @return
      */
     @PreAuthorize("@ss.hasPermi('mes:wm:productsales:edit')")
     @Log(title = "销售出库单", businessType = BusinessType.UPDATE)

@@ -2,16 +2,11 @@ package com.ktg.mes.wm.domain;
 
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ktg.common.annotation.Excel;
 import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 生产领料单头对象 wm_issue_header
- * 
- * @author yinjinlu
- * @date 2022-07-14
  */
 public class WmIssueHeader extends BaseEntity
 {

@@ -7,9 +7,6 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * 报表管理对象 ureport_file_tbl
- * 
- * @author yanshikui
- * @date 2022-10-07
  */
 public class UreportFileTbl extends BaseEntity
 {

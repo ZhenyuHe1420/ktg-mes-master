@@ -2,13 +2,8 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
-import cn.hutool.core.collection.CollUtil;
 import com.ktg.common.constant.UserConstants;
-import com.ktg.mes.wm.domain.WmIssueHeader;
-import com.ktg.mes.wm.domain.WmIssueLine;
 import com.ktg.mes.wm.domain.WmMiscIssueLine;
-import com.ktg.mes.wm.domain.tx.IssueTxBean;
 import com.ktg.mes.wm.domain.tx.MiscIssueTxBean;
 import com.ktg.mes.wm.service.IStorageCoreService;
 import com.ktg.mes.wm.service.IWmMiscIssueLineService;
@@ -35,9 +30,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 杂项出库单Controller
- * 
- * @author yinjinlu
- * @date 2025-05-15
  */
 @RestController
 @RequestMapping("/mes/wm/miscissue")
@@ -45,10 +37,8 @@ public class WmMiscIssueController extends BaseController
 {
     @Autowired
     private IWmMiscIssueService wmMiscIssueService;
-
     @Autowired
     private IWmMiscIssueLineService wmMiscIssueLineService;
-
     @Autowired
     private IStorageCoreService storageCoreService;
 

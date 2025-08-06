@@ -3,13 +3,10 @@ package com.ktg.mes.wm.controller;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
-import com.ktg.common.constant.UserConstants;
 import com.ktg.mes.wm.domain.WmMaterialStock;
 import com.ktg.mes.wm.domain.WmRtVendorLine;
 import com.ktg.mes.wm.service.IWmMaterialStockService;
 import com.ktg.mes.wm.service.IWmRtVendorLineService;
-import org.apache.commons.collections.CollectionUtils;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,9 +28,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 采购退货单明细Controller
- * 
- * @author yinjinlu
- * @date 2025-03-03
  */
 @RestController
 @RequestMapping("/mes/wm/rtvendordetail")
@@ -41,10 +35,8 @@ public class WmRtVendorDetailController extends BaseController
 {
     @Autowired
     private IWmRtVendorDetailService wmRtVendorDetailService;
-
     @Autowired
     private IWmRtVendorLineService wmRtVendorLineService;
-
     @Autowired
     private IWmMaterialStockService wmMaterialStockService;
 
@@ -82,7 +74,6 @@ public class WmRtVendorDetailController extends BaseController
     {
         return AjaxResult.success(wmRtVendorDetailService.selectWmRtVendorDetailByDetailId(detailId));
     }
-
 
     /**
      * 新增采购退货单明细

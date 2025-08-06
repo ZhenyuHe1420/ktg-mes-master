@@ -2,7 +2,6 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.WmBarcode;
@@ -28,9 +27,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 装箱单Controller
- * 
- * @author yinjinlu
- * @date 2022-10-10
  */
 @RestController
 @RequestMapping("/mes/wm/package")
@@ -38,7 +34,6 @@ public class WmPackageController extends BaseController
 {
     @Autowired
     private IWmPackageService wmPackageService;
-
     @Autowired
     private IWmBarcodeService wmBarcodeService;
 

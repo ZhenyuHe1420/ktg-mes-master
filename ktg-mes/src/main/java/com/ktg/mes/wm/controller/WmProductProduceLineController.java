@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 产品产出记录行Controller
- * 
- * @author yinjinlu
- * @date 2022-09-22
  */
 @RestController
 @RequestMapping("/mes/wm/productproduceline")

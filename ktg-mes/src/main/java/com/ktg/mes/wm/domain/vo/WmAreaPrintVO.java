@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class WmAreaPrintVO {
-
     private String barcodeContent;
 
     private String locationName;

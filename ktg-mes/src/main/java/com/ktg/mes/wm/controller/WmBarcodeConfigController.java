@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 条码配置Controller
- * 
- * @author yinjinlu
- * @date 2022-10-22
  */
 @RestController
 @RequestMapping("/mes/wm/barcodeconfig")

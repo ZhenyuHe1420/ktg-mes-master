@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 仓库设置对象 wm_warehouse
- * 
- * @author yinjinlu
- * @date 2022-05-07
  */
 public class WmWarehouse extends BaseEntity
 {

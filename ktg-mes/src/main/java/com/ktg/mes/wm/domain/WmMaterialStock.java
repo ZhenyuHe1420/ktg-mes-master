@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 库存记录对象 wm_material_stock
- * 
- * @author yinjinlu
- * @date 2022-05-24
  */
 public class WmMaterialStock extends BaseEntity
 {

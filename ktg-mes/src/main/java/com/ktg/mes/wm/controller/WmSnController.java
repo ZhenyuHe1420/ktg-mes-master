@@ -3,7 +3,6 @@ package com.ktg.mes.wm.controller;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import cn.hutool.core.date.DateUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
@@ -16,7 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,9 +30,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * SN码Controller
- * 
- * @author yinjinlu
- * @date 2022-12-08
  */
 @RestController
 @RequestMapping("/mes/wm/sn")
@@ -42,7 +37,6 @@ public class WmSnController extends BaseController
 {
     @Autowired
     private IWmSnService wmSnService;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
 
@@ -106,7 +100,6 @@ public class WmSnController extends BaseController
         List<WmSn> snList = wmSnService.getStationList(sn);
         return AjaxResult.success(snList);
     }
-
 
     /**
      * 新增SN码

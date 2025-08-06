@@ -2,11 +2,8 @@ package com.ktg.mes.wm.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.StringUtils;
-import com.ktg.mes.qc.domain.QcTemplate;
-import com.ktg.mes.qc.service.IQcTemplateService;
 import com.ktg.mes.wm.domain.WmArrivalNoticeLine;
 import com.ktg.mes.wm.service.IWmArrivalNoticeLineService;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -32,9 +29,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 到货通知单Controller
- * 
- * @author yinjinlu
- * @date 2024-11-12
  */
 @RestController
 @RequestMapping("/mes/wm/arrivalnotice")
@@ -42,12 +36,8 @@ public class WmArrivalNoticeController extends BaseController
 {
     @Autowired
     private IWmArrivalNoticeService wmArrivalNoticeService;
-
     @Autowired
     private IWmArrivalNoticeLineService wmArrivalNoticeLineService;
-
-    @Autowired
-    private IQcTemplateService qcTemplateService;
 
     /**
      * 查询到货通知单列表

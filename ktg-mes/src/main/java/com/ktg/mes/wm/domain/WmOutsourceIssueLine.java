@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 外协领料单行对象 wm_outsource_issue_line
- * 
- * @author yinjinlu
- * @date 2023-10-30
  */
 public class WmOutsourceIssueLine extends BaseEntity
 {

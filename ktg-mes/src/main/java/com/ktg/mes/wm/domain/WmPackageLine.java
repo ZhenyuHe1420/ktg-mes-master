@@ -10,9 +10,6 @@ import com.ktg.common.core.domain.BaseEntity;
 
 /**
  * 装箱明细对象 wm_package_line
- * 
- * @author yinjinlu
- * @date 2022-10-11
  */
 public class WmPackageLine extends BaseEntity
 {

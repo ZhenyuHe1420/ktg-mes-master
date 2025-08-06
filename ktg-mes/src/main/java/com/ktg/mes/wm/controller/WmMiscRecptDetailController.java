@@ -23,9 +23,6 @@ import com.ktg.common.core.page.TableDataInfo;
 
 /**
  * 杂项入库单明细Controller
- * 
- * @author yinjinlu
- * @date 2025-05-15
  */
 @RestController
 @RequestMapping("/mes/wm/miscrecptdetail")
