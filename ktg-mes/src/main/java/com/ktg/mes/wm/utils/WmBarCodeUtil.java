@@ -16,12 +16,10 @@ import java.util.List;
 
 @Component
 public class WmBarCodeUtil {
-
     private static final Logger log = LoggerFactory.getLogger(WmBarCodeUtil.class);
 
     @Autowired
     private IWmBarcodeConfigService wmBarcodeConfigService;
-
     @Autowired
     private IWmBarcodeService wmBarcodeService;
 
