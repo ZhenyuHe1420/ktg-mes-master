@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmTransferDetailService;
 
 /**
  * 转移调拨单明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-18
  */
 @Service
 public class WmTransferDetailServiceImpl implements IWmTransferDetailService 
@@ -22,7 +19,6 @@ public class WmTransferDetailServiceImpl implements IWmTransferDetailService
 
     /**
      * 查询转移调拨单明细
-     * 
      * @param detailId 转移调拨单明细主键
      * @return 转移调拨单明细
      */
@@ -34,7 +30,6 @@ public class WmTransferDetailServiceImpl implements IWmTransferDetailService
 
     /**
      * 查询转移调拨单明细列表
-     * 
      * @param wmTransferDetail 转移调拨单明细
      * @return 转移调拨单明细
      */
@@ -51,9 +46,7 @@ public class WmTransferDetailServiceImpl implements IWmTransferDetailService
 
     /**
      * 新增转移调拨单明细
-     * 
      * @param wmTransferDetail 转移调拨单明细
-     * @return 结果
      */
     @Override
     public int insertWmTransferDetail(WmTransferDetail wmTransferDetail)
@@ -64,9 +57,7 @@ public class WmTransferDetailServiceImpl implements IWmTransferDetailService
 
     /**
      * 修改转移调拨单明细
-     * 
      * @param wmTransferDetail 转移调拨单明细
-     * @return 结果
      */
     @Override
     public int updateWmTransferDetail(WmTransferDetail wmTransferDetail)
@@ -77,25 +68,11 @@ public class WmTransferDetailServiceImpl implements IWmTransferDetailService
 
     /**
      * 批量删除转移调拨单明细
-     * 
      * @param detailIds 需要删除的转移调拨单明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmTransferDetailByDetailIds(Long[] detailIds)
     {
         return wmTransferDetailMapper.deleteWmTransferDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除转移调拨单明细信息
-     * 
-     * @param detailId 转移调拨单明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmTransferDetailByDetailId(Long detailId)
-    {
-        return wmTransferDetailMapper.deleteWmTransferDetailByDetailId(detailId);
     }
 }

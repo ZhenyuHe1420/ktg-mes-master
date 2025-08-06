@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmProductRecptDetailService;
 
 /**
  * 产品入库记录明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-13
  */
 @Service
 public class WmProductRecptDetailServiceImpl implements IWmProductRecptDetailService 
@@ -22,7 +19,6 @@ public class WmProductRecptDetailServiceImpl implements IWmProductRecptDetailSer
 
     /**
      * 查询产品入库记录明细
-     * 
      * @param detailId 产品入库记录明细主键
      * @return 产品入库记录明细
      */
@@ -34,7 +30,6 @@ public class WmProductRecptDetailServiceImpl implements IWmProductRecptDetailSer
 
     /**
      * 查询产品入库记录明细列表
-     * 
      * @param wmProductRecptDetail 产品入库记录明细
      * @return 产品入库记录明细
      */
@@ -51,9 +46,7 @@ public class WmProductRecptDetailServiceImpl implements IWmProductRecptDetailSer
 
     /**
      * 新增产品入库记录明细
-     * 
      * @param wmProductRecptDetail 产品入库记录明细
-     * @return 结果
      */
     @Override
     public int insertWmProductRecptDetail(WmProductRecptDetail wmProductRecptDetail)
@@ -64,9 +57,7 @@ public class WmProductRecptDetailServiceImpl implements IWmProductRecptDetailSer
 
     /**
      * 修改产品入库记录明细
-     * 
      * @param wmProductRecptDetail 产品入库记录明细
-     * @return 结果
      */
     @Override
     public int updateWmProductRecptDetail(WmProductRecptDetail wmProductRecptDetail)
@@ -77,25 +68,11 @@ public class WmProductRecptDetailServiceImpl implements IWmProductRecptDetailSer
 
     /**
      * 批量删除产品入库记录明细
-     * 
      * @param detailIds 需要删除的产品入库记录明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmProductRecptDetailByDetailIds(Long[] detailIds)
     {
         return wmProductRecptDetailMapper.deleteWmProductRecptDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除产品入库记录明细信息
-     * 
-     * @param detailId 产品入库记录明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmProductRecptDetailByDetailId(Long detailId)
-    {
-        return wmProductRecptDetailMapper.deleteWmProductRecptDetailByDetailId(detailId);
     }
 }

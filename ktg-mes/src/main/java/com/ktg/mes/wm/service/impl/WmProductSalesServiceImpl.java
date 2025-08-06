@@ -3,7 +3,6 @@ package com.ktg.mes.wm.service.impl;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.utils.DateUtils;
@@ -18,9 +17,6 @@ import com.ktg.mes.wm.service.IWmProductSalesService;
 
 /**
  * 销售出库单Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-10-04
  */
 @Service
 public class WmProductSalesServiceImpl implements IWmProductSalesService
@@ -30,7 +26,6 @@ public class WmProductSalesServiceImpl implements IWmProductSalesService
 
     /**
      * 查询销售出库单
-     * 
      * @param salesId 销售出库单主键
      * @return 销售出库单
      */
@@ -42,7 +37,6 @@ public class WmProductSalesServiceImpl implements IWmProductSalesService
 
     /**
      * 查询销售出库单列表
-     * 
      * @param wmProductSales 销售出库单
      * @return 销售出库单
      */
@@ -69,9 +63,7 @@ public class WmProductSalesServiceImpl implements IWmProductSalesService
 
     /**
      * 新增销售出库单
-     * 
      * @param wmProductSales 销售出库单
-     * @return 结果
      */
     @Override
     public int insertWmProductSales(WmProductSales wmProductSales)
@@ -82,9 +74,7 @@ public class WmProductSalesServiceImpl implements IWmProductSalesService
 
     /**
      * 修改销售出库单
-     * 
      * @param wmProductSales 销售出库单
-     * @return 结果
      */
     @Override
     public int updateWmProductSales(WmProductSales wmProductSales)
@@ -95,9 +85,7 @@ public class WmProductSalesServiceImpl implements IWmProductSalesService
 
     /**
      * 批量删除销售出库单
-     * 
      * @param salesIds 需要删除的销售出库单主键
-     * @return 结果
      */
     @Override
     public int deleteWmProductSalesBySalesIds(Long[] salesIds)
@@ -106,21 +94,8 @@ public class WmProductSalesServiceImpl implements IWmProductSalesService
     }
 
     /**
-     * 删除销售出库单信息
-     * 
-     * @param salesId 销售出库单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmProductSalesBySalesId(Long salesId)
-    {
-        return wmProductSalesMapper.deleteWmProductSalesBySalesId(salesId);
-    }
-
-    /**
      * 根据客户 id 获取产品清单数据
      * @param clientId
-     * @return
      */
     @Override
     public AjaxResult getItem(Long clientId) {
@@ -137,7 +112,6 @@ public class WmProductSalesServiceImpl implements IWmProductSalesService
     /**
      * 根据客户 id 获取销售记录数据
      * @param clientId
-     * @return
      */
     @Override
     public AjaxResult getSaleRecord(Long clientId) {

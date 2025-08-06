@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmOutsourceRecptDetailService;
 
 /**
  * 外协入库单明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-04-12
  */
 @Service
 public class WmOutsourceRecptDetailServiceImpl implements IWmOutsourceRecptDetailService 
@@ -22,7 +19,6 @@ public class WmOutsourceRecptDetailServiceImpl implements IWmOutsourceRecptDetai
 
     /**
      * 查询外协入库单明细
-     * 
      * @param detailId 外协入库单明细主键
      * @return 外协入库单明细
      */
@@ -34,7 +30,6 @@ public class WmOutsourceRecptDetailServiceImpl implements IWmOutsourceRecptDetai
 
     /**
      * 查询外协入库单明细列表
-     * 
      * @param wmOutsourceRecptDetail 外协入库单明细
      * @return 外协入库单明细
      */
@@ -51,9 +46,7 @@ public class WmOutsourceRecptDetailServiceImpl implements IWmOutsourceRecptDetai
 
     /**
      * 新增外协入库单明细
-     * 
      * @param wmOutsourceRecptDetail 外协入库单明细
-     * @return 结果
      */
     @Override
     public int insertWmOutsourceRecptDetail(WmOutsourceRecptDetail wmOutsourceRecptDetail)
@@ -64,9 +57,7 @@ public class WmOutsourceRecptDetailServiceImpl implements IWmOutsourceRecptDetai
 
     /**
      * 修改外协入库单明细
-     * 
      * @param wmOutsourceRecptDetail 外协入库单明细
-     * @return 结果
      */
     @Override
     public int updateWmOutsourceRecptDetail(WmOutsourceRecptDetail wmOutsourceRecptDetail)
@@ -77,25 +68,11 @@ public class WmOutsourceRecptDetailServiceImpl implements IWmOutsourceRecptDetai
 
     /**
      * 批量删除外协入库单明细
-     * 
      * @param detailIds 需要删除的外协入库单明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmOutsourceRecptDetailByDetailIds(Long[] detailIds)
     {
         return wmOutsourceRecptDetailMapper.deleteWmOutsourceRecptDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除外协入库单明细信息
-     * 
-     * @param detailId 外协入库单明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmOutsourceRecptDetailByDetailId(Long detailId)
-    {
-        return wmOutsourceRecptDetailMapper.deleteWmOutsourceRecptDetailByDetailId(detailId);
     }
 }

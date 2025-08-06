@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmRtVendorDetailService;
 
 /**
  * 采购退货单明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-03
  */
 @Service
 public class WmRtVendorDetailServiceImpl implements IWmRtVendorDetailService 
@@ -22,7 +19,6 @@ public class WmRtVendorDetailServiceImpl implements IWmRtVendorDetailService
 
     /**
      * 查询采购退货单明细
-     * 
      * @param detailId 采购退货单明细主键
      * @return 采购退货单明细
      */
@@ -34,7 +30,6 @@ public class WmRtVendorDetailServiceImpl implements IWmRtVendorDetailService
 
     /**
      * 查询采购退货单明细列表
-     * 
      * @param wmRtVendorDetail 采购退货单明细
      * @return 采购退货单明细
      */
@@ -51,9 +46,7 @@ public class WmRtVendorDetailServiceImpl implements IWmRtVendorDetailService
 
     /**
      * 新增采购退货单明细
-     * 
      * @param wmRtVendorDetail 采购退货单明细
-     * @return 结果
      */
     @Override
     public int insertWmRtVendorDetail(WmRtVendorDetail wmRtVendorDetail)
@@ -64,9 +57,7 @@ public class WmRtVendorDetailServiceImpl implements IWmRtVendorDetailService
 
     /**
      * 修改采购退货单明细
-     * 
      * @param wmRtVendorDetail 采购退货单明细
-     * @return 结果
      */
     @Override
     public int updateWmRtVendorDetail(WmRtVendorDetail wmRtVendorDetail)
@@ -77,25 +68,11 @@ public class WmRtVendorDetailServiceImpl implements IWmRtVendorDetailService
 
     /**
      * 批量删除采购退货单明细
-     * 
      * @param detailIds 需要删除的采购退货单明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmRtVendorDetailByDetailIds(Long[] detailIds)
     {
         return wmRtVendorDetailMapper.deleteWmRtVendorDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除采购退货单明细信息
-     * 
-     * @param detailId 采购退货单明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmRtVendorDetailByDetailId(Long detailId)
-    {
-        return wmRtVendorDetailMapper.deleteWmRtVendorDetailByDetailId(detailId);
     }
 }

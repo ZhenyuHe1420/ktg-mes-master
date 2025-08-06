@@ -1,7 +1,6 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -14,9 +13,6 @@ import com.ktg.mes.wm.service.IWmProductRecptService;
 
 /**
  * 产品入库录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-09-22
  */
 @Service
 public class WmProductRecptServiceImpl implements IWmProductRecptService 
@@ -26,7 +22,6 @@ public class WmProductRecptServiceImpl implements IWmProductRecptService
 
     /**
      * 查询产品入库录
-     * 
      * @param recptId 产品入库录主键
      * @return 产品入库录
      */
@@ -38,7 +33,6 @@ public class WmProductRecptServiceImpl implements IWmProductRecptService
 
     /**
      * 查询产品入库录列表
-     * 
      * @param wmProductRecpt 产品入库录
      * @return 产品入库录
      */
@@ -60,9 +54,7 @@ public class WmProductRecptServiceImpl implements IWmProductRecptService
 
     /**
      * 新增产品入库录
-     * 
      * @param wmProductRecpt 产品入库录
-     * @return 结果
      */
     @Override
     public int insertWmProductRecpt(WmProductRecpt wmProductRecpt)
@@ -73,9 +65,7 @@ public class WmProductRecptServiceImpl implements IWmProductRecptService
 
     /**
      * 修改产品入库录
-     * 
      * @param wmProductRecpt 产品入库录
-     * @return 结果
      */
     @Override
     public int updateWmProductRecpt(WmProductRecpt wmProductRecpt)
@@ -86,26 +76,12 @@ public class WmProductRecptServiceImpl implements IWmProductRecptService
 
     /**
      * 批量删除产品入库录
-     * 
      * @param recptIds 需要删除的产品入库录主键
-     * @return 结果
      */
     @Override
     public int deleteWmProductRecptByRecptIds(Long[] recptIds)
     {
         return wmProductRecptMapper.deleteWmProductRecptByRecptIds(recptIds);
-    }
-
-    /**
-     * 删除产品入库录信息
-     * 
-     * @param recptId 产品入库录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmProductRecptByRecptId(Long recptId)
-    {
-        return wmProductRecptMapper.deleteWmProductRecptByRecptId(recptId);
     }
 
     @Override

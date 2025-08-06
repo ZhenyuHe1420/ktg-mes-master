@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmProductSalesLineService;
 
 /**
  * 产品销售出库行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-10-05
  */
 @Service
 public class WmProductSalesLineServiceImpl implements IWmProductSalesLineService
@@ -22,7 +19,6 @@ public class WmProductSalesLineServiceImpl implements IWmProductSalesLineService
 
     /**
      * 查询产品销售出库行
-     * 
      * @param lineId 产品销售出库行主键
      * @return 产品销售出库行
      */
@@ -32,14 +28,8 @@ public class WmProductSalesLineServiceImpl implements IWmProductSalesLineService
         return wmProductSalesLineMapper.selectWmProductSalesLineByLineId(lineId);
     }
 
-    @Override
-    public WmProductSalesLine selectWmProductSalesLineWithQuantityByLineId(Long lineId) {
-        return wmProductSalesLineMapper.selectWmProductSalesLineWithQuantityByLineId(lineId);
-    }
-
     /**
      * 查询产品销售出库行列表
-     * 
      * @param wmProductSalesLine 产品销售出库行
      * @return 产品销售出库行
      */
@@ -61,9 +51,7 @@ public class WmProductSalesLineServiceImpl implements IWmProductSalesLineService
 
     /**
      * 新增产品销售出库行
-     * 
      * @param wmProductSalesLine 产品销售出库行
-     * @return 结果
      */
     @Override
     public int insertWmProductSalesLine(WmProductSalesLine wmProductSalesLine)
@@ -74,9 +62,7 @@ public class WmProductSalesLineServiceImpl implements IWmProductSalesLineService
 
     /**
      * 修改产品销售出库行
-     * 
      * @param wmProductSalesLine 产品销售出库行
-     * @return 结果
      */
     @Override
     public int updateWmProductSalesLine(WmProductSalesLine wmProductSalesLine)
@@ -87,26 +73,12 @@ public class WmProductSalesLineServiceImpl implements IWmProductSalesLineService
 
     /**
      * 批量删除产品销售出库行
-     * 
      * @param lineIds 需要删除的产品销售出库行主键
-     * @return 结果
      */
     @Override
     public int deleteWmProductSalesLineByLineIds(Long[] lineIds)
     {
         return wmProductSalesLineMapper.deleteWmProductSalesLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除产品销售出库行信息
-     * 
-     * @param lineId 产品销售出库行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmProductSalesLineByLineId(Long lineId)
-    {
-        return wmProductSalesLineMapper.deleteWmProductSalesLineByLineId(lineId);
     }
 
     @Override

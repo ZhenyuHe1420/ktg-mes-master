@@ -3,14 +3,10 @@ package com.ktg.mes.wm.service.impl;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
-
 import cn.hutool.core.collection.CollectionUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
-import com.ktg.mes.md.domain.MdProductBom;
-import com.ktg.mes.md.domain.MdWorkstation;
-import com.ktg.mes.md.mapper.MdWorkstationMapper;
 import com.ktg.mes.pro.domain.*;
 import com.ktg.mes.pro.mapper.*;
 import com.ktg.mes.wm.domain.*;
@@ -22,43 +18,31 @@ import com.ktg.mes.wm.service.IWmItemConsumeService;
 
 /**
  * 物料消耗记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-09-19
  */
 @Service
 public class WmItemConsumeServiceImpl implements IWmItemConsumeService 
 {
     @Autowired
     private WmItemConsumeMapper wmItemConsumeMapper;
-
     @Autowired
     private WmItemConsumeLineMapper wmItemConsumeLineMapper;
-
     @Autowired
     private WmItemConsumeDetailMapper wmItemConsumeDetailMapper;
-
     @Autowired
     private WmWarehouseMapper wmWarehouseMapper;
-
     @Autowired
     private WmStorageLocationMapper wmStorageLocationMapper;
-
     @Autowired
     private WmStorageAreaMapper wmStorageAreaMapper;
-
     @Autowired
     private ProRouteMapper proRouteMapper;
-
     @Autowired
     private ProRouteProductBomMapper proRouteProductBomMapper;
-
     @Autowired
     private WmMaterialStockMapper wmMaterialStockMapper;
 
     /**
      * 查询物料消耗记录
-     * 
      * @param recordId 物料消耗记录主键
      * @return 物料消耗记录
      */
@@ -70,7 +54,6 @@ public class WmItemConsumeServiceImpl implements IWmItemConsumeService
 
     /**
      * 查询物料消耗记录列表
-     * 
      * @param wmItemConsume 物料消耗记录
      * @return 物料消耗记录
      */
@@ -82,9 +65,7 @@ public class WmItemConsumeServiceImpl implements IWmItemConsumeService
 
     /**
      * 新增物料消耗记录
-     * 
      * @param wmItemConsume 物料消耗记录
-     * @return 结果
      */
     @Override
     public int insertWmItemConsume(WmItemConsume wmItemConsume)
@@ -95,9 +76,7 @@ public class WmItemConsumeServiceImpl implements IWmItemConsumeService
 
     /**
      * 修改物料消耗记录
-     * 
      * @param wmItemConsume 物料消耗记录
-     * @return 结果
      */
     @Override
     public int updateWmItemConsume(WmItemConsume wmItemConsume)
@@ -108,26 +87,12 @@ public class WmItemConsumeServiceImpl implements IWmItemConsumeService
 
     /**
      * 批量删除物料消耗记录
-     * 
      * @param recordIds 需要删除的物料消耗记录主键
-     * @return 结果
      */
     @Override
     public int deleteWmItemConsumeByRecordIds(Long[] recordIds)
     {
         return wmItemConsumeMapper.deleteWmItemConsumeByRecordIds(recordIds);
-    }
-
-    /**
-     * 删除物料消耗记录信息
-     * 
-     * @param recordId 物料消耗记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmItemConsumeByRecordId(Long recordId)
-    {
-        return wmItemConsumeMapper.deleteWmItemConsumeByRecordId(recordId);
     }
 
     /**
@@ -144,13 +109,9 @@ public class WmItemConsumeServiceImpl implements IWmItemConsumeService
      *    2.遍历所有的BOM消耗行
      *    3.查找此物资在线边库中的库存记录（根据工单领料单上的批次进行匹配）
      *    4.按照先进先出原则进行匹配，匹配到对应的库存信息，生成消耗单明细行；如果找不到，则生成一个不带批次号的消耗单明细行。
-     *
-     *
-     * @param feedback
      */
     @Override
     public WmItemConsume generateItemConsume(ProFeedback feedback){
-
         //先获取当前生产的产品在此道工序中配置的物料BOM
         ProRoute route = proRouteMapper.getRouteByProductId(feedback.getItemId());
         if(StringUtils.isNull(route)){
@@ -199,7 +160,6 @@ public class WmItemConsumeServiceImpl implements IWmItemConsumeService
             line.setUnitName(bom.getUnitName());
             line.setQuantityConsume(bom.getQuantity().multiply(feedback.getQuantityFeedback()));
             wmItemConsumeLineMapper.insertWmItemConsumeLine(line);
-
 
             WmMaterialStock p1 = new WmMaterialStock();
             p1.setItemId(line.getItemId());
@@ -330,7 +290,6 @@ public class WmItemConsumeServiceImpl implements IWmItemConsumeService
 
         return itemConsume;
     }
-
 
     @Override
     public List<ItemConsumeTxBean> getTxBeans(Long recordId) {

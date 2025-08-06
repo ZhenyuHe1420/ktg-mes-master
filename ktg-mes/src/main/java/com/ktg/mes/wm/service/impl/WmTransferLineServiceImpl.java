@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmTransferLineService;
 
 /**
  * 转移单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-11-28
  */
 @Service
 public class WmTransferLineServiceImpl implements IWmTransferLineService
@@ -22,7 +19,6 @@ public class WmTransferLineServiceImpl implements IWmTransferLineService
 
     /**
      * 查询转移单行
-     * 
      * @param lineId 转移单行主键
      * @return 转移单行
      */
@@ -32,14 +28,8 @@ public class WmTransferLineServiceImpl implements IWmTransferLineService
         return wmTransferLineMapper.selectWmTransferLineByLineId(lineId);
     }
 
-    @Override
-    public WmTransferLine selectWmTransferLineWithQuantityByLineId(Long lineId) {
-        return wmTransferLineMapper.selectWmTransferLineWithQuantityByLineId(lineId);
-    }
-
     /**
      * 查询转移单行列表
-     * 
      * @param wmTransferLine 转移单行
      * @return 转移单行
      */
@@ -50,20 +40,13 @@ public class WmTransferLineServiceImpl implements IWmTransferLineService
     }
 
     @Override
-    public List<WmTransferLine> selectWmTransferLineWithQuantityList(WmTransferLine wmTransferLine) {
-        return wmTransferLineMapper.selectWmTransferLineWithQuantityList(wmTransferLine);
-    }
-
-    @Override
     public List<WmTransferLine> selectWmTransferLineWithDetailList(WmTransferLine wmTransferLine) {
         return wmTransferLineMapper.selectWmTransferLineWithDetailList(wmTransferLine);
     }
 
     /**
      * 新增转移单行
-     * 
      * @param wmTransferLine 转移单行
-     * @return 结果
      */
     @Override
     public int insertWmTransferLine(WmTransferLine wmTransferLine)
@@ -74,9 +57,7 @@ public class WmTransferLineServiceImpl implements IWmTransferLineService
 
     /**
      * 修改转移单行
-     * 
      * @param wmTransferLine 转移单行
-     * @return 结果
      */
     @Override
     public int updateWmTransferLine(WmTransferLine wmTransferLine)
@@ -87,26 +68,12 @@ public class WmTransferLineServiceImpl implements IWmTransferLineService
 
     /**
      * 批量删除转移单行
-     * 
      * @param lineIds 需要删除的转移单行主键
-     * @return 结果
      */
     @Override
     public int deleteWmTransferLineByLineIds(Long[] lineIds)
     {
         return wmTransferLineMapper.deleteWmTransferLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除转移单行信息
-     * 
-     * @param lineId 转移单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmTransferLineByLineId(Long lineId)
-    {
-        return wmTransferLineMapper.deleteWmTransferLineByLineId(lineId);
     }
 
     @Override

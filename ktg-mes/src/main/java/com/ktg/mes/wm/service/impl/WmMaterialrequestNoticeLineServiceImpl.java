@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmMaterialrequestNoticeLineService;
 
 /**
  * 备料通知单明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-12-13
  */
 @Service
 public class WmMaterialrequestNoticeLineServiceImpl implements IWmMaterialrequestNoticeLineService 
@@ -22,7 +19,6 @@ public class WmMaterialrequestNoticeLineServiceImpl implements IWmMaterialreques
 
     /**
      * 查询备料通知单明细
-     * 
      * @param lineId 备料通知单明细主键
      * @return 备料通知单明细
      */
@@ -34,7 +30,6 @@ public class WmMaterialrequestNoticeLineServiceImpl implements IWmMaterialreques
 
     /**
      * 查询备料通知单明细列表
-     * 
      * @param wmMaterialrequestNoticeLine 备料通知单明细
      * @return 备料通知单明细
      */
@@ -46,9 +41,7 @@ public class WmMaterialrequestNoticeLineServiceImpl implements IWmMaterialreques
 
     /**
      * 新增备料通知单明细
-     * 
      * @param wmMaterialrequestNoticeLine 备料通知单明细
-     * @return 结果
      */
     @Override
     public int insertWmMaterialrequestNoticeLine(WmMaterialrequestNoticeLine wmMaterialrequestNoticeLine)
@@ -59,9 +52,7 @@ public class WmMaterialrequestNoticeLineServiceImpl implements IWmMaterialreques
 
     /**
      * 修改备料通知单明细
-     * 
      * @param wmMaterialrequestNoticeLine 备料通知单明细
-     * @return 结果
      */
     @Override
     public int updateWmMaterialrequestNoticeLine(WmMaterialrequestNoticeLine wmMaterialrequestNoticeLine)
@@ -72,25 +63,11 @@ public class WmMaterialrequestNoticeLineServiceImpl implements IWmMaterialreques
 
     /**
      * 批量删除备料通知单明细
-     * 
      * @param lineIds 需要删除的备料通知单明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmMaterialrequestNoticeLineByLineIds(Long[] lineIds)
     {
         return wmMaterialrequestNoticeLineMapper.deleteWmMaterialrequestNoticeLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除备料通知单明细信息
-     * 
-     * @param lineId 备料通知单明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmMaterialrequestNoticeLineByLineId(Long lineId)
-    {
-        return wmMaterialrequestNoticeLineMapper.deleteWmMaterialrequestNoticeLineByLineId(lineId);
     }
 }

@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.utils.DateUtils;
@@ -21,25 +20,19 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 库区设置Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-07
  */
 @Service
 public class WmStorageLocationServiceImpl implements IWmStorageLocationService 
 {
     @Autowired
     private WmStorageLocationMapper wmStorageLocationMapper;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
-
     @Autowired
     private IWmMaterialStockService wmMaterialStockService;
 
     /**
      * 查询库区设置
-     * 
      * @param locationId 库区设置主键
      * @return 库区设置
      */
@@ -56,7 +49,6 @@ public class WmStorageLocationServiceImpl implements IWmStorageLocationService
 
     /**
      * 查询库区设置列表
-     * 
      * @param wmStorageLocation 库区设置
      * @return 库区设置
      */
@@ -88,9 +80,7 @@ public class WmStorageLocationServiceImpl implements IWmStorageLocationService
 
     /**
      * 新增库区设置
-     * 
      * @param wmStorageLocation 库区设置
-     * @return 结果
      */
     @Override
     public int insertWmStorageLocation(WmStorageLocation wmStorageLocation)
@@ -101,9 +91,7 @@ public class WmStorageLocationServiceImpl implements IWmStorageLocationService
 
     /**
      * 修改库区设置
-     * 
      * @param wmStorageLocation 库区设置
-     * @return 结果
      */
     @Override
     public int updateWmStorageLocation(WmStorageLocation wmStorageLocation)
@@ -114,9 +102,7 @@ public class WmStorageLocationServiceImpl implements IWmStorageLocationService
 
     /**
      * 批量删除库区设置
-     *
      * @param locationIds 需要删除的库区设置主键
-     * @return 结果
      */
     @Override
     @Transactional
@@ -150,18 +136,6 @@ public class WmStorageLocationServiceImpl implements IWmStorageLocationService
         wmStorageAreaService.deleteByLocationIds(locationIds);
         wmStorageLocationMapper.deleteWmStorageLocationByLocationIds(locationIds);
         return AjaxResult.success();
-    }
-
-    /**
-     * 删除库区设置信息
-     * 
-     * @param locationId 库区设置主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmStorageLocationByLocationId(Long locationId)
-    {
-        return wmStorageLocationMapper.deleteWmStorageLocationByLocationId(locationId);
     }
 
     @Override

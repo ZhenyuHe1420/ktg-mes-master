@@ -1,7 +1,6 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.mes.md.domain.MdItem;
@@ -18,31 +17,23 @@ import com.ktg.mes.wm.service.IWmBatchService;
 
 /**
  * 批次记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-02-24
  */
 @Service
 public class WmBatchServiceImpl implements IWmBatchService 
 {
     @Autowired
     private WmBatchMapper wmBatchMapper;
-
     @Autowired
     private AutoCodeUtil autoCodeUtil;
-
     @Autowired
     private IMdItemService mdItemService;
-
     @Autowired
     private WmBarCodeUtil barcodeUtil;
-
     @Autowired
     private IMdItemBatchConfigService mdItemBatchConfigService;
 
     /**
      * 查询批次记录
-     * 
      * @param batchId 批次记录主键
      * @return 批次记录
      */
@@ -54,7 +45,6 @@ public class WmBatchServiceImpl implements IWmBatchService
 
     /**
      * 查询批次记录列表
-     * 
      * @param wmBatch 批次记录
      * @return 批次记录
      */
@@ -76,9 +66,7 @@ public class WmBatchServiceImpl implements IWmBatchService
 
     /**
      * 新增批次记录
-     * 
      * @param wmBatch 批次记录
-     * @return 结果
      */
     @Override
     public int insertWmBatch(WmBatch wmBatch)
@@ -89,9 +77,7 @@ public class WmBatchServiceImpl implements IWmBatchService
 
     /**
      * 修改批次记录
-     * 
      * @param wmBatch 批次记录
-     * @return 结果
      */
     @Override
     public int updateWmBatch(WmBatch wmBatch)
@@ -102,9 +88,7 @@ public class WmBatchServiceImpl implements IWmBatchService
 
     /**
      * 批量删除批次记录
-     * 
      * @param batchIds 需要删除的批次记录主键
-     * @return 结果
      */
     @Override
     public int deleteWmBatchByBatchIds(Long[] batchIds)
@@ -113,28 +97,12 @@ public class WmBatchServiceImpl implements IWmBatchService
     }
 
     /**
-     * 删除批次记录信息
-     * 
-     * @param batchId 批次记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmBatchByBatchId(Long batchId)
-    {
-        return wmBatchMapper.deleteWmBatchByBatchId(batchId);
-    }
-
-
-    /**
      * 获取批次号
      * 根据传入的参数获取批次号
      * 如果根据参数可以查询到批次号，则返回批次号，否则生成新的批次号
-     * @param wmBatch
-     * @return
      */
     @Override
     public WmBatch getOrGenerateBatchCode(WmBatch wmBatch) {
-
         //1.检查物料ID/物料编码参数是否为空
         if(wmBatch.getItemId() == null && wmBatch.getItemCode() == null){
             throw new IllegalArgumentException("物料ID/物料编码不能同时为空!");
@@ -286,49 +254,5 @@ public class WmBatchServiceImpl implements IWmBatchService
         wmBatchMapper.insertWmBatch(wmBatch);
         barcodeUtil.generateBarCode(UserConstants.BARCODE_TYPE_BATCH,wmBatch.getBatchId(),wmBatch.getBatchCode(), wmBatch.getItemName()); //为每个批次号生成一个码
         return wmBatch;
-    }
-
-    @Override
-    public WmBatch checkBatchCodeByBatchAndProperties(WmBatch wmBatch) {
-        //未启用批次管理则直接返回NULL
-        MdItem item = mdItemService.selectMdItemById(wmBatch.getItemId());
-        if(UserConstants.NO.equals(item.getBatchFlag())){
-            return null;
-        }
-
-        //1.批次号和物料不能为空
-        if(wmBatch.getBatchCode() == null && wmBatch.getBatchId() == null){
-            throw new IllegalArgumentException("批次号不能为空!");
-        }
-        if(wmBatch.getItemId() == null && wmBatch.getItemCode() == null){
-            throw new IllegalArgumentException("物资不能为空!");
-        }
-
-        //2.查询批次号与对应的树形是否匹配
-        WmBatch batch = wmBatchMapper.checkBatchCodeByBatchAndProperties(wmBatch);
-
-        //3.如果查询到批次号，则返回批次号，否则生成新的批次号
-        if(batch != null){
-            return batch;
-        }
-
-        //4.只通过批次号匹配
-        WmBatch param = new WmBatch();
-        param.setBatchId(wmBatch.getBatchId());
-        param.setBatchCode(wmBatch.getBatchCode());
-        WmBatch oldBatch = wmBatchMapper.checkBatchCodeByBatchAndProperties(param);
-
-        //5.更新除了batchId,batchCode之外的其他属性
-        oldBatch.setBatchId(null);
-        oldBatch.setBatchCode(null);
-        oldBatch.updateFileds(wmBatch);
-
-
-        //4.生成新的批次号
-        String batchCode = autoCodeUtil.genSerialCode(UserConstants.BATCH_CODE,"");
-        oldBatch.setBatchCode(batchCode);
-        wmBatchMapper.insertWmBatch(oldBatch);
-
-        return oldBatch;
     }
 }

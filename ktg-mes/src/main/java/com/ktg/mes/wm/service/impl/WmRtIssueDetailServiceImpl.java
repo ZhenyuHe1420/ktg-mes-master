@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmRtIssueDetailService;
 
 /**
  * 生产退料单明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-05
  */
 @Service
 public class WmRtIssueDetailServiceImpl implements IWmRtIssueDetailService 
@@ -22,7 +19,6 @@ public class WmRtIssueDetailServiceImpl implements IWmRtIssueDetailService
 
     /**
      * 查询生产退料单明细
-     * 
      * @param detailId 生产退料单明细主键
      * @return 生产退料单明细
      */
@@ -34,7 +30,6 @@ public class WmRtIssueDetailServiceImpl implements IWmRtIssueDetailService
 
     /**
      * 查询生产退料单明细列表
-     * 
      * @param wmRtIssueDetail 生产退料单明细
      * @return 生产退料单明细
      */
@@ -51,9 +46,7 @@ public class WmRtIssueDetailServiceImpl implements IWmRtIssueDetailService
 
     /**
      * 新增生产退料单明细
-     * 
      * @param wmRtIssueDetail 生产退料单明细
-     * @return 结果
      */
     @Override
     public int insertWmRtIssueDetail(WmRtIssueDetail wmRtIssueDetail)
@@ -64,9 +57,7 @@ public class WmRtIssueDetailServiceImpl implements IWmRtIssueDetailService
 
     /**
      * 修改生产退料单明细
-     * 
      * @param wmRtIssueDetail 生产退料单明细
-     * @return 结果
      */
     @Override
     public int updateWmRtIssueDetail(WmRtIssueDetail wmRtIssueDetail)
@@ -77,25 +68,11 @@ public class WmRtIssueDetailServiceImpl implements IWmRtIssueDetailService
 
     /**
      * 批量删除生产退料单明细
-     * 
      * @param detailIds 需要删除的生产退料单明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmRtIssueDetailByDetailIds(Long[] detailIds)
     {
         return wmRtIssueDetailMapper.deleteWmRtIssueDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除生产退料单明细信息
-     * 
-     * @param detailId 生产退料单明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmRtIssueDetailByDetailId(Long detailId)
-    {
-        return wmRtIssueDetailMapper.deleteWmRtIssueDetailByDetailId(detailId);
     }
 }

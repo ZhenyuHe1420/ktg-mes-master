@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmMiscRecptDetailService;
 
 /**
  * 杂项入库单明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-05-15
  */
 @Service
 public class WmMiscRecptDetailServiceImpl implements IWmMiscRecptDetailService 
@@ -22,7 +19,6 @@ public class WmMiscRecptDetailServiceImpl implements IWmMiscRecptDetailService
 
     /**
      * 查询杂项入库单明细
-     * 
      * @param detailId 杂项入库单明细主键
      * @return 杂项入库单明细
      */
@@ -34,7 +30,6 @@ public class WmMiscRecptDetailServiceImpl implements IWmMiscRecptDetailService
 
     /**
      * 查询杂项入库单明细列表
-     * 
      * @param wmMiscRecptDetail 杂项入库单明细
      * @return 杂项入库单明细
      */
@@ -46,9 +41,7 @@ public class WmMiscRecptDetailServiceImpl implements IWmMiscRecptDetailService
 
     /**
      * 新增杂项入库单明细
-     * 
      * @param wmMiscRecptDetail 杂项入库单明细
-     * @return 结果
      */
     @Override
     public int insertWmMiscRecptDetail(WmMiscRecptDetail wmMiscRecptDetail)
@@ -59,9 +52,7 @@ public class WmMiscRecptDetailServiceImpl implements IWmMiscRecptDetailService
 
     /**
      * 修改杂项入库单明细
-     * 
      * @param wmMiscRecptDetail 杂项入库单明细
-     * @return 结果
      */
     @Override
     public int updateWmMiscRecptDetail(WmMiscRecptDetail wmMiscRecptDetail)
@@ -72,9 +63,7 @@ public class WmMiscRecptDetailServiceImpl implements IWmMiscRecptDetailService
 
     /**
      * 批量删除杂项入库单明细
-     * 
      * @param detailIds 需要删除的杂项入库单明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmMiscRecptDetailByDetailIds(Long[] detailIds)
@@ -85,17 +74,5 @@ public class WmMiscRecptDetailServiceImpl implements IWmMiscRecptDetailService
     @Override
     public int deleteWmMiscRecptDetailByLineId(Long lineId) {
         return wmMiscRecptDetailMapper.deleteWmMiscRecptDetailByLineId(lineId);
-    }
-
-    /**
-     * 删除杂项入库单明细信息
-     * 
-     * @param detailId 杂项入库单明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmMiscRecptDetailByDetailId(Long detailId)
-    {
-        return wmMiscRecptDetailMapper.deleteWmMiscRecptDetailByDetailId(detailId);
     }
 }

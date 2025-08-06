@@ -1,11 +1,9 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
-import com.ktg.mes.wm.domain.WmItemRecpt;
 import com.ktg.mes.wm.domain.tx.MiscRecptTxBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,9 +13,6 @@ import com.ktg.mes.wm.service.IWmMiscRecptService;
 
 /**
  * 杂项入库单Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-05-15
  */
 @Service
 public class WmMiscRecptServiceImpl implements IWmMiscRecptService 
@@ -27,7 +22,6 @@ public class WmMiscRecptServiceImpl implements IWmMiscRecptService
 
     /**
      * 查询杂项入库单
-     * 
      * @param recptId 杂项入库单主键
      * @return 杂项入库单
      */
@@ -39,7 +33,6 @@ public class WmMiscRecptServiceImpl implements IWmMiscRecptService
 
     /**
      * 查询杂项入库单列表
-     * 
      * @param wmMiscRecpt 杂项入库单
      * @return 杂项入库单
      */
@@ -66,9 +59,7 @@ public class WmMiscRecptServiceImpl implements IWmMiscRecptService
 
     /**
      * 新增杂项入库单
-     * 
      * @param wmMiscRecpt 杂项入库单
-     * @return 结果
      */
     @Override
     public int insertWmMiscRecpt(WmMiscRecpt wmMiscRecpt)
@@ -79,9 +70,7 @@ public class WmMiscRecptServiceImpl implements IWmMiscRecptService
 
     /**
      * 修改杂项入库单
-     * 
      * @param wmMiscRecpt 杂项入库单
-     * @return 结果
      */
     @Override
     public int updateWmMiscRecpt(WmMiscRecpt wmMiscRecpt)
@@ -92,25 +81,11 @@ public class WmMiscRecptServiceImpl implements IWmMiscRecptService
 
     /**
      * 批量删除杂项入库单
-     * 
      * @param recptIds 需要删除的杂项入库单主键
-     * @return 结果
      */
     @Override
     public int deleteWmMiscRecptByRecptIds(Long[] recptIds)
     {
         return wmMiscRecptMapper.deleteWmMiscRecptByRecptIds(recptIds);
-    }
-
-    /**
-     * 删除杂项入库单信息
-     * 
-     * @param recptId 杂项入库单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmMiscRecptByRecptId(Long recptId)
-    {
-        return wmMiscRecptMapper.deleteWmMiscRecptByRecptId(recptId);
     }
 }

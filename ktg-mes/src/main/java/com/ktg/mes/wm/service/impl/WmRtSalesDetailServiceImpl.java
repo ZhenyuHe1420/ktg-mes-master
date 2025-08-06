@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmRtSalesDetailService;
 
 /**
  * 销售退货记录明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-16
  */
 @Service
 public class WmRtSalesDetailServiceImpl implements IWmRtSalesDetailService 
@@ -22,7 +19,6 @@ public class WmRtSalesDetailServiceImpl implements IWmRtSalesDetailService
 
     /**
      * 查询销售退货记录明细
-     * 
      * @param detailId 销售退货记录明细主键
      * @return 销售退货记录明细
      */
@@ -34,7 +30,6 @@ public class WmRtSalesDetailServiceImpl implements IWmRtSalesDetailService
 
     /**
      * 查询销售退货记录明细列表
-     * 
      * @param wmRtSalesDetail 销售退货记录明细
      * @return 销售退货记录明细
      */
@@ -51,9 +46,7 @@ public class WmRtSalesDetailServiceImpl implements IWmRtSalesDetailService
 
     /**
      * 新增销售退货记录明细
-     * 
      * @param wmRtSalesDetail 销售退货记录明细
-     * @return 结果
      */
     @Override
     public int insertWmRtSalesDetail(WmRtSalesDetail wmRtSalesDetail)
@@ -64,9 +57,7 @@ public class WmRtSalesDetailServiceImpl implements IWmRtSalesDetailService
 
     /**
      * 修改销售退货记录明细
-     * 
      * @param wmRtSalesDetail 销售退货记录明细
-     * @return 结果
      */
     @Override
     public int updateWmRtSalesDetail(WmRtSalesDetail wmRtSalesDetail)
@@ -77,25 +68,11 @@ public class WmRtSalesDetailServiceImpl implements IWmRtSalesDetailService
 
     /**
      * 批量删除销售退货记录明细
-     * 
      * @param detailIds 需要删除的销售退货记录明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmRtSalesDetailByDetailIds(Long[] detailIds)
     {
         return wmRtSalesDetailMapper.deleteWmRtSalesDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除销售退货记录明细信息
-     * 
-     * @param detailId 销售退货记录明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmRtSalesDetailByDetailId(Long detailId)
-    {
-        return wmRtSalesDetailMapper.deleteWmRtSalesDetailByDetailId(detailId);
     }
 }

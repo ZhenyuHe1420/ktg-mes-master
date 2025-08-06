@@ -1,7 +1,6 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -14,9 +13,6 @@ import com.ktg.mes.wm.service.IWmIssueHeaderService;
 
 /**
  * 生产领料单头Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-07-14
  */
 @Service
 public class WmIssueHeaderServiceImpl implements IWmIssueHeaderService 
@@ -26,7 +22,6 @@ public class WmIssueHeaderServiceImpl implements IWmIssueHeaderService
 
     /**
      * 查询生产领料单头
-     * 
      * @param issueId 生产领料单头主键
      * @return 生产领料单头
      */
@@ -38,7 +33,6 @@ public class WmIssueHeaderServiceImpl implements IWmIssueHeaderService
 
     /**
      * 查询生产领料单头列表
-     * 
      * @param wmIssueHeader 生产领料单头
      * @return 生产领料单头
      */
@@ -60,9 +54,7 @@ public class WmIssueHeaderServiceImpl implements IWmIssueHeaderService
 
     /**
      * 新增生产领料单头
-     * 
      * @param wmIssueHeader 生产领料单头
-     * @return 结果
      */
     @Override
     public int insertWmIssueHeader(WmIssueHeader wmIssueHeader)
@@ -73,9 +65,7 @@ public class WmIssueHeaderServiceImpl implements IWmIssueHeaderService
 
     /**
      * 修改生产领料单头
-     * 
      * @param wmIssueHeader 生产领料单头
-     * @return 结果
      */
     @Override
     public int updateWmIssueHeader(WmIssueHeader wmIssueHeader)
@@ -86,26 +76,12 @@ public class WmIssueHeaderServiceImpl implements IWmIssueHeaderService
 
     /**
      * 批量删除生产领料单头
-     * 
      * @param issueIds 需要删除的生产领料单头主键
-     * @return 结果
      */
     @Override
     public int deleteWmIssueHeaderByIssueIds(Long[] issueIds)
     {
         return wmIssueHeaderMapper.deleteWmIssueHeaderByIssueIds(issueIds);
-    }
-
-    /**
-     * 删除生产领料单头信息
-     * 
-     * @param issueId 生产领料单头主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmIssueHeaderByIssueId(Long issueId)
-    {
-        return wmIssueHeaderMapper.deleteWmIssueHeaderByIssueId(issueId);
     }
 
     @Override

@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmItemRecptLineService;
 
 /**
  * 物料入库单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-22
  */
 @Service
 public class WmItemRecptLineServiceImpl implements IWmItemRecptLineService 
@@ -22,7 +19,6 @@ public class WmItemRecptLineServiceImpl implements IWmItemRecptLineService
 
     /**
      * 查询物料入库单行
-     * 
      * @param lineId 物料入库单行主键
      * @return 物料入库单行
      */
@@ -34,7 +30,6 @@ public class WmItemRecptLineServiceImpl implements IWmItemRecptLineService
 
     /**
      * 查询物料入库单行列表
-     * 
      * @param wmItemRecptLine 物料入库单行
      * @return 物料入库单行
      */
@@ -44,16 +39,8 @@ public class WmItemRecptLineServiceImpl implements IWmItemRecptLineService
         return wmItemRecptLineMapper.selectWmItemRecptLineList(wmItemRecptLine);
     }
 
-    @Override
-    public List<WmItemRecptLine> selectWmItemRecptLineWithOnShelfList(WmItemRecptLine wmItemRecptLine) {
-        return wmItemRecptLineMapper.selectWmItemRecptLineWithOnShelfList(wmItemRecptLine);
-    }
-
-
     /**
      * 查询物料入库单行列表（含明细）
-     * @param wmItemRecptLine
-     * @return
      */
     @Override
     public List<WmItemRecptLine> selectWmItemRecptLineWithDetail(WmItemRecptLine wmItemRecptLine){
@@ -62,9 +49,7 @@ public class WmItemRecptLineServiceImpl implements IWmItemRecptLineService
 
     /**
      * 新增物料入库单行
-     * 
      * @param wmItemRecptLine 物料入库单行
-     * @return 结果
      */
     @Override
     public int insertWmItemRecptLine(WmItemRecptLine wmItemRecptLine)
@@ -75,9 +60,7 @@ public class WmItemRecptLineServiceImpl implements IWmItemRecptLineService
 
     /**
      * 修改物料入库单行
-     * 
      * @param wmItemRecptLine 物料入库单行
-     * @return 结果
      */
     @Override
     public int updateWmItemRecptLine(WmItemRecptLine wmItemRecptLine)
@@ -88,26 +71,12 @@ public class WmItemRecptLineServiceImpl implements IWmItemRecptLineService
 
     /**
      * 批量删除物料入库单行
-     * 
      * @param lineIds 需要删除的物料入库单行主键
-     * @return 结果
      */
     @Override
     public int deleteWmItemRecptLineByLineIds(Long[] lineIds)
     {
         return wmItemRecptLineMapper.deleteWmItemRecptLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除物料入库单行信息
-     * 
-     * @param lineId 物料入库单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmItemRecptLineByLineId(Long lineId)
-    {
-        return wmItemRecptLineMapper.deleteWmItemRecptLineByLineId(lineId);
     }
 
     @Override

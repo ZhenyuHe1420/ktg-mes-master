@@ -1,8 +1,6 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
-import cn.hutool.core.collection.CollectionUtil;
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.mes.wm.domain.WmStockTakingLine;
@@ -16,22 +14,17 @@ import org.springframework.util.CollectionUtils;
 
 /**
  * 库存盘点结果Service业务层处理
- * 
- * @author yinjinlu
- * @date 2023-08-22
  */
 @Service
 public class WmStockTakingResultServiceImpl implements IWmStockTakingResultService 
 {
     @Autowired
     private WmStockTakingResultMapper wmStockTakingResultMapper;
-
     @Autowired
     private WmStockTakingLineMapper wmStockTakingLineMapper;
 
     /**
      * 查询库存盘点结果
-     * 
      * @param resultId 库存盘点结果主键
      * @return 库存盘点结果
      */
@@ -43,7 +36,6 @@ public class WmStockTakingResultServiceImpl implements IWmStockTakingResultServi
 
     /**
      * 查询库存盘点结果列表
-     * 
      * @param wmStockTakingResult 库存盘点结果
      * @return 库存盘点结果
      */
@@ -59,14 +51,11 @@ public class WmStockTakingResultServiceImpl implements IWmStockTakingResultServi
      *   1.1 如果没有找到则新增一个行，用传入的信息更新行信息，设置盘点状态为“盘盈”；保存结果信息，绑定对应的行ID。
      *   1.2 如果找到了，则更新行信息中的盘点数量和盘点状态；保存结果信息。
      *
-     *
      * @param wmStockTakingResult 库存盘点结果
-     * @return 结果
      */
     @Override
     public int insertWmStockTakingResult(WmStockTakingResult wmStockTakingResult)
     {
-
         WmStockTakingLine param = new WmStockTakingLine();
         param.setAreaId(wmStockTakingResult.getAreaId());
         param.setBatchId(wmStockTakingResult.getBatchId());
@@ -109,9 +98,7 @@ public class WmStockTakingResultServiceImpl implements IWmStockTakingResultServi
 
     /**
      * 修改库存盘点结果
-     * 
      * @param wmStockTakingResult 库存盘点结果
-     * @return 结果
      */
     @Override
     public int updateWmStockTakingResult(WmStockTakingResult wmStockTakingResult)
@@ -125,26 +112,12 @@ public class WmStockTakingResultServiceImpl implements IWmStockTakingResultServi
 
     /**
      * 批量删除库存盘点结果
-     * 
      * @param resultIds 需要删除的库存盘点结果主键
-     * @return 结果
      */
     @Override
     public int deleteWmStockTakingResultByResultIds(Long[] resultIds)
     {
         return wmStockTakingResultMapper.deleteWmStockTakingResultByResultIds(resultIds);
-    }
-
-    /**
-     * 删除库存盘点结果信息
-     * 
-     * @param resultId 库存盘点结果主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmStockTakingResultByResultId(Long resultId)
-    {
-        return wmStockTakingResultMapper.deleteWmStockTakingResultByResultId(resultId);
     }
 
     @Override

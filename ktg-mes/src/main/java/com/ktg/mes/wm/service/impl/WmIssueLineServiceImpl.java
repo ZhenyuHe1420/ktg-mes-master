@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmIssueLineService;
 
 /**
  * 生产领料单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-07-14
  */
 @Service
 public class WmIssueLineServiceImpl implements IWmIssueLineService 
@@ -22,7 +19,6 @@ public class WmIssueLineServiceImpl implements IWmIssueLineService
 
     /**
      * 查询生产领料单行
-     * 
      * @param lineId 生产领料单行主键
      * @return 生产领料单行
      */
@@ -34,7 +30,6 @@ public class WmIssueLineServiceImpl implements IWmIssueLineService
 
     /**
      * 查询生产领料单行列表
-     * 
      * @param wmIssueLine 生产领料单行
      * @return 生产领料单行
      */
@@ -45,20 +40,13 @@ public class WmIssueLineServiceImpl implements IWmIssueLineService
     }
 
     @Override
-    public List<WmIssueLine> selectWmIssueLineWithOffShelfList(WmIssueLine wmIssueLine) {
-        return wmIssueLineMapper.selectWmIssueLineWithOffShelfList(wmIssueLine);
-    }
-
-    @Override
     public List<WmIssueLine> selectWmIssueLineWithDetailList(WmIssueLine wmIssueLine) {
         return wmIssueLineMapper.selectWmIssueLineWithDetailList(wmIssueLine);
     }
 
     /**
      * 新增生产领料单行
-     * 
      * @param wmIssueLine 生产领料单行
-     * @return 结果
      */
     @Override
     public int insertWmIssueLine(WmIssueLine wmIssueLine)
@@ -69,9 +57,7 @@ public class WmIssueLineServiceImpl implements IWmIssueLineService
 
     /**
      * 修改生产领料单行
-     * 
      * @param wmIssueLine 生产领料单行
-     * @return 结果
      */
     @Override
     public int updateWmIssueLine(WmIssueLine wmIssueLine)
@@ -82,26 +68,12 @@ public class WmIssueLineServiceImpl implements IWmIssueLineService
 
     /**
      * 批量删除生产领料单行
-     * 
      * @param lineIds 需要删除的生产领料单行主键
-     * @return 结果
      */
     @Override
     public int deleteWmIssueLineByLineIds(Long[] lineIds)
     {
         return wmIssueLineMapper.deleteWmIssueLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除生产领料单行信息
-     * 
-     * @param lineId 生产领料单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmIssueLineByLineId(Long lineId)
-    {
-        return wmIssueLineMapper.deleteWmIssueLineByLineId(lineId);
     }
 
     @Override

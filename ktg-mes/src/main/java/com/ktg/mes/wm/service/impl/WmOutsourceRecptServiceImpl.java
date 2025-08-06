@@ -1,7 +1,6 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -14,9 +13,6 @@ import com.ktg.mes.wm.service.IWmOutsourceRecptService;
 
 /**
  * 外协入库单Service业务层处理
- * 
- * @author yinjinlu
- * @date 2023-10-30
  */
 @Service
 public class WmOutsourceRecptServiceImpl implements IWmOutsourceRecptService 
@@ -26,7 +22,6 @@ public class WmOutsourceRecptServiceImpl implements IWmOutsourceRecptService
 
     /**
      * 查询外协入库单
-     * 
      * @param recptId 外协入库单主键
      * @return 外协入库单
      */
@@ -38,7 +33,6 @@ public class WmOutsourceRecptServiceImpl implements IWmOutsourceRecptService
 
     /**
      * 查询外协入库单列表
-     * 
      * @param wmOutsourceRecpt 外协入库单
      * @return 外协入库单
      */
@@ -50,9 +44,7 @@ public class WmOutsourceRecptServiceImpl implements IWmOutsourceRecptService
 
     /**
      * 新增外协入库单
-     * 
      * @param wmOutsourceRecpt 外协入库单
-     * @return 结果
      */
     @Override
     public int insertWmOutsourceRecpt(WmOutsourceRecpt wmOutsourceRecpt)
@@ -63,9 +55,7 @@ public class WmOutsourceRecptServiceImpl implements IWmOutsourceRecptService
 
     /**
      * 修改外协入库单
-     * 
      * @param wmOutsourceRecpt 外协入库单
-     * @return 结果
      */
     @Override
     public int updateWmOutsourceRecpt(WmOutsourceRecpt wmOutsourceRecpt)
@@ -76,26 +66,12 @@ public class WmOutsourceRecptServiceImpl implements IWmOutsourceRecptService
 
     /**
      * 批量删除外协入库单
-     * 
      * @param recptIds 需要删除的外协入库单主键
-     * @return 结果
      */
     @Override
     public int deleteWmOutsourceRecptByRecptIds(Long[] recptIds)
     {
         return wmOutsourceRecptMapper.deleteWmOutsourceRecptByRecptIds(recptIds);
-    }
-
-    /**
-     * 删除外协入库单信息
-     * 
-     * @param recptId 外协入库单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmOutsourceRecptByRecptId(Long recptId)
-    {
-        return wmOutsourceRecptMapper.deleteWmOutsourceRecptByRecptId(recptId);
     }
 
     @Override

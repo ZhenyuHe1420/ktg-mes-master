@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmArrivalNoticeLineService;
 
 /**
  * 到货通知单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-11-12
  */
 @Service
 public class WmArrivalNoticeLineServiceImpl implements IWmArrivalNoticeLineService 
@@ -22,7 +19,6 @@ public class WmArrivalNoticeLineServiceImpl implements IWmArrivalNoticeLineServi
 
     /**
      * 查询到货通知单行
-     * 
      * @param lineId 到货通知单行主键
      * @return 到货通知单行
      */
@@ -34,7 +30,6 @@ public class WmArrivalNoticeLineServiceImpl implements IWmArrivalNoticeLineServi
 
     /**
      * 查询到货通知单行列表
-     * 
      * @param wmArrivalNoticeLine 到货通知单行
      * @return 到货通知单行
      */
@@ -46,7 +41,6 @@ public class WmArrivalNoticeLineServiceImpl implements IWmArrivalNoticeLineServi
 
     /**
      * 新增到货通知单行
-     * 
      * @param wmArrivalNoticeLine 到货通知单行
      * @return 结果
      */
@@ -59,9 +53,7 @@ public class WmArrivalNoticeLineServiceImpl implements IWmArrivalNoticeLineServi
 
     /**
      * 修改到货通知单行
-     * 
      * @param wmArrivalNoticeLine 到货通知单行
-     * @return 结果
      */
     @Override
     public int updateWmArrivalNoticeLine(WmArrivalNoticeLine wmArrivalNoticeLine)
@@ -72,9 +64,7 @@ public class WmArrivalNoticeLineServiceImpl implements IWmArrivalNoticeLineServi
 
     /**
      * 批量删除到货通知单行
-     * 
      * @param lineIds 需要删除的到货通知单行主键
-     * @return 结果
      */
     @Override
     public int deleteWmArrivalNoticeLineByLineIds(Long[] lineIds)
@@ -83,26 +73,11 @@ public class WmArrivalNoticeLineServiceImpl implements IWmArrivalNoticeLineServi
     }
 
     /**
-     * 删除到货通知单行信息
-     * 
-     * @param lineId 到货通知单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmArrivalNoticeLineByLineId(Long lineId)
-    {
-        return wmArrivalNoticeLineMapper.deleteWmArrivalNoticeLineByLineId(lineId);
-    }
-
-    /**
      * 根据通知单ID删除所有通知单行
      * @param noticeId
-     * @return
      */
     @Override
     public int deleteByNoticeId(Long noticeId) {
         return wmArrivalNoticeLineMapper.deleteByNoticeId(noticeId);
     }
-
-
 }

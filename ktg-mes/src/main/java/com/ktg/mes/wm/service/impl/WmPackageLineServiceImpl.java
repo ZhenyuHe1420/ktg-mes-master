@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmPackageLineService;
 
 /**
  * 装箱明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-10-11
  */
 @Service
 public class WmPackageLineServiceImpl implements IWmPackageLineService 
@@ -22,7 +19,6 @@ public class WmPackageLineServiceImpl implements IWmPackageLineService
 
     /**
      * 查询装箱明细
-     * 
      * @param lineId 装箱明细主键
      * @return 装箱明细
      */
@@ -34,7 +30,6 @@ public class WmPackageLineServiceImpl implements IWmPackageLineService
 
     /**
      * 查询装箱明细列表
-     * 
      * @param wmPackageLine 装箱明细
      * @return 装箱明细
      */
@@ -46,9 +41,7 @@ public class WmPackageLineServiceImpl implements IWmPackageLineService
 
     /**
      * 新增装箱明细
-     * 
      * @param wmPackageLine 装箱明细
-     * @return 结果
      */
     @Override
     public int insertWmPackageLine(WmPackageLine wmPackageLine)
@@ -59,9 +52,7 @@ public class WmPackageLineServiceImpl implements IWmPackageLineService
 
     /**
      * 修改装箱明细
-     * 
      * @param wmPackageLine 装箱明细
-     * @return 结果
      */
     @Override
     public int updateWmPackageLine(WmPackageLine wmPackageLine)
@@ -72,25 +63,11 @@ public class WmPackageLineServiceImpl implements IWmPackageLineService
 
     /**
      * 批量删除装箱明细
-     * 
      * @param lineIds 需要删除的装箱明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmPackageLineByLineIds(Long[] lineIds)
     {
         return wmPackageLineMapper.deleteWmPackageLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除装箱明细信息
-     * 
-     * @param lineId 装箱明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmPackageLineByLineId(Long lineId)
-    {
-        return wmPackageLineMapper.deleteWmPackageLineByLineId(lineId);
     }
 }

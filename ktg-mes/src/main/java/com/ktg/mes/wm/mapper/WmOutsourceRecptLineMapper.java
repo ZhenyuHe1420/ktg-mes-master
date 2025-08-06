@@ -5,90 +5,52 @@ import com.ktg.mes.wm.domain.WmOutsourceRecptLine;
 
 /**
  * 外协入库单行Mapper接口
- * 
- * @author yinjinlu
- * @date 2023-10-30
  */
 public interface WmOutsourceRecptLineMapper 
 {
     /**
      * 查询外协入库单行
-     * 
      * @param lineId 外协入库单行主键
      * @return 外协入库单行
      */
-    public WmOutsourceRecptLine selectWmOutsourceRecptLineByLineId(Long lineId);
-
-    /**
-     * 查询外协入库单行
-     *
-     * @param lineId 外协入库单行主键
-     * @return 外协入库单行
-     */
-    public WmOutsourceRecptLine selectWmOutsourceRecptLineWithQuantityByLineId(Long lineId);
+    WmOutsourceRecptLine selectWmOutsourceRecptLineByLineId(Long lineId);
 
     /**
      * 查询外协入库单行列表
-     * 
      * @param wmOutsourceRecptLine 外协入库单行
      * @return 外协入库单行集合
      */
-    public List<WmOutsourceRecptLine> selectWmOutsourceRecptLineList(WmOutsourceRecptLine wmOutsourceRecptLine);
+    List<WmOutsourceRecptLine> selectWmOutsourceRecptLineList(WmOutsourceRecptLine wmOutsourceRecptLine);
 
-    /**
-     * 查询外协入库单行列表
-     *
-     * @param wmOutsourceRecptLine 外协入库单行
-     * @return 外协入库单行集合
-     */
-    public List<WmOutsourceRecptLine> selectWmOutsourceRecptLineWithQuantityList(WmOutsourceRecptLine wmOutsourceRecptLine);
-
-
-    public List<WmOutsourceRecptLine> selectWmOutsourceRecptLineWithDetailList(WmOutsourceRecptLine wmOutsourceRecptLine);
+    List<WmOutsourceRecptLine> selectWmOutsourceRecptLineWithDetailList(WmOutsourceRecptLine wmOutsourceRecptLine);
 
     /**
      * 根据外协入库单ID查询所有入库单行
      * @param recptId
-     * @return
      */
-    public List<WmOutsourceRecptLine> selectWmOutsourceRecptLineByRecptId(Long recptId);
+    List<WmOutsourceRecptLine> selectWmOutsourceRecptLineByRecptId(Long recptId);
 
     /**
      * 新增外协入库单行
-     * 
      * @param wmOutsourceRecptLine 外协入库单行
-     * @return 结果
      */
-    public int insertWmOutsourceRecptLine(WmOutsourceRecptLine wmOutsourceRecptLine);
+    int insertWmOutsourceRecptLine(WmOutsourceRecptLine wmOutsourceRecptLine);
 
     /**
      * 修改外协入库单行
-     * 
      * @param wmOutsourceRecptLine 外协入库单行
-     * @return 结果
      */
-    public int updateWmOutsourceRecptLine(WmOutsourceRecptLine wmOutsourceRecptLine);
+    int updateWmOutsourceRecptLine(WmOutsourceRecptLine wmOutsourceRecptLine);
 
     /**
      * 删除外协入库单行
-     * 
      * @param lineId 外协入库单行主键
-     * @return 结果
      */
-    public int deleteWmOutsourceRecptLineByLineId(Long lineId);
+    int deleteWmOutsourceRecptLineByLineId(Long lineId);
 
     /**
      * 批量删除外协入库单行
-     * 
      * @param lineIds 需要删除的数据主键集合
-     * @return 结果
      */
-    public int deleteWmOutsourceRecptLineByLineIds(Long[] lineIds);
-
-    /**
-     * 根据外协入库单头ID删除所有行
-     * @param recptId
-     * @return
-     */
-    public int deleteWmOutsourceRecptLineByRecptId(Long recptId);
+    int deleteWmOutsourceRecptLineByLineIds(Long[] lineIds);
 }

@@ -1,11 +1,9 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
-import com.ktg.mes.wm.domain.tx.IssueTxBean;
 import com.ktg.mes.wm.domain.tx.OutsourceIssueTxBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,19 +13,14 @@ import com.ktg.mes.wm.service.IWmOutsourceIssueService;
 
 /**
  * 外协领料单头Service业务层处理
- *
- * @author yinjinlu
- * @date 2023-10-30
  */
 @Service
 public class WmOutsourceIssueServiceImpl implements IWmOutsourceIssueService {
-
     @Autowired
     private WmOutsourceIssueMapper wmOutsourceIssueMapper;
 
     /**
      * 查询外协领料单头
-     *
      * @param issueId 外协领料单头主键
      * @return 外协领料单头
      */
@@ -38,7 +31,6 @@ public class WmOutsourceIssueServiceImpl implements IWmOutsourceIssueService {
 
     /**
      * 查询外协领料单头列表
-     *
      * @param wmOutsourceIssue 外协领料单头
      * @return 外协领料单头
      */
@@ -49,9 +41,7 @@ public class WmOutsourceIssueServiceImpl implements IWmOutsourceIssueService {
 
     /**
      * 新增外协领料单头
-     *
      * @param wmOutsourceIssue 外协领料单头
-     * @return 结果
      */
     @Override
     public int insertWmOutsourceIssue(WmOutsourceIssue wmOutsourceIssue) {
@@ -61,9 +51,7 @@ public class WmOutsourceIssueServiceImpl implements IWmOutsourceIssueService {
 
     /**
      * 修改外协领料单头
-     *
      * @param wmOutsourceIssue 外协领料单头
-     * @return 结果
      */
     @Override
     public int updateWmOutsourceIssue(WmOutsourceIssue wmOutsourceIssue) {
@@ -73,24 +61,11 @@ public class WmOutsourceIssueServiceImpl implements IWmOutsourceIssueService {
 
     /**
      * 批量删除外协领料单头
-     *
      * @param issueIds 需要删除的外协领料单头主键
-     * @return 结果
      */
     @Override
     public int deleteWmOutsourceIssueByIssueIds(Long[] issueIds) {
         return wmOutsourceIssueMapper.deleteWmOutsourceIssueByIssueIds(issueIds);
-    }
-
-    /**
-     * 删除外协领料单头信息
-     *
-     * @param issueId 外协领料单头主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmOutsourceIssueByIssueId(Long issueId) {
-        return wmOutsourceIssueMapper.deleteWmOutsourceIssueByIssueId(issueId);
     }
 
     @Override

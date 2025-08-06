@@ -1,7 +1,6 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.wm.service.IWmStockTakingPlanService;
 
 /**
  * 库存盘点方案Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-21
  */
 @Service
 public class WmStockTakingPlanServiceImpl implements IWmStockTakingPlanService 
@@ -25,7 +21,6 @@ public class WmStockTakingPlanServiceImpl implements IWmStockTakingPlanService
 
     /**
      * 查询库存盘点方案
-     * 
      * @param planId 库存盘点方案主键
      * @return 库存盘点方案
      */
@@ -37,7 +32,6 @@ public class WmStockTakingPlanServiceImpl implements IWmStockTakingPlanService
 
     /**
      * 查询库存盘点方案列表
-     * 
      * @param wmStockTakingPlan 库存盘点方案
      * @return 库存盘点方案
      */
@@ -59,9 +53,7 @@ public class WmStockTakingPlanServiceImpl implements IWmStockTakingPlanService
 
     /**
      * 新增库存盘点方案
-     * 
      * @param wmStockTakingPlan 库存盘点方案
-     * @return 结果
      */
     @Override
     public int insertWmStockTakingPlan(WmStockTakingPlan wmStockTakingPlan)
@@ -72,9 +64,7 @@ public class WmStockTakingPlanServiceImpl implements IWmStockTakingPlanService
 
     /**
      * 修改库存盘点方案
-     * 
      * @param wmStockTakingPlan 库存盘点方案
-     * @return 结果
      */
     @Override
     public int updateWmStockTakingPlan(WmStockTakingPlan wmStockTakingPlan)
@@ -85,25 +75,11 @@ public class WmStockTakingPlanServiceImpl implements IWmStockTakingPlanService
 
     /**
      * 批量删除库存盘点方案
-     * 
      * @param planIds 需要删除的库存盘点方案主键
-     * @return 结果
      */
     @Override
     public int deleteWmStockTakingPlanByPlanIds(Long[] planIds)
     {
         return wmStockTakingPlanMapper.deleteWmStockTakingPlanByPlanIds(planIds);
-    }
-
-    /**
-     * 删除库存盘点方案信息
-     * 
-     * @param planId 库存盘点方案主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmStockTakingPlanByPlanId(Long planId)
-    {
-        return wmStockTakingPlanMapper.deleteWmStockTakingPlanByPlanId(planId);
     }
 }

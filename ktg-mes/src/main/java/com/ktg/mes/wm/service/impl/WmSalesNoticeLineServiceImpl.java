@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmSalesNoticeLineService;
 
 /**
  * 发货通知单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-14
  */
 @Service
 public class WmSalesNoticeLineServiceImpl implements IWmSalesNoticeLineService 
@@ -22,7 +19,6 @@ public class WmSalesNoticeLineServiceImpl implements IWmSalesNoticeLineService
 
     /**
      * 查询发货通知单行
-     * 
      * @param lineId 发货通知单行主键
      * @return 发货通知单行
      */
@@ -34,7 +30,6 @@ public class WmSalesNoticeLineServiceImpl implements IWmSalesNoticeLineService
 
     /**
      * 查询发货通知单行列表
-     * 
      * @param wmSalesNoticeLine 发货通知单行
      * @return 发货通知单行
      */
@@ -46,9 +41,7 @@ public class WmSalesNoticeLineServiceImpl implements IWmSalesNoticeLineService
 
     /**
      * 新增发货通知单行
-     * 
      * @param wmSalesNoticeLine 发货通知单行
-     * @return 结果
      */
     @Override
     public int insertWmSalesNoticeLine(WmSalesNoticeLine wmSalesNoticeLine)
@@ -59,9 +52,7 @@ public class WmSalesNoticeLineServiceImpl implements IWmSalesNoticeLineService
 
     /**
      * 修改发货通知单行
-     * 
      * @param wmSalesNoticeLine 发货通知单行
-     * @return 结果
      */
     @Override
     public int updateWmSalesNoticeLine(WmSalesNoticeLine wmSalesNoticeLine)
@@ -72,25 +63,11 @@ public class WmSalesNoticeLineServiceImpl implements IWmSalesNoticeLineService
 
     /**
      * 批量删除发货通知单行
-     * 
      * @param lineIds 需要删除的发货通知单行主键
-     * @return 结果
      */
     @Override
     public int deleteWmSalesNoticeLineByLineIds(Long[] lineIds)
     {
         return wmSalesNoticeLineMapper.deleteWmSalesNoticeLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除发货通知单行信息
-     * 
-     * @param lineId 发货通知单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmSalesNoticeLineByLineId(Long lineId)
-    {
-        return wmSalesNoticeLineMapper.deleteWmSalesNoticeLineByLineId(lineId);
     }
 }

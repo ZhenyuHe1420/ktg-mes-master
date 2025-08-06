@@ -8,12 +8,8 @@ import com.ktg.mes.wm.service.IWmMaterialStockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 /**
  * 库存记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-24
  */
 @Service
 public class WmMaterialStockServiceImpl implements IWmMaterialStockService
@@ -23,7 +19,6 @@ public class WmMaterialStockServiceImpl implements IWmMaterialStockService
 
     /**
      * 查询库存记录
-     * 
      * @param materialStockId 库存记录主键
      * @return 库存记录
      */
@@ -33,10 +28,8 @@ public class WmMaterialStockServiceImpl implements IWmMaterialStockService
         return wmMaterialStockMapper.selectWmMaterialStockByMaterialStockId(materialStockId);
     }
 
-
     /**
      * 查询库存记录列表
-     * 
      * @param wmMaterialStock 库存记录
      * @return 库存记录
      */
@@ -46,16 +39,9 @@ public class WmMaterialStockServiceImpl implements IWmMaterialStockService
         return wmMaterialStockMapper.selectWmMaterialStockList(wmMaterialStock);
     }
 
-    @Override
-    public List<WmMaterialStock> queryWmMaterialStockList(WmMaterialStock wmMaterialStock) {
-        return wmMaterialStockMapper.queryWmMaterialStockList(wmMaterialStock);
-    }
-
     /**
      * 新增库存记录
-     * 
      * @param wmMaterialStock 库存记录
-     * @return 结果
      */
     @Override
     public int insertWmMaterialStock(WmMaterialStock wmMaterialStock)
@@ -66,9 +52,7 @@ public class WmMaterialStockServiceImpl implements IWmMaterialStockService
 
     /**
      * 修改库存记录
-     * 
      * @param wmMaterialStock 库存记录
-     * @return 结果
      */
     @Override
     public int updateWmMaterialStock(WmMaterialStock wmMaterialStock)
@@ -79,9 +63,7 @@ public class WmMaterialStockServiceImpl implements IWmMaterialStockService
 
     /**
      * 批量删除库存记录
-     * 
      * @param materialStockIds 需要删除的库存记录主键
-     * @return 结果
      */
     @Override
     public int deleteWmMaterialStockByMaterialStockIds(Long[] materialStockIds)
@@ -90,21 +72,8 @@ public class WmMaterialStockServiceImpl implements IWmMaterialStockService
     }
 
     /**
-     * 删除库存记录信息
-     * 
-     * @param materialStockId 库存记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmMaterialStockByMaterialStockId(Long materialStockId)
-    {
-        return wmMaterialStockMapper.deleteWmMaterialStockByMaterialStockId(materialStockId);
-    }
-
-    /**
      * 根据库位id查询相关库存现有量数据
      * @param areaId
-     * @return
      */
     @Override
     public List<WmMaterialStock> getByAreaId(Long areaId) {
@@ -116,7 +85,6 @@ public class WmMaterialStockServiceImpl implements IWmMaterialStockService
     /**
      * 根据库区id查询相关库存现有量
      * @param locationId
-     * @return
      */
     @Override
     public List<WmMaterialStock> getLocationId(Long locationId) {
@@ -128,7 +96,6 @@ public class WmMaterialStockServiceImpl implements IWmMaterialStockService
     /**
      * 根据仓库id查询相关库存现有量
      * @param warehouseId
-     * @return
      */
     @Override
     public List<WmMaterialStock> getByWarehouseId(Long warehouseId) {

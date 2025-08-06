@@ -1,7 +1,6 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -14,9 +13,6 @@ import com.ktg.mes.wm.service.IWmTransferService;
 
 /**
  * 转移单Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-11-28
  */
 @Service
 public class WmTransferServiceImpl implements IWmTransferService 
@@ -26,7 +22,6 @@ public class WmTransferServiceImpl implements IWmTransferService
 
     /**
      * 查询转移单
-     * 
      * @param transferId 转移单主键
      * @return 转移单
      */
@@ -38,7 +33,6 @@ public class WmTransferServiceImpl implements IWmTransferService
 
     /**
      * 查询转移单列表
-     * 
      * @param wmTransfer 转移单
      * @return 转移单
      */
@@ -65,9 +59,7 @@ public class WmTransferServiceImpl implements IWmTransferService
 
     /**
      * 新增转移单
-     * 
      * @param wmTransfer 转移单
-     * @return 结果
      */
     @Override
     public int insertWmTransfer(WmTransfer wmTransfer)
@@ -78,9 +70,7 @@ public class WmTransferServiceImpl implements IWmTransferService
 
     /**
      * 修改转移单
-     * 
      * @param wmTransfer 转移单
-     * @return 结果
      */
     @Override
     public int updateWmTransfer(WmTransfer wmTransfer)
@@ -91,25 +81,11 @@ public class WmTransferServiceImpl implements IWmTransferService
 
     /**
      * 批量删除转移单
-     * 
      * @param transferIds 需要删除的转移单主键
-     * @return 结果
      */
     @Override
     public int deleteWmTransferByTransferIds(Long[] transferIds)
     {
         return wmTransferMapper.deleteWmTransferByTransferIds(transferIds);
-    }
-
-    /**
-     * 删除转移单信息
-     * 
-     * @param transferId 转移单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmTransferByTransferId(Long transferId)
-    {
-        return wmTransferMapper.deleteWmTransferByTransferId(transferId);
     }
 }

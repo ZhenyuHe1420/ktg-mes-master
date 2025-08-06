@@ -1,13 +1,11 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
 import com.ktg.mes.wm.domain.WmArrivalNoticeLine;
 import com.ktg.mes.wm.mapper.WmArrivalNoticeLineMapper;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ktg.mes.wm.mapper.WmArrivalNoticeMapper;
@@ -17,22 +15,17 @@ import org.springframework.util.CollectionUtils;
 
 /**
  * 到货通知单Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-11-12
  */
 @Service
 public class WmArrivalNoticeServiceImpl implements IWmArrivalNoticeService 
 {
     @Autowired
     private WmArrivalNoticeMapper wmArrivalNoticeMapper;
-
     @Autowired
     private WmArrivalNoticeLineMapper wmArrivalNoticeLineMapper;
 
     /**
      * 查询到货通知单
-     * 
      * @param noticeId 到货通知单主键
      * @return 到货通知单
      */
@@ -44,7 +37,6 @@ public class WmArrivalNoticeServiceImpl implements IWmArrivalNoticeService
 
     /**
      * 查询到货通知单列表
-     * 
      * @param wmArrivalNotice 到货通知单
      * @return 到货通知单
      */
@@ -56,8 +48,6 @@ public class WmArrivalNoticeServiceImpl implements IWmArrivalNoticeService
 
     /**
      * 检查通知单编码是否唯一
-     * @param wmArrivalNotice
-     * @return
      */
     @Override
     public String checkRnCodeUnique(WmArrivalNotice wmArrivalNotice) {
@@ -71,9 +61,7 @@ public class WmArrivalNoticeServiceImpl implements IWmArrivalNoticeService
 
     /**
      * 新增到货通知单
-     * 
      * @param wmArrivalNotice 到货通知单
-     * @return 结果
      */
     @Override
     public int insertWmArrivalNotice(WmArrivalNotice wmArrivalNotice)
@@ -84,9 +72,7 @@ public class WmArrivalNoticeServiceImpl implements IWmArrivalNoticeService
 
     /**
      * 修改到货通知单
-     * 
      * @param wmArrivalNotice 到货通知单
-     * @return 结果
      */
     @Override
     public int updateWmArrivalNotice(WmArrivalNotice wmArrivalNotice)
@@ -112,25 +98,11 @@ public class WmArrivalNoticeServiceImpl implements IWmArrivalNoticeService
 
     /**
      * 批量删除到货通知单
-     * 
      * @param noticeIds 需要删除的到货通知单主键
-     * @return 结果
      */
     @Override
     public int deleteWmArrivalNoticeByNoticeIds(Long[] noticeIds)
     {
         return wmArrivalNoticeMapper.deleteWmArrivalNoticeByNoticeIds(noticeIds);
-    }
-
-    /**
-     * 删除到货通知单信息
-     * 
-     * @param noticeId 到货通知单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmArrivalNoticeByNoticeId(Long noticeId)
-    {
-        return wmArrivalNoticeMapper.deleteWmArrivalNoticeByNoticeId(noticeId);
     }
 }

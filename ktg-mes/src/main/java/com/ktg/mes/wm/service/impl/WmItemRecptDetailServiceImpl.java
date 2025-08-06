@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmItemRecptDetailService;
 
 /**
  * 物料入库单明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-02-28
  */
 @Service
 public class WmItemRecptDetailServiceImpl implements IWmItemRecptDetailService 
@@ -22,7 +19,6 @@ public class WmItemRecptDetailServiceImpl implements IWmItemRecptDetailService
 
     /**
      * 查询物料入库单明细
-     * 
      * @param detailId 物料入库单明细主键
      * @return 物料入库单明细
      */
@@ -34,7 +30,6 @@ public class WmItemRecptDetailServiceImpl implements IWmItemRecptDetailService
 
     /**
      * 查询物料入库单明细列表
-     * 
      * @param wmItemRecptDetail 物料入库单明细
      * @return 物料入库单明细
      */
@@ -51,9 +46,7 @@ public class WmItemRecptDetailServiceImpl implements IWmItemRecptDetailService
 
     /**
      * 新增物料入库单明细
-     * 
      * @param wmItemRecptDetail 物料入库单明细
-     * @return 结果
      */
     @Override
     public int insertWmItemRecptDetail(WmItemRecptDetail wmItemRecptDetail)
@@ -64,9 +57,7 @@ public class WmItemRecptDetailServiceImpl implements IWmItemRecptDetailService
 
     /**
      * 修改物料入库单明细
-     * 
      * @param wmItemRecptDetail 物料入库单明细
-     * @return 结果
      */
     @Override
     public int updateWmItemRecptDetail(WmItemRecptDetail wmItemRecptDetail)
@@ -77,25 +68,11 @@ public class WmItemRecptDetailServiceImpl implements IWmItemRecptDetailService
 
     /**
      * 批量删除物料入库单明细
-     * 
      * @param detailIds 需要删除的物料入库单明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmItemRecptDetailByDetailIds(Long[] detailIds)
     {
         return wmItemRecptDetailMapper.deleteWmItemRecptDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除物料入库单明细信息
-     * 
-     * @param detailId 物料入库单明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmItemRecptDetailByDetailId(Long detailId)
-    {
-        return wmItemRecptDetailMapper.deleteWmItemRecptDetailByDetailId(detailId);
     }
 }

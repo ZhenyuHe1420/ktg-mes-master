@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmProductProduceDetailService;
 
 /**
  * 产品产出记录明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-11
  */
 @Service
 public class WmProductProduceDetailServiceImpl implements IWmProductProduceDetailService 
@@ -22,7 +19,6 @@ public class WmProductProduceDetailServiceImpl implements IWmProductProduceDetai
 
     /**
      * 查询产品产出记录明细
-     * 
      * @param detailId 产品产出记录明细主键
      * @return 产品产出记录明细
      */
@@ -34,7 +30,6 @@ public class WmProductProduceDetailServiceImpl implements IWmProductProduceDetai
 
     /**
      * 查询产品产出记录明细列表
-     * 
      * @param wmProductProduceDetail 产品产出记录明细
      * @return 产品产出记录明细
      */
@@ -46,9 +41,7 @@ public class WmProductProduceDetailServiceImpl implements IWmProductProduceDetai
 
     /**
      * 新增产品产出记录明细
-     * 
      * @param wmProductProduceDetail 产品产出记录明细
-     * @return 结果
      */
     @Override
     public int insertWmProductProduceDetail(WmProductProduceDetail wmProductProduceDetail)
@@ -59,9 +52,7 @@ public class WmProductProduceDetailServiceImpl implements IWmProductProduceDetai
 
     /**
      * 修改产品产出记录明细
-     * 
      * @param wmProductProduceDetail 产品产出记录明细
-     * @return 结果
      */
     @Override
     public int updateWmProductProduceDetail(WmProductProduceDetail wmProductProduceDetail)
@@ -72,25 +63,11 @@ public class WmProductProduceDetailServiceImpl implements IWmProductProduceDetai
 
     /**
      * 批量删除产品产出记录明细
-     * 
      * @param detailIds 需要删除的产品产出记录明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmProductProduceDetailByDetailIds(Long[] detailIds)
     {
         return wmProductProduceDetailMapper.deleteWmProductProduceDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除产品产出记录明细信息
-     * 
-     * @param detailId 产品产出记录明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmProductProduceDetailByDetailId(Long detailId)
-    {
-        return wmProductProduceDetailMapper.deleteWmProductProduceDetailByDetailId(detailId);
     }
 }

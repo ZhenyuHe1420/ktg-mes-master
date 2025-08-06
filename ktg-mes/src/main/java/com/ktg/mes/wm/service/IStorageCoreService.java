@@ -2,91 +2,75 @@ package com.ktg.mes.wm.service;
 
 import com.ktg.mes.wm.domain.tx.*;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 public interface IStorageCoreService {
-
     /**
      * 处理物料入库单
-     * @param lines
      */
-    public void processItemRecpt(List<ItemRecptTxBean> lines);
+    void processItemRecpt(List<ItemRecptTxBean> lines);
 
     /**
      * 处理杂项入库单
-     * @param lines
      */
-    public void processMiscRecpt(List<MiscRecptTxBean> lines);
+    void processMiscRecpt(List<MiscRecptTxBean> lines);
 
     /**
      * 处理供应商退货单
-     * @param lines
      */
-    public void processRtVendor(List<RtVendorTxBean> lines);
+    void processRtVendor(List<RtVendorTxBean> lines);
 
     /**
      * 处理生产领料
-     * @param lines
      */
-    public void processIssue(List<IssueTxBean> lines);
+    void processIssue(List<IssueTxBean> lines);
 
 
-    public void processMiscIssue(List<MiscIssueTxBean> lines);
+    void processMiscIssue(List<MiscIssueTxBean> lines);
 
     /**
      * 处理外协领料
-     * @param lines
      */
-    public void processOutsourceIssue(List<OutsourceIssueTxBean> lines);
+    void processOutsourceIssue(List<OutsourceIssueTxBean> lines);
 
     /**
      * 处理外协入库
-     * @param lines
      */
-    public void processOutsourceRecpt(List<OutsourceRecptTxBean> lines);
+    void processOutsourceRecpt(List<OutsourceRecptTxBean> lines);
 
     /**
      * 处理生产退料
-     * @param lines
      */
-    public void processRtIssue(List<RtIssueTxBean> lines);
+    void processRtIssue(List<RtIssueTxBean> lines);
 
     /**
      * 处理生产消耗
-     * @param lines
      */
-    public void processItemConsume(List<ItemConsumeTxBean> lines);
+    void processItemConsume(List<ItemConsumeTxBean> lines);
 
     /**
      * 处理产品产出
-     * @param lines
      */
-    public void processProductProduce(List<ProductProductTxBean> lines);
+    void processProductProduce(List<ProductProductTxBean> lines);
 
     /**
      * 处理产品入库
-     * @param lines
      */
-    public void processProductRecpt(List<ProductRecptTxBean> lines);
+    void processProductRecpt(List<ProductRecptTxBean> lines);
 
     /**
      * 处理产品销售出库
-     * @param lines
      */
-    public void processProductSales(List<ProductSalesTxBean> lines);
+    void processProductSales(List<ProductSalesTxBean> lines);
 
     /**
      * 处理销售退货
-     * @param lines
      */
-    public void processRtSales(List<RtSalesTxBean> lines);
+    void processRtSales(List<RtSalesTxBean> lines);
 
     /**
      * 处理转移单
-     * @param lines
      */
-    public void processTransfer(List<TransferTxBean> lines);
-
+    void processTransfer(List<TransferTxBean> lines);
 }

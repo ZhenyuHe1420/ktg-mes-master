@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.core.domain.AjaxResult;
 import com.ktg.common.utils.DateUtils;
@@ -26,34 +25,25 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 仓库设置Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-05-07
  */
 @Service
 public class WmWarehouseServiceImpl implements IWmWarehouseService 
 {
     @Autowired
     private WmWarehouseMapper wmWarehouseMapper;
-
     @Autowired
     private WmStorageLocationMapper wmStorageLocationMapper;
-
     @Autowired
     private WmStorageAreaMapper wmStorageAreaMapper;
-
     @Autowired
     private IWmMaterialStockService wmMaterialStockService;
-
     @Autowired
     private IWmStorageLocationService wmStorageLocationService;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
 
     /**
      * 查询仓库设置
-     * 
      * @param warehouseId 仓库设置主键
      * @return 仓库设置
      */
@@ -70,7 +60,6 @@ public class WmWarehouseServiceImpl implements IWmWarehouseService
 
     /**
      * 查询仓库设置列表
-     * 
      * @param wmWarehouse 仓库设置
      * @return 仓库设置
      */
@@ -108,9 +97,7 @@ public class WmWarehouseServiceImpl implements IWmWarehouseService
 
     /**
      * 新增仓库设置
-     * 
      * @param wmWarehouse 仓库设置
-     * @return 结果
      */
     @Override
     public int insertWmWarehouse(WmWarehouse wmWarehouse)
@@ -121,9 +108,7 @@ public class WmWarehouseServiceImpl implements IWmWarehouseService
 
     /**
      * 修改仓库设置
-     * 
      * @param wmWarehouse 仓库设置
-     * @return 结果
      */
     @Override
     public int updateWmWarehouse(WmWarehouse wmWarehouse)
@@ -134,9 +119,7 @@ public class WmWarehouseServiceImpl implements IWmWarehouseService
 
     /**
      * 批量删除仓库设置
-     *
      * @param warehouseIds 需要删除的仓库设置主键
-     * @return 结果
      */
     @Override
     @Transactional
@@ -173,21 +156,8 @@ public class WmWarehouseServiceImpl implements IWmWarehouseService
         return AjaxResult.success(wmWarehouseMapper.deleteWmWarehouseByWarehouseIds(warehouseIds));
     }
 
-    /**
-     * 删除仓库设置信息
-     * 
-     * @param warehouseId 仓库设置主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmWarehouseByWarehouseId(Long warehouseId)
-    {
-        return wmWarehouseMapper.deleteWmWarehouseByWarehouseId(warehouseId);
-    }
-
     @Override
     public WmWarehouse initVirtualWarehouse() {
-
         WmWarehouse warehouse = wmWarehouseMapper.selectWmWarehouseByWarehouseCode(UserConstants.VIRTUAL_WH);
         if(!StringUtils.isNotNull(warehouse)){
             warehouse = new WmWarehouse();
@@ -206,7 +176,6 @@ public class WmWarehouseServiceImpl implements IWmWarehouseService
             location.setAreaFlag(UserConstants.YES);
             wmStorageLocationMapper.insertWmStorageLocation(location);
         }
-
 
         WmStorageArea area = wmStorageAreaMapper.selectWmStorageAreaByAreaCode(UserConstants.VIRTUAL_WA);
         if(!StringUtils.isNotNull(area)){

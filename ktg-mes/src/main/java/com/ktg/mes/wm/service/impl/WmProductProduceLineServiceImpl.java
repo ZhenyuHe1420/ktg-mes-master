@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmProductProduceLineService;
 
 /**
  * 产品产出记录行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-09-22
  */
 @Service
 public class WmProductProduceLineServiceImpl implements IWmProductProduceLineService 
@@ -22,7 +19,6 @@ public class WmProductProduceLineServiceImpl implements IWmProductProduceLineSer
 
     /**
      * 查询产品产出记录行
-     * 
      * @param lineId 产品产出记录行主键
      * @return 产品产出记录行
      */
@@ -34,7 +30,6 @@ public class WmProductProduceLineServiceImpl implements IWmProductProduceLineSer
 
     /**
      * 查询产品产出记录行列表
-     * 
      * @param wmProductProduceLine 产品产出记录行
      * @return 产品产出记录行
      */
@@ -46,9 +41,7 @@ public class WmProductProduceLineServiceImpl implements IWmProductProduceLineSer
 
     /**
      * 新增产品产出记录行
-     * 
      * @param wmProductProduceLine 产品产出记录行
-     * @return 结果
      */
     @Override
     public int insertWmProductProduceLine(WmProductProduceLine wmProductProduceLine)
@@ -59,9 +52,7 @@ public class WmProductProduceLineServiceImpl implements IWmProductProduceLineSer
 
     /**
      * 修改产品产出记录行
-     * 
      * @param wmProductProduceLine 产品产出记录行
-     * @return 结果
      */
     @Override
     public int updateWmProductProduceLine(WmProductProduceLine wmProductProduceLine)
@@ -72,26 +63,12 @@ public class WmProductProduceLineServiceImpl implements IWmProductProduceLineSer
 
     /**
      * 批量删除产品产出记录行
-     * 
      * @param lineIds 需要删除的产品产出记录行主键
-     * @return 结果
      */
     @Override
     public int deleteWmProductProduceLineByLineIds(Long[] lineIds)
     {
         return wmProductProduceLineMapper.deleteWmProductProduceLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除产品产出记录行信息
-     * 
-     * @param lineId 产品产出记录行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmProductProduceLineByLineId(Long lineId)
-    {
-        return wmProductProduceLineMapper.deleteWmProductProduceLineByLineId(lineId);
     }
 
     @Override

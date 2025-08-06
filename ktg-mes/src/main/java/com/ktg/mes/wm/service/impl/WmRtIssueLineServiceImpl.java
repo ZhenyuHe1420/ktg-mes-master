@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmRtIssueLineService;
 
 /**
  * 生产退料单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-09-15
  */
 @Service
 public class WmRtIssueLineServiceImpl implements IWmRtIssueLineService 
@@ -22,7 +19,6 @@ public class WmRtIssueLineServiceImpl implements IWmRtIssueLineService
 
     /**
      * 查询生产退料单行
-     * 
      * @param lineId 生产退料单行主键
      * @return 生产退料单行
      */
@@ -32,14 +28,8 @@ public class WmRtIssueLineServiceImpl implements IWmRtIssueLineService
         return wmRtIssueLineMapper.selectWmRtIssueLineByLineId(lineId);
     }
 
-    @Override
-    public WmRtIssueLine selectWmRtIssueLineWithQuantityByLineId(Long lineId) {
-        return wmRtIssueLineMapper.selectWmRtIssueLineWithQuantityByLineId(lineId);
-    }
-
     /**
      * 查询生产退料单行列表
-     * 
      * @param wmRtIssueLine 生产退料单行
      * @return 生产退料单行
      */
@@ -50,20 +40,13 @@ public class WmRtIssueLineServiceImpl implements IWmRtIssueLineService
     }
 
     @Override
-    public List<WmRtIssueLine> selectWmRtIssueLineWithQuantityList(WmRtIssueLine wmRtIssueLine) {
-        return wmRtIssueLineMapper.selectWmRtIssueLineWithQuantityList(wmRtIssueLine);
-    }
-
-    @Override
     public List<WmRtIssueLine> selectWmRtIssueLineWithDetailList(WmRtIssueLine wmRtIssueLine) {
         return wmRtIssueLineMapper.selectWmRtIssueLineWithDetailList(wmRtIssueLine);
     }
 
     /**
      * 新增生产退料单行
-     * 
      * @param wmRtIssueLine 生产退料单行
-     * @return 结果
      */
     @Override
     public int insertWmRtIssueLine(WmRtIssueLine wmRtIssueLine)
@@ -74,9 +57,7 @@ public class WmRtIssueLineServiceImpl implements IWmRtIssueLineService
 
     /**
      * 修改生产退料单行
-     * 
      * @param wmRtIssueLine 生产退料单行
-     * @return 结果
      */
     @Override
     public int updateWmRtIssueLine(WmRtIssueLine wmRtIssueLine)
@@ -87,26 +68,12 @@ public class WmRtIssueLineServiceImpl implements IWmRtIssueLineService
 
     /**
      * 批量删除生产退料单行
-     * 
      * @param lineIds 需要删除的生产退料单行主键
-     * @return 结果
      */
     @Override
     public int deleteWmRtIssueLineByLineIds(Long[] lineIds)
     {
         return wmRtIssueLineMapper.deleteWmRtIssueLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除生产退料单行信息
-     * 
-     * @param lineId 生产退料单行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmRtIssueLineByLineId(Long lineId)
-    {
-        return wmRtIssueLineMapper.deleteWmRtIssueLineByLineId(lineId);
     }
 
     @Override

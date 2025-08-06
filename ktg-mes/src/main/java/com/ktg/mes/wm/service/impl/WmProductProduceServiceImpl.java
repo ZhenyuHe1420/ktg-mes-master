@@ -4,7 +4,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.bean.BeanUtils;
@@ -28,52 +27,37 @@ import com.ktg.mes.wm.service.IWmProductProduceService;
 
 /**
  * 产品产出记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-09-21
  */
 @Service
 public class WmProductProduceServiceImpl implements IWmProductProduceService 
 {
     @Autowired
     private WmProductProduceMapper wmProductProduceMapper;
-
     @Autowired
     private WmProductProduceLineMapper wmProductProduceLineMapper;
-
     @Autowired
     private WmProductProduceDetailMapper wmProductProduceDetailMapper;
-
     @Autowired
     private WmWarehouseMapper wmWarehouseMapper;
-
     @Autowired
     private WmStorageLocationMapper wmStorageLocationMapper;
-
     @Autowired
     private WmStorageAreaMapper wmStorageAreaMapper;
-
     @Autowired
     private IStorageCoreService storageCoreService;
-
     @Autowired
     private ProWorkorderMapper proWorkorderMapper;
-
     @Autowired
     private ProTaskMapper proTaskMapper;
-
     @Autowired
     private MdWorkstationMapper mdWorkstationMapper;
-
     @Autowired
     private ProProcessMapper proProcessMapper;
-
     @Autowired
     private IWmBatchService wmBatchService;
 
     /**
      * 查询产品产出记录
-     * 
      * @param recordId 产品产出记录主键
      * @return 产品产出记录
      */
@@ -85,7 +69,6 @@ public class WmProductProduceServiceImpl implements IWmProductProduceService
 
     /**
      * 查询产品产出记录列表
-     * 
      * @param wmProductProduce 产品产出记录
      * @return 产品产出记录
      */
@@ -97,9 +80,7 @@ public class WmProductProduceServiceImpl implements IWmProductProduceService
 
     /**
      * 新增产品产出记录
-     * 
      * @param wmProductProduce 产品产出记录
-     * @return 结果
      */
     @Override
     public int insertWmProductProduce(WmProductProduce wmProductProduce)
@@ -110,9 +91,7 @@ public class WmProductProduceServiceImpl implements IWmProductProduceService
 
     /**
      * 修改产品产出记录
-     * 
      * @param wmProductProduce 产品产出记录
-     * @return 结果
      */
     @Override
     public int updateWmProductProduce(WmProductProduce wmProductProduce)
@@ -123,9 +102,7 @@ public class WmProductProduceServiceImpl implements IWmProductProduceService
 
     /**
      * 批量删除产品产出记录
-     * 
      * @param recordIds 需要删除的产品产出记录主键
-     * @return 结果
      */
     @Override
     public int deleteWmProductProduceByRecordIds(Long[] recordIds)
@@ -134,21 +111,7 @@ public class WmProductProduceServiceImpl implements IWmProductProduceService
     }
 
     /**
-     * 删除产品产出记录信息
-     * 
-     * @param recordId 产品产出记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmProductProduceByRecordId(Long recordId)
-    {
-        return wmProductProduceMapper.deleteWmProductProduceByRecordId(recordId);
-    }
-
-    /**
      * 根据报工单生成
-     * @param feedback
-     * @return
      */
     @Override
     public WmProductProduce generateProductProduce(ProFeedback feedback) {
@@ -191,7 +154,6 @@ public class WmProductProduceServiceImpl implements IWmProductProduceService
         line.setLotNumber(feedback.getLotNumber());   //TODO: 这里的批次号需要在生产报工时提供 （不过当前版本的批次号生成规则暂时不启用批号和过期日期）
         line.setQuantityProduce(feedback.getQuantityFeedback());
 
-
         //此处要根据物资配置的批次属性规则生成对应的批次号
         WmBatch batch = new WmBatch();
         batch.setItemId(line.getItemId());
@@ -228,7 +190,6 @@ public class WmProductProduceServiceImpl implements IWmProductProduceService
         WmWarehouse warehouse = wmWarehouseMapper.selectWmWarehouseByWarehouseCode(UserConstants.VIRTUAL_WH);
         WmStorageLocation location = wmStorageLocationMapper.selectWmStorageLocationByLocationCode(UserConstants.VIRTUAL_WS);
         WmStorageArea area = wmStorageAreaMapper.selectWmStorageAreaByAreaCode(UserConstants.VIRTUAL_WA);
-
 
         //根据产品是否需要检验设置行的质量状态
         if (UserConstants.YES.equals(feedback.getIsCheck())) {

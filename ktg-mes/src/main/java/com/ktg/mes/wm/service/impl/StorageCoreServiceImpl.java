@@ -12,29 +12,22 @@ import com.ktg.mes.wm.domain.tx.*;
 import com.ktg.mes.wm.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.Date;
 import java.util.List;
 
-
 @Component
 public class StorageCoreServiceImpl implements IStorageCoreService {
-
     @Autowired
     private IWmTransactionService wmTransactionService;
-
     @Autowired
     private IWmWarehouseService wmWarehouseService;
-
     @Autowired
     private IWmStorageLocationService wmStorageLocationService;
-
     @Autowired
     private IWmStorageAreaService wmStorageAreaService;
 
     /**
      * 采购入库
-     * @param lines
      */
     @Override
     public void processItemRecpt(List<ItemRecptTxBean> lines) {
@@ -52,7 +45,6 @@ public class StorageCoreServiceImpl implements IStorageCoreService {
             transaction.setTransactionDate(new Date());
             wmTransactionService.processTransaction(transaction);
         }
-
     }
 
     @Override
@@ -75,7 +67,6 @@ public class StorageCoreServiceImpl implements IStorageCoreService {
 
     /**
      * 供应商退货
-     * @param lines
      */
     @Override
     public void processRtVendor(List<RtVendorTxBean> lines) {
@@ -93,12 +84,10 @@ public class StorageCoreServiceImpl implements IStorageCoreService {
             transaction.setTransactionDate(new Date());
             wmTransactionService.processTransaction(transaction);
         }
-
     }
 
     /**
      * 生产领料
-     * @param lines
      */
     @Override
     public void processIssue(List<IssueTxBean> lines) {
@@ -201,10 +190,8 @@ public class StorageCoreServiceImpl implements IStorageCoreService {
         }
     }
 
-
     /**
      * 生产退料
-     * @param lines
      */
     @Override
     public void processRtIssue(List<RtIssueTxBean> lines) {
@@ -256,7 +243,6 @@ public class StorageCoreServiceImpl implements IStorageCoreService {
 
     /**
      * 库存消耗
-     *
      */
     @Override
     public void processItemConsume(List<ItemConsumeTxBean> lines){
@@ -292,7 +278,6 @@ public class StorageCoreServiceImpl implements IStorageCoreService {
 
     /**
      * 产品产出
-     *
      */
     @Override
     public void processProductProduce(List<ProductProductTxBean> lines){
@@ -325,10 +310,8 @@ public class StorageCoreServiceImpl implements IStorageCoreService {
         }
     }
 
-
     /**
      * 产品入库
-     * @param lines
      */
     @Override
     public void processProductRecpt(List<ProductRecptTxBean> lines) {
@@ -377,13 +360,10 @@ public class StorageCoreServiceImpl implements IStorageCoreService {
 
             wmTransactionService.processTransaction(transaction_in);
         }
-
-
     }
 
     /**
      * 销售出库
-     * @param lines
      */
     @Override
     public void processProductSales(List<ProductSalesTxBean> lines) {
@@ -467,8 +447,5 @@ public class StorageCoreServiceImpl implements IStorageCoreService {
             transaction_in.setRelatedTransactionId(transaction_out.getTransactionId());
             wmTransactionService.processTransaction(transaction_in);
         }
-
     }
-
-
 }

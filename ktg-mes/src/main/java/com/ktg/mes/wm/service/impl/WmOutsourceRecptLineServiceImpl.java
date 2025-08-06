@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmOutsourceRecptLineService;
 
 /**
  * 外协入库单行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2023-10-30
  */
 @Service
 public class WmOutsourceRecptLineServiceImpl implements IWmOutsourceRecptLineService 
@@ -22,7 +19,6 @@ public class WmOutsourceRecptLineServiceImpl implements IWmOutsourceRecptLineSer
 
     /**
      * 查询外协入库单行
-     * 
      * @param lineId 外协入库单行主键
      * @return 外协入库单行
      */
@@ -32,15 +28,8 @@ public class WmOutsourceRecptLineServiceImpl implements IWmOutsourceRecptLineSer
         return wmOutsourceRecptLineMapper.selectWmOutsourceRecptLineByLineId(lineId);
     }
 
-    @Override
-    public WmOutsourceRecptLine selectWmOutsourceRecptLineWithQuantityByLineId(Long lineId) {
-        return wmOutsourceRecptLineMapper.selectWmOutsourceRecptLineWithQuantityByLineId(lineId);
-    }
-
-
     /**
      * 查询外协入库单行列表
-     * 
      * @param wmOutsourceRecptLine 外协入库单行
      * @return 外协入库单行
      */
@@ -48,11 +37,6 @@ public class WmOutsourceRecptLineServiceImpl implements IWmOutsourceRecptLineSer
     public List<WmOutsourceRecptLine> selectWmOutsourceRecptLineList(WmOutsourceRecptLine wmOutsourceRecptLine)
     {
         return wmOutsourceRecptLineMapper.selectWmOutsourceRecptLineList(wmOutsourceRecptLine);
-    }
-
-    @Override
-    public List<WmOutsourceRecptLine> selectWmOutsourceRecptLineWithQuantityList(WmOutsourceRecptLine wmOutsourceRecptLine) {
-        return wmOutsourceRecptLineMapper.selectWmOutsourceRecptLineWithQuantityList(wmOutsourceRecptLine);
     }
 
     @Override
@@ -67,9 +51,7 @@ public class WmOutsourceRecptLineServiceImpl implements IWmOutsourceRecptLineSer
 
     /**
      * 新增外协入库单行
-     * 
      * @param wmOutsourceRecptLine 外协入库单行
-     * @return 结果
      */
     @Override
     public int insertWmOutsourceRecptLine(WmOutsourceRecptLine wmOutsourceRecptLine)
@@ -80,9 +62,7 @@ public class WmOutsourceRecptLineServiceImpl implements IWmOutsourceRecptLineSer
 
     /**
      * 修改外协入库单行
-     * 
      * @param wmOutsourceRecptLine 外协入库单行
-     * @return 结果
      */
     @Override
     public int updateWmOutsourceRecptLine(WmOutsourceRecptLine wmOutsourceRecptLine)
@@ -93,9 +73,7 @@ public class WmOutsourceRecptLineServiceImpl implements IWmOutsourceRecptLineSer
 
     /**
      * 批量删除外协入库单行
-     * 
      * @param lineIds 需要删除的外协入库单行主键
-     * @return 结果
      */
     @Override
     public int deleteWmOutsourceRecptLineByLineIds(Long[] lineIds)
@@ -105,18 +83,11 @@ public class WmOutsourceRecptLineServiceImpl implements IWmOutsourceRecptLineSer
 
     /**
      * 删除外协入库单行信息
-     * 
      * @param lineId 外协入库单行主键
-     * @return 结果
      */
     @Override
     public int deleteWmOutsourceRecptLineByLineId(Long lineId)
     {
         return wmOutsourceRecptLineMapper.deleteWmOutsourceRecptLineByLineId(lineId);
-    }
-
-    @Override
-    public int deleteWmOutsourceRecptLineByRecptId(Long recptId) {
-        return wmOutsourceRecptLineMapper.deleteWmOutsourceRecptLineByRecptId(recptId);
     }
 }

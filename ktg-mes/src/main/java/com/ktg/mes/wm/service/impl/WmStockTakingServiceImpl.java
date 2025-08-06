@@ -1,7 +1,6 @@
 package com.ktg.mes.wm.service.impl;
 
 import java.util.List;
-
 import com.ktg.common.constant.UserConstants;
 import com.ktg.common.utils.DateUtils;
 import com.ktg.common.utils.StringUtils;
@@ -13,9 +12,6 @@ import com.ktg.mes.wm.service.IWmStockTakingService;
 
 /**
  * 库存盘点记录Service业务层处理
- * 
- * @author yinjinlu
- * @date 2023-08-17
  */
 @Service
 public class WmStockTakingServiceImpl implements IWmStockTakingService 
@@ -25,7 +21,6 @@ public class WmStockTakingServiceImpl implements IWmStockTakingService
 
     /**
      * 查询库存盘点记录
-     * 
      * @param takingId 库存盘点记录主键
      * @return 库存盘点记录
      */
@@ -37,7 +32,6 @@ public class WmStockTakingServiceImpl implements IWmStockTakingService
 
     /**
      * 查询库存盘点记录列表
-     * 
      * @param wmStockTaking 库存盘点记录
      * @return 库存盘点记录
      */
@@ -49,8 +43,6 @@ public class WmStockTakingServiceImpl implements IWmStockTakingService
 
     /**
      * 检查编码是否唯一
-     * @param stockTaking
-     * @return
      */
     @Override
     public String checkUnique(WmStockTaking stockTaking){
@@ -64,9 +56,7 @@ public class WmStockTakingServiceImpl implements IWmStockTakingService
 
     /**
      * 新增库存盘点记录
-     * 
      * @param wmStockTaking 库存盘点记录
-     * @return 结果
      */
     @Override
     public int insertWmStockTaking(WmStockTaking wmStockTaking)
@@ -77,9 +67,7 @@ public class WmStockTakingServiceImpl implements IWmStockTakingService
 
     /**
      * 修改库存盘点记录
-     * 
      * @param wmStockTaking 库存盘点记录
-     * @return 结果
      */
     @Override
     public int updateWmStockTaking(WmStockTaking wmStockTaking)
@@ -90,25 +78,11 @@ public class WmStockTakingServiceImpl implements IWmStockTakingService
 
     /**
      * 批量删除库存盘点记录
-     * 
      * @param takingIds 需要删除的库存盘点记录主键
-     * @return 结果
      */
     @Override
     public int deleteWmStockTakingByTakingIds(Long[] takingIds)
     {
         return wmStockTakingMapper.deleteWmStockTakingByTakingIds(takingIds);
-    }
-
-    /**
-     * 删除库存盘点记录信息
-     * 
-     * @param takingId 库存盘点记录主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmStockTakingByTakingId(Long takingId)
-    {
-        return wmStockTakingMapper.deleteWmStockTakingByTakingId(takingId);
     }
 }

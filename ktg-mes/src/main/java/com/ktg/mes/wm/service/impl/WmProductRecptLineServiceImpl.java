@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmProductRecptLineService;
 
 /**
  * 产品入库记录行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-09-22
  */
 @Service
 public class WmProductRecptLineServiceImpl implements IWmProductRecptLineService 
@@ -22,7 +19,6 @@ public class WmProductRecptLineServiceImpl implements IWmProductRecptLineService
 
     /**
      * 查询产品入库记录行
-     * 
      * @param lineId 产品入库记录行主键
      * @return 产品入库记录行
      */
@@ -32,14 +28,8 @@ public class WmProductRecptLineServiceImpl implements IWmProductRecptLineService
         return wmProductRecptLineMapper.selectWmProductRecptLineByLineId(lineId);
     }
 
-    @Override
-    public WmProductRecptLine selectWmProductRecptLineWithQuantityByLineId(Long lineId) {
-        return wmProductRecptLineMapper.selectWmProductRecptLineWithQuantityByLineId(lineId);
-    }
-
     /**
      * 查询产品入库记录行列表
-     * 
      * @param wmProductRecptLine 产品入库记录行
      * @return 产品入库记录行
      */
@@ -50,20 +40,13 @@ public class WmProductRecptLineServiceImpl implements IWmProductRecptLineService
     }
 
     @Override
-    public List<WmProductRecptLine> selectWmProductRecptLineWithQuantityList(WmProductRecptLine wmProductRecptLine) {
-        return wmProductRecptLineMapper.selectWmProductRecptLineWithQuantityList(wmProductRecptLine);
-    }
-
-    @Override
     public List<WmProductRecptLine> selectWmProductRecptLineWithDetailList(WmProductRecptLine wmProductRecptLine) {
         return wmProductRecptLineMapper.selectWmProductRecptLineWithDetailList(wmProductRecptLine);
     }
 
     /**
      * 新增产品入库记录行
-     * 
      * @param wmProductRecptLine 产品入库记录行
-     * @return 结果
      */
     @Override
     public int insertWmProductRecptLine(WmProductRecptLine wmProductRecptLine)
@@ -74,9 +57,7 @@ public class WmProductRecptLineServiceImpl implements IWmProductRecptLineService
 
     /**
      * 修改产品入库记录行
-     * 
      * @param wmProductRecptLine 产品入库记录行
-     * @return 结果
      */
     @Override
     public int updateWmProductRecptLine(WmProductRecptLine wmProductRecptLine)
@@ -87,26 +68,12 @@ public class WmProductRecptLineServiceImpl implements IWmProductRecptLineService
 
     /**
      * 批量删除产品入库记录行
-     * 
      * @param lineIds 需要删除的产品入库记录行主键
-     * @return 结果
      */
     @Override
     public int deleteWmProductRecptLineByLineIds(Long[] lineIds)
     {
         return wmProductRecptLineMapper.deleteWmProductRecptLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除产品入库记录行信息
-     * 
-     * @param lineId 产品入库记录行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmProductRecptLineByLineId(Long lineId)
-    {
-        return wmProductRecptLineMapper.deleteWmProductRecptLineByLineId(lineId);
     }
 
     @Override

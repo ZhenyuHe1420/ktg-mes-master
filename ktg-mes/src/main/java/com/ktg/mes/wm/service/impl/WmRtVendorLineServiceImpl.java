@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmRtVendorLineService;
 
 /**
  * 供应商退货行Service业务层处理
- * 
- * @author yinjinlu
- * @date 2022-06-13
  */
 @Service
 public class WmRtVendorLineServiceImpl implements IWmRtVendorLineService 
@@ -22,7 +19,6 @@ public class WmRtVendorLineServiceImpl implements IWmRtVendorLineService
 
     /**
      * 查询供应商退货行
-     * 
      * @param lineId 供应商退货行主键
      * @return 供应商退货行
      */
@@ -34,7 +30,6 @@ public class WmRtVendorLineServiceImpl implements IWmRtVendorLineService
 
     /**
      * 查询供应商退货行列表
-     * 
      * @param wmRtVendorLine 供应商退货行
      * @return 供应商退货行
      */
@@ -51,9 +46,7 @@ public class WmRtVendorLineServiceImpl implements IWmRtVendorLineService
 
     /**
      * 新增供应商退货行
-     * 
      * @param wmRtVendorLine 供应商退货行
-     * @return 结果
      */
     @Override
     public int insertWmRtVendorLine(WmRtVendorLine wmRtVendorLine)
@@ -64,9 +57,7 @@ public class WmRtVendorLineServiceImpl implements IWmRtVendorLineService
 
     /**
      * 修改供应商退货行
-     * 
      * @param wmRtVendorLine 供应商退货行
-     * @return 结果
      */
     @Override
     public int updateWmRtVendorLine(WmRtVendorLine wmRtVendorLine)
@@ -77,26 +68,12 @@ public class WmRtVendorLineServiceImpl implements IWmRtVendorLineService
 
     /**
      * 批量删除供应商退货行
-     * 
      * @param lineIds 需要删除的供应商退货行主键
-     * @return 结果
      */
     @Override
     public int deleteWmRtVendorLineByLineIds(Long[] lineIds)
     {
         return wmRtVendorLineMapper.deleteWmRtVendorLineByLineIds(lineIds);
-    }
-
-    /**
-     * 删除供应商退货行信息
-     * 
-     * @param lineId 供应商退货行主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmRtVendorLineByLineId(Long lineId)
-    {
-        return wmRtVendorLineMapper.deleteWmRtVendorLineByLineId(lineId);
     }
 
     @Override

@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmItemConsumeDetailService;
 
 /**
  * 物料消耗记录明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-03-07
  */
 @Service
 public class WmItemConsumeDetailServiceImpl implements IWmItemConsumeDetailService 
@@ -22,7 +19,6 @@ public class WmItemConsumeDetailServiceImpl implements IWmItemConsumeDetailServi
 
     /**
      * 查询物料消耗记录明细
-     * 
      * @param detailId 物料消耗记录明细主键
      * @return 物料消耗记录明细
      */
@@ -34,7 +30,6 @@ public class WmItemConsumeDetailServiceImpl implements IWmItemConsumeDetailServi
 
     /**
      * 查询物料消耗记录明细列表
-     * 
      * @param wmItemConsumeDetail 物料消耗记录明细
      * @return 物料消耗记录明细
      */
@@ -46,9 +41,7 @@ public class WmItemConsumeDetailServiceImpl implements IWmItemConsumeDetailServi
 
     /**
      * 新增物料消耗记录明细
-     * 
      * @param wmItemConsumeDetail 物料消耗记录明细
-     * @return 结果
      */
     @Override
     public int insertWmItemConsumeDetail(WmItemConsumeDetail wmItemConsumeDetail)
@@ -59,9 +52,7 @@ public class WmItemConsumeDetailServiceImpl implements IWmItemConsumeDetailServi
 
     /**
      * 修改物料消耗记录明细
-     * 
      * @param wmItemConsumeDetail 物料消耗记录明细
-     * @return 结果
      */
     @Override
     public int updateWmItemConsumeDetail(WmItemConsumeDetail wmItemConsumeDetail)
@@ -72,25 +63,11 @@ public class WmItemConsumeDetailServiceImpl implements IWmItemConsumeDetailServi
 
     /**
      * 批量删除物料消耗记录明细
-     * 
      * @param detailIds 需要删除的物料消耗记录明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmItemConsumeDetailByDetailIds(Long[] detailIds)
     {
         return wmItemConsumeDetailMapper.deleteWmItemConsumeDetailByDetailIds(detailIds);
-    }
-
-    /**
-     * 删除物料消耗记录明细信息
-     * 
-     * @param detailId 物料消耗记录明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmItemConsumeDetailByDetailId(Long detailId)
-    {
-        return wmItemConsumeDetailMapper.deleteWmItemConsumeDetailByDetailId(detailId);
     }
 }

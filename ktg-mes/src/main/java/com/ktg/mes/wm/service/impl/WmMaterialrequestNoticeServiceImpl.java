@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmMaterialrequestNoticeService;
 
 /**
  * 备料通知单Service业务层处理
- * 
- * @author yinjinlu
- * @date 2024-12-13
  */
 @Service
 public class WmMaterialrequestNoticeServiceImpl implements IWmMaterialrequestNoticeService 
@@ -22,7 +19,6 @@ public class WmMaterialrequestNoticeServiceImpl implements IWmMaterialrequestNot
 
     /**
      * 查询备料通知单
-     * 
      * @param noticeId 备料通知单主键
      * @return 备料通知单
      */
@@ -34,7 +30,6 @@ public class WmMaterialrequestNoticeServiceImpl implements IWmMaterialrequestNot
 
     /**
      * 查询备料通知单列表
-     * 
      * @param wmMaterialrequestNotice 备料通知单
      * @return 备料通知单
      */
@@ -46,9 +41,7 @@ public class WmMaterialrequestNoticeServiceImpl implements IWmMaterialrequestNot
 
     /**
      * 新增备料通知单
-     * 
      * @param wmMaterialrequestNotice 备料通知单
-     * @return 结果
      */
     @Override
     public int insertWmMaterialrequestNotice(WmMaterialrequestNotice wmMaterialrequestNotice)
@@ -59,9 +52,7 @@ public class WmMaterialrequestNoticeServiceImpl implements IWmMaterialrequestNot
 
     /**
      * 修改备料通知单
-     * 
      * @param wmMaterialrequestNotice 备料通知单
-     * @return 结果
      */
     @Override
     public int updateWmMaterialrequestNotice(WmMaterialrequestNotice wmMaterialrequestNotice)
@@ -72,25 +63,11 @@ public class WmMaterialrequestNoticeServiceImpl implements IWmMaterialrequestNot
 
     /**
      * 批量删除备料通知单
-     * 
      * @param noticeIds 需要删除的备料通知单主键
-     * @return 结果
      */
     @Override
     public int deleteWmMaterialrequestNoticeByNoticeIds(Long[] noticeIds)
     {
         return wmMaterialrequestNoticeMapper.deleteWmMaterialrequestNoticeByNoticeIds(noticeIds);
-    }
-
-    /**
-     * 删除备料通知单信息
-     * 
-     * @param noticeId 备料通知单主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmMaterialrequestNoticeByNoticeId(Long noticeId)
-    {
-        return wmMaterialrequestNoticeMapper.deleteWmMaterialrequestNoticeByNoticeId(noticeId);
     }
 }

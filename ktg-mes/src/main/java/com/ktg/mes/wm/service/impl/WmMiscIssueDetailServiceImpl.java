@@ -10,9 +10,6 @@ import com.ktg.mes.wm.service.IWmMiscIssueDetailService;
 
 /**
  * 杂项出库单明细Service业务层处理
- * 
- * @author yinjinlu
- * @date 2025-05-15
  */
 @Service
 public class WmMiscIssueDetailServiceImpl implements IWmMiscIssueDetailService 
@@ -22,7 +19,6 @@ public class WmMiscIssueDetailServiceImpl implements IWmMiscIssueDetailService
 
     /**
      * 查询杂项出库单明细
-     * 
      * @param detailId 杂项出库单明细主键
      * @return 杂项出库单明细
      */
@@ -34,7 +30,6 @@ public class WmMiscIssueDetailServiceImpl implements IWmMiscIssueDetailService
 
     /**
      * 查询杂项出库单明细列表
-     * 
      * @param wmMiscIssueDetail 杂项出库单明细
      * @return 杂项出库单明细
      */
@@ -46,9 +41,7 @@ public class WmMiscIssueDetailServiceImpl implements IWmMiscIssueDetailService
 
     /**
      * 新增杂项出库单明细
-     * 
      * @param wmMiscIssueDetail 杂项出库单明细
-     * @return 结果
      */
     @Override
     public int insertWmMiscIssueDetail(WmMiscIssueDetail wmMiscIssueDetail)
@@ -59,9 +52,7 @@ public class WmMiscIssueDetailServiceImpl implements IWmMiscIssueDetailService
 
     /**
      * 修改杂项出库单明细
-     * 
      * @param wmMiscIssueDetail 杂项出库单明细
-     * @return 结果
      */
     @Override
     public int updateWmMiscIssueDetail(WmMiscIssueDetail wmMiscIssueDetail)
@@ -72,9 +63,7 @@ public class WmMiscIssueDetailServiceImpl implements IWmMiscIssueDetailService
 
     /**
      * 批量删除杂项出库单明细
-     * 
      * @param detailIds 需要删除的杂项出库单明细主键
-     * @return 结果
      */
     @Override
     public int deleteWmMiscIssueDetailByDetailIds(Long[] detailIds)
@@ -85,17 +74,5 @@ public class WmMiscIssueDetailServiceImpl implements IWmMiscIssueDetailService
     @Override
     public int deleteWmMiscIssueDetailByLineId(Long lineId) {
         return wmMiscIssueDetailMapper.deleteWmMiscIssueDetailByLineId(lineId);
-    }
-
-    /**
-     * 删除杂项出库单明细信息
-     * 
-     * @param detailId 杂项出库单明细主键
-     * @return 结果
-     */
-    @Override
-    public int deleteWmMiscIssueDetailByDetailId(Long detailId)
-    {
-        return wmMiscIssueDetailMapper.deleteWmMiscIssueDetailByDetailId(detailId);
     }
 }
